@@ -5,8 +5,16 @@
       {
         "appID": "472Y749ZU7.com.madreamircea.fridgy",
         "paths": [
+          "/verify-email",
+          "/verify-email/*",
           "/email-verified",
           "/email-verified/*",
+          "/reset-password",
+          "/reset-password/*",
+          "/reset-password-failed",
+          "/reset-password-failed/*",
+          "/email-verification-error",
+          "/email-verification-error/*",
           "/claim/*",
           "/invitation/*"
         ]
