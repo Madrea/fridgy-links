@@ -1,3 +1,4 @@
+/confirm-email             /verify-email.html     200
 /verify-email              /verify-email.html     200
 /email-verified            /verify-email.html     200
 /email-verification-error  /verify-email.html     200
