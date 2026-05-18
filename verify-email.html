@@ -5,36 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#1f4ec5" />
 <title>Fridgy — Verificare email</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  body { font-family: 'Arial', sans-serif; background: #eef5fe; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-  .card { background: #fff; border-radius: 16px; padding: 40px; max-width: 400px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
-  h1 { color: #0E7AFE; font-size: 22px; margin-bottom: 12px; }
-  p { color: #333; line-height: 1.6; margin-bottom: 20px; }
-  .btn { display: inline-block; background: #0E7AFE; color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: bold; font-size: 16px; }
-  .btn:hover { background: #0b6ad8; }
-  .stores { margin-top: 24px; font-size: 14px; color: #666; }
-  .stores a { color: #0E7AFE; }
+  :root{
+    --brand-1:#6daeff;--brand-2:#1f4ec5;--brand-deep:#0f2578;
+    --primary:#0E7AFE;--ink:#0b1b3a;--muted:#5b6b8c;--bg:#eef5fe;
+    --card:rgba(255,255,255,.72);--radius:26px;
+    --shadow:0 24px 60px -20px rgba(31,78,197,.45);
+    --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);color:var(--ink);background:var(--bg);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    -webkit-font-smoothing:antialiased;overflow:hidden}
+
+  .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+  .b1{width:560px;height:560px;background:var(--brand-1);top:-180px;left:-140px;animation:f1 18s ease-in-out infinite}
+  .b2{width:520px;height:520px;background:var(--brand-2);top:240px;right:-180px;animation:f2 22s ease-in-out infinite}
+  .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:f1 26s ease-in-out infinite}
+  @keyframes f1{50%{transform:translate(40px,-50px) scale(1.08)}}
+  @keyframes f2{50%{transform:translate(-50px,40px) scale(1.1)}}
+
+  .card{position:relative;z-index:1;background:var(--card);backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.7);border-radius:var(--radius);
+    padding:48px 40px;max-width:420px;width:92vw;text-align:center;
+    box-shadow:var(--shadow)}
+  .card img{width:80px;height:80px;border-radius:50%;margin:0 auto 20px;object-fit:contain}
+  h1{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+  h1 .grad{background:linear-gradient(120deg,var(--brand-1),var(--brand-2) 55%,var(--brand-deep));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  p{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:24px}
+
+  .open-btn{display:inline-block;background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
+    color:#fff;padding:14px 36px;border-radius:999px;font-weight:700;font-size:16px;
+    text-decoration:none;box-shadow:0 10px 24px -8px rgba(31,78,197,.6);
+    transition:transform .2s}
+  .open-btn:hover{transform:translateY(-2px)}
+
+  .divider{margin:28px 0 24px;border:none;border-top:1px solid rgba(31,78,197,.1)}
+
+  .store-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:14px}
+
+  .store-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .store-btn{display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;
+    padding:12px 20px;border-radius:14px;text-decoration:none;
+    transition:transform .22s,box-shadow .22s;
+    box-shadow:0 12px 24px -12px rgba(11,27,58,.7)}
+  .store-btn:hover{transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(11,27,58,.8)}
+  .store-btn svg{width:24px;height:24px;flex:none}
+  .store-btn small{display:block;font-size:10px;opacity:.75;line-height:1.2;font-weight:500}
+  .store-btn b{display:block;font-size:15px;font-weight:700;line-height:1.2}
 </style>
 </head>
 <body>
+
+<div class="mesh" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+</div>
+
 <div class="card">
-  <img src="/fridgy-logo.png" alt="Fridgy" width="80" style="border-radius: 50%; margin-bottom: 16px;" />
-  <h1>Verificare email</h1>
+  <img src="/fridgy-logo.png" alt="Fridgy" />
+  <h1><span class="grad">Verificare email</span></h1>
   <p>Deschide aplicatia Fridgy pentru a-ti verifica adresa de email.</p>
-  <a class="btn" id="openApp" href="/">Descarca Fridgy</a>
-  <div class="stores">
-    <a href="https://apps.apple.com/app/fridgy">App Store</a> &middot;
-    <a href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy">Google Play</a>
+  <a class="open-btn" id="openApp" href="/">Deschide in Fridgy</a>
+
+  <hr class="divider" />
+  <div class="store-label">Nu ai aplicatia? Descarca gratuit:</div>
+  <div class="store-row">
+    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
+      <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
+      <span><small>Disponibil pe</small><b>Google Play</b></span>
+    </a>
+    <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
+      <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
+      <span><small>Descarca din</small><b>App Store</b></span>
+    </a>
   </div>
 </div>
+
 <script>
-  // Try to open the app via Universal Link (same URL)
   var params = window.location.search;
   var appLink = 'fridgymobile://verify-email' + params;
   var btn = document.getElementById('openApp');
   btn.href = appLink;
-  btn.textContent = 'Deschide in Fridgy';
-  // Auto-attempt
   setTimeout(function() { window.location.href = appLink; }, 300);
 </script>
 </body>
