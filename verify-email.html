@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#1f4ec5" />
+<title>Fridgy — Verificare email</title>
+<style>
+  body { font-family: 'Arial', sans-serif; background: #eef5fe; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  .card { background: #fff; border-radius: 16px; padding: 40px; max-width: 400px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+  h1 { color: #0E7AFE; font-size: 22px; margin-bottom: 12px; }
+  p { color: #333; line-height: 1.6; margin-bottom: 20px; }
+  .btn { display: inline-block; background: #0E7AFE; color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-weight: bold; font-size: 16px; }
+  .btn:hover { background: #0b6ad8; }
+  .stores { margin-top: 24px; font-size: 14px; color: #666; }
+  .stores a { color: #0E7AFE; }
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="/fridgy-logo.png" alt="Fridgy" width="80" style="border-radius: 50%; margin-bottom: 16px;" />
+  <h1>Verificare email</h1>
+  <p>Deschide aplicatia Fridgy pentru a-ti verifica adresa de email.</p>
+  <a class="btn" id="openApp" href="/">Descarca Fridgy</a>
+  <div class="stores">
+    <a href="https://apps.apple.com/app/fridgy">App Store</a> &middot;
+    <a href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy">Google Play</a>
+  </div>
+</div>
+<script>
+  // Try to open the app via Universal Link (same URL)
+  var params = window.location.search;
+  var appLink = 'fridgymobile://verify-email' + params;
+  var btn = document.getElementById('openApp');
+  btn.href = appLink;
+  btn.textContent = 'Deschide in Fridgy';
+  // Auto-attempt
+  setTimeout(function() { window.location.href = appLink; }, 300);
+</script>
+</body>
+</html>

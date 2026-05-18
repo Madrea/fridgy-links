@@ -1,5 +1,5 @@
-/verify-email        /  302
-/email-verified      /  302
-/reset-password      /  302
-/reset-password-failed  /  302
-/email-verification-error  /  302
+/verify-email              /verify-email.html     200
+/email-verified            /verify-email.html     200
+/email-verification-error  /verify-email.html     200
+/reset-password            /reset-password.html   200
+/reset-password-failed     /reset-password.html   200
