@@ -39,6 +39,8 @@
     -webkit-background-clip:text;background-clip:text;color:transparent}
   p{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:24px}
 
+  .status-icon{font-size:48px;margin-bottom:16px}
+
   .open-btn{display:inline-block;background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
     color:#fff;padding:14px 36px;border-radius:999px;font-weight:700;font-size:16px;
     text-decoration:none;box-shadow:0 10px 24px -8px rgba(31,78,197,.6);
@@ -58,6 +60,13 @@
   .store-btn svg{width:24px;height:24px;flex:none}
   .store-btn small{display:block;font-size:10px;opacity:.75;line-height:1.2;font-weight:500}
   .store-btn b{display:block;font-size:15px;font-weight:700;line-height:1.2}
+
+  .hidden{display:none}
+
+  .spinner{width:36px;height:36px;border:4px solid rgba(31,78,197,.15);
+    border-top-color:var(--primary);border-radius:50%;
+    animation:spin .8s linear infinite;margin:0 auto 16px}
+  @keyframes spin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -68,9 +77,36 @@
 
 <div class="card">
   <img src="/fridgy-logo.png" alt="Fridgy" />
-  <h1><span class="grad">Verificare email</span></h1>
-  <p>Deschide aplicatia Fridgy pentru a-ti verifica adresa de email.</p>
-  <a class="open-btn" id="openApp" href="/">Deschide in Fridgy</a>
+
+  <!-- Loading state -->
+  <div id="state-loading">
+    <div class="spinner"></div>
+    <h1><span class="grad">Se verifica...</span></h1>
+    <p>Te rugam sa astepti cateva secunde.</p>
+  </div>
+
+  <!-- Success state -->
+  <div id="state-success" class="hidden">
+    <div class="status-icon">&#10003;</div>
+    <h1><span class="grad">Email confirmat!</span></h1>
+    <p>Adresa ta de email a fost verificata cu succes. Te poti autentifica in aplicatie.</p>
+    <a class="open-btn" href="fridgymobile://email-verified">Deschide Fridgy</a>
+  </div>
+
+  <!-- Already verified state -->
+  <div id="state-already" class="hidden">
+    <div class="status-icon">&#10003;</div>
+    <h1><span class="grad">Deja confirmat</span></h1>
+    <p>Emailul tau era deja verificat. Te poti autentifica in aplicatie.</p>
+    <a class="open-btn" href="fridgymobile://email-verified">Deschide Fridgy</a>
+  </div>
+
+  <!-- Error state -->
+  <div id="state-error" class="hidden">
+    <div class="status-icon">&#10007;</div>
+    <h1><span class="grad">Link invalid</span></h1>
+    <p>Linkul de verificare este invalid sau a expirat. Incearca sa soliciti un nou email de verificare din aplicatie.</p>
+  </div>
 
   <hr class="divider" />
   <div class="store-label">Nu ai aplicatia? Descarca gratuit:</div>
@@ -87,11 +123,42 @@
 </div>
 
 <script>
-  var params = window.location.search;
-  var appLink = 'fridgymobile://verify-email' + params;
-  var btn = document.getElementById('openApp');
-  btn.href = appLink;
-  setTimeout(function() { window.location.href = appLink; }, 300);
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var token = params.get('token');
+
+  function show(id) {
+    document.getElementById('state-loading').classList.add('hidden');
+    document.getElementById('state-success').classList.add('hidden');
+    document.getElementById('state-already').classList.add('hidden');
+    document.getElementById('state-error').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  if (!token) {
+    show('state-error');
+    return;
+  }
+
+  fetch('https://api.fridgy.org/api/verify-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ token: token })
+  })
+  .then(function(res) { return res.json().then(function(data) { return { status: res.status, data: data }; }); })
+  .then(function(result) {
+    if (result.status === 200 && result.data.already_verified) {
+      show('state-already');
+    } else if (result.status === 200) {
+      show('state-success');
+    } else {
+      show('state-error');
+    }
+  })
+  .catch(function() {
+    show('state-error');
+  });
+})();
 </script>
 </body>
 </html>
