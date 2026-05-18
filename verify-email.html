@@ -33,15 +33,13 @@
     border:1px solid rgba(255,255,255,.7);border-radius:var(--radius);
     padding:48px 40px;max-width:420px;width:92vw;text-align:center;
     box-shadow:var(--shadow)}
-  .card img{width:120px;height:120px;border-radius:50%;margin:0 auto 24px;object-fit:contain}
+  .card img{width:160px;height:160px;border-radius:50%;margin:0 auto 24px;object-fit:contain}
   h1{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
   h1 .grad{background:linear-gradient(120deg,var(--brand-1),var(--brand-2) 55%,var(--brand-deep));
     -webkit-background-clip:text;background-clip:text;color:transparent}
   p{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:0}
 
-  .status-icon{font-size:56px;margin-bottom:16px}
-  .status-icon.success{color:#16a34a}
-  .status-icon.error{color:#dc2626}
+  .status-icon{font-size:56px;margin-bottom:16px;color:#dc2626}
 
   .hidden{display:none}
 
@@ -69,21 +67,18 @@
 
   <!-- Success -->
   <div id="state-success" class="hidden">
-    <div class="status-icon success">&#10003;</div>
     <h1><span class="grad">Contul tau a fost confirmat!</span></h1>
     <p>Poti inchide aceasta pagina si te poti autentifica in aplicatia Fridgy.</p>
   </div>
 
   <!-- Already verified -->
   <div id="state-already" class="hidden">
-    <div class="status-icon success">&#10003;</div>
     <h1><span class="grad">Contul tau a fost confirmat!</span></h1>
     <p>Emailul tau era deja verificat. Te poti autentifica in aplicatia Fridgy.</p>
   </div>
 
   <!-- Error -->
   <div id="state-error" class="hidden">
-    <div class="status-icon error">&#10007;</div>
     <h1><span class="grad">Link invalid</span></h1>
     <p>Linkul de verificare este invalid sau a expirat. Incearca sa soliciti un nou email de verificare din aplicatie.</p>
   </div>
