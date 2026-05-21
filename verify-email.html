@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#1f4ec5" />
-<title>Fridgy — Verificare email</title>
+<title>Fridgy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -61,26 +61,26 @@
   <!-- Loading -->
   <div id="state-loading">
     <div class="spinner"></div>
-    <h1><span class="grad">Se verifica...</span></h1>
-    <p>Te rugam sa astepti cateva secunde.</p>
+    <h1><span class="grad" id="txt-loading"></span></h1>
+    <p id="txt-loading-desc"></p>
   </div>
 
   <!-- Success -->
   <div id="state-success" class="hidden">
-    <h1><span class="grad">Contul tau a fost confirmat!</span></h1>
-    <p>Poti inchide aceasta pagina si te poti autentifica in aplicatia Fridgy.</p>
+    <h1><span class="grad" id="txt-success"></span></h1>
+    <p id="txt-success-desc"></p>
   </div>
 
   <!-- Already verified -->
   <div id="state-already" class="hidden">
-    <h1><span class="grad">Contul tau a fost confirmat!</span></h1>
-    <p>Emailul tau era deja verificat. Te poti autentifica in aplicatia Fridgy.</p>
+    <h1><span class="grad" id="txt-already"></span></h1>
+    <p id="txt-already-desc"></p>
   </div>
 
   <!-- Error -->
   <div id="state-error" class="hidden">
-    <h1><span class="grad">Link invalid</span></h1>
-    <p>Linkul de verificare este invalid sau a expirat. Incearca sa soliciti un nou email de verificare din aplicatie.</p>
+    <h1><span class="grad" id="txt-error"></span></h1>
+    <p id="txt-error-desc"></p>
   </div>
 </div>
 
@@ -88,6 +88,41 @@
 (function() {
   var params = new URLSearchParams(window.location.search);
   var token = params.get('token');
+  var lang = params.get('lang') || 'ro';
+
+  var t = {
+    ro: {
+      loading: 'Se verifica...',
+      loadingDesc: 'Te rugam sa astepti cateva secunde.',
+      success: 'Contul tau a fost confirmat!',
+      successDesc: 'Poti inchide aceasta pagina si te poti autentifica in aplicatia Fridgy.',
+      already: 'Contul tau a fost confirmat!',
+      alreadyDesc: 'Emailul tau era deja verificat. Te poti autentifica in aplicatia Fridgy.',
+      error: 'Link invalid',
+      errorDesc: 'Linkul de verificare este invalid sau a expirat. Incearca sa soliciti un nou email de verificare din aplicatie.'
+    },
+    en: {
+      loading: 'Verifying...',
+      loadingDesc: 'Please wait a few seconds.',
+      success: 'Your account has been confirmed!',
+      successDesc: 'You can close this page and sign in to the Fridgy app.',
+      already: 'Your account has been confirmed!',
+      alreadyDesc: 'Your email was already verified. You can sign in to the Fridgy app.',
+      error: 'Invalid link',
+      errorDesc: 'The verification link is invalid or has expired. Try requesting a new verification email from the app.'
+    }
+  };
+
+  var i18n = t[lang] || t['ro'];
+  document.documentElement.lang = lang;
+  document.getElementById('txt-loading').textContent = i18n.loading;
+  document.getElementById('txt-loading-desc').textContent = i18n.loadingDesc;
+  document.getElementById('txt-success').textContent = i18n.success;
+  document.getElementById('txt-success-desc').textContent = i18n.successDesc;
+  document.getElementById('txt-already').textContent = i18n.already;
+  document.getElementById('txt-already-desc').textContent = i18n.alreadyDesc;
+  document.getElementById('txt-error').textContent = i18n.error;
+  document.getElementById('txt-error-desc').textContent = i18n.errorDesc;
 
   function show(id) {
     document.getElementById('state-loading').classList.add('hidden');
