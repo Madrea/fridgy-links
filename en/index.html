@@ -4,8 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#1f4ec5" />
-<title>Fridgy — Reduce food waste. Scan receipts. Generate recipes.</title>
+<title>Fridgy - Your smart fridge</title>
 <meta name="description" content="Fridgy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home." />
+<link rel="icon" type="image/png" href="/fridgy-logo.png" />
 
 <!-- Open Graph / social preview -->
 <meta property="og:title" content="Fridgy — Less waste, more recipes" />
@@ -105,8 +106,10 @@
   .hero-visual .frame,.shot .frame{background:none;border-radius:0;padding:0;box-shadow:none}
   .hero-visual .frame{width:100%;max-width:300px;animation:bob 6s ease-in-out infinite}
   @keyframes bob{50%{transform:translateY(-16px)}}
-  .screen{border-radius:0;overflow:visible}
+  .screen{border-radius:0;overflow:hidden;margin-bottom:-6px}
   .screen img{width:100%;display:block}
+  .shot .frame{filter:drop-shadow(0 16px 30px rgba(31,78,197,.18))}
+  .hero-visual .frame{filter:drop-shadow(0 16px 30px rgba(31,78,197,.18))}
 
   @media(max-width:900px){
     .hero-top{margin-top:30px;margin-bottom:14px}
@@ -145,12 +148,12 @@
   /* showcase / screenshots */
   .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
   .shot{display:flex;flex-direction:column;align-items:center;gap:18px}
-  .shot .frame{width:100%;max-width:260px;transition:transform .35s}
+  .shot .frame{width:100%;max-width:340px;transition:transform .35s}
   .shot:hover .frame{transform:translateY(-10px)}
   .shot h4{font-weight:800;font-size:19px}
   .shot p{color:var(--muted);font-size:14.5px;text-align:center;max-width:260px}
   @media(max-width:900px){.shots{grid-template-columns:1fr;gap:40px}
-    .shot .frame{max-width:220px;margin:0 auto}
+    .shot .frame{max-width:300px;margin:0 auto}
   }
 
   /* steps */
@@ -182,6 +185,8 @@
   .pricing-card .plan-name{font-size:22px;font-weight:800;color:var(--ink)}
   .pricing-card .plan-price{font-size:clamp(32px,4vw,42px);font-weight:800;letter-spacing:-.02em}
   .pricing-card .plan-price span{font-size:15px;font-weight:600;color:var(--muted)}
+  .pricing-card .plan-price .yearly{display:block;font-size:13px;font-weight:600;color:#888;margin-top:2px;
+    background:none;-webkit-background-clip:initial;background-clip:initial;-webkit-text-fill-color:#888;letter-spacing:normal}
   .pricing-card.premium .plan-price{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
     -webkit-background-clip:text;background-clip:text;color:transparent}
   .pricing-card .plan-features{list-style:none;display:flex;flex-direction:column;gap:14px;flex:1}
@@ -197,7 +202,7 @@
     border:1px solid rgba(31,78,197,.18)}
   .pricing-card .plan-btn.btn-premium{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
     color:#fff;box-shadow:0 10px 24px -8px rgba(31,78,197,.6)}
-  @media(max-width:600px){.pricing-wrap{grid-template-columns:1fr 1fr;gap:12px;max-width:100%;margin:0 auto}
+  @media(max-width:600px){.pricing-wrap{grid-template-columns:1fr;gap:16px;max-width:400px;margin:0 auto}
     .pricing-card{padding:20px 16px;gap:14px}
     .pricing-card .plan-name{font-size:18px}
     .pricing-card .plan-price{font-size:clamp(24px,5vw,32px)}
@@ -282,8 +287,8 @@
         <img src="/fridgy-logo.png" alt="Fridgy" />
       </a>
       <div class="nav-links">
-        <a href="#functii">Features</a>
-        <a href="#pasi">How it works</a>
+        <a href="#functii">Why Fridgy</a>
+        <a href="#planuri">Plans</a>
         <a href="#download">Download</a>
         <a href="/" class="lang-btn">RO</a>
         <a href="#download" class="nav-cta">Download free</a>
@@ -300,23 +305,23 @@
     </div>
     <div class="hero-row reveal">
       <div class="hero-text">
-        <h1>€290 thrown in the trash<br><span class="grad">every year. We fix that.</span></h1>
+        <h1>&euro;290 thrown in the trash<br><span class="grad">every year. We fix that.</span></h1>
       </div>
       <div class="hero-visual">
         <div class="glow"></div>
         <div class="frame"><div class="screen">
-            <img src="/image3.png" alt="Fridgy" />
+            <img src="/scan_en.png" alt="Fridgy" />
         </div></div>
       </div>
     </div>
     <div class="hero-bottom reveal">
-      <p class="sub">Europeans throw away an average of <strong>130 kg</strong> of food per year — the equivalent of <strong>~€290</strong> lost. Fridgy helps you scan receipts, track your fridge and cook with what you already have.</p>
-      <div class="store-row">
-        <a class="store-btn" href="#" aria-label="Google Play">
+      <p class="sub">Every European wastes around <strong>~130 kg</strong> of food per year — roughly <strong>&euro;290</strong> thrown away. Fridgy helps you organize your food and notifies you before it expires. And so nothing goes to waste, it suggests delicious recipes to put it all to good use.</p>
+      <div class="store-row" style="margin-top:28px">
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
           <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
           <span><small>Available on</small><b>Google Play</b></span>
         </a>
-        <a class="store-btn" href="#" aria-label="App Store">
+        <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
           <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
           <span><small>Download from</small><b>App Store</b></span>
         </a>
@@ -339,7 +344,7 @@
         <span class="stat-sub">Source: Eurostat, 2023</span>
       </div>
       <div class="stat-card reveal">
-        <span class="stat-number">€290</span>
+        <span class="stat-number">&euro;290</span>
         <span class="stat-label">lost / person / year</span>
         <span class="stat-sub">Money thrown in the trash</span>
       </div>
@@ -364,17 +369,18 @@
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 8h6M11 12h6M11 16h4"/></svg></div>
         <h3>Scan receipts</h3>
-        <p>Take a photo of your grocery receipt and Fridgy automatically adds the products to your digital fridge.</p>
+        <p>After shopping, take a photo of your receipt and Fridgy automatically adds the products to your digital fridge.</p>
+        <span style="display:inline-block;margin-top:12px;background:rgba(34,197,94,.12);color:#16a34a;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;">&#9889; Under 10 seconds</span>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>Reduce waste</h3>
-        <p>Get notifications before products expire, so you use them in time and stop wasting money.</p>
+        <p>See what you have, what expires soon and get notified at the right time — so you use everything before it goes bad and stop wasting money.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 1 6 6c0 2.5-1.5 4-3 5v2H9v-2c-1.5-1-3-2.5-3-5a6 6 0 0 1 6-6z"/><path d="M9 19h6M10 22h4"/></svg></div>
         <h3>Generate recipes</h3>
-        <p>Fridgy suggests recipes based on the ingredients you already have at home. Cook without buying extra.</p>
+        <p>Fridgy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste.</p>
       </div>
     </div>
   </div>
@@ -391,21 +397,21 @@
     <div class="shots">
       <div class="shot reveal">
         <div class="frame"><div class="screen">
-          <img src="/image2.png" alt="Fridgy" />
+          <img src="/fridge_en.png" alt="Fridgy" />
         </div></div>
         <h4>Your digital fridge</h4>
         <p>All products, clearly organized, with expiry dates in plain sight.</p>
       </div>
       <div class="shot reveal">
         <div class="frame"><div class="screen">
-          <img src="/image3.png" alt="Fridgy" />
+          <img src="/scan_en.png" alt="Fridgy" />
         </div></div>
         <h4>Instant scanning</h4>
         <p>One scanned receipt = fridge updated in seconds.</p>
       </div>
       <div class="shot reveal">
         <div class="frame"><div class="screen">
-          <img src="/image1.png" alt="Fridgy" />
+          <img src="/recipe_en.png" alt="Fridgy" />
         </div></div>
         <h4>Personalized recipes</h4>
         <p>Cooking ideas based on what you already have in your fridge.</p>
@@ -414,41 +420,8 @@
   </div>
 </section>
 
-<!-- ===== PASI ===== -->
-<section class="block" id="pasi" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">How it works</div>
-      <h2>Three steps to zero waste</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 8h6M11 12h6M11 16h4"/></svg>
-          <span class="n">1</span>
-        </div>
-        <h4>Scan the receipt</h4><p>After shopping, take a photo of your receipt. Products are added automatically.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/><circle cx="16" cy="16" r="2"/></svg>
-          <span class="n">2</span>
-        </div>
-        <h4>Track your fridge</h4><p>See what you have, what expires soon and get reminders at the right time.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 1 6 6c0 2.5-1.5 4-3 5v2H9v-2c-1.5-1-3-2.5-3-5a6 6 0 0 1 6-6z"/><path d="M9 19h6M10 22h4"/></svg>
-          <span class="n">3</span>
-        </div>
-        <h4>Cook with what you have</h4><p>Pick a recipe generated from your ingredients and cook without waste.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== PRICING ===== -->
-<section class="block" style="padding-top:0">
+<section class="block" id="planuri" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="tag">Plans</div>
@@ -458,20 +431,28 @@
       <div class="pricing-card reveal">
         <div class="plan-badge-slot"></div>
         <div class="plan-name">Free</div>
-        <div class="plan-price">Free</div>
+        <div class="plan-price">Free <span>&nbsp;</span><small class="yearly">&nbsp;</small></div>
         <ul class="plan-features">
-          <li><span class="check no">&#10005;</span> Receipt scans: 3 / month</li>
-          <li><span class="check no">&#10005;</span> Recipes per day: 1</li>
+          <li><span class="check yes">&#10003;</span> Receipt scans: 5 / month</li>
+          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
+          <li><span class="check no">&#10005;</span> Recipe regeneration</li>
+          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
+          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
+          <li><span class="check yes">&#10003;</span> Shared fridge</li>
         </ul>
         <a href="#download" class="plan-btn btn-free">Download free</a>
       </div>
       <div class="pricing-card premium reveal">
         <div class="plan-badge-slot"><span class="plan-badge">Most popular</span></div>
         <div class="plan-name">Premium</div>
-        <div class="plan-price">€1.99 <span>/ month</span></div>
+        <div class="plan-price">&euro;1.99 <span>/ month</span><small class="yearly">or &euro;13.99 / year · save 42%</small></div>
         <ul class="plan-features">
           <li><span class="check yes">&#10003;</span> Receipt scans: 3 / day</li>
-          <li><span class="check yes">&#10003;</span> Recipes per day: 5</li>
+          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
+          <li><span class="check yes">&#10003;</span> Recipe regeneration: 5 / day</li>
+          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
+          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
+          <li><span class="check yes">&#10003;</span> Shared fridge</li>
         </ul>
         <a href="#download" class="plan-btn btn-premium">Start Premium</a>
       </div>
@@ -486,11 +467,11 @@
       <h2>Start saving today</h2>
       <p>Download Fridgy for free and transform the way you manage your food.</p>
       <div class="store-row">
-        <a class="store-btn" href="#" aria-label="Google Play">
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
           <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
           <span><small>Available on</small><b>Google Play</b></span>
         </a>
-        <a class="store-btn" href="#" aria-label="App Store">
+        <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
           <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
           <span><small>Download from</small><b>App Store</b></span>
         </a>
