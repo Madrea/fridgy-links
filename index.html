@@ -290,6 +290,10 @@
   if(lang.startsWith('ro')) return;
   if(lang.startsWith('de')) location.replace('/de');
   else if(lang.startsWith('hu')) location.replace('/hu');
+  else if(lang.startsWith('fr')) location.replace('/fr');
+  else if(lang.startsWith('nl')) location.replace('/nl');
+  else if(lang.startsWith('da')) location.replace('/da');
+  else if(lang.startsWith('sv')) location.replace('/sv');
   else location.replace('/en');
 })();
 </script>
@@ -318,6 +322,10 @@
             <a href="/en" onclick="localStorage.setItem('fridgy-lang','en')">English</a>
             <a href="/de" onclick="localStorage.setItem('fridgy-lang','de')">Deutsch</a>
             <a href="/hu" onclick="localStorage.setItem('fridgy-lang','hu')">Magyar</a>
+            <a href="/fr" onclick="localStorage.setItem('fridgy-lang','fr')">Français</a>
+            <a href="/nl" onclick="localStorage.setItem('fridgy-lang','nl')">Nederlands</a>
+            <a href="/da" onclick="localStorage.setItem('fridgy-lang','da')">Dansk</a>
+            <a href="/sv" onclick="localStorage.setItem('fridgy-lang','sv')">Svenska</a>
           </div>
         </div>
         <a href="#download" class="nav-cta">Descarcă gratuit</a>
