@@ -74,7 +74,15 @@
     color:var(--brand-2);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
     border:1px solid rgba(31,78,197,.18);transition:background .2s}
   .lang-btn:hover{background:rgba(14,122,254,.2)}
-  @media(max-width:760px){.nav-links a:not(.nav-cta):not(.lang-btn){display:none}}
+  .lang-drop{position:relative}
+  .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:rgba(255,255,255,.95);
+    backdrop-filter:blur(14px);border:1px solid rgba(31,78,197,.12);border-radius:12px;
+    box-shadow:0 8px 24px -8px rgba(31,78,197,.2);overflow:hidden;min-width:130px;z-index:100}
+  .lang-drop:hover .lang-drop-menu{display:block}
+  .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--ink);transition:background .2s}
+  .lang-drop-menu a:hover{background:rgba(14,122,254,.08)}
+  .lang-drop-menu a.active{color:var(--primary);font-weight:700}
+  @media(max-width:760px){.nav-links a:not(.nav-cta):not(.lang-btn){display:none}.lang-drop>a:not(.lang-btn){display:none}}
 
   /* ---------- hero ---------- */
   .hero-top{margin-top:90px;margin-bottom:22px;text-align:center}
@@ -272,6 +280,18 @@
     .phone,.blob{animation:none}
   }
 </style>
+<script>
+(function(){
+  var saved = localStorage.getItem('fridgy-lang');
+  if(saved && saved !== 'ro'){ location.replace('/' + saved); return; }
+  if(saved) return;
+  var lang = (navigator.language || 'en').toLowerCase();
+  if(lang.startsWith('ro')) return;
+  if(lang.startsWith('de')) location.replace('/de');
+  else if(lang.startsWith('hu')) location.replace('/hu');
+  else location.replace('/en');
+})();
+</script>
 </head>
 <body>
 
@@ -290,7 +310,15 @@
         <a href="#functii">De ce Fridgy</a>
         <a href="#planuri">Planuri</a>
         <a href="#download">Download</a>
-        <a href="/en" class="lang-btn">EN</a>
+        <div class="lang-drop">
+          <span class="lang-btn">RO &#9662;</span>
+          <div class="lang-drop-menu">
+            <a href="/" class="active">Romana</a>
+            <a href="/en">English</a>
+            <a href="/de">Deutsch</a>
+            <a href="/hu">Magyar</a>
+          </div>
+        </div>
         <a href="#download" class="nav-cta">Descarca gratuit</a>
       </div>
     </nav>
@@ -516,6 +544,7 @@
 </footer>
 
 <script>
+  localStorage.setItem('fridgy-lang','ro');
   document.getElementById('yr').textContent = new Date().getFullYear();
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });

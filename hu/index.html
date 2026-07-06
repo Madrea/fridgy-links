@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#1f4ec5" />
-<title>Fridgy - Your smart fridge</title>
-<meta name="description" content="Fridgy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home." />
+<title>Fridgy - Az okos hűtőd</title>
+<meta name="description" content="Szkenneld a blokkot, rendezd a hűtőd, csökkentsd a pazarlást, spórolj pénzt." />
 <link rel="icon" type="image/png" href="/fridgy-logo.png" />
 
 <!-- Open Graph / social preview -->
-<meta property="og:title" content="Fridgy — Less waste, more recipes" />
-<meta property="og:description" content="Scan receipts, organize your fridge and cook with what you already have at home." />
+<meta property="og:title" content="Fridgy — Kevesebb pazarlás, több recept" />
+<meta property="og:description" content="Szkennelj blokkokat, rendezd a hűtőd és főzz abból, amid már otthon van." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fridgy.org" />
+<meta property="og:url" content="https://fridgy.org/hu" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,6 @@
   section{position:relative;z-index:1}
   .wrap{width:min(1160px,92vw);margin:0 auto}
 
-  /* ---------- fundal mesh animat ---------- */
   .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
   .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
   .b1{width:560px;height:560px;background:var(--brand-1);top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
@@ -56,7 +55,6 @@
   @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
   @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
 
-  /* ---------- navbar ---------- */
   header{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);
     background:rgba(238,245,254,.7);border-bottom:1px solid rgba(31,78,197,.08)}
   nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
@@ -72,7 +70,7 @@
   .nav-cta:hover{transform:translateY(-2px)}
   .lang-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(14,122,254,.1);
     color:var(--brand-2);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
-    border:1px solid rgba(31,78,197,.18);transition:background .2s}
+    border:1px solid rgba(31,78,197,.18);transition:background .2s;cursor:pointer}
   .lang-btn:hover{background:rgba(14,122,254,.2)}
   .lang-drop{position:relative}
   .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:rgba(255,255,255,.95);
@@ -84,7 +82,6 @@
   .lang-drop-menu a.active{color:var(--primary);font-weight:700}
   @media(max-width:760px){.nav-links a:not(.nav-cta):not(.lang-btn){display:none}.lang-drop>a:not(.lang-btn){display:none}}
 
-  /* ---------- hero ---------- */
   .hero-top{margin-top:90px;margin-bottom:22px;text-align:center}
   .hero-row{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
   .hero-bottom{margin-top:22px;padding-bottom:70px;text-align:center}
@@ -108,7 +105,6 @@
   .trust{margin-top:26px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px;font-weight:600}
   .stars{color:#f5b400;letter-spacing:2px}
 
-  /* ---------- phone hero mockup ---------- */
   .hero-visual{display:flex;justify-content:center;position:relative}
   .glow{display:none}
   .hero-visual .frame,.shot .frame{background:none;border-radius:0;padding:0;box-shadow:none}
@@ -133,14 +129,12 @@
     .store-btn svg{width:20px;height:20px}
   }
 
-  /* ---------- sectiuni ---------- */
   .sec-head{text-align:center;max-width:640px;margin:0 auto 56px}
   .sec-head .tag{color:var(--primary);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.12em}
   .sec-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;letter-spacing:-.02em;margin:14px 0 12px}
   .sec-head p{color:var(--muted);font-size:17px}
   .block{padding:96px 0}
 
-  /* features */
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .feat{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
     border-radius:var(--radius);padding:34px 30px;transition:transform .3s,box-shadow .3s}
@@ -153,7 +147,6 @@
   .feat p{color:var(--muted);font-size:15.5px}
   @media(max-width:900px){.grid3{grid-template-columns:1fr}}
 
-  /* showcase / screenshots */
   .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
   .shot{display:flex;flex-direction:column;align-items:center;gap:18px}
   .shot .frame{width:100%;max-width:340px;transition:transform .35s}
@@ -164,7 +157,6 @@
     .shot .frame{max-width:300px;margin:0 auto}
   }
 
-  /* steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s}
   .step{position:relative;padding-left:8px;text-align:center}
   .step .step-icon{position:relative;width:68px;height:68px;border-radius:20px;display:flex;align-items:center;justify-content:center;
@@ -178,7 +170,6 @@
   .step p{color:var(--muted);font-size:15px}
   @media(max-width:900px){.steps{grid-template-columns:1fr;gap:34px}}
 
-  /* pricing table */
   .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;max-width:720px;margin:0 auto;gap:24px}
   .pricing-card{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
     border-radius:var(--radius);padding:36px 30px;display:flex;flex-direction:column;gap:20px;
@@ -219,7 +210,6 @@
     .pricing-card .plan-badge{font-size:11px;padding:4px 10px}
   }
 
-  /* CTA band */
   .cta{background:linear-gradient(125deg,var(--brand-1),var(--brand-2) 55%,var(--brand-deep));
     border-radius:40px;padding:70px 50px;text-align:center;color:#fff;position:relative;overflow:hidden;
     box-shadow:var(--shadow)}
@@ -230,7 +220,6 @@
   .cta .store-row{justify-content:center;position:relative}
   .cta .store-btn{background:#fff;color:var(--ink)}
 
-  /* footer */
   footer{padding:70px 0 50px;margin-top:90px;border-top:1px solid rgba(31,78,197,.1)}
   .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
   .foot .logo{font-size:24px;margin-bottom:14px}
@@ -254,7 +243,6 @@
     .copy{justify-content:center;text-align:center;flex-direction:column;align-items:center}
   }
 
-  /* stats row */
   .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .stat-card{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
     border-radius:var(--radius);padding:42px 28px;text-align:center;display:flex;flex-direction:column;
@@ -269,10 +257,8 @@
     .stat-card{padding:20px 16px}
   }
 
-  /* anchor offset for sticky header */
   [id]{scroll-margin-top:120px}
 
-  /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){
@@ -283,7 +269,6 @@
 </head>
 <body>
 
-<!-- ===== fundal mesh ===== -->
 <div class="mesh" aria-hidden="true">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 </div>
@@ -291,23 +276,23 @@
 <header>
   <div class="wrap">
     <nav>
-      <a href="/" class="logo" aria-label="Fridgy">
+      <a href="/hu" class="logo" aria-label="Fridgy">
         <img src="/fridgy-logo.png" alt="Fridgy" />
       </a>
       <div class="nav-links">
-        <a href="#functii">Why Fridgy</a>
-        <a href="#planuri">Plans</a>
-        <a href="#download">Download</a>
+        <a href="#funkciok">Miért Fridgy</a>
+        <a href="#csomagok">Csomagok</a>
+        <a href="#download">Letöltés</a>
         <div class="lang-drop">
-          <span class="lang-btn">EN &#9662;</span>
+          <span class="lang-btn">HU &#9662;</span>
           <div class="lang-drop-menu">
             <a href="/">Romana</a>
-            <a href="/en" class="active">English</a>
+            <a href="/en">English</a>
             <a href="/de">Deutsch</a>
-            <a href="/hu">Magyar</a>
+            <a href="/hu" class="active">Magyar</a>
           </div>
         </div>
-        <a href="#download" class="nav-cta">Download free</a>
+        <a href="#download" class="nav-cta">Ingyenes letöltés</a>
       </div>
     </nav>
   </div>
@@ -317,11 +302,11 @@
 <section class="block" style="padding-top:0;padding-bottom:0">
   <div class="wrap">
     <div class="hero-top reveal">
-      <span class="pill">Your smart fridge</span>
+      <span class="pill">Az okos hűtőd</span>
     </div>
     <div class="hero-row reveal">
       <div class="hero-text">
-        <h1>&euro;290 thrown in the trash<br><span class="grad">every year. We fix that.</span></h1>
+        <h1>Évente 130 kg étel a kukában.<br><span class="grad">Mi segítünk megállítani.</span></h1>
       </div>
       <div class="hero-visual">
         <div class="glow"></div>
@@ -331,15 +316,15 @@
       </div>
     </div>
     <div class="hero-bottom reveal">
-      <p class="sub">Every European wastes around <strong>~130 kg</strong> of food per year — roughly <strong>&euro;290</strong> thrown away. Fridgy helps you organize your food and notifies you before it expires. And so nothing goes to waste, it suggests delicious recipes to put it all to good use.</p>
+      <p class="sub">Minden európai évente <strong>~130 kg</strong> élelmiszert pazarol el — ez körülbelül <strong>&euro;290</strong> kidobott pénz. A Fridgy segít rendszerezni az ételeidet és időben figyelmeztet, mielőtt lejárnának. És hogy semmi ne menjen kárba, finom recepteket javasol.</p>
       <div class="store-row" style="margin-top:28px">
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
           <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
-          <span><small>Available on</small><b>Google Play</b></span>
+          <span><small>Elérhető a</small><b>Google Play</b></span>
         </a>
         <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
           <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
-          <span><small>Download from</small><b>App Store</b></span>
+          <span><small>Letöltés az</small><b>App Store</b></span>
         </a>
       </div>
     </div>
@@ -350,53 +335,53 @@
 <section class="block" style="padding-top:20px;padding-bottom:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="tag">The numbers speak</div>
-      <h2>Food waste in numbers</h2>
+      <div class="tag">A számok beszélnek</div>
+      <h2>Élelmiszerpazarlás számokban</h2>
     </div>
     <div class="stats-row">
       <div class="stat-card reveal">
         <span class="stat-number">130 kg</span>
-        <span class="stat-label">waste / person / year</span>
-        <span class="stat-sub">Source: Eurostat, 2023</span>
+        <span class="stat-label">pazarlás / fő / év</span>
+        <span class="stat-sub">Forrás: Eurostat, 2023</span>
       </div>
       <div class="stat-card reveal">
         <span class="stat-number">&euro;290</span>
-        <span class="stat-label">lost / person / year</span>
-        <span class="stat-sub">Money thrown in the trash</span>
+        <span class="stat-label">veszteség / fő / év</span>
+        <span class="stat-sub">Kidobott pénz</span>
       </div>
       <div class="stat-card reveal">
         <span class="stat-number">53%</span>
-        <span class="stat-label">comes from households</span>
-        <span class="stat-sub">You can make a difference</span>
+        <span class="stat-label">háztartásokból származik</span>
+        <span class="stat-sub">Te is tehetsz ellene</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FUNCTII ===== -->
-<section class="block" id="functii">
+<!-- ===== FUNKCIOK ===== -->
+<section class="block" id="funkciok">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="tag">Why Fridgy</div>
-      <h2>Everything you need to stop throwing away food</h2>
-      <p>Three simple features that change the way you shop and cook.</p>
+      <div class="tag">Miért Fridgy</div>
+      <h2>Minden, amire szükséged van, hogy ne dobj ki több ételt</h2>
+      <p>Három egyszerű funkció, amely megváltoztatja a vásárlási és főzési szokásaidat.</p>
     </div>
     <div class="grid3">
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 8h6M11 12h6M11 16h4"/></svg></div>
-        <h3>Scan receipts</h3>
-        <p>After shopping, take a photo of your receipt and Fridgy automatically adds the products to your digital fridge.</p>
-        <span style="display:inline-block;margin-top:12px;background:rgba(34,197,94,.12);color:#16a34a;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;">&#9889; Under 10 seconds</span>
+        <h3>Blokk szkennelés</h3>
+        <p>Vásárlás után fotózd le a blokkot és a Fridgy automatikusan hozzáadja a termékeket a digitális hűtődhöz.</p>
+        <span style="display:inline-block;margin-top:12px;background:rgba(34,197,94,.12);color:#16a34a;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;">&#9889; 10 másodperc alatt</span>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Reduce waste</h3>
-        <p>See what you have, what expires soon and get notified at the right time — so you use everything before it goes bad and stop wasting money.</p>
+        <h3>Pazarlás csökkentése</h3>
+        <p>Lásd mit tartasz, mi jár le hamarosan és kapj értesítéseket a megfelelő időben — hogy mindent időben felhasználj és ne dobd ki a pénzed.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 1 6 6c0 2.5-1.5 4-3 5v2H9v-2c-1.5-1-3-2.5-3-5a6 6 0 0 1 6-6z"/><path d="M9 19h6M10 22h4"/></svg></div>
-        <h3>Generate recipes</h3>
-        <p>Fridgy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste.</p>
+        <h3>Receptek generálása</h3>
+        <p>A Fridgy recepteket javasol a már otthon lévő hozzávalókból. Válassz egyet és főzz pazarlás nélkül.</p>
       </div>
     </div>
   </div>
@@ -406,71 +391,71 @@
 <section class="block" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="tag">See the app</div>
-      <h2>Modern, fast, intuitive</h2>
-      <p>An experience designed down to the smallest detail.</p>
+      <div class="tag">Nézd meg az appot</div>
+      <h2>Modern, gyors, intuitív</h2>
+      <p>A legapróbb részletekig átgondolt élmény.</p>
     </div>
     <div class="shots">
       <div class="shot reveal">
         <div class="frame"><div class="screen">
           <img src="/fridge_en.png" alt="Fridgy" />
         </div></div>
-        <h4>Your digital fridge</h4>
-        <p>All products, clearly organized, with expiry dates in plain sight.</p>
+        <h4>Digitális hűtőd</h4>
+        <p>Minden termék, áttekinthetően rendezve, lejárati dátumokkal.</p>
       </div>
       <div class="shot reveal">
         <div class="frame"><div class="screen">
           <img src="/scan_en.png" alt="Fridgy" />
         </div></div>
-        <h4>Instant scanning</h4>
-        <p>One scanned receipt = fridge updated in seconds.</p>
+        <h4>Azonnali szkennelés</h4>
+        <p>Egy szkennelt blokk = hűtő frissítve másodpercek alatt.</p>
       </div>
       <div class="shot reveal">
         <div class="frame"><div class="screen">
           <img src="/recipe_en.png" alt="Fridgy" />
         </div></div>
-        <h4>Personalized recipes</h4>
-        <p>Cooking ideas based on what you already have in your fridge.</p>
+        <h4>Személyre szabott receptek</h4>
+        <p>Főzési ötletek a hűtődben lévő hozzávalók alapján.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== PRICING ===== -->
-<section class="block" id="planuri" style="padding-top:0">
+<section class="block" id="csomagok" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="tag">Plans</div>
+      <div class="tag">Csomagok</div>
       <h2>Free vs Premium</h2>
     </div>
     <div class="pricing-wrap">
       <div class="pricing-card reveal">
         <div class="plan-badge-slot"></div>
         <div class="plan-name">Free</div>
-        <div class="plan-price">Free <span>&nbsp;</span><small class="yearly">&nbsp;</small></div>
+        <div class="plan-price">Ingyenes <span>&nbsp;</span><small class="yearly">&nbsp;</small></div>
         <ul class="plan-features">
-          <li><span class="check yes">&#10003;</span> Receipt scans: 5 / month</li>
-          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
-          <li><span class="check no">&#10005;</span> Recipe regeneration</li>
-          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
-          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
-          <li><span class="check yes">&#10003;</span> Shared fridge</li>
+          <li><span class="check yes">&#10003;</span> Blokk szkennelés: 5 / hónap</li>
+          <li><span class="check yes">&#10003;</span> Receptek naponta: 3</li>
+          <li><span class="check no">&#10005;</span> Recept újragenerálás</li>
+          <li><span class="check yes">&#10003;</span> Több hűtő</li>
+          <li><span class="check yes">&#10003;</span> Haladó statisztikák</li>
+          <li><span class="check yes">&#10003;</span> Megosztott hűtő</li>
         </ul>
-        <a href="#download" class="plan-btn btn-free">Download free</a>
+        <a href="#download" class="plan-btn btn-free">Ingyenes letöltés</a>
       </div>
       <div class="pricing-card premium reveal">
-        <div class="plan-badge-slot"><span class="plan-badge">Most popular</span></div>
+        <div class="plan-badge-slot"><span class="plan-badge">Legnépszerűbb</span></div>
         <div class="plan-name">Premium</div>
-        <div class="plan-price">&euro;2.99 <span>/ month</span><small class="yearly">or &euro;15.99 / year · save 55%</small></div>
+        <div class="plan-price">&euro;2,99 <span>/ hónap</span><small class="yearly">vagy &euro;15,99 / év · spórolj 55%</small></div>
         <ul class="plan-features">
-          <li><span class="check yes">&#10003;</span> Receipt scans: Unlimited</li>
-          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
-          <li><span class="check yes">&#10003;</span> Recipe regeneration: 5 / day</li>
-          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
-          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
-          <li><span class="check yes">&#10003;</span> Shared fridge</li>
+          <li><span class="check yes">&#10003;</span> Blokk szkennelés: Korlátlan</li>
+          <li><span class="check yes">&#10003;</span> Receptek naponta: 3</li>
+          <li><span class="check yes">&#10003;</span> Recept újragenerálás: 5 / nap</li>
+          <li><span class="check yes">&#10003;</span> Több hűtő</li>
+          <li><span class="check yes">&#10003;</span> Haladó statisztikák</li>
+          <li><span class="check yes">&#10003;</span> Megosztott hűtő</li>
         </ul>
-        <a href="#download" class="plan-btn btn-premium">Start Premium</a>
+        <a href="#download" class="plan-btn btn-premium">Premium indítása</a>
       </div>
     </div>
   </div>
@@ -480,16 +465,16 @@
 <section class="block" id="download" style="padding-top:0">
   <div class="wrap">
     <div class="cta reveal">
-      <h2>Start saving today</h2>
-      <p>Download Fridgy for free and transform the way you manage your food.</p>
+      <h2>Kezdj el spórolni ma</h2>
+      <p>Töltsd le a Fridgy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat.</p>
       <div class="store-row">
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
           <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
-          <span><small>Available on</small><b>Google Play</b></span>
+          <span><small>Elérhető a</small><b>Google Play</b></span>
         </a>
         <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
           <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
-          <span><small>Download from</small><b>App Store</b></span>
+          <span><small>Letöltés az</small><b>App Store</b></span>
         </a>
       </div>
     </div>
@@ -504,35 +489,34 @@
         <div class="logo">
           <img src="/fridgy-logo.png" alt="Fridgy" />
         </div>
-        <p>Reduce food waste. Scan receipts. Generate recipes from what you already have at home.</p>
+        <p>Csökkentsd az élelmiszerpazarlást. Szkennelj blokkokat. Generálj recepteket abból, amid már otthon van.</p>
       </div>
       <div class="foot-links reveal">
         <div class="foot-col">
-          <h5>Product</h5>
-          <a href="#functii">Features</a>
-          <a href="#pasi">How it works</a>
-          <a href="#download">Download</a>
+          <h5>Termék</h5>
+          <a href="#funkciok">Funkciók</a>
+          <a href="#download">Letöltés</a>
         </div>
         <div class="foot-col">
-          <h5>Legal</h5>
-          <a href="https://api.fridgy.org/privacy-policy?lang=en">Privacy Policy</a>
-          <a href="https://api.fridgy.org/terms-and-conditions?lang=en">Terms &amp; Conditions</a>
+          <h5>Jogi</h5>
+          <a href="https://api.fridgy.org/privacy-policy?lang=hu">Adatvédelem</a>
+          <a href="https://api.fridgy.org/terms-and-conditions?lang=hu">Felhasználási feltételek</a>
         </div>
         <div class="foot-col">
-          <h5>Contact</h5>
+          <h5>Kapcsolat</h5>
           <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>
         </div>
       </div>
     </div>
     <div class="copy">
-      <span>&copy; <span id="yr"></span> Fridgy. All rights reserved.</span>
-      <span>Made with &#x1F499; in Romania</span>
+      <span>&copy; <span id="yr"></span> Fridgy. Minden jog fenntartva.</span>
+      <span>Szeretettel készült &#x1F499; Romániában</span>
     </div>
   </div>
 </footer>
 
 <script>
-  localStorage.setItem('fridgy-lang','en');
+  localStorage.setItem('fridgy-lang','hu');
   document.getElementById('yr').textContent = new Date().getFullYear();
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
