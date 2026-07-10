@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Fridgy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #eef5fe;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+        .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+        .b1{width:560px;height:560px;background:#6daeff;top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
+        .b2{width:520px;height:520px;background:#1f4ec5;top:240px;right:-180px;animation:float2 22s ease-in-out infinite}
+        .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:float1 26s ease-in-out infinite}
+        @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
+        @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,.85);
+            backdrop-filter: blur(14px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+        .last-updated {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        .warning {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning p {
+            margin-bottom: 10px;
+            color: #92400e;
+        }
+        .warning ul {
+            margin-bottom: 0;
+        }
+        .warning li {
+            color: #92400e;
+        }
+        .contact-box {
+            background-color: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .contact-box p {
+            color: #166534;
+            margin-bottom: 5px;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .company-info {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .company-info p {
+            margin-bottom: 5px;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 0;
+        }
+        .header-row h1 {
+            flex: 1;
+            min-width: 0;
+        }
+        .lang-switcher select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 32px 8px 12px;
+            font-size: 0.9rem;
+            color: #2d3748;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5568' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            white-space: nowrap;
+        }
+        .lang-switcher select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+        .top-lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+        }
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="mesh" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="container">
+
+    <div class="top-lang-switcher">
+        <div class="lang-switcher">
+            <select id="lang-select" onchange="switchLang(this.value)">
+                <option value="ro">Română</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="hu">Magyar</option>
+                <option value="fr">Français</option>
+                <option value="nl">Nederlands</option>
+                <option value="da">Dansk</option>
+                <option value="sv">Svenska</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- ROMANIAN -->
+    <div class="content" data-lang="ro" style="display:none">
+        <div class="header-row">
+            <h1>Politica de Confidentialitate - Fridgy</h1>
+        </div>
+        <p class="last-updated">Ultima actualizare: 20 mai 2026</p>
+
+        <p>Aceasta Politica de Confidentialitate descrie modul in care aplicatia Fridgy colecteaza, utilizeaza si protejeaza datele cu caracter personal ale utilizatorilor sai.</p>
+        <p>Prin utilizarea aplicatiei Fridgy, sunteti de acord cu practicile descrise in aceasta politica.</p>
+
+        <h2>1. Cine suntem</h2>
+        <p>Aplicatia Fridgy este operata de:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Email de contact: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>In sensul legislatiei privind protectia datelor cu caracter personal, noi suntem operatorul de date.</p>
+
+        <h2>2. Ce date colectam</h2>
+        <p>Colectam doar datele strict necesare pentru functionarea aplicatiei.</p>
+
+        <h3>2.1. Date de cont</h3>
+        <ul>
+            <li>adresa de email</li>
+            <li>nume de utilizator sau nume afisat</li>
+            <li>metoda de autentificare (email/parola sau cont Google)</li>
+        </ul>
+
+        <h3>2.2. Date introduse de utilizator in aplicatie</h3>
+        <ul>
+            <li>produse adaugate in aplicatie</li>
+            <li>date de expirare ale produselor</li>
+            <li>setari ale aplicatiei (limba, preferinte de notificare)</li>
+        </ul>
+
+        <h3>2.3. Date tehnice</h3>
+        <ul>
+            <li>token-uri pentru notificari push</li>
+            <li>identificatori tehnici necesari functionarii aplicatiei</li>
+            <li>date despre utilizarea aplicatiei (ecrane vizitate, actiuni efectuate)</li>
+            <li>inregistrari ale sesiunilor de utilizare (interactiunile cu interfata, fara inregistrarea datelor sensibile precum parole sau date de plata)</li>
+            <li>informatii despre dispozitiv (model, sistem de operare, versiune aplicatie)</li>
+            <li>limba si tara dispozitivului</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Nu colectam date sensibile, precum:</strong></p>
+            <ul>
+                <li>date medicale</li>
+                <li>date de card sau bancare</li>
+                <li>date biometrice</li>
+                <li>locatie precisa</li>
+            </ul>
+            <p>Preturile produselor introduse de utilizator sunt stocate in contul sau si nu sunt partajate cu terti.</p>
+        </div>
+
+        <h2>3. Scopul prelucrarii datelor</h2>
+        <p>Datele colectate sunt utilizate exclusiv pentru:</p>
+        <ul>
+            <li>crearea si administrarea contului de utilizator</li>
+            <li>furnizarea functionalitatilor principale ale aplicatiei</li>
+            <li>salvarea si gestionarea produselor utilizatorului</li>
+            <li>trimiterea notificarilor legate de expirarea produselor</li>
+            <li>functionarea tehnica si securitatea aplicatiei</li>
+            <li>imbunatatirea experientei utilizatorului</li>
+        </ul>
+
+        <h2>4. Temeiul legal al prelucrarii</h2>
+        <p>Datele cu caracter personal sunt prelucrate in baza urmatoarelor temeiuri legale:</p>
+        <ul>
+            <li>executarea serviciului furnizat prin aplicatia Fridgy</li>
+            <li>consimtamantul utilizatorului</li>
+            <li>interesul legitim de a asigura securitatea, stabilitatea si buna functionare a aplicatiei</li>
+        </ul>
+        <p>Atunci cand prelucrarea se bazeaza pe consimtamant, utilizatorul isi poate retrage consimtamantul in orice moment, fara a afecta legalitatea prelucrarii efectuate anterior retragerii acestuia.</p>
+
+        <h2>5. Stocarea si securitatea datelor</h2>
+        <p>Datele cu caracter personal sunt stocate pe servere securizate si sunt protejate prin:</p>
+        <ul>
+            <li>acces restrictionat</li>
+            <li>masuri tehnice si organizatorice adecvate</li>
+            <li>comunicare criptata (HTTPS)</li>
+        </ul>
+        <p>Depunem eforturi rezonabile pentru a proteja datele personale impotriva accesului neautorizat, pierderii, distrugerii sau divulgarii acestora.</p>
+
+        <h2>6. Partajarea datelor</h2>
+        <p>Nu vindem, nu inchiriem si nu transferam datele personale ale utilizatorilor catre terti in scopuri comerciale.</p>
+        <p>Datele pot fi prelucrate de furnizori de servicii de incredere exclusiv in scopuri tehnice, cum ar fi:</p>
+        <ul>
+            <li>servicii de gazduire (hosting)</li>
+            <li>servicii de livrare a notificarilor push (Expo, Apple, Google)</li>
+            <li>servicii AI de extragere text (Google Cloud Vision, Google Gemini)</li>
+            <li>servicii de procesare plati (RevenueCat, Apple, Google)</li>
+            <li>servicii de analiza si statistici de utilizare (Firebase Analytics de la Google, PostHog)</li>
+            <li>servicii de raportare a erorilor si performantei (Firebase Crashlytics)</li>
+        </ul>
+        <p>Imaginile bonurilor fiscale sunt procesate prin servicii AI (Google Cloud Vision, Google Gemini) exclusiv pentru extragerea textului. Imaginile nu sunt stocate permanent pe serverele noastre.</p>
+        <p>Platile pentru abonamentul Premium sunt procesate prin RevenueCat si Apple/Google. Nu avem acces la datele cardului tau.</p>
+        <p>Acesti furnizori au acces doar la datele strict necesare pentru furnizarea serviciilor respective si sunt obligati sa respecte confidentialitatea datelor.</p>
+
+        <h2>6.1. Analytics si inregistrarea sesiunilor</h2>
+        <p>Pentru a intelege cum este utilizata aplicatia si pentru a o imbunatati continuu, folosim doua servicii de analiza:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Colecteaza date anonime despre utilizarea aplicatiei:</p>
+        <ul>
+            <li>ecranele vizitate si actiunile efectuate</li>
+            <li>frecventa de utilizare a functionalitatilor</li>
+            <li>rapoarte de eroare si performanta</li>
+            <li>informatii tehnice despre dispozitiv</li>
+        </ul>
+        <p>Datele sunt stocate pe infrastructura Google Cloud in Uniunea Europeana.</p>
+        <p>Politica de confidentialitate Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Colecteaza date despre interactiunea utilizatorului cu aplicatia, inclusiv inregistrari ale sesiunilor de utilizare. Inregistrarile sunt similare unor materiale video care arata navigarea prin aplicatie, exclusiv interfata aplicatiei Fridgy.</p>
+        <p>Inregistrarile NU contin:</p>
+        <ul>
+            <li>continutul campurilor de parola (mascat automat)</li>
+            <li>date de plata (procesate de Apple/Google in dialoguri native, in afara aplicatiei)</li>
+            <li>continutul altor aplicatii de pe dispozitiv</li>
+            <li>imagini din camera sau galerie in afara contextului aplicatiei</li>
+        </ul>
+        <p>Doar aproximativ 25% din sesiuni sunt inregistrate, selectate aleator, pentru a respecta volumul de date colectate.</p>
+        <p>Datele sunt stocate pe infrastructura PostHog Cloud in Uniunea Europeana (Frankfurt, Germania).</p>
+        <p>Politica de confidentialitate PostHog: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Dezactivare</h3>
+        <p>Utilizatorii pot solicita oprirea colectarii datelor de analiza si a inregistrarii sesiunilor contactandu-ne la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vom procesa cererea in maxim 30 de zile, conform GDPR.</p>
+
+        <h2>7. Transferuri de date in afara Uniunii Europene</h2>
+        <p>Datele cu caracter personal sunt stocate, in principal, in Uniunea Europeana. Furnizorii nostri de servicii (Firebase, PostHog, RevenueCat) folosesc infrastructura UE pentru stocarea principala a datelor.</p>
+        <p>In situatii limitate, anumite date tehnice pot fi prelucrate de serviciile partenere in afara UE (de exemplu, pentru anumite operatiuni ale Google sau Apple). In astfel de cazuri, ne asiguram ca sunt aplicate garantii adecvate pentru protectia datelor, conform Standard Contractual Clauses (SCC) sau alte mecanisme prevazute de GDPR.</p>
+
+        <h2>8. Notificari push</h2>
+        <p>Aplicatia Fridgy poate trimite notificari push legate de produsele utilizatorului si datele de expirare.</p>
+        <p>Notificarile:</p>
+        <ul>
+            <li>sunt optionale</li>
+            <li>pot fi dezactivate oricand din setarile aplicatiei sau ale dispozitivului</li>
+        </ul>
+
+        <h2>9. Perioada de pastrare a datelor</h2>
+        <p>Datele cu caracter personal sunt pastrate:</p>
+        <ul>
+            <li>pe durata existentei contului de utilizator</li>
+            <li>pana cand utilizatorul isi sterge contul</li>
+        </ul>
+        <p>Dupa stergerea contului, datele sunt eliminate permanent din sistemele noastre, cu exceptia situatiilor in care legislatia aplicabila impune pastrarea anumitor informatii pentru o perioada determinata.</p>
+
+        <h2>10. Drepturile utilizatorilor</h2>
+        <p>Conform legislatiei privind protectia datelor cu caracter personal, utilizatorii beneficiaza de urmatoarele drepturi:</p>
+        <ul>
+            <li>dreptul de acces la datele lor</li>
+            <li>dreptul de rectificare a datelor</li>
+            <li>dreptul de stergere a contului si a datelor asociate</li>
+            <li>dreptul de retragere a consimtamantului</li>
+            <li>dreptul de a solicita informatii privind prelucrarea datelor</li>
+        </ul>
+        <p>Pentru exercitarea acestor drepturi, ne puteti contacta la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Utilizatorii au, de asemenea, dreptul de a depune o plangere la autoritatea competenta in materie de protectia datelor:</p>
+        <div class="company-info">
+            <p><strong>Autoritatea Nationala de Supraveghere a Prelucrarii Datelor cu Caracter Personal (ANSPDCP)</strong></p>
+            <p>Website: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Stergerea contului</h2>
+        <p>Utilizatorii isi pot sterge contul direct din aplicatie, din sectiunea de setari.</p>
+        <p>Prin stergerea contului:</p>
+        <ul>
+            <li>toate datele personale asociate sunt eliminate permanent</li>
+            <li>accesul la aplicatie este revocat</li>
+        </ul>
+
+        <h2>12. Modificari ale politicii de confidentialitate</h2>
+        <p>Ne rezervam dreptul de a actualiza aceasta Politica de Confidentialitate.</p>
+        <p>In cazul modificarilor semnificative, utilizatorii vor fi informati prin aplicatie sau prin alte mijloace adecvate.</p>
+        <p>Data ultimei actualizari va fi afisata in partea de sus a documentului.</p>
+
+        <h2>13. Contact</h2>
+        <p>Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau de datele cu caracter personal, ne puteti contacta la:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="content" data-lang="en" style="display:none">
+        <div class="header-row">
+            <h1>Privacy Policy - Fridgy</h1>
+        </div>
+        <p class="last-updated">Last updated: May 20, 2026</p>
+
+        <p>This Privacy Policy describes how the Fridgy application collects, uses, and protects the personal data of its users.</p>
+        <p>By using the Fridgy application, you agree to the practices described in this policy.</p>
+
+        <h2>1. Who we are</h2>
+        <p>The Fridgy application is operated by:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Contact email: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>For the purposes of data protection legislation, we are the data controller.</p>
+
+        <h2>2. What data we collect</h2>
+        <p>We collect only the data strictly necessary for the functioning of the application.</p>
+
+        <h3>2.1. Account data</h3>
+        <ul>
+            <li>email address</li>
+            <li>username or display name</li>
+            <li>authentication method (email/password or Google account)</li>
+        </ul>
+
+        <h3>2.2. Data entered by the user in the application</h3>
+        <ul>
+            <li>products added to the application</li>
+            <li>product expiration dates</li>
+            <li>application settings (language, notification preferences)</li>
+        </ul>
+
+        <h3>2.3. Technical data</h3>
+        <ul>
+            <li>tokens for push notifications</li>
+            <li>technical identifiers required for the functioning of the application</li>
+            <li>application usage data (screens visited, actions performed)</li>
+            <li>session recordings of usage (interface interactions, without recording sensitive data such as passwords or payment details)</li>
+            <li>device information (model, operating system, application version)</li>
+            <li>device language and country</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>We do not collect sensitive data such as:</strong></p>
+            <ul>
+                <li>medical data</li>
+                <li>credit card or banking data</li>
+                <li>biometric data</li>
+                <li>precise location</li>
+            </ul>
+            <p>Product prices entered by the user are stored within their account and are not shared with third parties.</p>
+        </div>
+
+        <h2>3. Purpose of data processing</h2>
+        <p>The data collected is used exclusively for:</p>
+        <ul>
+            <li>creating and managing the user account</li>
+            <li>providing the core functionalities of the application</li>
+            <li>storing and managing the user's products</li>
+            <li>sending notifications regarding product expiration</li>
+            <li>technical functioning and security of the application</li>
+            <li>improving the user experience</li>
+        </ul>
+
+        <h2>4. Legal basis for processing</h2>
+        <p>Personal data is processed on the following legal grounds:</p>
+        <ul>
+            <li>performance of the service provided through the Fridgy application</li>
+            <li>user consent</li>
+            <li>legitimate interest in ensuring the security, stability, and proper functioning of the application</li>
+        </ul>
+        <p>Where processing is based on consent, the user may withdraw consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal.</p>
+
+        <h2>5. Data storage and security</h2>
+        <p>Personal data is stored on secure servers and protected through:</p>
+        <ul>
+            <li>restricted access</li>
+            <li>appropriate technical and organizational measures</li>
+            <li>encrypted communication (HTTPS)</li>
+        </ul>
+        <p>We make reasonable efforts to protect personal data against unauthorized access, loss, destruction, or disclosure.</p>
+
+        <h2>6. Data sharing</h2>
+        <p>We do not sell, rent, or transfer users' personal data to third parties for commercial purposes.</p>
+        <p>Data may be processed by trusted service providers solely for technical purposes such as:</p>
+        <ul>
+            <li>hosting services</li>
+            <li>push notification delivery services (Expo, Apple, Google)</li>
+            <li>AI-based text extraction services (Google Cloud Vision, Google Gemini)</li>
+            <li>payment processing services (RevenueCat, Apple, Google)</li>
+            <li>usage analytics and statistics services (Firebase Analytics by Google, PostHog)</li>
+            <li>error and performance reporting services (Firebase Crashlytics)</li>
+        </ul>
+        <p>Receipt images are processed through AI services (Google Cloud Vision, Google Gemini) exclusively for text extraction. Images are not permanently stored on our servers.</p>
+        <p>Premium subscription payments are processed through RevenueCat and Apple/Google. We do not have access to your card details.</p>
+        <p>These providers have access only to the data strictly necessary to provide their services and are required to maintain data confidentiality.</p>
+
+        <h2>6.1. Analytics and session recording</h2>
+        <p>To understand how the application is used and to continuously improve it, we use two analytics services:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Collects anonymous data about application usage:</p>
+        <ul>
+            <li>screens visited and actions performed</li>
+            <li>feature usage frequency</li>
+            <li>error and performance reports</li>
+            <li>technical device information</li>
+        </ul>
+        <p>Data is stored on Google Cloud infrastructure in the European Union.</p>
+        <p>Firebase privacy policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Collects data about the user's interaction with the application, including session recordings. The recordings are similar to video materials showing navigation through the application, exclusively within the Fridgy app interface.</p>
+        <p>The recordings do NOT contain:</p>
+        <ul>
+            <li>password field contents (automatically masked)</li>
+            <li>payment data (processed by Apple/Google in native dialogs, outside the application)</li>
+            <li>content from other applications on the device</li>
+            <li>camera or gallery images outside the application context</li>
+        </ul>
+        <p>Only approximately 25% of sessions are recorded, randomly selected, to manage the volume of collected data.</p>
+        <p>Data is stored on PostHog Cloud infrastructure in the European Union (Frankfurt, Germany).</p>
+        <p>PostHog privacy policy: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Opt-out</h3>
+        <p>Users may request the cessation of analytics data collection and session recording by contacting us at <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. We will process the request within 30 days, in accordance with GDPR.</p>
+
+        <h2>7. Data transfers outside the European Union</h2>
+        <p>Personal data is primarily stored in the European Union. Our service providers (Firebase, PostHog, RevenueCat) use EU infrastructure for primary data storage.</p>
+        <p>In limited situations, certain technical data may be processed by partner services outside the EU (for example, for certain Google or Apple operations). In such cases, we ensure that adequate safeguards for data protection are applied, in accordance with Standard Contractual Clauses (SCC) or other mechanisms provided by GDPR.</p>
+
+        <h2>8. Push notifications</h2>
+        <p>The Fridgy application may send push notifications related to the user's products and expiration dates.</p>
+        <p>Notifications are:</p>
+        <ul>
+            <li>optional</li>
+            <li>can be disabled at any time from the application settings or device settings</li>
+        </ul>
+
+        <h2>9. Data retention period</h2>
+        <p>Personal data is retained:</p>
+        <ul>
+            <li>for as long as the user account exists</li>
+            <li>until the user deletes their account</li>
+        </ul>
+        <p>After account deletion, the data is permanently removed from our systems, except where applicable legislation requires certain information to be retained for a specified period.</p>
+
+        <h2>10. Users' rights</h2>
+        <p>Under data protection legislation, users have the following rights:</p>
+        <ul>
+            <li>the right to access their data</li>
+            <li>the right to rectify data</li>
+            <li>the right to delete their account and associated data</li>
+            <li>the right to withdraw consent</li>
+            <li>the right to request information regarding data processing</li>
+        </ul>
+        <p>To exercise these rights, you may contact us at <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Users also have the right to file a complaint with the competent data protection authority:</p>
+        <div class="company-info">
+            <p><strong>National Supervisory Authority for Personal Data Processing (ANSPDCP)</strong></p>
+            <p>Website: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Account deletion</h2>
+        <p>Users may delete their account directly from the application, in the settings section.</p>
+        <p>By deleting the account:</p>
+        <ul>
+            <li>all associated personal data is permanently removed</li>
+            <li>access to the application is revoked</li>
+        </ul>
+
+        <h2>12. Changes to the privacy policy</h2>
+        <p>We reserve the right to update this Privacy Policy.</p>
+        <p>In the event of significant changes, users will be informed through the application or by other appropriate means.</p>
+        <p>The date of the last update will be displayed at the top of the document.</p>
+
+        <h2>13. Contact</h2>
+        <p>For any questions or requests regarding this Privacy Policy or personal data, you may contact us at:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- GERMAN -->
+    <div class="content" data-lang="de" style="display:none">
+        <div class="header-row">
+            <h1>Datenschutzerklärung - Fridgy</h1>
+        </div>
+        <p class="last-updated">Letzte Aktualisierung: 20. Mai 2026</p>
+
+        <p>Diese Datenschutzerklärung beschreibt, wie die Fridgy-Anwendung personenbezogene Daten ihrer Nutzer erfasst, verwendet und schützt.</p>
+        <p>Durch die Nutzung der Fridgy-Anwendung stimmen Sie den in dieser Richtlinie beschriebenen Praktiken zu.</p>
+
+        <h2>1. Wer wir sind</h2>
+        <p>Die Fridgy-Anwendung wird betrieben von:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Rumänien</p>
+            <p>Kontakt-E-Mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>Im Sinne der Datenschutzgesetzgebung sind wir der Verantwortliche für die Datenverarbeitung.</p>
+
+        <h2>2. Welche Daten wir erheben</h2>
+        <p>Wir erheben nur die Daten, die für den Betrieb der Anwendung unbedingt erforderlich sind.</p>
+
+        <h3>2.1. Kontodaten</h3>
+        <ul>
+            <li>E-Mail-Adresse</li>
+            <li>Benutzername oder Anzeigename</li>
+            <li>Authentifizierungsmethode (E-Mail/Passwort oder Google-Konto)</li>
+        </ul>
+
+        <h3>2.2. Vom Nutzer in der Anwendung eingegebene Daten</h3>
+        <ul>
+            <li>in der Anwendung hinzugefügte Produkte</li>
+            <li>Ablaufdaten der Produkte</li>
+            <li>Anwendungseinstellungen (Sprache, Benachrichtigungseinstellungen)</li>
+        </ul>
+
+        <h3>2.3. Technische Daten</h3>
+        <ul>
+            <li>Token für Push-Benachrichtigungen</li>
+            <li>technische Kennungen, die für den Betrieb der Anwendung erforderlich sind</li>
+            <li>Nutzungsdaten der Anwendung (besuchte Bildschirme, durchgeführte Aktionen)</li>
+            <li>Sitzungsaufzeichnungen (Interaktionen mit der Oberfläche, ohne Aufzeichnung sensibler Daten wie Passwörter oder Zahlungsdaten)</li>
+            <li>Geräteinformationen (Modell, Betriebssystem, Anwendungsversion)</li>
+            <li>Gerätesprache und -land</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Wir erheben keine sensiblen Daten wie:</strong></p>
+            <ul>
+                <li>medizinische Daten</li>
+                <li>Kreditkarten- oder Bankdaten</li>
+                <li>biometrische Daten</li>
+                <li>genaue Standortdaten</li>
+            </ul>
+            <p>Vom Nutzer eingegebene Produktpreise werden in seinem Konto gespeichert und nicht an Dritte weitergegeben.</p>
+        </div>
+
+        <h2>3. Zweck der Datenverarbeitung</h2>
+        <p>Die erhobenen Daten werden ausschließlich verwendet für:</p>
+        <ul>
+            <li>Erstellung und Verwaltung des Benutzerkontos</li>
+            <li>Bereitstellung der Kernfunktionen der Anwendung</li>
+            <li>Speicherung und Verwaltung der Produkte des Nutzers</li>
+            <li>Versenden von Benachrichtigungen über das Ablaufdatum von Produkten</li>
+            <li>technischen Betrieb und Sicherheit der Anwendung</li>
+            <li>Verbesserung der Benutzererfahrung</li>
+        </ul>
+
+        <h2>4. Rechtsgrundlage der Verarbeitung</h2>
+        <p>Personenbezogene Daten werden auf folgenden Rechtsgrundlagen verarbeitet:</p>
+        <ul>
+            <li>Erfüllung des über die Fridgy-Anwendung erbrachten Dienstes</li>
+            <li>Einwilligung des Nutzers</li>
+            <li>berechtigtes Interesse an der Gewährleistung von Sicherheit, Stabilität und ordnungsgemäßem Betrieb der Anwendung</li>
+        </ul>
+        <p>Soweit die Verarbeitung auf einer Einwilligung beruht, kann der Nutzer diese jederzeit widerrufen, ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird.</p>
+
+        <h2>5. Datenspeicherung und Sicherheit</h2>
+        <p>Personenbezogene Daten werden auf sicheren Servern gespeichert und durch folgende Maßnahmen geschützt:</p>
+        <ul>
+            <li>eingeschränkter Zugang</li>
+            <li>angemessene technische und organisatorische Maßnahmen</li>
+            <li>verschlüsselte Kommunikation (HTTPS)</li>
+        </ul>
+        <p>Wir unternehmen angemessene Anstrengungen, um personenbezogene Daten vor unbefugtem Zugriff, Verlust, Zerstörung oder Offenlegung zu schützen.</p>
+
+        <h2>6. Datenweitergabe</h2>
+        <p>Wir verkaufen, vermieten oder übertragen die personenbezogenen Daten der Nutzer nicht zu kommerziellen Zwecken an Dritte.</p>
+        <p>Daten können von vertrauenswürdigen Dienstleistern ausschließlich zu technischen Zwecken verarbeitet werden, wie z. B.:</p>
+        <ul>
+            <li>Hosting-Dienste</li>
+            <li>Zustelldienste für Push-Benachrichtigungen (Expo, Apple, Google)</li>
+            <li>KI-basierte Textextraktionsdienste (Google Cloud Vision, Google Gemini)</li>
+            <li>Zahlungsabwicklungsdienste (RevenueCat, Apple, Google)</li>
+            <li>Nutzungsanalyse- und Statistikdienste (Firebase Analytics von Google, PostHog)</li>
+            <li>Fehler- und Leistungsberichtsdienste (Firebase Crashlytics)</li>
+        </ul>
+        <p>Quittungsbilder werden über KI-Dienste (Google Cloud Vision, Google Gemini) ausschließlich zur Textextraktion verarbeitet. Bilder werden nicht dauerhaft auf unseren Servern gespeichert.</p>
+        <p>Premium-Abonnementzahlungen werden über RevenueCat und Apple/Google abgewickelt. Wir haben keinen Zugang zu Ihren Kartendaten.</p>
+        <p>Diese Anbieter haben nur Zugang zu den Daten, die für die Erbringung ihrer Dienste unbedingt erforderlich sind, und sind zur Wahrung der Datensicherheit verpflichtet.</p>
+
+        <h2>6.1. Analyse und Sitzungsaufzeichnung</h2>
+        <p>Um zu verstehen, wie die Anwendung genutzt wird, und um sie kontinuierlich zu verbessern, verwenden wir zwei Analysedienste:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Erfasst anonyme Daten über die Nutzung der Anwendung:</p>
+        <ul>
+            <li>besuchte Bildschirme und durchgeführte Aktionen</li>
+            <li>Häufigkeit der Funktionsnutzung</li>
+            <li>Fehler- und Leistungsberichte</li>
+            <li>technische Geräteinformationen</li>
+        </ul>
+        <p>Die Daten werden auf der Google Cloud-Infrastruktur in der Europäischen Union gespeichert.</p>
+        <p>Firebase-Datenschutzrichtlinie: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Erfasst Daten über die Interaktion des Nutzers mit der Anwendung, einschließlich Sitzungsaufzeichnungen. Die Aufzeichnungen ähneln Videomaterial, das die Navigation durch die Anwendung zeigt, ausschließlich innerhalb der Fridgy-App-Oberfläche.</p>
+        <p>Die Aufzeichnungen enthalten NICHT:</p>
+        <ul>
+            <li>Passwortfeldinhalte (automatisch maskiert)</li>
+            <li>Zahlungsdaten (von Apple/Google in nativen Dialogen außerhalb der Anwendung verarbeitet)</li>
+            <li>Inhalte anderer Anwendungen auf dem Gerät</li>
+            <li>Kamera- oder Galeriebilder außerhalb des Anwendungskontexts</li>
+        </ul>
+        <p>Nur etwa 25 % der Sitzungen werden zufällig ausgewählt aufgezeichnet, um das Volumen der gesammelten Daten zu begrenzen.</p>
+        <p>Die Daten werden auf der PostHog Cloud-Infrastruktur in der Europäischen Union (Frankfurt, Deutschland) gespeichert.</p>
+        <p>PostHog-Datenschutzrichtlinie: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Opt-out</h3>
+        <p>Nutzer können die Einstellung der Analysedatenerhebung und Sitzungsaufzeichnung beantragen, indem sie uns unter <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> kontaktieren. Wir werden die Anfrage innerhalb von 30 Tagen gemäß der DSGVO bearbeiten.</p>
+
+        <h2>7. Datenübermittlungen außerhalb der Europäischen Union</h2>
+        <p>Personenbezogene Daten werden in erster Linie in der Europäischen Union gespeichert. Unsere Dienstleister (Firebase, PostHog, RevenueCat) nutzen EU-Infrastruktur für die primäre Datenspeicherung.</p>
+        <p>In begrenzten Situationen können bestimmte technische Daten von Partnerdiensten außerhalb der EU verarbeitet werden (z. B. für bestimmte Google- oder Apple-Operationen). In solchen Fällen stellen wir sicher, dass angemessene Schutzmaßnahmen für den Datenschutz angewendet werden, gemäß den Standardvertragsklauseln (SCC) oder anderen von der DSGVO vorgesehenen Mechanismen.</p>
+
+        <h2>8. Push-Benachrichtigungen</h2>
+        <p>Die Fridgy-Anwendung kann Push-Benachrichtigungen zu den Produkten des Nutzers und deren Ablaufdaten senden.</p>
+        <p>Benachrichtigungen sind:</p>
+        <ul>
+            <li>optional</li>
+            <li>können jederzeit in den Anwendungs- oder Geräteeinstellungen deaktiviert werden</li>
+        </ul>
+
+        <h2>9. Datenspeicherungsdauer</h2>
+        <p>Personenbezogene Daten werden gespeichert:</p>
+        <ul>
+            <li>solange das Benutzerkonto besteht</li>
+            <li>bis der Nutzer sein Konto löscht</li>
+        </ul>
+        <p>Nach der Kontolöschung werden die Daten dauerhaft aus unseren Systemen entfernt, sofern nicht geltendes Recht die Aufbewahrung bestimmter Informationen für einen bestimmten Zeitraum vorschreibt.</p>
+
+        <h2>10. Rechte der Nutzer</h2>
+        <p>Gemäß der Datenschutzgesetzgebung haben Nutzer folgende Rechte:</p>
+        <ul>
+            <li>das Recht auf Auskunft über ihre Daten</li>
+            <li>das Recht auf Berichtigung der Daten</li>
+            <li>das Recht auf Löschung ihres Kontos und der zugehörigen Daten</li>
+            <li>das Recht auf Widerruf der Einwilligung</li>
+            <li>das Recht, Informationen zur Datenverarbeitung anzufordern</li>
+        </ul>
+        <p>Zur Ausübung dieser Rechte können Sie uns unter <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> kontaktieren.</p>
+        <p>Nutzer haben auch das Recht, eine Beschwerde bei der zuständigen Datenschutzbehörde einzureichen:</p>
+        <div class="company-info">
+            <p><strong>Nationale Aufsichtsbehörde für die Verarbeitung personenbezogener Daten (ANSPDCP)</strong></p>
+            <p>Website: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Kontolöschung</h2>
+        <p>Nutzer können ihr Konto direkt in der Anwendung im Einstellungsbereich löschen.</p>
+        <p>Durch die Kontolöschung:</p>
+        <ul>
+            <li>werden alle zugehörigen personenbezogenen Daten dauerhaft entfernt</li>
+            <li>wird der Zugang zur Anwendung widerrufen</li>
+        </ul>
+
+        <h2>12. Änderungen der Datenschutzerklärung</h2>
+        <p>Wir behalten uns das Recht vor, diese Datenschutzerklärung zu aktualisieren.</p>
+        <p>Bei wesentlichen Änderungen werden die Nutzer über die Anwendung oder auf andere geeignete Weise informiert.</p>
+        <p>Das Datum der letzten Aktualisierung wird oben im Dokument angezeigt.</p>
+
+        <h2>13. Kontakt</h2>
+        <p>Für Fragen oder Anfragen zu dieser Datenschutzerklärung oder zu personenbezogenen Daten können Sie uns kontaktieren unter:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- HUNGARIAN -->
+    <div class="content" data-lang="hu" style="display:none">
+        <div class="header-row">
+            <h1>Adatvédelmi szabályzat - Fridgy</h1>
+        </div>
+        <p class="last-updated">Utolsó frissítés: 2026. május 20.</p>
+
+        <p>Ez az Adatvédelmi szabályzat leírja, hogyan gyűjti, használja és védi a Fridgy alkalmazás a felhasználók személyes adatait.</p>
+        <p>A Fridgy alkalmazás használatával Ön elfogadja az ebben a szabályzatban leírt gyakorlatokat.</p>
+
+        <h2>1. Kik vagyunk</h2>
+        <p>A Fridgy alkalmazást üzemelteti:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Románia</p>
+            <p>Kapcsolattartási e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>Az adatvédelmi jogszabályok értelmében mi vagyunk az adatkezelő.</p>
+
+        <h2>2. Milyen adatokat gyűjtünk</h2>
+        <p>Csak az alkalmazás működéséhez feltétlenül szükséges adatokat gyűjtjük.</p>
+
+        <h3>2.1. Fiókadatok</h3>
+        <ul>
+            <li>e-mail cím</li>
+            <li>felhasználónév vagy megjelenítési név</li>
+            <li>hitelesítési módszer (e-mail/jelszó vagy Google-fiók)</li>
+        </ul>
+
+        <h3>2.2. A felhasználó által az alkalmazásban megadott adatok</h3>
+        <ul>
+            <li>az alkalmazáshoz hozzáadott termékek</li>
+            <li>termékek lejárati dátuma</li>
+            <li>alkalmazásbeállítások (nyelv, értesítési preferenciák)</li>
+        </ul>
+
+        <h3>2.3. Technikai adatok</h3>
+        <ul>
+            <li>push értesítési tokenek</li>
+            <li>az alkalmazás működéséhez szükséges technikai azonosítók</li>
+            <li>alkalmazáshasználati adatok (meglátogatott képernyők, elvégzett műveletek)</li>
+            <li>munkamenet-felvételek (felületi interakciók, érzékeny adatok – jelszavak, fizetési adatok – rögzítése nélkül)</li>
+            <li>eszközinformációk (modell, operációs rendszer, alkalmazásverzió)</li>
+            <li>eszköz nyelve és országa</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Nem gyűjtünk érzékeny adatokat, mint például:</strong></p>
+            <ul>
+                <li>egészségügyi adatok</li>
+                <li>hitelkártya- vagy banki adatok</li>
+                <li>biometrikus adatok</li>
+                <li>pontos tartózkodási hely</li>
+            </ul>
+            <p>A felhasználó által megadott termékárak a fiókjában tárolódnak, és nem kerülnek megosztásra harmadik felekkel.</p>
+        </div>
+
+        <h2>3. Az adatkezelés célja</h2>
+        <p>A gyűjtött adatokat kizárólag a következő célokra használjuk:</p>
+        <ul>
+            <li>felhasználói fiók létrehozása és kezelése</li>
+            <li>az alkalmazás alapfunkcióinak biztosítása</li>
+            <li>a felhasználó termékeinek tárolása és kezelése</li>
+            <li>értesítések küldése a termékek lejáratával kapcsolatban</li>
+            <li>az alkalmazás technikai működése és biztonsága</li>
+            <li>a felhasználói élmény javítása</li>
+        </ul>
+
+        <h2>4. Az adatkezelés jogalapja</h2>
+        <p>A személyes adatok kezelése a következő jogalapokon történik:</p>
+        <ul>
+            <li>a Fridgy alkalmazáson keresztül nyújtott szolgáltatás teljesítése</li>
+            <li>a felhasználó hozzájárulása</li>
+            <li>jogos érdek az alkalmazás biztonságának, stabilitásának és megfelelő működésének biztosításához</li>
+        </ul>
+        <p>Amennyiben az adatkezelés hozzájáruláson alapul, a felhasználó bármikor visszavonhatja hozzájárulását anélkül, hogy ez érintené a visszavonás előtti, hozzájáruláson alapuló adatkezelés jogszerűségét.</p>
+
+        <h2>5. Adattárolás és biztonság</h2>
+        <p>A személyes adatok biztonságos szervereken kerülnek tárolásra, és a következők révén védett:</p>
+        <ul>
+            <li>korlátozott hozzáférés</li>
+            <li>megfelelő technikai és szervezési intézkedések</li>
+            <li>titkosított kommunikáció (HTTPS)</li>
+        </ul>
+        <p>Ésszerű erőfeszítéseket teszünk a személyes adatok jogosulatlan hozzáférés, elvesztés, megsemmisítés vagy nyilvánosságra hozatal elleni védelme érdekében.</p>
+
+        <h2>6. Adatmegosztás</h2>
+        <p>Nem adjuk el, adjuk bérbe vagy adjuk át a felhasználók személyes adatait kereskedelmi célból harmadik feleknek.</p>
+        <p>Az adatokat megbízható szolgáltatók kizárólag technikai célokra kezelhetik, mint például:</p>
+        <ul>
+            <li>tárhelyszolgáltatások</li>
+            <li>push értesítési kézbesítési szolgáltatások (Expo, Apple, Google)</li>
+            <li>MI-alapú szövegkinyerési szolgáltatások (Google Cloud Vision, Google Gemini)</li>
+            <li>fizetésfeldolgozási szolgáltatások (RevenueCat, Apple, Google)</li>
+            <li>használati elemzési és statisztikai szolgáltatások (Firebase Analytics a Google-tól, PostHog)</li>
+            <li>hiba- és teljesítményjelentési szolgáltatások (Firebase Crashlytics)</li>
+        </ul>
+        <p>A nyugtaképeket MI-szolgáltatások (Google Cloud Vision, Google Gemini) dolgozzák fel kizárólag szövegkinyerés céljából. A képek nem kerülnek tartósan tárolásra szervereinkre.</p>
+        <p>A prémium előfizetési fizetések a RevenueCat és az Apple/Google által kerülnek feldolgozásra. Nincs hozzáférésünk a kártyaadataihoz.</p>
+        <p>Ezek a szolgáltatók csak az adott szolgáltatások nyújtásához feltétlenül szükséges adatokhoz férnek hozzá, és kötelesek megőrizni az adatok titkosságát.</p>
+
+        <h2>6.1. Elemzés és munkamenet-rögzítés</h2>
+        <p>Az alkalmazás használatának megértése és folyamatos fejlesztése érdekében két elemzési szolgáltatást használunk:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Névtelen adatokat gyűjt az alkalmazáshasználatról:</p>
+        <ul>
+            <li>meglátogatott képernyők és elvégzett műveletek</li>
+            <li>funkcióhasználati gyakoriság</li>
+            <li>hiba- és teljesítményjelentések</li>
+            <li>eszköz technikai adatai</li>
+        </ul>
+        <p>Az adatok az Európai Unióban lévő Google Cloud infrastruktúrán kerülnek tárolásra.</p>
+        <p>Firebase adatvédelmi szabályzat: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Adatokat gyűjt a felhasználónak az alkalmazással való interakciójáról, beleértve a munkamenet-felvételeket. A felvételek hasonlóak az alkalmazáson belüli navigációt bemutató videóanyagokhoz, kizárólag a Fridgy alkalmazás felületén belül.</p>
+        <p>A felvételek NEM tartalmaznak:</p>
+        <ul>
+            <li>jelszómező tartalmát (automatikusan maszkolva)</li>
+            <li>fizetési adatokat (az Apple/Google native párbeszédablakain keresztül, az alkalmazáson kívül feldolgozva)</li>
+            <li>más alkalmazások tartalmát az eszközön</li>
+            <li>kamera- vagy galéria-képeket az alkalmazás kontextusán kívül</li>
+        </ul>
+        <p>A munkamenetek csak körülbelül 25%-a kerül véletlenszerűen kiválasztva rögzítésre, hogy kezeljük a gyűjtött adatok mennyiségét.</p>
+        <p>Az adatok az Európai Unióban (Frankfurt, Németország) lévő PostHog Cloud infrastruktúrán kerülnek tárolásra.</p>
+        <p>PostHog adatvédelmi szabályzat: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Leiratkozás</h3>
+        <p>A felhasználók kérhetik az elemzési adatgyűjtés és munkamenet-rögzítés leállítását, ha kapcsolatba lépnek velünk a <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> címen. A kérelmet 30 napon belül feldolgozzuk a GDPR-nak megfelelően.</p>
+
+        <h2>7. Adattovábbítás az Európai Unión kívülre</h2>
+        <p>A személyes adatok elsősorban az Európai Unióban kerülnek tárolásra. Szolgáltatóink (Firebase, PostHog, RevenueCat) uniós infrastruktúrát használnak az elsődleges adattároláshoz.</p>
+        <p>Korlátozott esetekben bizonyos technikai adatokat partnercégek az EU-n kívül is feldolgozhatnak (például egyes Google vagy Apple műveletek esetén). Ilyen esetekben gondoskodunk arról, hogy megfelelő adatvédelmi garanciák kerüljenek alkalmazásra, a Szabványos Szerződési Záradékoknak (SCC) vagy a GDPR által biztosított egyéb mechanizmusoknak megfelelően.</p>
+
+        <h2>8. Push értesítések</h2>
+        <p>A Fridgy alkalmazás push értesítéseket küldhet a felhasználó termékeihez és lejárati dátumaihoz kapcsolódóan.</p>
+        <p>Az értesítések:</p>
+        <ul>
+            <li>opcionálisak</li>
+            <li>bármikor letilthatók az alkalmazás beállításaiban vagy az eszköz beállításaiban</li>
+        </ul>
+
+        <h2>9. Adatmegőrzési időszak</h2>
+        <p>A személyes adatokat megőrizzük:</p>
+        <ul>
+            <li>a felhasználói fiók fennállásáig</li>
+            <li>amíg a felhasználó törli fiókját</li>
+        </ul>
+        <p>A fiók törlése után az adatok véglegesen eltávolításra kerülnek rendszereinkből, kivéve, ha az alkalmazandó jogszabályok megkövetelik bizonyos információk meghatározott ideig történő megőrzését.</p>
+
+        <h2>10. Felhasználói jogok</h2>
+        <p>Az adatvédelmi jogszabályok alapján a felhasználóknak a következő jogaik vannak:</p>
+        <ul>
+            <li>az adatokhoz való hozzáférés joga</li>
+            <li>az adatok helyesbítésének joga</li>
+            <li>a fiók és a kapcsolódó adatok törlésének joga</li>
+            <li>a hozzájárulás visszavonásának joga</li>
+            <li>az adatkezeléssel kapcsolatos információk kérésének joga</li>
+        </ul>
+        <p>E jogok gyakorlásához forduljon hozzánk a következő e-mail-címen: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>A felhasználóknak joguk van panaszt tenni az illetékes adatvédelmi hatóságnál is:</p>
+        <div class="company-info">
+            <p><strong>Személyes Adatok Feldolgozásának Felügyeleti Hatósága (ANSPDCP)</strong></p>
+            <p>Weboldal: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Fiók törlése</h2>
+        <p>A felhasználók közvetlenül az alkalmazásban, a beállítások részben törölhetik fiókjukat.</p>
+        <p>A fiók törlésével:</p>
+        <ul>
+            <li>minden kapcsolódó személyes adat véglegesen eltávolításra kerül</li>
+            <li>az alkalmazáshoz való hozzáférés visszavonásra kerül</li>
+        </ul>
+
+        <h2>12. Az adatvédelmi szabályzat módosításai</h2>
+        <p>Fenntartjuk a jogot, hogy frissítsük ezt az Adatvédelmi szabályzatot.</p>
+        <p>Jelentős változások esetén a felhasználókat az alkalmazáson keresztül vagy más megfelelő módon értesítjük.</p>
+        <p>Az utolsó frissítés dátuma a dokumentum tetején jelenik meg.</p>
+
+        <h2>13. Kapcsolat</h2>
+        <p>Az Adatvédelmi szabályzattal vagy személyes adatokkal kapcsolatos kérdések vagy kérések esetén forduljon hozzánk:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- FRENCH -->
+    <div class="content" data-lang="fr" style="display:none">
+        <div class="header-row">
+            <h1>Politique de confidentialité - Fridgy</h1>
+        </div>
+        <p class="last-updated">Dernière mise à jour : 20 mai 2026</p>
+
+        <p>Cette Politique de confidentialité décrit comment l'application Fridgy collecte, utilise et protège les données personnelles de ses utilisateurs.</p>
+        <p>En utilisant l'application Fridgy, vous acceptez les pratiques décrites dans cette politique.</p>
+
+        <h2>1. Qui nous sommes</h2>
+        <p>L'application Fridgy est exploitée par :</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Roumanie</p>
+            <p>E-mail de contact : <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>Aux fins de la législation sur la protection des données, nous sommes le responsable du traitement des données.</p>
+
+        <h2>2. Quelles données nous collectons</h2>
+        <p>Nous ne collectons que les données strictement nécessaires au fonctionnement de l'application.</p>
+
+        <h3>2.1. Données de compte</h3>
+        <ul>
+            <li>adresse e-mail</li>
+            <li>nom d'utilisateur ou nom d'affichage</li>
+            <li>méthode d'authentification (e-mail/mot de passe ou compte Google)</li>
+        </ul>
+
+        <h3>2.2. Données saisies par l'utilisateur dans l'application</h3>
+        <ul>
+            <li>produits ajoutés à l'application</li>
+            <li>dates d'expiration des produits</li>
+            <li>paramètres de l'application (langue, préférences de notification)</li>
+        </ul>
+
+        <h3>2.3. Données techniques</h3>
+        <ul>
+            <li>jetons pour les notifications push</li>
+            <li>identifiants techniques nécessaires au fonctionnement de l'application</li>
+            <li>données d'utilisation de l'application (écrans visités, actions effectuées)</li>
+            <li>enregistrements de sessions d'utilisation (interactions avec l'interface, sans enregistrement de données sensibles telles que mots de passe ou données de paiement)</li>
+            <li>informations sur l'appareil (modèle, système d'exploitation, version de l'application)</li>
+            <li>langue et pays de l'appareil</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Nous ne collectons pas de données sensibles telles que :</strong></p>
+            <ul>
+                <li>données médicales</li>
+                <li>données de carte de crédit ou bancaires</li>
+                <li>données biométriques</li>
+                <li>localisation précise</li>
+            </ul>
+            <p>Les prix des produits saisis par l'utilisateur sont stockés dans son compte et ne sont pas partagés avec des tiers.</p>
+        </div>
+
+        <h2>3. Finalité du traitement des données</h2>
+        <p>Les données collectées sont utilisées exclusivement pour :</p>
+        <ul>
+            <li>la création et la gestion du compte utilisateur</li>
+            <li>la fourniture des fonctionnalités principales de l'application</li>
+            <li>le stockage et la gestion des produits de l'utilisateur</li>
+            <li>l'envoi de notifications concernant l'expiration des produits</li>
+            <li>le fonctionnement technique et la sécurité de l'application</li>
+            <li>l'amélioration de l'expérience utilisateur</li>
+        </ul>
+
+        <h2>4. Base légale du traitement</h2>
+        <p>Les données personnelles sont traitées sur les bases légales suivantes :</p>
+        <ul>
+            <li>exécution du service fourni via l'application Fridgy</li>
+            <li>consentement de l'utilisateur</li>
+            <li>intérêt légitime à assurer la sécurité, la stabilité et le bon fonctionnement de l'application</li>
+        </ul>
+        <p>Lorsque le traitement est basé sur le consentement, l'utilisateur peut retirer son consentement à tout moment, sans affecter la licéité du traitement effectué avant ce retrait.</p>
+
+        <h2>5. Stockage et sécurité des données</h2>
+        <p>Les données personnelles sont stockées sur des serveurs sécurisés et protégées par :</p>
+        <ul>
+            <li>accès restreint</li>
+            <li>mesures techniques et organisationnelles appropriées</li>
+            <li>communication chiffrée (HTTPS)</li>
+        </ul>
+        <p>Nous faisons des efforts raisonnables pour protéger les données personnelles contre tout accès non autorisé, perte, destruction ou divulgation.</p>
+
+        <h2>6. Partage des données</h2>
+        <p>Nous ne vendons, ne louons ni ne transférons les données personnelles des utilisateurs à des tiers à des fins commerciales.</p>
+        <p>Les données peuvent être traitées par des prestataires de services de confiance uniquement à des fins techniques telles que :</p>
+        <ul>
+            <li>services d'hébergement</li>
+            <li>services de livraison de notifications push (Expo, Apple, Google)</li>
+            <li>services d'extraction de texte basés sur l'IA (Google Cloud Vision, Google Gemini)</li>
+            <li>services de traitement des paiements (RevenueCat, Apple, Google)</li>
+            <li>services d'analyse d'utilisation et de statistiques (Firebase Analytics de Google, PostHog)</li>
+            <li>services de rapport d'erreurs et de performance (Firebase Crashlytics)</li>
+        </ul>
+        <p>Les images de reçus sont traitées via des services d'IA (Google Cloud Vision, Google Gemini) exclusivement pour l'extraction de texte. Les images ne sont pas stockées définitivement sur nos serveurs.</p>
+        <p>Les paiements d'abonnement Premium sont traités via RevenueCat et Apple/Google. Nous n'avons pas accès à vos données de carte.</p>
+        <p>Ces prestataires n'ont accès qu'aux données strictement nécessaires à la fourniture de leurs services et sont tenus de maintenir la confidentialité des données.</p>
+
+        <h2>6.1. Analyse et enregistrement de sessions</h2>
+        <p>Pour comprendre comment l'application est utilisée et l'améliorer continuellement, nous utilisons deux services d'analyse :</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Collecte des données anonymes sur l'utilisation de l'application :</p>
+        <ul>
+            <li>écrans visités et actions effectuées</li>
+            <li>fréquence d'utilisation des fonctionnalités</li>
+            <li>rapports d'erreurs et de performance</li>
+            <li>informations techniques sur l'appareil</li>
+        </ul>
+        <p>Les données sont stockées sur l'infrastructure Google Cloud dans l'Union européenne.</p>
+        <p>Politique de confidentialité Firebase : <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Collecte des données sur l'interaction de l'utilisateur avec l'application, y compris des enregistrements de sessions. Les enregistrements sont similaires à des vidéos montrant la navigation dans l'application, exclusivement dans l'interface de l'application Fridgy.</p>
+        <p>Les enregistrements ne contiennent PAS :</p>
+        <ul>
+            <li>le contenu des champs de mot de passe (masqué automatiquement)</li>
+            <li>les données de paiement (traitées par Apple/Google dans des dialogues natifs, en dehors de l'application)</li>
+            <li>le contenu d'autres applications sur l'appareil</li>
+            <li>les images de l'appareil photo ou de la galerie en dehors du contexte de l'application</li>
+        </ul>
+        <p>Seulement environ 25 % des sessions sont enregistrées, sélectionnées aléatoirement, pour gérer le volume des données collectées.</p>
+        <p>Les données sont stockées sur l'infrastructure PostHog Cloud dans l'Union européenne (Francfort, Allemagne).</p>
+        <p>Politique de confidentialité PostHog : <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Désactivation</h3>
+        <p>Les utilisateurs peuvent demander l'arrêt de la collecte de données analytiques et de l'enregistrement de sessions en nous contactant à <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Nous traiterons la demande dans les 30 jours, conformément au RGPD.</p>
+
+        <h2>7. Transferts de données hors de l'Union européenne</h2>
+        <p>Les données personnelles sont principalement stockées dans l'Union européenne. Nos prestataires de services (Firebase, PostHog, RevenueCat) utilisent l'infrastructure de l'UE pour le stockage principal des données.</p>
+        <p>Dans des situations limitées, certaines données techniques peuvent être traitées par des services partenaires en dehors de l'UE (par exemple, pour certaines opérations Google ou Apple). Dans ces cas, nous nous assurons que des garanties adéquates pour la protection des données sont appliquées, conformément aux Clauses Contractuelles Types (CCT) ou à d'autres mécanismes prévus par le RGPD.</p>
+
+        <h2>8. Notifications push</h2>
+        <p>L'application Fridgy peut envoyer des notifications push relatives aux produits de l'utilisateur et aux dates d'expiration.</p>
+        <p>Les notifications sont :</p>
+        <ul>
+            <li>optionnelles</li>
+            <li>peuvent être désactivées à tout moment depuis les paramètres de l'application ou de l'appareil</li>
+        </ul>
+
+        <h2>9. Durée de conservation des données</h2>
+        <p>Les données personnelles sont conservées :</p>
+        <ul>
+            <li>aussi longtemps que le compte utilisateur existe</li>
+            <li>jusqu'à ce que l'utilisateur supprime son compte</li>
+        </ul>
+        <p>Après la suppression du compte, les données sont définitivement supprimées de nos systèmes, sauf si la législation applicable exige que certaines informations soient conservées pendant une période déterminée.</p>
+
+        <h2>10. Droits des utilisateurs</h2>
+        <p>En vertu de la législation sur la protection des données, les utilisateurs ont les droits suivants :</p>
+        <ul>
+            <li>le droit d'accès à leurs données</li>
+            <li>le droit de rectification des données</li>
+            <li>le droit de suppression de leur compte et des données associées</li>
+            <li>le droit de retrait du consentement</li>
+            <li>le droit de demander des informations sur le traitement des données</li>
+        </ul>
+        <p>Pour exercer ces droits, vous pouvez nous contacter à <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Les utilisateurs ont également le droit de déposer une plainte auprès de l'autorité compétente en matière de protection des données :</p>
+        <div class="company-info">
+            <p><strong>Autorité nationale de surveillance du traitement des données à caractère personnel (ANSPDCP)</strong></p>
+            <p>Site web : <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Suppression du compte</h2>
+        <p>Les utilisateurs peuvent supprimer leur compte directement depuis l'application, dans la section des paramètres.</p>
+        <p>En supprimant le compte :</p>
+        <ul>
+            <li>toutes les données personnelles associées sont définitivement supprimées</li>
+            <li>l'accès à l'application est révoqué</li>
+        </ul>
+
+        <h2>12. Modifications de la politique de confidentialité</h2>
+        <p>Nous nous réservons le droit de mettre à jour cette Politique de confidentialité.</p>
+        <p>En cas de modifications significatives, les utilisateurs seront informés via l'application ou par d'autres moyens appropriés.</p>
+        <p>La date de la dernière mise à jour sera affichée en haut du document.</p>
+
+        <h2>13. Contact</h2>
+        <p>Pour toute question ou demande concernant cette Politique de confidentialité ou les données personnelles, vous pouvez nous contacter à :</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- DUTCH -->
+    <div class="content" data-lang="nl" style="display:none">
+        <div class="header-row">
+            <h1>Privacybeleid - Fridgy</h1>
+        </div>
+        <p class="last-updated">Laatst bijgewerkt: 20 mei 2026</p>
+
+        <p>Dit Privacybeleid beschrijft hoe de Fridgy-applicatie de persoonlijke gegevens van zijn gebruikers verzamelt, gebruikt en beschermt.</p>
+        <p>Door de Fridgy-applicatie te gebruiken, stemt u in met de in dit beleid beschreven praktijken.</p>
+
+        <h2>1. Wie wij zijn</h2>
+        <p>De Fridgy-applicatie wordt geëxploiteerd door:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Roemenië</p>
+            <p>Contact e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>Voor de doeleinden van de gegevensbeschermingswetgeving zijn wij de verwerkingsverantwoordelijke.</p>
+
+        <h2>2. Welke gegevens wij verzamelen</h2>
+        <p>Wij verzamelen alleen de gegevens die strikt noodzakelijk zijn voor het functioneren van de applicatie.</p>
+
+        <h3>2.1. Accountgegevens</h3>
+        <ul>
+            <li>e-mailadres</li>
+            <li>gebruikersnaam of weergavenaam</li>
+            <li>authenticatiemethode (e-mail/wachtwoord of Google-account)</li>
+        </ul>
+
+        <h3>2.2. Door de gebruiker ingevoerde gegevens in de applicatie</h3>
+        <ul>
+            <li>aan de applicatie toegevoegde producten</li>
+            <li>vervaldatums van producten</li>
+            <li>applicatie-instellingen (taal, meldingsvoorkeuren)</li>
+        </ul>
+
+        <h3>2.3. Technische gegevens</h3>
+        <ul>
+            <li>tokens voor pushmeldingen</li>
+            <li>technische identificatoren die nodig zijn voor het functioneren van de applicatie</li>
+            <li>gebruiksgegevens van de applicatie (bezochte schermen, uitgevoerde acties)</li>
+            <li>sessie-opnamen van gebruik (interface-interacties, zonder vastlegging van gevoelige gegevens zoals wachtwoorden of betalingsgegevens)</li>
+            <li>apparaatinformatie (model, besturingssysteem, applicatieversie)</li>
+            <li>apparaattaal en -land</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Wij verzamelen geen gevoelige gegevens zoals:</strong></p>
+            <ul>
+                <li>medische gegevens</li>
+                <li>creditcard- of bankgegevens</li>
+                <li>biometrische gegevens</li>
+                <li>precieze locatie</li>
+            </ul>
+            <p>Productprijzen ingevoerd door de gebruiker worden opgeslagen in hun account en worden niet gedeeld met derden.</p>
+        </div>
+
+        <h2>3. Doel van gegevensverwerking</h2>
+        <p>De verzamelde gegevens worden uitsluitend gebruikt voor:</p>
+        <ul>
+            <li>het aanmaken en beheren van het gebruikersaccount</li>
+            <li>het leveren van de kernfunctionaliteiten van de applicatie</li>
+            <li>het opslaan en beheren van de producten van de gebruiker</li>
+            <li>het verzenden van meldingen over het verlopen van producten</li>
+            <li>technisch functioneren en beveiliging van de applicatie</li>
+            <li>het verbeteren van de gebruikerservaring</li>
+        </ul>
+
+        <h2>4. Rechtsgrondslag voor verwerking</h2>
+        <p>Persoonsgegevens worden verwerkt op de volgende rechtsgronden:</p>
+        <ul>
+            <li>uitvoering van de dienst die via de Fridgy-applicatie wordt geleverd</li>
+            <li>toestemming van de gebruiker</li>
+            <li>gerechtvaardigd belang bij het waarborgen van de veiligheid, stabiliteit en goede werking van de applicatie</li>
+        </ul>
+        <p>Wanneer de verwerking gebaseerd is op toestemming, kan de gebruiker de toestemming te allen tijde intrekken, zonder dat dit gevolgen heeft voor de rechtmatigheid van de verwerking op basis van toestemming vóór de intrekking ervan.</p>
+
+        <h2>5. Gegevensopslag en beveiliging</h2>
+        <p>Persoonsgegevens worden opgeslagen op beveiligde servers en beschermd door:</p>
+        <ul>
+            <li>beperkte toegang</li>
+            <li>passende technische en organisatorische maatregelen</li>
+            <li>versleutelde communicatie (HTTPS)</li>
+        </ul>
+        <p>Wij doen redelijke inspanningen om persoonsgegevens te beschermen tegen ongeautoriseerde toegang, verlies, vernietiging of openbaarmaking.</p>
+
+        <h2>6. Gegevensdeling</h2>
+        <p>Wij verkopen, verhuren of dragen de persoonsgegevens van gebruikers niet over aan derden voor commerciële doeleinden.</p>
+        <p>Gegevens kunnen worden verwerkt door vertrouwde dienstverleners uitsluitend voor technische doeleinden zoals:</p>
+        <ul>
+            <li>hostingdiensten</li>
+            <li>bezorgdiensten voor pushmeldingen (Expo, Apple, Google)</li>
+            <li>AI-gebaseerde tekstextractiediensten (Google Cloud Vision, Google Gemini)</li>
+            <li>betalingsverwerkingsdiensten (RevenueCat, Apple, Google)</li>
+            <li>gebruiksanalyse- en statistiekdiensten (Firebase Analytics van Google, PostHog)</li>
+            <li>fout- en prestatierapportagediensten (Firebase Crashlytics)</li>
+        </ul>
+        <p>Bonafbeeldingen worden verwerkt via AI-diensten (Google Cloud Vision, Google Gemini) uitsluitend voor tekstextractie. Afbeeldingen worden niet permanent opgeslagen op onze servers.</p>
+        <p>Premium abonnementsbetalingen worden verwerkt via RevenueCat en Apple/Google. Wij hebben geen toegang tot uw kaartgegevens.</p>
+        <p>Deze aanbieders hebben alleen toegang tot de gegevens die strikt noodzakelijk zijn voor het leveren van hun diensten en zijn verplicht de vertrouwelijkheid van gegevens te handhaven.</p>
+
+        <h2>6.1. Analyse en sessieopname</h2>
+        <p>Om te begrijpen hoe de applicatie wordt gebruikt en deze voortdurend te verbeteren, gebruiken we twee analysediensten:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Verzamelt anonieme gegevens over applicatiegebruik:</p>
+        <ul>
+            <li>bezochte schermen en uitgevoerde acties</li>
+            <li>gebruiksfrequentie van functies</li>
+            <li>fout- en prestatierapporten</li>
+            <li>technische apparaatinformatie</li>
+        </ul>
+        <p>Gegevens worden opgeslagen op Google Cloud-infrastructuur in de Europese Unie.</p>
+        <p>Firebase privacybeleid: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Verzamelt gegevens over de interactie van de gebruiker met de applicatie, inclusief sessie-opnamen. De opnamen zijn vergelijkbaar met videomateriaal dat de navigatie door de applicatie toont, uitsluitend binnen de Fridgy-app-interface.</p>
+        <p>De opnamen bevatten GEEN:</p>
+        <ul>
+            <li>inhoud van wachtwoordvelden (automatisch gemaskeerd)</li>
+            <li>betalingsgegevens (verwerkt door Apple/Google in native dialogen, buiten de applicatie)</li>
+            <li>inhoud van andere applicaties op het apparaat</li>
+            <li>camera- of galerij-afbeeldingen buiten de applicatiecontext</li>
+        </ul>
+        <p>Slechts ongeveer 25% van de sessies wordt willekeurig geselecteerd opgenomen, om het volume van verzamelde gegevens te beheren.</p>
+        <p>Gegevens worden opgeslagen op PostHog Cloud-infrastructuur in de Europese Unie (Frankfurt, Duitsland).</p>
+        <p>PostHog privacybeleid: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Opt-out</h3>
+        <p>Gebruikers kunnen verzoeken om stopzetting van de verzameling van analysegegevens en sessieopname door contact met ons op te nemen via <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Wij verwerken het verzoek binnen 30 dagen, in overeenstemming met de AVG.</p>
+
+        <h2>7. Gegevensoverdrachten buiten de Europese Unie</h2>
+        <p>Persoonsgegevens worden primair opgeslagen in de Europese Unie. Onze dienstverleners (Firebase, PostHog, RevenueCat) gebruiken EU-infrastructuur voor primaire gegevensopslag.</p>
+        <p>In beperkte situaties kunnen bepaalde technische gegevens worden verwerkt door partnerdiensten buiten de EU (bijvoorbeeld voor bepaalde Google- of Apple-operaties). In dergelijke gevallen zorgen wij ervoor dat adequate waarborgen voor gegevensbescherming worden toegepast, in overeenstemming met Standaard Contractuele Clausules (SCC) of andere mechanismen voorzien door de AVG.</p>
+
+        <h2>8. Pushmeldingen</h2>
+        <p>De Fridgy-applicatie kan pushmeldingen sturen met betrekking tot de producten van de gebruiker en vervaldatums.</p>
+        <p>Meldingen zijn:</p>
+        <ul>
+            <li>optioneel</li>
+            <li>kunnen op elk moment worden uitgeschakeld vanuit de applicatie-instellingen of apparaatinstellingen</li>
+        </ul>
+
+        <h2>9. Bewaartermijn van gegevens</h2>
+        <p>Persoonsgegevens worden bewaard:</p>
+        <ul>
+            <li>zolang het gebruikersaccount bestaat</li>
+            <li>totdat de gebruiker hun account verwijdert</li>
+        </ul>
+        <p>Na verwijdering van het account worden de gegevens permanent verwijderd uit onze systemen, tenzij de toepasselijke wetgeving vereist dat bepaalde informatie gedurende een bepaalde periode wordt bewaard.</p>
+
+        <h2>10. Rechten van gebruikers</h2>
+        <p>Onder de gegevensbeschermingswetgeving hebben gebruikers de volgende rechten:</p>
+        <ul>
+            <li>het recht op toegang tot hun gegevens</li>
+            <li>het recht op rectificatie van gegevens</li>
+            <li>het recht op verwijdering van hun account en bijbehorende gegevens</li>
+            <li>het recht om toestemming in te trekken</li>
+            <li>het recht om informatie over gegevensverwerking op te vragen</li>
+        </ul>
+        <p>Om deze rechten uit te oefenen, kunt u contact met ons opnemen via <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Gebruikers hebben ook het recht een klacht in te dienen bij de bevoegde gegevensbeschermingsautoriteit:</p>
+        <div class="company-info">
+            <p><strong>Nationale Toezichthoudende Autoriteit voor de Verwerking van Persoonsgegevens (ANSPDCP)</strong></p>
+            <p>Website: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Account verwijderen</h2>
+        <p>Gebruikers kunnen hun account direct vanuit de applicatie verwijderen, in de instellingensectie.</p>
+        <p>Door het account te verwijderen:</p>
+        <ul>
+            <li>worden alle bijbehorende persoonsgegevens permanent verwijderd</li>
+            <li>wordt de toegang tot de applicatie ingetrokken</li>
+        </ul>
+
+        <h2>12. Wijzigingen in het privacybeleid</h2>
+        <p>Wij behouden ons het recht voor dit Privacybeleid bij te werken.</p>
+        <p>Bij significante wijzigingen worden gebruikers geïnformeerd via de applicatie of op andere passende wijze.</p>
+        <p>De datum van de laatste update wordt bovenaan het document weergegeven.</p>
+
+        <h2>13. Contact</h2>
+        <p>Voor vragen of verzoeken met betrekking tot dit Privacybeleid of persoonsgegevens kunt u contact met ons opnemen via:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- DANISH -->
+    <div class="content" data-lang="da" style="display:none">
+        <div class="header-row">
+            <h1>Privatlivspolitik - Fridgy</h1>
+        </div>
+        <p class="last-updated">Sidst opdateret: 20. maj 2026</p>
+
+        <p>Denne Privatlivspolitik beskriver, hvordan Fridgy-applikationen indsamler, bruger og beskytter sine brugeres personoplysninger.</p>
+        <p>Ved at bruge Fridgy-applikationen accepterer du de praksisser, der er beskrevet i denne politik.</p>
+
+        <h2>1. Hvem vi er</h2>
+        <p>Fridgy-applikationen drives af:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Rumænien</p>
+            <p>Kontakt-e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>I henhold til databeskyttelseslovgivningen er vi den dataansvarlige.</p>
+
+        <h2>2. Hvilke data vi indsamler</h2>
+        <p>Vi indsamler kun de data, der er strengt nødvendige for applikationens funktion.</p>
+
+        <h3>2.1. Kontodata</h3>
+        <ul>
+            <li>e-mailadresse</li>
+            <li>brugernavn eller visningsnavn</li>
+            <li>godkendelsesmetode (e-mail/adgangskode eller Google-konto)</li>
+        </ul>
+
+        <h3>2.2. Data indtastet af brugeren i applikationen</h3>
+        <ul>
+            <li>produkter tilføjet til applikationen</li>
+            <li>produkters udløbsdatoer</li>
+            <li>applikationsindstillinger (sprog, notifikationspræferencer)</li>
+        </ul>
+
+        <h3>2.3. Tekniske data</h3>
+        <ul>
+            <li>tokens til push-notifikationer</li>
+            <li>tekniske identifikatorer nødvendige for applikationens funktion</li>
+            <li>applikationsbrugsdata (besøgte skærme, udførte handlinger)</li>
+            <li>sessionsoptagelser af brug (grænsefladeinteraktioner, uden optagelse af følsomme data som adgangskoder eller betalingsoplysninger)</li>
+            <li>enhedsoplysninger (model, operativsystem, applikationsversion)</li>
+            <li>enhedssprog og -land</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Vi indsamler ikke følsomme data såsom:</strong></p>
+            <ul>
+                <li>medicinske data</li>
+                <li>kredit- eller bankkortsdata</li>
+                <li>biometriske data</li>
+                <li>præcis lokation</li>
+            </ul>
+            <p>Produktpriser indtastet af brugeren gemmes i deres konto og deles ikke med tredjepart.</p>
+        </div>
+
+        <h2>3. Formål med databehandling</h2>
+        <p>De indsamlede data bruges udelukkende til:</p>
+        <ul>
+            <li>oprettelse og administration af brugerkontoen</li>
+            <li>levering af applikationens kernefunktioner</li>
+            <li>lagring og administration af brugerens produkter</li>
+            <li>afsendelse af notifikationer om produkters udløb</li>
+            <li>teknisk funktion og sikkerhed for applikationen</li>
+            <li>forbedring af brugeroplevelsen</li>
+        </ul>
+
+        <h2>4. Retsgrundlag for behandling</h2>
+        <p>Personoplysninger behandles på følgende retsgrundlag:</p>
+        <ul>
+            <li>udførelse af den tjeneste, der leveres via Fridgy-applikationen</li>
+            <li>brugerens samtykke</li>
+            <li>legitim interesse i at sikre applikationens sikkerhed, stabilitet og korrekte funktion</li>
+        </ul>
+        <p>Når behandlingen er baseret på samtykke, kan brugeren til enhver tid trække samtykket tilbage, uden at dette påvirker lovligheden af behandlingen baseret på samtykke inden tilbagetrækningen.</p>
+
+        <h2>5. Datalagring og sikkerhed</h2>
+        <p>Personoplysninger gemmes på sikre servere og beskyttes gennem:</p>
+        <ul>
+            <li>begrænset adgang</li>
+            <li>passende tekniske og organisatoriske foranstaltninger</li>
+            <li>krypteret kommunikation (HTTPS)</li>
+        </ul>
+        <p>Vi gør rimelige bestræbelser på at beskytte personoplysninger mod uautoriseret adgang, tab, ødelæggelse eller offentliggørelse.</p>
+
+        <h2>6. Datadeling</h2>
+        <p>Vi sælger, udlejer eller overfører ikke brugernes personoplysninger til tredjepart til kommercielle formål.</p>
+        <p>Data kan behandles af betroede tjenesteudbydere udelukkende til tekniske formål såsom:</p>
+        <ul>
+            <li>hostingtjenester</li>
+            <li>leveringstjenester for push-notifikationer (Expo, Apple, Google)</li>
+            <li>AI-baserede tekstudtrækstjenester (Google Cloud Vision, Google Gemini)</li>
+            <li>betalingsbehandlingstjenester (RevenueCat, Apple, Google)</li>
+            <li>brugsanalyse- og statistiktjenester (Firebase Analytics fra Google, PostHog)</li>
+            <li>fejl- og ydeevnerapporteringstjenester (Firebase Crashlytics)</li>
+        </ul>
+        <p>Kvitteringsbilleder behandles via AI-tjenester (Google Cloud Vision, Google Gemini) udelukkende til tekstudtrækning. Billeder gemmes ikke permanent på vores servere.</p>
+        <p>Premium-abonnementsbetalinger behandles via RevenueCat og Apple/Google. Vi har ikke adgang til dine kortoplysninger.</p>
+        <p>Disse udbydere har kun adgang til de data, der er strengt nødvendige for at levere deres tjenester, og er forpligtet til at opretholde fortrolighed om data.</p>
+
+        <h2>6.1. Analyse og sessionsoptagelse</h2>
+        <p>For at forstå, hvordan applikationen bruges og løbende forbedre den, bruger vi to analysetjenester:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Indsamler anonyme data om applikationsbrug:</p>
+        <ul>
+            <li>besøgte skærme og udførte handlinger</li>
+            <li>hyppighed af funktionsbrug</li>
+            <li>fejl- og ydeevnerapporter</li>
+            <li>tekniske enhedsoplysninger</li>
+        </ul>
+        <p>Data gemmes på Google Cloud-infrastruktur i Den Europæiske Union.</p>
+        <p>Firebase privatlivspolitik: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Indsamler data om brugerens interaktion med applikationen, herunder sessionsoptagelser. Optagelserne ligner videomateriale, der viser navigation gennem applikationen, udelukkende inden for Fridgy-appens grænseflade.</p>
+        <p>Optagelserne indeholder IKKE:</p>
+        <ul>
+            <li>indhold af adgangskodefelter (automatisk maskeret)</li>
+            <li>betalingsdata (behandlet af Apple/Google i native dialoger uden for applikationen)</li>
+            <li>indhold fra andre applikationer på enheden</li>
+            <li>kamera- eller galleribilleder uden for applikationskonteksten</li>
+        </ul>
+        <p>Kun ca. 25 % af sessionerne optages, tilfældigt udvalgt, for at håndtere mængden af indsamlede data.</p>
+        <p>Data gemmes på PostHog Cloud-infrastruktur i Den Europæiske Union (Frankfurt, Tyskland).</p>
+        <p>PostHog privatlivspolitik: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Fravalg</h3>
+        <p>Brugere kan anmode om ophør af indsamling af analysedata og sessionsoptagelse ved at kontakte os på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vi behandler anmodningen inden for 30 dage i overensstemmelse med GDPR.</p>
+
+        <h2>7. Dataoverførsler uden for Den Europæiske Union</h2>
+        <p>Personoplysninger lagres primært i Den Europæiske Union. Vores tjenesteudbydere (Firebase, PostHog, RevenueCat) bruger EU-infrastruktur til primær datalagring.</p>
+        <p>I begrænsede situationer kan visse tekniske data behandles af partnertjenester uden for EU (f.eks. for visse Google- eller Apple-operationer). I sådanne tilfælde sikrer vi, at passende beskyttelsesforanstaltninger for databeskyttelse anvendes i overensstemmelse med standardkontraktbestemmelser (SCC) eller andre mekanismer i henhold til GDPR.</p>
+
+        <h2>8. Push-notifikationer</h2>
+        <p>Fridgy-applikationen kan sende push-notifikationer relateret til brugerens produkter og udløbsdatoer.</p>
+        <p>Notifikationer er:</p>
+        <ul>
+            <li>valgfrie</li>
+            <li>kan til enhver tid deaktiveres fra applikationsindstillingerne eller enhedsindstillingerne</li>
+        </ul>
+
+        <h2>9. Dataopbevaringsperiode</h2>
+        <p>Personoplysninger opbevares:</p>
+        <ul>
+            <li>så længe brugerkontoen eksisterer</li>
+            <li>indtil brugeren sletter sin konto</li>
+        </ul>
+        <p>Efter sletning af kontoen fjernes dataene permanent fra vores systemer, undtagen hvor gældende lovgivning kræver, at visse oplysninger opbevares i en bestemt periode.</p>
+
+        <h2>10. Brugernes rettigheder</h2>
+        <p>I henhold til databeskyttelseslovgivningen har brugere følgende rettigheder:</p>
+        <ul>
+            <li>retten til adgang til deres data</li>
+            <li>retten til berigtigelse af data</li>
+            <li>retten til sletning af deres konto og tilhørende data</li>
+            <li>retten til at trække samtykke tilbage</li>
+            <li>retten til at anmode om oplysninger om databehandling</li>
+        </ul>
+        <p>For at udøve disse rettigheder kan du kontakte os på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Brugere har også ret til at indgive en klage til den kompetente databeskyttelsesmyndighed:</p>
+        <div class="company-info">
+            <p><strong>National tilsynsmyndighed for behandling af personoplysninger (ANSPDCP)</strong></p>
+            <p>Websted: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Sletning af konto</h2>
+        <p>Brugere kan slette deres konto direkte fra applikationen i indstillingsafsnittet.</p>
+        <p>Ved sletning af kontoen:</p>
+        <ul>
+            <li>fjernes alle tilknyttede personoplysninger permanent</li>
+            <li>tilbagekaldes adgangen til applikationen</li>
+        </ul>
+
+        <h2>12. Ændringer i privatlivspolitikken</h2>
+        <p>Vi forbeholder os retten til at opdatere denne Privatlivspolitik.</p>
+        <p>Ved væsentlige ændringer vil brugerne blive informeret via applikationen eller på anden passende måde.</p>
+        <p>Datoen for den seneste opdatering vises øverst i dokumentet.</p>
+
+        <h2>13. Kontakt</h2>
+        <p>For spørgsmål eller anmodninger vedrørende denne Privatlivspolitik eller personoplysninger kan du kontakte os på:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- SWEDISH -->
+    <div class="content" data-lang="sv" style="display:none">
+        <div class="header-row">
+            <h1>Integritetspolicy - Fridgy</h1>
+        </div>
+        <p class="last-updated">Senast uppdaterad: 20 maj 2026</p>
+
+        <p>Denna Integritetspolicy beskriver hur Fridgy-applikationen samlar in, använder och skyddar sina användares personuppgifter.</p>
+        <p>Genom att använda Fridgy-applikationen godkänner du de metoder som beskrivs i denna policy.</p>
+
+        <h2>1. Vilka vi är</h2>
+        <p>Fridgy-applikationen drivs av:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Rumänien</p>
+            <p>Kontakt-e-post: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+        <p>I enlighet med dataskyddslagstiftningen är vi personuppgiftsansvarig.</p>
+
+        <h2>2. Vilka uppgifter vi samlar in</h2>
+        <p>Vi samlar bara in uppgifter som är strikt nödvändiga för applikationens funktion.</p>
+
+        <h3>2.1. Kontouppgifter</h3>
+        <ul>
+            <li>e-postadress</li>
+            <li>användarnamn eller visningsnamn</li>
+            <li>autentiseringsmetod (e-post/lösenord eller Google-konto)</li>
+        </ul>
+
+        <h3>2.2. Uppgifter som användaren har angett i applikationen</h3>
+        <ul>
+            <li>produkter som lagts till i applikationen</li>
+            <li>produkters utgångsdatum</li>
+            <li>applikationsinställningar (språk, aviseringspreferenser)</li>
+        </ul>
+
+        <h3>2.3. Tekniska uppgifter</h3>
+        <ul>
+            <li>tokens för push-aviseringar</li>
+            <li>tekniska identifierare som krävs för applikationens funktion</li>
+            <li>applikationsanvändningsdata (besökta skärmar, utförda åtgärder)</li>
+            <li>sessionsinspelningar av användning (gränssnittsinteraktioner, utan inspelning av känsliga uppgifter som lösenord eller betalningsuppgifter)</li>
+            <li>enhetsinformation (modell, operativsystem, applikationsversion)</li>
+            <li>enhetsspråk och -land</li>
+        </ul>
+
+        <div class="warning">
+            <p><strong>Vi samlar inte in känsliga uppgifter såsom:</strong></p>
+            <ul>
+                <li>medicinska uppgifter</li>
+                <li>kredit- eller bankkortsuppgifter</li>
+                <li>biometriska uppgifter</li>
+                <li>exakt plats</li>
+            </ul>
+            <p>Produktpriser som användaren angett lagras i deras konto och delas inte med tredje part.</p>
+        </div>
+
+        <h2>3. Syfte med databehandling</h2>
+        <p>De insamlade uppgifterna används uteslutande för:</p>
+        <ul>
+            <li>skapande och hantering av användarkontot</li>
+            <li>tillhandahållande av applikationens kärnfunktioner</li>
+            <li>lagring och hantering av användarens produkter</li>
+            <li>sändning av aviseringar om produkters utgång</li>
+            <li>teknisk funktion och säkerhet för applikationen</li>
+            <li>förbättring av användarupplevelsen</li>
+        </ul>
+
+        <h2>4. Rättslig grund för behandling</h2>
+        <p>Personuppgifter behandlas på följande rättsliga grunder:</p>
+        <ul>
+            <li>utförande av tjänsten som tillhandahålls via Fridgy-applikationen</li>
+            <li>användarens samtycke</li>
+            <li>berättigat intresse av att säkerställa applikationens säkerhet, stabilitet och korrekt funktion</li>
+        </ul>
+        <p>När behandlingen baseras på samtycke kan användaren när som helst återkalla samtycket, utan att detta påverkar lagligheten av behandling baserad på samtycke före återkallandet.</p>
+
+        <h2>5. Datalagring och säkerhet</h2>
+        <p>Personuppgifter lagras på säkra servrar och skyddas genom:</p>
+        <ul>
+            <li>begränsad åtkomst</li>
+            <li>lämpliga tekniska och organisatoriska åtgärder</li>
+            <li>krypterad kommunikation (HTTPS)</li>
+        </ul>
+        <p>Vi gör rimliga ansträngningar för att skydda personuppgifter mot obehörig åtkomst, förlust, förstörelse eller röjande.</p>
+
+        <h2>6. Datadelning</h2>
+        <p>Vi säljer, hyr ut eller överför inte användarnas personuppgifter till tredje part för kommersiella ändamål.</p>
+        <p>Uppgifter kan behandlas av betrodda tjänsteleverantörer enbart för tekniska ändamål såsom:</p>
+        <ul>
+            <li>värdtjänster</li>
+            <li>leveranstjänster för push-aviseringar (Expo, Apple, Google)</li>
+            <li>AI-baserade textutvinningtjänster (Google Cloud Vision, Google Gemini)</li>
+            <li>betalningstjänster (RevenueCat, Apple, Google)</li>
+            <li>användningsanalys- och statistiktjänster (Firebase Analytics från Google, PostHog)</li>
+            <li>fel- och prestandarapporteringstjänster (Firebase Crashlytics)</li>
+        </ul>
+        <p>Kvittobilder behandlas via AI-tjänster (Google Cloud Vision, Google Gemini) uteslutande för textutvinning. Bilder lagras inte permanent på våra servrar.</p>
+        <p>Premium-prenumerationsbetalningar behandlas via RevenueCat och Apple/Google. Vi har inte tillgång till dina kortuppgifter.</p>
+        <p>Dessa leverantörer har endast tillgång till de uppgifter som är strikt nödvändiga för att tillhandahålla sina tjänster och är skyldiga att upprätthålla konfidentialitet om uppgifter.</p>
+
+        <h2>6.1. Analys och sessionsinspelning</h2>
+        <p>För att förstå hur applikationen används och kontinuerligt förbättra den, använder vi två analystjänster:</p>
+
+        <h3>Firebase Analytics (Google Ireland Limited)</h3>
+        <p>Samlar in anonyma uppgifter om applikationsanvändning:</p>
+        <ul>
+            <li>besökta skärmar och utförda åtgärder</li>
+            <li>frekvens av funktionsanvändning</li>
+            <li>fel- och prestandarapporter</li>
+            <li>teknisk enhetsinformation</li>
+        </ul>
+        <p>Uppgifter lagras på Google Cloud-infrastruktur i Europeiska unionen.</p>
+        <p>Firebase integritetspolicy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+
+        <h3>PostHog (PostHog Inc.)</h3>
+        <p>Samlar in uppgifter om användarens interaktion med applikationen, inklusive sessionsinspelningar. Inspelningarna liknar videomaterial som visar navigering genom applikationen, uteslutande inom Fridgy-appens gränssnitt.</p>
+        <p>Inspelningarna innehåller INTE:</p>
+        <ul>
+            <li>innehåll i lösenordsfält (automatiskt maskerat)</li>
+            <li>betalningsuppgifter (behandlade av Apple/Google i inbyggda dialoger utanför applikationen)</li>
+            <li>innehåll från andra applikationer på enheten</li>
+            <li>kamera- eller galleribilder utanför applikationskontexten</li>
+        </ul>
+        <p>Endast ungefär 25 % av sessionerna spelas in, slumpmässigt utvalda, för att hantera volymen av insamlade uppgifter.</p>
+        <p>Uppgifter lagras på PostHog Cloud-infrastruktur i Europeiska unionen (Frankfurt, Tyskland).</p>
+        <p>PostHog integritetspolicy: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+
+        <h3>Avanmälan</h3>
+        <p>Användare kan begära att analysdatainsamling och sessionsinspelning upphör genom att kontakta oss på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vi behandlar begäran inom 30 dagar i enlighet med GDPR.</p>
+
+        <h2>7. Dataöverföringar utanför Europeiska unionen</h2>
+        <p>Personuppgifter lagras primärt inom Europeiska unionen. Våra tjänsteleverantörer (Firebase, PostHog, RevenueCat) använder EU-infrastruktur för primär datalagring.</p>
+        <p>I begränsade situationer kan vissa tekniska uppgifter behandlas av partnertjänster utanför EU (till exempel för vissa Google- eller Apple-operationer). I sådana fall säkerställer vi att lämpliga skyddsåtgärder för dataskydd tillämpas, i enlighet med standardavtalsklausuler (SCC) eller andra mekanismer som föreskrivs av GDPR.</p>
+
+        <h2>8. Push-aviseringar</h2>
+        <p>Fridgy-applikationen kan skicka push-aviseringar relaterade till användarens produkter och utgångsdatum.</p>
+        <p>Aviseringar är:</p>
+        <ul>
+            <li>valfria</li>
+            <li>kan inaktiveras när som helst från applikationsinställningarna eller enhetsinställningarna</li>
+        </ul>
+
+        <h2>9. Datalagringens varaktighet</h2>
+        <p>Personuppgifter lagras:</p>
+        <ul>
+            <li>så länge användarkontot existerar</li>
+            <li>tills användaren raderar sitt konto</li>
+        </ul>
+        <p>Efter radering av kontot tas uppgifterna bort permanent från våra system, utom där tillämplig lagstiftning kräver att viss information behålls under en angiven period.</p>
+
+        <h2>10. Användares rättigheter</h2>
+        <p>Enligt dataskyddslagstiftningen har användare följande rättigheter:</p>
+        <ul>
+            <li>rätten att få tillgång till sina uppgifter</li>
+            <li>rätten att korrigera uppgifter</li>
+            <li>rätten att radera sitt konto och tillhörande uppgifter</li>
+            <li>rätten att återkalla samtycke</li>
+            <li>rätten att begära information om databehandling</li>
+        </ul>
+        <p>För att utöva dessa rättigheter kan du kontakta oss på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Användare har också rätt att lämna in ett klagomål till den behöriga dataskyddsmyndigheten:</p>
+        <div class="company-info">
+            <p><strong>Nationell tillsynsmyndighet för behandling av personuppgifter (ANSPDCP)</strong></p>
+            <p>Webbplats: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
+        </div>
+
+        <h2>11. Radering av konto</h2>
+        <p>Användare kan radera sitt konto direkt från applikationen i inställningssektionen.</p>
+        <p>Genom att radera kontot:</p>
+        <ul>
+            <li>tas alla tillhörande personuppgifter bort permanent</li>
+            <li>återkallas åtkomsten till applikationen</li>
+        </ul>
+
+        <h2>12. Ändringar av integritetspolicyn</h2>
+        <p>Vi förbehåller oss rätten att uppdatera denna Integritetspolicy.</p>
+        <p>Vid väsentliga ändringar kommer användare att informeras via applikationen eller på annat lämpligt sätt.</p>
+        <p>Datumet för den senaste uppdateringen visas överst i dokumentet.</p>
+
+        <h2>13. Kontakt</h2>
+        <p>För frågor eller förfrågningar angående denna Integritetspolicy eller personuppgifter kan du kontakta oss på:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var pageTitles = {
+        ro: 'Politica de Confidentialitate - Fridgy',
+        en: 'Privacy Policy - Fridgy',
+        de: 'Datenschutzerklärung - Fridgy',
+        hu: 'Adatvédelmi szabályzat - Fridgy',
+        fr: 'Politique de confidentialité - Fridgy',
+        nl: 'Privacybeleid - Fridgy',
+        da: 'Privatlivspolitik - Fridgy',
+        sv: 'Integritetspolicy - Fridgy'
+    };
+
+    var supportedLangs = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
+
+    function detectLang() {
+        var params = new URLSearchParams(window.location.search);
+        var lang = params.get('lang');
+        if (lang && supportedLangs.indexOf(lang) !== -1) return lang;
+
+        lang = localStorage.getItem('fridgy-lang');
+        if (lang && supportedLangs.indexOf(lang) !== -1) return lang;
+
+        var nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        var primary = nav.split('-')[0];
+        if (supportedLangs.indexOf(primary) !== -1) return primary;
+
+        return 'en';
+    }
+
+    function showLang(lang) {
+        var contents = document.querySelectorAll('.content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        var target = document.querySelector('.content[data-lang="' + lang + '"]');
+        if (target) {
+            target.style.display = 'block';
+        }
+        document.title = pageTitles[lang] || pageTitles['en'];
+        document.getElementById('lang-select').value = lang;
+        localStorage.setItem('fridgy-lang', lang);
+    }
+
+    function switchLang(lang) {
+        showLang(lang);
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.pushState({lang: lang}, '', url.toString());
+    }
+
+    window.addEventListener('popstate', function(e) {
+        var params = new URLSearchParams(window.location.search);
+        var lang = params.get('lang');
+        if (lang && supportedLangs.indexOf(lang) !== -1) {
+            showLang(lang);
+        }
+    });
+
+    showLang(detectLang());
+</script>
+</body>
+</html>

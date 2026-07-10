@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Fridgy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #eef5fe;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+        .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+        .b1{width:560px;height:560px;background:#6daeff;top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
+        .b2{width:520px;height:520px;background:#1f4ec5;top:240px;right:-180px;animation:float2 22s ease-in-out infinite}
+        .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:float1 26s ease-in-out infinite}
+        @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
+        @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,.85);
+            backdrop-filter: blur(14px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+        .last-updated {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        .intro {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .intro p {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+        .warning {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning p {
+            color: #92400e;
+            margin-bottom: 0;
+        }
+        .contact-box {
+            background-color: #f0fdf4;
+            border: 1px solid #86efac;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .contact-box p {
+            color: #166534;
+            margin-bottom: 5px;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .company-info {
+            background-color: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .company-info p {
+            margin-bottom: 5px;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .header-row h1 {
+            flex: 1;
+            min-width: 0;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switcher select {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 32px 8px 12px;
+            font-size: 0.9rem;
+            color: #2d3748;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a5568' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            white-space: nowrap;
+        }
+        .lang-switcher select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="mesh" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="container">
+
+    <div class="lang-switcher">
+        <select id="lang-select" onchange="switchLang(this.value)">
+            <option value="ro">Română</option>
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="hu">Magyar</option>
+            <option value="fr">Français</option>
+            <option value="nl">Nederlands</option>
+            <option value="da">Dansk</option>
+            <option value="sv">Svenska</option>
+        </select>
+    </div>
+
+    <!-- Romanian -->
+    <div class="content" data-lang="ro" style="display:none">
+        <div class="header-row">
+            <h1>Termeni și Condiții - Fridgy</h1>
+        </div>
+        <p class="last-updated">Ultima actualizare: 6 mai 2026</p>
+
+        <div class="intro">
+            <p>Acești Termeni și Condiții („Termenii") reglementează utilizarea aplicației mobile Fridgy.</p>
+            <p>Prin crearea unui cont sau utilizarea aplicației, confirmați că ați citit, înțeles și acceptat acești Termeni.</p>
+        </div>
+
+        <h2>1. Operatorul aplicației</h2>
+        <p>Aplicația Fridgy este operată de:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Email de contact: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Descrierea serviciului</h2>
+        <p>Fridgy este o aplicație destinată gestionării produselor alimentare, permițând utilizatorilor să adauge produse și să primească notificări privind datele de expirare.</p>
+        <p>Aplicația este disponibilă în versiune gratuită și Premium. Vezi secțiunea 2.1 pentru detalii despre abonamentul Premium.</p>
+
+        <h3>2.1. Abonament Premium</h3>
+        <p>Fridgy oferă un abonament Premium cu următoarele condiții:</p>
+        <ul>
+            <li>Prețul: €2.99/lună sau €15.99/an</li>
+            <li>Abonamentul se reînnoiește automat</li>
+            <li>Poate fi anulat oricând din setările App Store sau Google Play</li>
+            <li>Plățile sunt gestionate de Apple/Google — politica de rambursare a acestora se aplică</li>
+        </ul>
+
+        <h2>3. Eligibilitate</h2>
+        <p>Pentru a utiliza aplicația:</p>
+        <ul>
+            <li>trebuie să aveți cel puțin 13 ani</li>
+            <li>trebuie să aveți capacitatea legală de a accepta acești Termeni</li>
+            <li>informațiile furnizate trebuie să fie reale și corecte</li>
+        </ul>
+        <p>Ne rezervăm dreptul de a restricționa accesul utilizatorilor care nu îndeplinesc aceste condiții.</p>
+
+        <h2>4. Crearea și utilizarea contului</h2>
+        <p>Pentru utilizarea aplicației este necesar un cont de utilizator.</p>
+        <p>Utilizatorul este responsabil pentru:</p>
+        <ul>
+            <li>păstrarea confidențialității datelor de autentificare</li>
+            <li>activitatea desfășurată în contul său</li>
+            <li>corectitudinea datelor introduse</li>
+        </ul>
+        <p>Ne rezervăm dreptul de a suspenda sau șterge conturi care încalcă acești Termeni.</p>
+
+        <h2>5. Utilizarea permisă a aplicației</h2>
+        <p>Utilizatorii se obligă să utilizeze aplicația în mod legal și responsabil.</p>
+        <p>Este interzis:</p>
+        <ul>
+            <li>utilizarea aplicației în scopuri ilegale</li>
+            <li>încercarea de acces neautorizat la sistemele aplicației</li>
+            <li>utilizarea automatizărilor sau a altor mijloace care pot afecta funcționarea aplicației</li>
+            <li>introducerea de conținut fals, abuziv sau înșelător</li>
+        </ul>
+
+        <h2>6. Conținut introdus de utilizator</h2>
+        <p>Utilizatorul este singurul responsabil pentru informațiile introduse în aplicație, inclusiv:</p>
+        <ul>
+            <li>produsele adăugate</li>
+            <li>datele de expirare</li>
+            <li>setările personale</li>
+        </ul>
+        <p>Fridgy nu verifică și nu garantează corectitudinea acestor informații.</p>
+
+        <h2>7. Frigidere partajate</h2>
+        <p>Fridgy permite utilizatorilor să partajeze frigidere cu alți utilizatori. La utilizarea frigiderelor partajate:</p>
+        <ul>
+            <li>toți membrii unui frigider partajat pot vizualiza și modifica produsele din acesta</li>
+            <li>fiecare utilizator este responsabil pentru conținutul pe care îl adaugă într-un frigider partajat</li>
+            <li>proprietarul frigiderului poate elimina membri în orice moment</li>
+            <li>Fridgy nu este responsabil pentru disputele dintre utilizatori privind conținutul frigiderelor partajate</li>
+        </ul>
+
+        <h2>8. Disponibilitatea serviciului</h2>
+        <p>Deși depunem eforturi pentru a asigura funcționarea aplicației, nu garantăm disponibilitatea neîntreruptă sau lipsa erorilor.</p>
+        <p>Aplicația poate fi:</p>
+        <ul>
+            <li>modificată</li>
+            <li>suspendată temporar</li>
+            <li>actualizată sau întreruptă</li>
+        </ul>
+        <p>fără notificare prealabilă.</p>
+
+        <h2>9. Limitarea răspunderii</h2>
+        <p>Aplicația Fridgy este furnizată „așa cum este" („as is"), fără garanții explicite sau implicite.</p>
+        <p>În măsura permisă de lege:</p>
+        <ul>
+            <li>nu garantăm că notificările vor fi livrate la timp sau deloc</li>
+            <li>nu suntem responsabili pentru pierderi directe sau indirecte</li>
+            <li>nu suntem responsabili pentru produse expirate sau pierderi rezultate din utilizarea aplicației</li>
+        </ul>
+        <p>Utilizatorul este responsabil pentru verificarea produselor și a datelor de expirare.</p>
+
+        <h2>10. Suspendarea sau încetarea contului</h2>
+        <p>Ne rezervăm dreptul de a:</p>
+        <ul>
+            <li>suspenda temporar contul</li>
+            <li>șterge definitiv contul</li>
+        </ul>
+        <p>în cazul încălcării acestor Termeni sau al utilizării abuzive a aplicației.</p>
+        <p>Utilizatorul poate șterge contul în orice moment din aplicație.</p>
+
+        <h2>11. Drepturi de proprietate intelectuală</h2>
+        <p>Aplicația Fridgy, inclusiv codul sursă, designul, logo-ul și elementele grafice, sunt protejate de legislația privind drepturile de proprietate intelectuală.</p>
+        <p>Utilizatorii nu dobândesc niciun drept asupra acestor elemente.</p>
+
+        <h2>12. Legea aplicabilă</h2>
+        <p>Acești Termeni sunt guvernați de legea română.</p>
+        <p>Orice litigiu va fi soluționat de instanțele competente din Romania.</p>
+
+        <h2>13. Modificarea termenilor</h2>
+        <p>Ne rezervăm dreptul de a modifica acești Termeni.</p>
+        <p>Modificările vor intra în vigoare de la data publicării lor în aplicație sau pe website.</p>
+        <p>Continuarea utilizării aplicației constituie acceptarea termenilor actualizați.</p>
+
+        <h2>14. Contact</h2>
+        <p>Pentru orice întrebări sau nelămuriri legate de acești Termeni, ne puteți contacta la:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- English -->
+    <div class="content" data-lang="en" style="display:none">
+        <div class="header-row">
+            <h1>Terms and Conditions - Fridgy</h1>
+        </div>
+        <p class="last-updated">Last updated: May 6, 2026</p>
+
+        <div class="intro">
+            <p>These Terms and Conditions ("Terms") govern the use of the Fridgy mobile application.</p>
+            <p>By creating an account or using the application, you confirm that you have read, understood, and accepted these Terms.</p>
+        </div>
+
+        <h2>1. Application operator</h2>
+        <p>The Fridgy application is operated by:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Contact email: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Service description</h2>
+        <p>Fridgy is an application designed for managing food products, allowing users to add products and receive notifications regarding expiration dates.</p>
+        <p>The application is available in free and Premium versions. See section 2.1 for Premium subscription details.</p>
+
+        <h3>2.1. Premium Subscription</h3>
+        <p>Fridgy offers a Premium subscription with the following conditions:</p>
+        <ul>
+            <li>Price: €2.99/month or €15.99/year</li>
+            <li>The subscription renews automatically</li>
+            <li>It can be cancelled at any time from the App Store or Google Play settings</li>
+            <li>Payments are managed by Apple/Google — their refund policy applies</li>
+        </ul>
+
+        <h2>3. Eligibility</h2>
+        <p>To use the application:</p>
+        <ul>
+            <li>you must be at least 13 years old</li>
+            <li>you must have the legal capacity to accept these Terms</li>
+            <li>the information you provide must be accurate and truthful</li>
+        </ul>
+        <p>We reserve the right to restrict access to users who do not meet these conditions.</p>
+
+        <h2>4. Account creation and use</h2>
+        <p>A user account is required to use the application.</p>
+        <p>The user is responsible for:</p>
+        <ul>
+            <li>keeping authentication data confidential</li>
+            <li>all activity carried out within their account</li>
+            <li>the accuracy of the information provided</li>
+        </ul>
+        <p>We reserve the right to suspend or delete accounts that violate these Terms.</p>
+
+        <h2>5. Permitted use of the application</h2>
+        <p>Users agree to use the application in a lawful and responsible manner.</p>
+        <p>It is prohibited to:</p>
+        <ul>
+            <li>use the application for illegal purposes</li>
+            <li>attempt to gain unauthorized access to the application's systems</li>
+            <li>use automation tools or other means that may affect the application's functionality</li>
+            <li>introduce false, abusive, or misleading content</li>
+        </ul>
+
+        <h2>6. User-submitted content</h2>
+        <p>The user is solely responsible for the information submitted in the application, including:</p>
+        <ul>
+            <li>added products</li>
+            <li>expiration dates</li>
+            <li>personal settings</li>
+        </ul>
+        <p>Fridgy does not verify and does not guarantee the accuracy of this information.</p>
+
+        <h2>7. Shared fridges</h2>
+        <p>Fridgy allows users to share fridges with other users. When using shared fridges:</p>
+        <ul>
+            <li>all members of a shared fridge can view and modify the products within it</li>
+            <li>each user is responsible for the content they add to a shared fridge</li>
+            <li>the fridge owner can remove members at any time</li>
+            <li>Fridgy is not responsible for disputes between users regarding shared fridge content</li>
+        </ul>
+
+        <h2>8. Service availability</h2>
+        <p>Although we make efforts to ensure the proper functioning of the application, we do not guarantee uninterrupted availability or the absence of errors.</p>
+        <p>The application may be:</p>
+        <ul>
+            <li>modified</li>
+            <li>temporarily suspended</li>
+            <li>updated or discontinued</li>
+        </ul>
+        <p>without prior notice.</p>
+
+        <h2>9. Limitation of liability</h2>
+        <p>The Fridgy application is provided "as is", without express or implied warranties.</p>
+        <p>To the extent permitted by law:</p>
+        <ul>
+            <li>we do not guarantee that notifications will be delivered on time or at all</li>
+            <li>we are not liable for direct or indirect losses</li>
+            <li>we are not liable for expired products or losses resulting from the use of the application</li>
+        </ul>
+        <p>The user is responsible for checking products and their expiration dates.</p>
+
+        <h2>10. Suspension or termination of the account</h2>
+        <p>We reserve the right to:</p>
+        <ul>
+            <li>temporarily suspend the account</li>
+            <li>permanently delete the account</li>
+        </ul>
+        <p>in case of violation of these Terms or abusive use of the application.</p>
+        <p>The user may delete their account at any time through the application.</p>
+
+        <h2>11. Intellectual property rights</h2>
+        <p>The Fridgy application, including source code, design, logo, and graphic elements, is protected by intellectual property laws.</p>
+        <p>Users do not acquire any rights over these elements.</p>
+
+        <h2>12. Applicable law</h2>
+        <p>These Terms are governed by Romanian law.</p>
+        <p>Any dispute will be resolved by the competent courts in Romania.</p>
+
+        <h2>13. Modification of the Terms</h2>
+        <p>We reserve the right to update these Terms.</p>
+        <p>Modifications take effect from the date of publication in the application or on the website.</p>
+        <p>Continued use of the application constitutes acceptance of the updated Terms.</p>
+
+        <h2>14. Contact</h2>
+        <p>For any questions or concerns regarding these Terms, you may contact us at:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- German -->
+    <div class="content" data-lang="de" style="display:none">
+        <div class="header-row">
+            <h1>Allgemeine Geschäftsbedingungen - Fridgy</h1>
+        </div>
+        <p class="last-updated">Zuletzt aktualisiert: 6. Mai 2026</p>
+
+        <div class="intro">
+            <p>Diese Allgemeinen Geschäftsbedingungen („AGB") regeln die Nutzung der mobilen Anwendung Fridgy.</p>
+            <p>Durch die Erstellung eines Kontos oder die Nutzung der Anwendung bestätigen Sie, dass Sie diese AGB gelesen, verstanden und akzeptiert haben.</p>
+        </div>
+
+        <h2>1. Betreiber der Anwendung</h2>
+        <p>Die Fridgy-Anwendung wird betrieben von:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Kontakt-E-Mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Beschreibung des Dienstes</h2>
+        <p>Fridgy ist eine Anwendung zur Verwaltung von Lebensmitteln, mit der Benutzer Produkte hinzufügen und Benachrichtigungen zu Ablaufdaten erhalten können.</p>
+        <p>Die Anwendung ist in einer kostenlosen und einer Premium-Version verfügbar. Einzelheiten zum Premium-Abonnement finden Sie in Abschnitt 2.1.</p>
+
+        <h3>2.1. Premium-Abonnement</h3>
+        <p>Fridgy bietet ein Premium-Abonnement mit den folgenden Bedingungen an:</p>
+        <ul>
+            <li>Preis: €2,99/Monat oder €15,99/Jahr</li>
+            <li>Das Abonnement verlängert sich automatisch</li>
+            <li>Es kann jederzeit über die Einstellungen des App Store oder Google Play gekündigt werden</li>
+            <li>Zahlungen werden von Apple/Google verwaltet — deren Rückerstattungsrichtlinien gelten</li>
+        </ul>
+
+        <h2>3. Berechtigung</h2>
+        <p>Um die Anwendung zu nutzen:</p>
+        <ul>
+            <li>müssen Sie mindestens 13 Jahre alt sein</li>
+            <li>müssen Sie die Rechtsfähigkeit besitzen, diese AGB zu akzeptieren</li>
+            <li>müssen die von Ihnen angegebenen Informationen korrekt und wahrheitsgemäß sein</li>
+        </ul>
+        <p>Wir behalten uns das Recht vor, den Zugang für Benutzer zu beschränken, die diese Bedingungen nicht erfüllen.</p>
+
+        <h2>4. Kontoerstellung und -nutzung</h2>
+        <p>Zur Nutzung der Anwendung ist ein Benutzerkonto erforderlich.</p>
+        <p>Der Benutzer ist verantwortlich für:</p>
+        <ul>
+            <li>die Geheimhaltung der Anmeldedaten</li>
+            <li>alle Aktivitäten, die innerhalb seines Kontos durchgeführt werden</li>
+            <li>die Richtigkeit der angegebenen Informationen</li>
+        </ul>
+        <p>Wir behalten uns das Recht vor, Konten, die gegen diese AGB verstoßen, zu sperren oder zu löschen.</p>
+
+        <h2>5. Zulässige Nutzung der Anwendung</h2>
+        <p>Die Benutzer verpflichten sich, die Anwendung auf gesetzliche und verantwortungsvolle Weise zu nutzen.</p>
+        <p>Es ist verboten:</p>
+        <ul>
+            <li>die Anwendung für illegale Zwecke zu nutzen</li>
+            <li>unbefugten Zugriff auf die Systeme der Anwendung zu versuchen</li>
+            <li>Automatisierungstools oder andere Mittel zu verwenden, die die Funktionalität der Anwendung beeinträchtigen könnten</li>
+            <li>falsche, missbräuchliche oder irreführende Inhalte einzugeben</li>
+        </ul>
+
+        <h2>6. Vom Benutzer eingegebene Inhalte</h2>
+        <p>Der Benutzer trägt die alleinige Verantwortung für die in der Anwendung eingegebenen Informationen, einschließlich:</p>
+        <ul>
+            <li>hinzugefügte Produkte</li>
+            <li>Ablaufdaten</li>
+            <li>persönliche Einstellungen</li>
+        </ul>
+        <p>Fridgy überprüft und garantiert nicht die Richtigkeit dieser Informationen.</p>
+
+        <h2>7. Geteilte Kühlschränke</h2>
+        <p>Fridgy ermöglicht es Benutzern, Kühlschränke mit anderen Benutzern zu teilen. Bei der Nutzung geteilter Kühlschränke:</p>
+        <ul>
+            <li>können alle Mitglieder eines geteilten Kühlschranks die darin enthaltenen Produkte anzeigen und ändern</li>
+            <li>ist jeder Benutzer für die Inhalte verantwortlich, die er einem geteilten Kühlschrank hinzufügt</li>
+            <li>kann der Kühlschrankbesitzer Mitglieder jederzeit entfernen</li>
+            <li>ist Fridgy nicht verantwortlich für Streitigkeiten zwischen Benutzern bezüglich der Inhalte geteilter Kühlschränke</li>
+        </ul>
+
+        <h2>8. Verfügbarkeit des Dienstes</h2>
+        <p>Obwohl wir uns um einen ordnungsgemäßen Betrieb der Anwendung bemühen, garantieren wir keine ununterbrochene Verfügbarkeit oder Fehlerfreiheit.</p>
+        <p>Die Anwendung kann:</p>
+        <ul>
+            <li>geändert werden</li>
+            <li>vorübergehend gesperrt werden</li>
+            <li>aktualisiert oder eingestellt werden</li>
+        </ul>
+        <p>ohne vorherige Ankündigung.</p>
+
+        <h2>9. Haftungsbeschränkung</h2>
+        <p>Die Fridgy-Anwendung wird „wie besehen" ohne ausdrückliche oder stillschweigende Garantien bereitgestellt.</p>
+        <p>Soweit gesetzlich zulässig:</p>
+        <ul>
+            <li>garantieren wir nicht, dass Benachrichtigungen rechtzeitig oder überhaupt zugestellt werden</li>
+            <li>haften wir nicht für direkte oder indirekte Verluste</li>
+            <li>haften wir nicht für abgelaufene Produkte oder Verluste, die aus der Nutzung der Anwendung resultieren</li>
+        </ul>
+        <p>Der Benutzer ist für die Überprüfung der Produkte und ihrer Ablaufdaten verantwortlich.</p>
+
+        <h2>10. Sperrung oder Beendigung des Kontos</h2>
+        <p>Wir behalten uns das Recht vor:</p>
+        <ul>
+            <li>das Konto vorübergehend zu sperren</li>
+            <li>das Konto dauerhaft zu löschen</li>
+        </ul>
+        <p>bei Verstoß gegen diese AGB oder missbräuchlicher Nutzung der Anwendung.</p>
+        <p>Der Benutzer kann sein Konto jederzeit über die Anwendung löschen.</p>
+
+        <h2>11. Rechte an geistigem Eigentum</h2>
+        <p>Die Fridgy-Anwendung, einschließlich Quellcode, Design, Logo und grafischer Elemente, ist durch Gesetze zum geistigen Eigentum geschützt.</p>
+        <p>Benutzer erwerben keine Rechte an diesen Elementen.</p>
+
+        <h2>12. Anwendbares Recht</h2>
+        <p>Diese AGB unterliegen rumänischem Recht.</p>
+        <p>Streitigkeiten werden von den zuständigen Gerichten in Rumänien entschieden.</p>
+
+        <h2>13. Änderung der AGB</h2>
+        <p>Wir behalten uns das Recht vor, diese AGB zu aktualisieren.</p>
+        <p>Änderungen treten ab dem Datum der Veröffentlichung in der Anwendung oder auf der Website in Kraft.</p>
+        <p>Die weitere Nutzung der Anwendung gilt als Akzeptanz der aktualisierten AGB.</p>
+
+        <h2>14. Kontakt</h2>
+        <p>Bei Fragen oder Bedenken zu diesen AGB können Sie uns kontaktieren unter:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- Hungarian -->
+    <div class="content" data-lang="hu" style="display:none">
+        <div class="header-row">
+            <h1>Általános Szerződési Feltételek - Fridgy</h1>
+        </div>
+        <p class="last-updated">Utoljára frissítve: 2026. május 6.</p>
+
+        <div class="intro">
+            <p>Jelen Általános Szerződési Feltételek („ÁSZF") szabályozzák a Fridgy mobil alkalmazás használatát.</p>
+            <p>Fiók létrehozásával vagy az alkalmazás használatával megerősíti, hogy elolvasta, megértette és elfogadta jelen ÁSZF-et.</p>
+        </div>
+
+        <h2>1. Az alkalmazás üzemeltetője</h2>
+        <p>A Fridgy alkalmazást az alábbi cég üzemelteti:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Kapcsolattartó e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. A szolgáltatás leírása</h2>
+        <p>A Fridgy egy élelmiszerek kezelésére tervezett alkalmazás, amely lehetővé teszi a felhasználók számára termékek hozzáadását és lejárati dátumokkal kapcsolatos értesítések fogadását.</p>
+        <p>Az alkalmazás ingyenes és Prémium verzióban érhető el. A Prémium előfizetés részleteiért lásd a 2.1. szakaszt.</p>
+
+        <h3>2.1. Prémium előfizetés</h3>
+        <p>A Fridgy Prémium előfizetést kínál az alábbi feltételekkel:</p>
+        <ul>
+            <li>Ár: €2,99/hó vagy €15,99/év</li>
+            <li>Az előfizetés automatikusan megújul</li>
+            <li>Az App Store vagy a Google Play beállításaiban bármikor lemondható</li>
+            <li>A fizetéseket az Apple/Google kezeli — az ő visszatérítési szabályzatuk érvényes</li>
+        </ul>
+
+        <h2>3. Jogosultság</h2>
+        <p>Az alkalmazás használatához:</p>
+        <ul>
+            <li>legalább 13 évesnek kell lennie</li>
+            <li>rendelkeznie kell a jelen ÁSZF elfogadásához szükséges jogképességgel</li>
+            <li>az Ön által megadott adatoknak pontosnak és valóságosnak kell lenniük</li>
+        </ul>
+        <p>Fenntartjuk a jogot, hogy korlátozzuk a hozzáférést azon felhasználók számára, akik nem felelnek meg ezeknek a feltételeknek.</p>
+
+        <h2>4. Fiók létrehozása és használata</h2>
+        <p>Az alkalmazás használatához felhasználói fiók szükséges.</p>
+        <p>A felhasználó felelős:</p>
+        <ul>
+            <li>a bejelentkezési adatok bizalmas kezeléséért</li>
+            <li>a fiókjában végzett összes tevékenységért</li>
+            <li>a megadott adatok pontosságáért</li>
+        </ul>
+        <p>Fenntartjuk a jogot, hogy felfüggesszük vagy töröljük az ÁSZF-et megsértő fiókokat.</p>
+
+        <h2>5. Az alkalmazás megengedett használata</h2>
+        <p>A felhasználók vállalják, hogy az alkalmazást törvényes és felelősségteljes módon használják.</p>
+        <p>Tilos:</p>
+        <ul>
+            <li>az alkalmazást illegális célokra használni</li>
+            <li>jogosulatlan hozzáférést kísérelni meg az alkalmazás rendszereihez</li>
+            <li>automatizálási eszközöket vagy más olyan eszközöket használni, amelyek befolyásolhatják az alkalmazás működését</li>
+            <li>hamis, visszaélésszerű vagy félrevezető tartalmat bevinni</li>
+        </ul>
+
+        <h2>6. Felhasználó által bevitt tartalom</h2>
+        <p>A felhasználó kizárólagosan felelős az alkalmazásba bevitt információkért, beleértve:</p>
+        <ul>
+            <li>a hozzáadott termékeket</li>
+            <li>a lejárati dátumokat</li>
+            <li>a személyes beállításokat</li>
+        </ul>
+        <p>A Fridgy nem ellenőrzi és nem garantálja ezen információk pontosságát.</p>
+
+        <h2>7. Megosztott hűtőszekrények</h2>
+        <p>A Fridgy lehetővé teszi a felhasználóknak, hogy hűtőszekrényeiket más felhasználókkal osszák meg. Megosztott hűtőszekrények használatakor:</p>
+        <ul>
+            <li>a megosztott hűtőszekrény összes tagja megtekintheti és módosíthatja a benne lévő termékeket</li>
+            <li>minden felhasználó felelős az általa a megosztott hűtőszekrényhez adott tartalomért</li>
+            <li>a hűtőszekrény tulajdonosa bármikor eltávolíthat tagokat</li>
+            <li>A Fridgy nem felelős a megosztott hűtőszekrények tartalmával kapcsolatos felhasználók közötti vitákért</li>
+        </ul>
+
+        <h2>8. A szolgáltatás elérhetősége</h2>
+        <p>Bár igyekszünk biztosítani az alkalmazás megfelelő működését, nem garantálunk megszakítás nélküli elérhetőséget vagy hibamentességet.</p>
+        <p>Az alkalmazás:</p>
+        <ul>
+            <li>módosítható</li>
+            <li>ideiglenesen felfüggeszthető</li>
+            <li>frissíthető vagy megszüntethető</li>
+        </ul>
+        <p>előzetes értesítés nélkül.</p>
+
+        <h2>9. Felelősség korlátozása</h2>
+        <p>A Fridgy alkalmazás „adott állapotban" kerül biztosításra, kifejezett vagy hallgatólagos garanciák nélkül.</p>
+        <p>A törvény által megengedett mértékig:</p>
+        <ul>
+            <li>nem garantáljuk, hogy az értesítések időben vagy egyáltalán kézbesítésre kerülnek</li>
+            <li>nem vállalunk felelősséget közvetlen vagy közvetett veszteségekért</li>
+            <li>nem vállalunk felelősséget lejárt termékekért vagy az alkalmazás használatából eredő veszteségekért</li>
+        </ul>
+        <p>A felhasználó felelős a termékek és lejárati dátumuk ellenőrzéséért.</p>
+
+        <h2>10. A fiók felfüggesztése vagy megszüntetése</h2>
+        <p>Fenntartjuk a jogot:</p>
+        <ul>
+            <li>a fiók ideiglenes felfüggesztésére</li>
+            <li>a fiók végleges törlésére</li>
+        </ul>
+        <p>az ÁSZF megsértése vagy az alkalmazás visszaélésszerű használata esetén.</p>
+        <p>A felhasználó bármikor törölheti fiókját az alkalmazáson keresztül.</p>
+
+        <h2>11. Szellemi tulajdonjogok</h2>
+        <p>A Fridgy alkalmazás, beleértve a forráskódot, dizájnt, logót és grafikai elemeket, a szellemi tulajdonjogi törvények védelme alatt áll.</p>
+        <p>A felhasználók nem szereznek jogokat ezekre az elemekre.</p>
+
+        <h2>12. Alkalmazandó jog</h2>
+        <p>Jelen ÁSZF-re a román jog az irányadó.</p>
+        <p>Minden vitát Románia illetékes bíróságai döntenek el.</p>
+
+        <h2>13. Az ÁSZF módosítása</h2>
+        <p>Fenntartjuk a jogot, hogy frissítsük jelen ÁSZF-et.</p>
+        <p>A módosítások az alkalmazásban vagy a weboldalon való közzétételük napjától lépnek hatályba.</p>
+        <p>Az alkalmazás további használata a frissített ÁSZF elfogadásának minősül.</p>
+
+        <h2>14. Kapcsolat</h2>
+        <p>Ha bármilyen kérdése vagy aggálya van jelen ÁSZF-fel kapcsolatban, az alábbi elérhetőségen veheti fel velünk a kapcsolatot:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- French -->
+    <div class="content" data-lang="fr" style="display:none">
+        <div class="header-row">
+            <h1>Conditions Générales d'Utilisation - Fridgy</h1>
+        </div>
+        <p class="last-updated">Dernière mise à jour : 6 mai 2026</p>
+
+        <div class="intro">
+            <p>Les présentes Conditions Générales d'Utilisation (« CGU ») régissent l'utilisation de l'application mobile Fridgy.</p>
+            <p>En créant un compte ou en utilisant l'application, vous confirmez avoir lu, compris et accepté les présentes CGU.</p>
+        </div>
+
+        <h2>1. Opérateur de l'application</h2>
+        <p>L'application Fridgy est opérée par :</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>E-mail de contact : <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Description du service</h2>
+        <p>Fridgy est une application conçue pour gérer les produits alimentaires, permettant aux utilisateurs d'ajouter des produits et de recevoir des notifications concernant les dates de péremption.</p>
+        <p>L'application est disponible en versions gratuite et Premium. Voir la section 2.1 pour les détails de l'abonnement Premium.</p>
+
+        <h3>2.1. Abonnement Premium</h3>
+        <p>Fridgy propose un abonnement Premium avec les conditions suivantes :</p>
+        <ul>
+            <li>Prix : €2,99/mois ou €15,99/an</li>
+            <li>L'abonnement se renouvelle automatiquement</li>
+            <li>Il peut être annulé à tout moment depuis les paramètres de l'App Store ou de Google Play</li>
+            <li>Les paiements sont gérés par Apple/Google — leur politique de remboursement s'applique</li>
+        </ul>
+
+        <h2>3. Éligibilité</h2>
+        <p>Pour utiliser l'application :</p>
+        <ul>
+            <li>vous devez avoir au moins 13 ans</li>
+            <li>vous devez avoir la capacité juridique d'accepter les présentes CGU</li>
+            <li>les informations que vous fournissez doivent être exactes et véridiques</li>
+        </ul>
+        <p>Nous nous réservons le droit de restreindre l'accès aux utilisateurs qui ne remplissent pas ces conditions.</p>
+
+        <h2>4. Création et utilisation du compte</h2>
+        <p>Un compte utilisateur est nécessaire pour utiliser l'application.</p>
+        <p>L'utilisateur est responsable :</p>
+        <ul>
+            <li>de la confidentialité de ses données d'authentification</li>
+            <li>de toutes les activités effectuées dans son compte</li>
+            <li>de l'exactitude des informations fournies</li>
+        </ul>
+        <p>Nous nous réservons le droit de suspendre ou de supprimer les comptes qui violent les présentes CGU.</p>
+
+        <h2>5. Utilisation autorisée de l'application</h2>
+        <p>Les utilisateurs s'engagent à utiliser l'application de manière légale et responsable.</p>
+        <p>Il est interdit de :</p>
+        <ul>
+            <li>utiliser l'application à des fins illégales</li>
+            <li>tenter d'obtenir un accès non autorisé aux systèmes de l'application</li>
+            <li>utiliser des outils d'automatisation ou d'autres moyens susceptibles d'affecter le fonctionnement de l'application</li>
+            <li>introduire des contenus faux, abusifs ou trompeurs</li>
+        </ul>
+
+        <h2>6. Contenu soumis par l'utilisateur</h2>
+        <p>L'utilisateur est seul responsable des informations soumises dans l'application, notamment :</p>
+        <ul>
+            <li>les produits ajoutés</li>
+            <li>les dates de péremption</li>
+            <li>les paramètres personnels</li>
+        </ul>
+        <p>Fridgy ne vérifie pas et ne garantit pas l'exactitude de ces informations.</p>
+
+        <h2>7. Réfrigérateurs partagés</h2>
+        <p>Fridgy permet aux utilisateurs de partager des réfrigérateurs avec d'autres utilisateurs. Lors de l'utilisation de réfrigérateurs partagés :</p>
+        <ul>
+            <li>tous les membres d'un réfrigérateur partagé peuvent consulter et modifier les produits qu'il contient</li>
+            <li>chaque utilisateur est responsable du contenu qu'il ajoute à un réfrigérateur partagé</li>
+            <li>le propriétaire du réfrigérateur peut retirer des membres à tout moment</li>
+            <li>Fridgy n'est pas responsable des litiges entre utilisateurs concernant le contenu des réfrigérateurs partagés</li>
+        </ul>
+
+        <h2>8. Disponibilité du service</h2>
+        <p>Bien que nous fassions des efforts pour assurer le bon fonctionnement de l'application, nous ne garantissons pas une disponibilité ininterrompue ni l'absence d'erreurs.</p>
+        <p>L'application peut être :</p>
+        <ul>
+            <li>modifiée</li>
+            <li>temporairement suspendue</li>
+            <li>mise à jour ou interrompue</li>
+        </ul>
+        <p>sans préavis.</p>
+
+        <h2>9. Limitation de responsabilité</h2>
+        <p>L'application Fridgy est fournie « telle quelle », sans garanties expresses ou implicites.</p>
+        <p>Dans la mesure permise par la loi :</p>
+        <ul>
+            <li>nous ne garantissons pas que les notifications seront délivrées à temps ou du tout</li>
+            <li>nous ne sommes pas responsables des pertes directes ou indirectes</li>
+            <li>nous ne sommes pas responsables des produits périmés ou des pertes résultant de l'utilisation de l'application</li>
+        </ul>
+        <p>L'utilisateur est responsable de la vérification des produits et de leurs dates de péremption.</p>
+
+        <h2>10. Suspension ou résiliation du compte</h2>
+        <p>Nous nous réservons le droit de :</p>
+        <ul>
+            <li>suspendre temporairement le compte</li>
+            <li>supprimer définitivement le compte</li>
+        </ul>
+        <p>en cas de violation des présentes CGU ou d'utilisation abusive de l'application.</p>
+        <p>L'utilisateur peut supprimer son compte à tout moment via l'application.</p>
+
+        <h2>11. Droits de propriété intellectuelle</h2>
+        <p>L'application Fridgy, y compris le code source, le design, le logo et les éléments graphiques, est protégée par les lois sur la propriété intellectuelle.</p>
+        <p>Les utilisateurs n'acquièrent aucun droit sur ces éléments.</p>
+
+        <h2>12. Droit applicable</h2>
+        <p>Les présentes CGU sont régies par le droit roumain.</p>
+        <p>Tout litige sera résolu par les tribunaux compétents de Roumanie.</p>
+
+        <h2>13. Modification des CGU</h2>
+        <p>Nous nous réservons le droit de mettre à jour les présentes CGU.</p>
+        <p>Les modifications prennent effet à compter de leur date de publication dans l'application ou sur le site web.</p>
+        <p>La poursuite de l'utilisation de l'application vaut acceptation des CGU mises à jour.</p>
+
+        <h2>14. Contact</h2>
+        <p>Pour toute question ou préoccupation concernant les présentes CGU, vous pouvez nous contacter à :</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- Dutch -->
+    <div class="content" data-lang="nl" style="display:none">
+        <div class="header-row">
+            <h1>Algemene Voorwaarden - Fridgy</h1>
+        </div>
+        <p class="last-updated">Laatst bijgewerkt: 6 mei 2026</p>
+
+        <div class="intro">
+            <p>Deze Algemene Voorwaarden ("Voorwaarden") regelen het gebruik van de mobiele applicatie Fridgy.</p>
+            <p>Door een account aan te maken of de applicatie te gebruiken, bevestigt u dat u deze Voorwaarden heeft gelezen, begrepen en geaccepteerd.</p>
+        </div>
+
+        <h2>1. Beheerder van de applicatie</h2>
+        <p>De Fridgy-applicatie wordt beheerd door:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Contact-e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Beschrijving van de dienst</h2>
+        <p>Fridgy is een applicatie voor het beheren van voedingsproducten, waarmee gebruikers producten kunnen toevoegen en meldingen kunnen ontvangen over houdbaarheidsdatums.</p>
+        <p>De applicatie is beschikbaar in gratis en Premium versies. Zie sectie 2.1 voor details over het Premium-abonnement.</p>
+
+        <h3>2.1. Premium abonnement</h3>
+        <p>Fridgy biedt een Premium-abonnement aan met de volgende voorwaarden:</p>
+        <ul>
+            <li>Prijs: €2,99/maand of €15,99/jaar</li>
+            <li>Het abonnement verlengt automatisch</li>
+            <li>Het kan op elk moment worden opgezegd via de instellingen van de App Store of Google Play</li>
+            <li>Betalingen worden beheerd door Apple/Google — hun terugbetalingsbeleid is van toepassing</li>
+        </ul>
+
+        <h2>3. Geschiktheid</h2>
+        <p>Om de applicatie te gebruiken:</p>
+        <ul>
+            <li>moet u minimaal 13 jaar oud zijn</li>
+            <li>moet u de juridische bevoegdheid hebben om deze Voorwaarden te accepteren</li>
+            <li>moeten de door u verstrekte informatie nauwkeurig en waarheidsgetrouw zijn</li>
+        </ul>
+        <p>Wij behouden ons het recht voor om de toegang te beperken voor gebruikers die niet aan deze voorwaarden voldoen.</p>
+
+        <h2>4. Aanmaken en gebruik van account</h2>
+        <p>Een gebruikersaccount is vereist om de applicatie te gebruiken.</p>
+        <p>De gebruiker is verantwoordelijk voor:</p>
+        <ul>
+            <li>het vertrouwelijk houden van authenticatiegegevens</li>
+            <li>alle activiteiten die binnen zijn account worden uitgevoerd</li>
+            <li>de juistheid van de verstrekte informatie</li>
+        </ul>
+        <p>Wij behouden ons het recht voor om accounts die deze Voorwaarden schenden op te schorten of te verwijderen.</p>
+
+        <h2>5. Toegestaan gebruik van de applicatie</h2>
+        <p>Gebruikers stemmen ermee in de applicatie op een wettelijke en verantwoordelijke manier te gebruiken.</p>
+        <p>Het is verboden om:</p>
+        <ul>
+            <li>de applicatie voor illegale doeleinden te gebruiken</li>
+            <li>te proberen ongeautoriseerde toegang te krijgen tot de systemen van de applicatie</li>
+            <li>automatiseringstools of andere middelen te gebruiken die de functionaliteit van de applicatie kunnen beïnvloeden</li>
+            <li>valse, misbruikende of misleidende inhoud in te voeren</li>
+        </ul>
+
+        <h2>6. Door gebruiker ingediende inhoud</h2>
+        <p>De gebruiker is als enige verantwoordelijk voor de informatie die in de applicatie wordt ingediend, inclusief:</p>
+        <ul>
+            <li>toegevoegde producten</li>
+            <li>houdbaarheidsdatums</li>
+            <li>persoonlijke instellingen</li>
+        </ul>
+        <p>Fridgy verifieert de juistheid van deze informatie niet en garandeert deze ook niet.</p>
+
+        <h2>7. Gedeelde koelkasten</h2>
+        <p>Fridgy stelt gebruikers in staat koelkasten te delen met andere gebruikers. Bij het gebruik van gedeelde koelkasten:</p>
+        <ul>
+            <li>kunnen alle leden van een gedeelde koelkast de producten daarin bekijken en wijzigen</li>
+            <li>is elke gebruiker verantwoordelijk voor de inhoud die hij aan een gedeelde koelkast toevoegt</li>
+            <li>kan de eigenaar van de koelkast op elk moment leden verwijderen</li>
+            <li>is Fridgy niet verantwoordelijk voor geschillen tussen gebruikers over de inhoud van gedeelde koelkasten</li>
+        </ul>
+
+        <h2>8. Beschikbaarheid van de dienst</h2>
+        <p>Hoewel we ons best doen om de goede werking van de applicatie te waarborgen, garanderen we geen ononderbroken beschikbaarheid of afwezigheid van fouten.</p>
+        <p>De applicatie kan:</p>
+        <ul>
+            <li>worden gewijzigd</li>
+            <li>tijdelijk worden opgeschort</li>
+            <li>worden bijgewerkt of stopgezet</li>
+        </ul>
+        <p>zonder voorafgaande kennisgeving.</p>
+
+        <h2>9. Beperking van aansprakelijkheid</h2>
+        <p>De Fridgy-applicatie wordt geleverd "zoals het is", zonder uitdrukkelijke of impliciete garanties.</p>
+        <p>Voor zover wettelijk toegestaan:</p>
+        <ul>
+            <li>garanderen we niet dat meldingen op tijd of überhaupt worden afgeleverd</li>
+            <li>zijn we niet aansprakelijk voor directe of indirecte verliezen</li>
+            <li>zijn we niet aansprakelijk voor verlopen producten of verliezen die voortvloeien uit het gebruik van de applicatie</li>
+        </ul>
+        <p>De gebruiker is verantwoordelijk voor het controleren van producten en hun houdbaarheidsdatums.</p>
+
+        <h2>10. Opschorting of beëindiging van het account</h2>
+        <p>Wij behouden ons het recht voor om:</p>
+        <ul>
+            <li>het account tijdelijk op te schorten</li>
+            <li>het account permanent te verwijderen</li>
+        </ul>
+        <p>in geval van schending van deze Voorwaarden of misbruik van de applicatie.</p>
+        <p>De gebruiker kan zijn account op elk moment via de applicatie verwijderen.</p>
+
+        <h2>11. Intellectuele eigendomsrechten</h2>
+        <p>De Fridgy-applicatie, inclusief broncode, ontwerp, logo en grafische elementen, is beschermd door intellectuele eigendomswetten.</p>
+        <p>Gebruikers verwerven geen rechten op deze elementen.</p>
+
+        <h2>12. Toepasselijk recht</h2>
+        <p>Deze Voorwaarden worden beheerst door Roemeens recht.</p>
+        <p>Geschillen worden beslecht door de bevoegde rechtbanken in Roemenië.</p>
+
+        <h2>13. Wijziging van de Voorwaarden</h2>
+        <p>Wij behouden ons het recht voor om deze Voorwaarden bij te werken.</p>
+        <p>Wijzigingen zijn van kracht vanaf de datum van publicatie in de applicatie of op de website.</p>
+        <p>Voortgezet gebruik van de applicatie geldt als acceptatie van de bijgewerkte Voorwaarden.</p>
+
+        <h2>14. Contact</h2>
+        <p>Voor vragen of zorgen over deze Voorwaarden kunt u contact met ons opnemen via:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- Danish -->
+    <div class="content" data-lang="da" style="display:none">
+        <div class="header-row">
+            <h1>Vilkår og Betingelser - Fridgy</h1>
+        </div>
+        <p class="last-updated">Sidst opdateret: 6. maj 2026</p>
+
+        <div class="intro">
+            <p>Disse Vilkår og Betingelser ("Vilkår") regulerer brugen af Fridgy mobilapplikationen.</p>
+            <p>Ved at oprette en konto eller bruge applikationen bekræfter du, at du har læst, forstået og accepteret disse Vilkår.</p>
+        </div>
+
+        <h2>1. Applikationsoperatør</h2>
+        <p>Fridgy-applikationen drives af:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Kontakt-e-mail: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Beskrivelse af tjenesten</h2>
+        <p>Fridgy er en applikation designet til at styre fødevareprodukter, der giver brugerne mulighed for at tilføje produkter og modtage notifikationer vedrørende udløbsdatoer.</p>
+        <p>Applikationen er tilgængelig i gratis og Premium versioner. Se afsnit 2.1 for detaljer om Premium-abonnement.</p>
+
+        <h3>2.1. Premium-abonnement</h3>
+        <p>Fridgy tilbyder et Premium-abonnement med følgende betingelser:</p>
+        <ul>
+            <li>Pris: €2,99/måned eller €15,99/år</li>
+            <li>Abonnementet fornyes automatisk</li>
+            <li>Det kan til enhver tid annulleres fra App Store- eller Google Play-indstillingerne</li>
+            <li>Betalinger administreres af Apple/Google — deres refusionspolitik gælder</li>
+        </ul>
+
+        <h2>3. Berettigelse</h2>
+        <p>For at bruge applikationen:</p>
+        <ul>
+            <li>skal du være mindst 13 år gammel</li>
+            <li>skal du have den juridiske kapacitet til at acceptere disse Vilkår</li>
+            <li>skal de oplysninger, du angiver, være nøjagtige og sandfærdige</li>
+        </ul>
+        <p>Vi forbeholder os retten til at begrænse adgangen for brugere, der ikke opfylder disse betingelser.</p>
+
+        <h2>4. Oprettelse og brug af konto</h2>
+        <p>En brugerkonto er påkrævet for at bruge applikationen.</p>
+        <p>Brugeren er ansvarlig for:</p>
+        <ul>
+            <li>at holde autentificeringsdata fortrolige</li>
+            <li>alle aktiviteter udført inden for sin konto</li>
+            <li>nøjagtigheden af de angivne oplysninger</li>
+        </ul>
+        <p>Vi forbeholder os retten til at suspendere eller slette konti, der overtræder disse Vilkår.</p>
+
+        <h2>5. Tilladt brug af applikationen</h2>
+        <p>Brugere accepterer at bruge applikationen på en lovlig og ansvarlig måde.</p>
+        <p>Det er forbudt at:</p>
+        <ul>
+            <li>bruge applikationen til ulovlige formål</li>
+            <li>forsøge at få uautoriseret adgang til applikationens systemer</li>
+            <li>bruge automatiseringsværktøjer eller andre midler, der kan påvirke applikationens funktionalitet</li>
+            <li>indtaste falsk, misbrugende eller vildledende indhold</li>
+        </ul>
+
+        <h2>6. Brugerindsendt indhold</h2>
+        <p>Brugeren er eneansvarlig for de oplysninger, der indsendes i applikationen, herunder:</p>
+        <ul>
+            <li>tilføjede produkter</li>
+            <li>udløbsdatoer</li>
+            <li>personlige indstillinger</li>
+        </ul>
+        <p>Fridgy verificerer ikke og garanterer ikke nøjagtigheden af disse oplysninger.</p>
+
+        <h2>7. Delte køleskabe</h2>
+        <p>Fridgy giver brugerne mulighed for at dele køleskabe med andre brugere. Når du bruger delte køleskabe:</p>
+        <ul>
+            <li>kan alle medlemmer af et delt køleskab se og ændre produkterne deri</li>
+            <li>er hver bruger ansvarlig for det indhold, de tilføjer til et delt køleskab</li>
+            <li>kan køleskabsejeren til enhver tid fjerne medlemmer</li>
+            <li>er Fridgy ikke ansvarlig for tvister mellem brugere vedrørende indhold i delte køleskabe</li>
+        </ul>
+
+        <h2>8. Tjenestetilgængelighed</h2>
+        <p>Selvom vi gør en indsats for at sikre korrekt funktion af applikationen, garanterer vi ikke uafbrudt tilgængelighed eller fravær af fejl.</p>
+        <p>Applikationen kan:</p>
+        <ul>
+            <li>ændres</li>
+            <li>midlertidigt suspenderes</li>
+            <li>opdateres eller afbrydes</li>
+        </ul>
+        <p>uden forudgående varsel.</p>
+
+        <h2>9. Ansvarsbegrænsning</h2>
+        <p>Fridgy-applikationen leveres "som den er", uden udtrykkelige eller underforståede garantier.</p>
+        <p>I det omfang loven tillader det:</p>
+        <ul>
+            <li>garanterer vi ikke, at notifikationer leveres til tiden eller overhovedet</li>
+            <li>er vi ikke ansvarlige for direkte eller indirekte tab</li>
+            <li>er vi ikke ansvarlige for udløbne produkter eller tab som følge af brug af applikationen</li>
+        </ul>
+        <p>Brugeren er ansvarlig for at kontrollere produkter og deres udløbsdatoer.</p>
+
+        <h2>10. Suspension eller opsigelse af konto</h2>
+        <p>Vi forbeholder os retten til at:</p>
+        <ul>
+            <li>midlertidigt suspendere kontoen</li>
+            <li>permanent slette kontoen</li>
+        </ul>
+        <p>i tilfælde af overtrædelse af disse Vilkår eller misbrug af applikationen.</p>
+        <p>Brugeren kan til enhver tid slette sin konto via applikationen.</p>
+
+        <h2>11. Intellektuelle ejendomsrettigheder</h2>
+        <p>Fridgy-applikationen, herunder kildekode, design, logo og grafiske elementer, er beskyttet af love om intellektuel ejendomsret.</p>
+        <p>Brugere erhverver ingen rettigheder over disse elementer.</p>
+
+        <h2>12. Gældende ret</h2>
+        <p>Disse Vilkår er underlagt rumænsk ret.</p>
+        <p>Enhver tvist afgøres af de kompetente domstole i Rumænien.</p>
+
+        <h2>13. Ændring af Vilkårene</h2>
+        <p>Vi forbeholder os retten til at opdatere disse Vilkår.</p>
+        <p>Ændringer træder i kraft fra datoen for offentliggørelse i applikationen eller på webstedet.</p>
+        <p>Fortsat brug af applikationen udgør accept af de opdaterede Vilkår.</p>
+
+        <h2>14. Kontakt</h2>
+        <p>For spørgsmål eller bekymringer vedrørende disse Vilkår kan du kontakte os på:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+    <!-- Swedish -->
+    <div class="content" data-lang="sv" style="display:none">
+        <div class="header-row">
+            <h1>Villkor och Bestämmelser - Fridgy</h1>
+        </div>
+        <p class="last-updated">Senast uppdaterad: 6 maj 2026</p>
+
+        <div class="intro">
+            <p>Dessa Villkor och Bestämmelser ("Villkor") styr användningen av Fridgy mobilapplikation.</p>
+            <p>Genom att skapa ett konto eller använda applikationen bekräftar du att du har läst, förstått och accepterat dessa Villkor.</p>
+        </div>
+
+        <h2>1. Applikationsoperatör</h2>
+        <p>Fridgy-applikationen drivs av:</p>
+        <div class="company-info">
+            <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
+            <p>Romania</p>
+            <p>Kontakt-e-post: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+
+        <h2>2. Beskrivning av tjänsten</h2>
+        <p>Fridgy är en applikation utformad för att hantera livsmedelsprodukter, vilket gör det möjligt för användare att lägga till produkter och få aviseringar om utgångsdatum.</p>
+        <p>Applikationen är tillgänglig i gratis och Premium versioner. Se avsnitt 2.1 för detaljer om Premium-prenumeration.</p>
+
+        <h3>2.1. Premium-prenumeration</h3>
+        <p>Fridgy erbjuder en Premium-prenumeration med följande villkor:</p>
+        <ul>
+            <li>Pris: €2,99/månad eller €15,99/år</li>
+            <li>Prenumerationen förnyas automatiskt</li>
+            <li>Den kan avbrytas när som helst från App Store- eller Google Play-inställningarna</li>
+            <li>Betalningar hanteras av Apple/Google — deras återbetalningspolicy gäller</li>
+        </ul>
+
+        <h2>3. Behörighet</h2>
+        <p>För att använda applikationen:</p>
+        <ul>
+            <li>måste du vara minst 13 år gammal</li>
+            <li>måste du ha den rättsliga kapaciteten att acceptera dessa Villkor</li>
+            <li>måste den information du uppger vara korrekt och sanningsenlig</li>
+        </ul>
+        <p>Vi förbehåller oss rätten att begränsa åtkomsten för användare som inte uppfyller dessa villkor.</p>
+
+        <h2>4. Skapande och användning av konto</h2>
+        <p>Ett användarkonto krävs för att använda applikationen.</p>
+        <p>Användaren ansvarar för:</p>
+        <ul>
+            <li>att hålla autentiseringsuppgifter konfidentiella</li>
+            <li>all aktivitet som utförs inom sitt konto</li>
+            <li>riktigheten av den information som lämnas</li>
+        </ul>
+        <p>Vi förbehåller oss rätten att stänga av eller ta bort konton som bryter mot dessa Villkor.</p>
+
+        <h2>5. Tillåten användning av applikationen</h2>
+        <p>Användare samtycker till att använda applikationen på ett lagligt och ansvarsfullt sätt.</p>
+        <p>Det är förbjudet att:</p>
+        <ul>
+            <li>använda applikationen för olagliga ändamål</li>
+            <li>försöka få obehörig åtkomst till applikationens system</li>
+            <li>använda automatiseringsverktyg eller andra medel som kan påverka applikationens funktionalitet</li>
+            <li>mata in falskt, kränkande eller vilseledande innehåll</li>
+        </ul>
+
+        <h2>6. Användarinskickat innehåll</h2>
+        <p>Användaren är ensamt ansvarig för den information som skickas in i applikationen, inklusive:</p>
+        <ul>
+            <li>tillagda produkter</li>
+            <li>utgångsdatum</li>
+            <li>personliga inställningar</li>
+        </ul>
+        <p>Fridgy verifierar inte och garanterar inte riktigheten av denna information.</p>
+
+        <h2>7. Delade kylskåp</h2>
+        <p>Fridgy gör det möjligt för användare att dela kylskåp med andra användare. När du använder delade kylskåp:</p>
+        <ul>
+            <li>kan alla medlemmar i ett delat kylskåp se och ändra produkterna i det</li>
+            <li>ansvarar varje användare för det innehåll de lägger till i ett delat kylskåp</li>
+            <li>kan kylskåpsägaren ta bort medlemmar när som helst</li>
+            <li>är Fridgy inte ansvarig för tvister mellan användare angående innehållet i delade kylskåp</li>
+        </ul>
+
+        <h2>8. Tjänstetillgänglighet</h2>
+        <p>Även om vi gör ansträngningar för att säkerställa korrekt funktion av applikationen, garanterar vi inte oavbruten tillgänglighet eller frånvaro av fel.</p>
+        <p>Applikationen kan:</p>
+        <ul>
+            <li>ändras</li>
+            <li>tillfälligt stängas av</li>
+            <li>uppdateras eller avbrytas</li>
+        </ul>
+        <p>utan föregående meddelande.</p>
+
+        <h2>9. Ansvarsbegränsning</h2>
+        <p>Fridgy-applikationen tillhandahålls "i befintligt skick", utan uttryckliga eller underförstådda garantier.</p>
+        <p>I den utsträckning lagen tillåter:</p>
+        <ul>
+            <li>garanterar vi inte att aviseringar levereras i tid eller alls</li>
+            <li>är vi inte ansvariga för direkta eller indirekta förluster</li>
+            <li>är vi inte ansvariga för utgångna produkter eller förluster som uppstår till följd av användning av applikationen</li>
+        </ul>
+        <p>Användaren ansvarar för att kontrollera produkter och deras utgångsdatum.</p>
+
+        <h2>10. Avstängning eller avslutning av konto</h2>
+        <p>Vi förbehåller oss rätten att:</p>
+        <ul>
+            <li>tillfälligt stänga av kontot</li>
+            <li>permanent ta bort kontot</li>
+        </ul>
+        <p>vid brott mot dessa Villkor eller missbruk av applikationen.</p>
+        <p>Användaren kan ta bort sitt konto när som helst via applikationen.</p>
+
+        <h2>11. Immateriella rättigheter</h2>
+        <p>Fridgy-applikationen, inklusive källkod, design, logotyp och grafiska element, är skyddad av lagar om immateriella rättigheter.</p>
+        <p>Användare förvärvar inga rättigheter över dessa element.</p>
+
+        <h2>12. Tillämplig lag</h2>
+        <p>Dessa Villkor regleras av rumänsk lag.</p>
+        <p>Eventuella tvister avgörs av behöriga domstolar i Rumänien.</p>
+
+        <h2>13. Ändring av Villkoren</h2>
+        <p>Vi förbehåller oss rätten att uppdatera dessa Villkor.</p>
+        <p>Ändringar träder i kraft från och med publiceringsdatumet i applikationen eller på webbplatsen.</p>
+        <p>Fortsatt användning av applikationen utgör acceptans av de uppdaterade Villkoren.</p>
+
+        <h2>14. Kontakt</h2>
+        <p>För frågor eller funderingar angående dessa Villkor kan du kontakta oss på:</p>
+        <div class="contact-box">
+            <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var titles = {
+        ro: 'Termeni și Condiții - Fridgy',
+        en: 'Terms and Conditions - Fridgy',
+        de: 'Allgemeine Geschäftsbedingungen - Fridgy',
+        hu: 'Általános Szerződési Feltételek - Fridgy',
+        fr: "Conditions Générales d'Utilisation - Fridgy",
+        nl: 'Algemene Voorwaarden - Fridgy',
+        da: 'Vilkår og Betingelser - Fridgy',
+        sv: 'Villkor och Bestämmelser - Fridgy'
+    };
+
+    var supportedLangs = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
+
+    function detectLang() {
+        var params = new URLSearchParams(window.location.search);
+        var lang = params.get('lang');
+        if (lang && supportedLangs.indexOf(lang) !== -1) {
+            return lang;
+        }
+        var stored = localStorage.getItem('fridgy-lang');
+        if (stored && supportedLangs.indexOf(stored) !== -1) {
+            return stored;
+        }
+        var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        var navBase = nav.split('-')[0];
+        if (supportedLangs.indexOf(navBase) !== -1) {
+            return navBase;
+        }
+        return 'en';
+    }
+
+    function showLang(lang) {
+        var divs = document.querySelectorAll('.content[data-lang]');
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = divs[i].getAttribute('data-lang') === lang ? 'block' : 'none';
+        }
+        var select = document.getElementById('lang-select');
+        if (select) {
+            select.value = lang;
+        }
+        document.title = titles[lang] || titles['en'];
+        document.documentElement.lang = lang;
+    }
+
+    function switchLang(lang) {
+        if (supportedLangs.indexOf(lang) === -1) {
+            lang = 'en';
+        }
+        localStorage.setItem('fridgy-lang', lang);
+        var url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.pushState({lang: lang}, '', url.toString());
+        showLang(lang);
+    }
+
+    window.addEventListener('popstate', function(e) {
+        var params = new URLSearchParams(window.location.search);
+        var lang = params.get('lang');
+        if (lang && supportedLangs.indexOf(lang) !== -1) {
+            showLang(lang);
+            document.getElementById('lang-select').value = lang;
+        }
+    });
+
+    (function init() {
+        var lang = detectLang();
+        showLang(lang);
+    })();
+</script>
+</body>
+</html>
