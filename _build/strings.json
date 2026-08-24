@@ -1,0 +1,1030 @@
+{
+ "ro": {
+  "title": "Fridgy - Frigiderul tău inteligent",
+  "meta_description": "Scanează bonurile, organizează-ți frigiderul, redu risipa, economisește bani.",
+  "og_title": "Fridgy — Frigiderul tău inteligent",
+  "og_description": "Scanează bonurile, organizează-ți frigiderul, redu risipa, economisește bani.",
+  "nav": [
+   "De ce Fridgy",
+   "Planuri",
+   "Descarcă",
+   "Descarcă gratuit",
+   "Descarcă gratuit",
+   "Începe Premium",
+   "Funcții",
+   "Cum funcționează",
+   "Descarcă"
+  ],
+  "nav_cta": "Descarcă gratuit",
+  "pill": "Frigiderul tău inteligent",
+  "h1": "130 kg de mâncare aruncate anual.<br><span class=\"grad\">Noi te ajutăm să oprești asta.</span>",
+  "hero_sub": "Fiecare european irosește anual <strong>~130 kg</strong> de mâncare — echivalentul a aproximativ <strong>1.450 lei</strong>. Fridgy te ajută să-ți organizezi alimentele și te anunță din timp când sunt aproape de expirare. Și ca să nu ajungă la gunoi, îți sugerează rețete delicioase prin care le poți folosi.",
+  "store_labels": [
+   "Disponibil pe",
+   "Descarcă din",
+   "Disponibil pe",
+   "Descarcă din"
+  ],
+  "tags": [
+   "Cifrele vorbesc",
+   "De ce Fridgy",
+   "Privește aplicația",
+   "Planuri"
+  ],
+  "h2": [
+   "Risipa alimentară în cifre",
+   "Tot ce ai nevoie ca să nu mai arunci mâncare",
+   "Modernă, rapidă, intuitivă",
+   "Free vs Premium",
+   "Începe să economisești azi"
+  ],
+  "sec_p": [
+   "Trei funcții simple care îți schimbă felul în care faci cumpărături și gătești.",
+   "O experiență gândită până la cel mai mic detaliu.",
+   "Descarcă Fridgy gratuit și transformă felul în care îți gestionezi mâncarea."
+  ],
+  "stat_number": [
+   "130 kg",
+   "1.450 lei",
+   "53%"
+  ],
+  "stat_label": [
+   "risipă / persoană / an",
+   "pierdere / persoană / an",
+   "vine din gospodării"
+  ],
+  "stat_sub": [
+   "Sursa: Eurostat, 2023",
+   "Bani aruncați la gunoi",
+   "Tu poți face diferența"
+  ],
+  "feat_h3": [
+   "Scanezi bonul",
+   "Reduci risipa",
+   "Generezi rețete"
+  ],
+  "feat_p": [
+   "După cumpărături, fotografiezi bonul și Fridgy adaugă automat produsele în frigiderul tău digital.",
+   "Vezi ce ai în frigider, ce expiră curând și primești notificări la momentul potrivit — ca să folosești totul la timp și să nu mai arunci bani.",
+   "Fridgy îți propune rețete din ingredientele pe care le ai deja acasă. Alegi o rețetă și gătești fără risipă."
+  ],
+  "feat_badge": "Sub 10 secunde",
+  "shot_h4": [
+   "Frigiderul tău digital",
+   "Scanare instant",
+   "Rețete personalizate"
+  ],
+  "shot_p": [
+   "Toate produsele, organizate clar, cu data de expirare la vedere.",
+   "Un bon scanat = frigider actualizat în câteva secunde.",
+   "Idei de gătit pe baza a ceea ce ai deja în frigider."
+  ],
+  "plan_name": [
+   "Free",
+   "Premium"
+  ],
+  "plan_price": [
+   "Gratuit <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "14,99 lei <span>/ lună</span><small class=\"yearly\">sau 79,99 lei / an · economisești 55%</small>"
+  ],
+  "plan_features": [
+   "Scanări bon: 5 / lună",
+   "Rețete pe zi: 3",
+   "Regenerare rețete",
+   "Frigidere multiple",
+   "Statistici de bază",
+   "Frigider partajat",
+   "Scanări bon: Nelimitate",
+   "Rețete pe zi: 3",
+   "Regenerare rețete: 5 / zi",
+   "Frigidere multiple",
+   "Statistici avansate",
+   "Frigider partajat"
+  ],
+  "plan_btn": [
+   "Descarcă gratuit",
+   "Începe Premium"
+  ],
+  "plan_badge": "Cel mai popular",
+  "cta_h2": "Începe să economisești azi",
+  "cta_p": "Descarcă Fridgy gratuit și transformă felul în care îți gestionezi mâncarea.",
+  "foot_tagline": "Reduce risipa alimentară. Scanează bonuri. Generează rețete din ce ai deja acasă.",
+  "foot_h5": [
+   "Produs",
+   "Legal",
+   "Contact"
+  ],
+  "foot_links": [
+   [
+    "Funcții",
+    "Cum funcționează",
+    "Descarcă"
+   ],
+   [
+    "Politica de confidențialitate",
+    "Termeni și condiții"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Toate drepturile rezervate.",
+  "made": "Făcut cu &#x1F499; în România"
+ },
+ "en": {
+  "title": "Fridgy - Your smart fridge",
+  "meta_description": "Fridgy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home.",
+  "og_title": "Fridgy — Less waste, more recipes",
+  "og_description": "Scan receipts, organize your fridge and cook with what you already have at home.",
+  "nav": [
+   "Why Fridgy",
+   "Plans",
+   "Download",
+   "Download free",
+   "Download free",
+   "Start Premium",
+   "Features",
+   "How it works",
+   "Download"
+  ],
+  "nav_cta": "Download free",
+  "pill": "Your smart fridge",
+  "h1": "&euro;290 thrown in the trash<br><span class=\"grad\">every year. We fix that.</span>",
+  "hero_sub": "Every European wastes around <strong>~130 kg</strong> of food per year — roughly <strong>&euro;290</strong> thrown away. Fridgy helps you organize your food and notifies you before it expires. And so nothing goes to waste, it suggests delicious recipes to put it all to good use.",
+  "store_labels": [
+   "Available on",
+   "Download from",
+   "Available on",
+   "Download from"
+  ],
+  "tags": [
+   "The numbers speak",
+   "Why Fridgy",
+   "See the app",
+   "Plans"
+  ],
+  "h2": [
+   "Food waste in numbers",
+   "Everything you need to stop throwing away food",
+   "Modern, fast, intuitive",
+   "Free vs Premium",
+   "Start saving today"
+  ],
+  "sec_p": [
+   "Three simple features that change the way you shop and cook.",
+   "An experience designed down to the smallest detail.",
+   "Download Fridgy for free and transform the way you manage your food."
+  ],
+  "stat_number": [
+   "130 kg",
+   "&euro;290",
+   "53%"
+  ],
+  "stat_label": [
+   "waste / person / year",
+   "lost / person / year",
+   "comes from households"
+  ],
+  "stat_sub": [
+   "Source: Eurostat, 2023",
+   "Money thrown in the trash",
+   "You can make a difference"
+  ],
+  "feat_h3": [
+   "Scan receipts",
+   "Reduce waste",
+   "Generate recipes"
+  ],
+  "feat_p": [
+   "After shopping, take a photo of your receipt and Fridgy automatically adds the products to your digital fridge.",
+   "See what you have, what expires soon and get notified at the right time — so you use everything before it goes bad and stop wasting money.",
+   "Fridgy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste."
+  ],
+  "feat_badge": "Under 10 seconds",
+  "shot_h4": [
+   "Your digital fridge",
+   "Instant scanning",
+   "Personalized recipes"
+  ],
+  "shot_p": [
+   "All products, clearly organized, with expiry dates in plain sight.",
+   "One scanned receipt = fridge updated in seconds.",
+   "Cooking ideas based on what you already have in your fridge."
+  ],
+  "plan_name": [
+   "Free",
+   "Premium"
+  ],
+  "plan_price": [
+   "Free <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "&euro;2.99 <span>/ month</span><small class=\"yearly\">or &euro;15.99 / year · save 55%</small>"
+  ],
+  "plan_features": [
+   "Receipt scans: 5 / month",
+   "Recipes per day: 3",
+   "Recipe regeneration",
+   "Multiple fridges",
+   "Basic statistics",
+   "Shared fridge",
+   "Receipt scans: Unlimited",
+   "Recipes per day: 3",
+   "Recipe regeneration: 5 / day",
+   "Multiple fridges",
+   "Advanced statistics",
+   "Shared fridge"
+  ],
+  "plan_btn": [
+   "Download free",
+   "Start Premium"
+  ],
+  "plan_badge": "Most popular",
+  "cta_h2": "Start saving today",
+  "cta_p": "Download Fridgy for free and transform the way you manage your food.",
+  "foot_tagline": "Reduce food waste. Scan receipts. Generate recipes from what you already have at home.",
+  "foot_h5": [
+   "Product",
+   "Legal",
+   "Contact"
+  ],
+  "foot_links": [
+   [
+    "Features",
+    "How it works",
+    "Download"
+   ],
+   [
+    "Privacy Policy",
+    "Terms &amp; Conditions"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. All rights reserved.",
+  "made": "Made with &#x1F499; in Romania"
+ },
+ "de": {
+  "title": "Fridgy - Dein smarter Kühlschrank",
+  "meta_description": "Scanne Kassenbons, organisiere deinen Kühlschrank, reduziere Verschwendung, spare Geld.",
+  "og_title": "Fridgy — Weniger Verschwendung, mehr Rezepte",
+  "og_description": "Scanne Kassenbons, organisiere deinen Kühlschrank und koche mit dem, was du bereits zu Hause hast.",
+  "nav": [
+   "Herunterladen",
+   "Kostenlos herunterladen",
+   "Kostenlos herunterladen",
+   "Premium starten",
+   "Herunterladen"
+  ],
+  "nav_cta": "Kostenlos herunterladen",
+  "pill": "Dein smarter Kühlschrank",
+  "h1": "290 &euro; landen jährlich im Müll.<br><span class=\"grad\">Wir ändern das.</span>",
+  "hero_sub": "Jeder Europäer verschwendet jährlich <strong>~130 kg</strong> Lebensmittel — etwa <strong>290&nbsp;&euro;</strong> weggeworfen. Fridgy hilft dir, deine Lebensmittel zu organisieren und benachrichtigt dich rechtzeitig vor dem Ablaufdatum. Und damit nichts verschwendet wird, schlägt es köstliche Rezepte vor.",
+  "store_labels": [
+   "Verfügbar auf",
+   "Laden im",
+   "Verfügbar auf",
+   "Laden im"
+  ],
+  "tags": [
+   "Die Zahlen sprechen",
+   "Warum Fridgy",
+   "Sieh die App",
+   "Tarife"
+  ],
+  "h2": [
+   "Lebensmittelverschwendung in Zahlen",
+   "Alles was du brauchst, um keine Lebensmittel mehr wegzuwerfen",
+   "Modern, schnell, intuitiv",
+   "Free vs Premium",
+   "Fang heute an zu sparen"
+  ],
+  "sec_p": [
+   "Drei einfache Funktionen, die die Art verändern, wie du einkaufst und kochst.",
+   "Ein Erlebnis, das bis ins kleinste Detail durchdacht ist.",
+   "Lade Fridgy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest."
+  ],
+  "stat_number": [
+   "130 kg",
+   "290 &euro;",
+   "53%"
+  ],
+  "stat_label": [
+   "Verschwendung / Person / Jahr",
+   "Verlust / Person / Jahr",
+   "kommt aus Haushalten"
+  ],
+  "stat_sub": [
+   "Quelle: Eurostat, 2023",
+   "Geld im Müll",
+   "Du kannst etwas ändern"
+  ],
+  "feat_h3": [
+   "Kassenbon scannen",
+   "Verschwendung reduzieren",
+   "Rezepte generieren"
+  ],
+  "feat_p": [
+   "Nach dem Einkauf fotografierst du den Kassenbon und Fridgy fügt die Produkte automatisch in deinen digitalen Kühlschrank ein.",
+   "Sieh was du hast, was bald abläuft und erhalte Benachrichtigungen zur richtigen Zeit — damit du alles rechtzeitig verbrauchst und kein Geld mehr verschwendest.",
+   "Fridgy schlägt Rezepte aus den Zutaten vor, die du bereits zu Hause hast. Wähle eines und koche ohne Verschwendung."
+  ],
+  "feat_badge": "Unter 10 Sekunden",
+  "shot_h4": [
+   "Dein digitaler Kühlschrank",
+   "Sofort scannen",
+   "Personalisierte Rezepte"
+  ],
+  "shot_p": [
+   "Alle Produkte, übersichtlich organisiert, mit Ablaufdaten auf einen Blick.",
+   "Ein gescannter Bon = Kühlschrank in Sekunden aktualisiert.",
+   "Kochideen basierend auf dem, was du bereits im Kühlschrank hast."
+  ],
+  "plan_name": [
+   "Free",
+   "Premium"
+  ],
+  "plan_price": [
+   "Kostenlos <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "2,99&nbsp;&euro; <span>/ Monat</span><small class=\"yearly\">oder 15,99&nbsp;&euro; / Jahr · spare 55%</small>"
+  ],
+  "plan_features": [
+   "Kassenbon-Scans: 5 / Monat",
+   "Rezepte pro Tag: 3",
+   "Rezept-Regenerierung",
+   "Mehrere Kühlschränke",
+   "Basis-Statistiken",
+   "Geteilter Kühlschrank",
+   "Kassenbon-Scans: Unbegrenzt",
+   "Rezepte pro Tag: 3",
+   "Rezept-Regenerierung: 5 / Tag",
+   "Mehrere Kühlschränke",
+   "Erweiterte Statistiken",
+   "Geteilter Kühlschrank"
+  ],
+  "plan_btn": [
+   "Kostenlos herunterladen",
+   "Premium starten"
+  ],
+  "plan_badge": "Beliebteste",
+  "cta_h2": "Fang heute an zu sparen",
+  "cta_p": "Lade Fridgy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest.",
+  "foot_tagline": "Reduziere Lebensmittelverschwendung. Scanne Kassenbons. Generiere Rezepte aus dem, was du bereits zu Hause hast.",
+  "foot_h5": [
+   "Produkt",
+   "Rechtliches",
+   "Kontakt"
+  ],
+  "foot_links": [
+   [
+    "Funktionen",
+    "Herunterladen"
+   ],
+   [
+    "Datenschutz",
+    "AGB"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Alle Rechte vorbehalten.",
+  "made": "Mit &#x1F499; in Rumänien gemacht"
+ },
+ "fr": {
+  "title": "Fridgy - Ton frigo intelligent",
+  "meta_description": "Fridgy t'aide à réduire le gaspillage alimentaire : scanne ton ticket de caisse, organise ton frigo et obtiens des recettes générées à partir de ce que tu as déjà chez toi.",
+  "og_title": "Fridgy — Moins de gaspillage, plus de recettes",
+  "og_description": "Scanne tes tickets de caisse, organise ton frigo et cuisine avec ce que tu as déjà chez toi.",
+  "nav": [
+   "Télécharger",
+   "Télécharger gratuitement",
+   "Télécharger gratuitement",
+   "Démarrer Premium",
+   "Télécharger"
+  ],
+  "nav_cta": "Télécharger gratuitement",
+  "pill": "Ton frigo intelligent",
+  "h1": "290&nbsp;&euro; jetés à la poubelle<br><span class=\"grad\">chaque année. On règle ça.</span>",
+  "hero_sub": "Chaque Européen gaspille environ <strong>~130 kg</strong> de nourriture par an — soit environ <strong>290&nbsp;&euro;</strong> jetés à la poubelle. Fridgy t'aide à organiser tes aliments et te prévient avant qu'ils expirent. Et pour ne rien perdre, il te suggère de délicieuses recettes pour tout mettre à profit.",
+  "store_labels": [
+   "Disponible sur",
+   "Télécharger dans",
+   "Disponible sur",
+   "Télécharger dans"
+  ],
+  "tags": [
+   "Les chiffres parlent",
+   "Pourquoi Fridgy",
+   "Voir l'application",
+   "Tarifs"
+  ],
+  "h2": [
+   "Le gaspillage alimentaire en chiffres",
+   "Tout ce qu'il faut pour arrêter de gaspiller de la nourriture",
+   "Moderne, rapide, intuitive",
+   "Gratuit vs Premium",
+   "Commence à économiser aujourd'hui"
+  ],
+  "sec_p": [
+   "Trois fonctionnalités simples qui changent ta façon de faire les courses et de cuisiner.",
+   "Une expérience conçue dans les moindres détails.",
+   "Télécharge Fridgy gratuitement et transforme la façon dont tu gères tes aliments."
+  ],
+  "stat_number": [
+   "130 kg",
+   "290 &euro;",
+   "53%"
+  ],
+  "stat_label": [
+   "gaspillé / personne / an",
+   "perdu / personne / an",
+   "provient des foyers"
+  ],
+  "stat_sub": [
+   "Source : Eurostat, 2023",
+   "De l'argent jeté à la poubelle",
+   "Tu peux faire la différence"
+  ],
+  "feat_h3": [
+   "Scanner les tickets",
+   "Réduire le gaspillage",
+   "Générer des recettes"
+  ],
+  "feat_p": [
+   "Après tes courses, prends en photo ton ticket de caisse et Fridgy ajoute automatiquement les produits à ton frigo numérique.",
+   "Vois ce que tu as, ce qui expire bientôt et reçois des notifications au bon moment — pour tout utiliser avant que ça ne se périme et arrêter de perdre de l'argent.",
+   "Fridgy suggère des recettes à partir des ingrédients que tu as déjà chez toi. Choisis-en une et cuisine sans gaspillage."
+  ],
+  "feat_badge": "En moins de 10 secondes",
+  "shot_h4": [
+   "Ton frigo numérique",
+   "Scan instantané",
+   "Recettes personnalisées"
+  ],
+  "shot_p": [
+   "Tous les produits, clairement organisés, avec les dates d'expiration bien visibles.",
+   "Un ticket scanné = frigo mis à jour en quelques secondes.",
+   "Des idées de cuisine basées sur ce que tu as déjà dans ton frigo."
+  ],
+  "plan_name": [
+   "Gratuit",
+   "Premium"
+  ],
+  "plan_price": [
+   "Gratuit <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "2,99&nbsp;&euro; <span>/ mois</span><small class=\"yearly\">ou 15,99&nbsp;&euro; / an · économisez 55%</small>"
+  ],
+  "plan_features": [
+   "Scans de tickets : 5 / mois",
+   "Recettes par jour : 3",
+   "Régénération de recettes",
+   "Plusieurs frigos",
+   "Statistiques de base",
+   "Frigo partagé",
+   "Scans de tickets : Illimitées",
+   "Recettes par jour : 3",
+   "Régénération de recettes : 5 / jour",
+   "Plusieurs frigos",
+   "Statistiques avancées",
+   "Frigo partagé"
+  ],
+  "plan_btn": [
+   "Télécharger gratuitement",
+   "Démarrer Premium"
+  ],
+  "plan_badge": "Le plus populaire",
+  "cta_h2": "Commence à économiser aujourd'hui",
+  "cta_p": "Télécharge Fridgy gratuitement et transforme la façon dont tu gères tes aliments.",
+  "foot_tagline": "Réduis le gaspillage alimentaire. Scanne tes tickets. Génère des recettes à partir de ce que tu as déjà chez toi.",
+  "foot_h5": [
+   "Produit",
+   "Légal",
+   "Contact"
+  ],
+  "foot_links": [
+   [
+    "Fonctionnalités",
+    "Télécharger"
+   ],
+   [
+    "Politique de confidentialité",
+    "Conditions générales"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Tous droits réservés.",
+  "made": "Fait avec &#x1F499; en Roumanie"
+ },
+ "nl": {
+  "title": "Fridgy - Je slimme koelkast",
+  "meta_description": "Fridgy helpt je voedselverspilling te verminderen: scan je kassabon, organiseer je koelkast en ontvang recepten op basis van wat je al thuis hebt.",
+  "og_title": "Fridgy — Minder verspilling, meer recepten",
+  "og_description": "Scan kassabonnen, organiseer je koelkast en kook met wat je al thuis hebt.",
+  "nav": [
+   "Downloaden",
+   "Gratis downloaden",
+   "Gratis downloaden",
+   "Premium starten",
+   "Hoe het werkt",
+   "Downloaden"
+  ],
+  "nav_cta": "Gratis downloaden",
+  "pill": "Je slimme koelkast",
+  "h1": "&euro;&nbsp;290 weggegooid in de prullenbak<br><span class=\"grad\">elk jaar. Wij lossen dat op.</span>",
+  "hero_sub": "Elke Europeaan verspilt ongeveer <strong>~130 kg</strong> voedsel per jaar — ongeveer <strong>&euro;&nbsp;290</strong> weggegooid. Fridgy helpt je je eten te organiseren en stuurt je een melding voordat het verloopt. En zodat niets verloren gaat, stelt het heerlijke recepten voor om alles goed te gebruiken.",
+  "store_labels": [
+   "Beschikbaar op",
+   "Download in",
+   "Beschikbaar op",
+   "Download in"
+  ],
+  "tags": [
+   "De cijfers spreken",
+   "Waarom Fridgy",
+   "Bekijk de app",
+   "Abonnementen"
+  ],
+  "h2": [
+   "Voedselverspilling in cijfers",
+   "Alles wat je nodig hebt om te stoppen met eten weggooien",
+   "Modern, snel, intuïtief",
+   "Gratis vs Premium",
+   "Begin vandaag nog met besparen"
+  ],
+  "sec_p": [
+   "Drie eenvoudige functies die de manier waarop je winkelt en kookt veranderen.",
+   "Een ervaring ontworpen tot in het kleinste detail.",
+   "Download Fridgy gratis en verander de manier waarop je je eten beheert."
+  ],
+  "stat_number": [
+   "130 kg",
+   "&euro; 290",
+   "53%"
+  ],
+  "stat_label": [
+   "verspilling / persoon / jaar",
+   "verloren / persoon / jaar",
+   "komt uit huishoudens"
+  ],
+  "stat_sub": [
+   "Bron: Eurostat, 2023",
+   "Geld weggegooid in de prullenbak",
+   "Jij kunt het verschil maken"
+  ],
+  "feat_h3": [
+   "Kassabonnen scannen",
+   "Verspilling verminderen",
+   "Recepten genereren"
+  ],
+  "feat_p": [
+   "Maak na het winkelen een foto van je kassabon en Fridgy voegt de producten automatisch toe aan je digitale koelkast.",
+   "Bekijk wat je hebt, wat binnenkort verloopt en ontvang een melding op het juiste moment — zodat je alles gebruikt voordat het slecht wordt en je geen geld meer verspilt.",
+   "Fridgy stelt recepten voor op basis van de ingrediënten die je al thuis hebt. Kies er een en kook zonder verspilling."
+  ],
+  "feat_badge": "Minder dan 10 seconden",
+  "shot_h4": [
+   "Jouw digitale koelkast",
+   "Direct scannen",
+   "Gepersonaliseerde recepten"
+  ],
+  "shot_p": [
+   "Alle producten, overzichtelijk georganiseerd, met houdbaarheidsdatums in het zicht.",
+   "Eén gescande kassabon = koelkast bijgewerkt in seconden.",
+   "Kookideeën op basis van wat je al in je koelkast hebt."
+  ],
+  "plan_name": [
+   "Gratis",
+   "Premium"
+  ],
+  "plan_price": [
+   "Gratis <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "&euro;&nbsp;2,99 <span>/ maand</span><small class=\"yearly\">of &euro;&nbsp;15,99 / jaar &middot; bespaar 55%</small>"
+  ],
+  "plan_features": [
+   "Kassabonscans: 5 / maand",
+   "Recepten per dag: 3",
+   "Recept opnieuw genereren",
+   "Meerdere koelkasten",
+   "Basisstatistieken",
+   "Gedeelde koelkast",
+   "Kassabonscans: Onbeperkt",
+   "Recepten per dag: 3",
+   "Recept opnieuw genereren: 5 / dag",
+   "Meerdere koelkasten",
+   "Geavanceerde statistieken",
+   "Gedeelde koelkast"
+  ],
+  "plan_btn": [
+   "Gratis downloaden",
+   "Premium starten"
+  ],
+  "plan_badge": "Meest populair",
+  "cta_h2": "Begin vandaag nog met besparen",
+  "cta_p": "Download Fridgy gratis en verander de manier waarop je je eten beheert.",
+  "foot_tagline": "Voedselverspilling verminderen. Kassabonnen scannen. Recepten genereren van wat je al thuis hebt.",
+  "foot_h5": [
+   "Product",
+   "Juridisch",
+   "Contact"
+  ],
+  "foot_links": [
+   [
+    "Functies",
+    "Hoe het werkt",
+    "Downloaden"
+   ],
+   [
+    "Privacybeleid",
+    "Algemene voorwaarden"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Alle rechten voorbehouden.",
+  "made": "Gemaakt met &#x1F499; in Roemenië"
+ },
+ "da": {
+  "title": "Fridgy - Dit smarte køleskab",
+  "meta_description": "Fridgy hjælper dig med at reducere madspild: scan din kassebonnet, organiser dit køleskab og få opskrifter genereret fra det, du allerede har derhjemme.",
+  "og_title": "Fridgy — Mindre spild, flere opskrifter",
+  "og_description": "Scan kvitteringer, organiser dit køleskab og lav mad med det, du allerede har derhjemme.",
+  "nav": [
+   "Hent",
+   "Download gratis",
+   "Download gratis",
+   "Start Premium",
+   "Hent"
+  ],
+  "nav_cta": "Download gratis",
+  "pill": "Dit smarte køleskab",
+  "h1": "2.150 kr smidt i skraldespanden<br><span class=\"grad\">hvert år. Vi løser det.</span>",
+  "hero_sub": "Hver europæer spilder ca. <strong>~130 kg</strong> mad om året — svarende til <strong>2.150 kr</strong> smidt væk. Fridgy hjælper dig med at organisere din mad og giver dig besked, inden den udløber. Og for at intet går til spilde, foreslår den lækre opskrifter, så du bruger det hele.",
+  "store_labels": [
+   "Tilgængelig på",
+   "Download fra",
+   "Tilgængelig på",
+   "Download fra"
+  ],
+  "tags": [
+   "Tallene taler for sig selv",
+   "Hvorfor Fridgy",
+   "Se appen",
+   "Priser"
+  ],
+  "h2": [
+   "Madspild i tal",
+   "Alt hvad du behøver for at stoppe med at smide mad ud",
+   "Moderne, hurtig, intuitiv",
+   "Gratis vs Premium",
+   "Begynd at spare i dag"
+  ],
+  "sec_p": [
+   "Tre enkle funktioner, der ændrer den måde du handler og laver mad på.",
+   "En oplevelse designet ned til mindste detalje.",
+   "Download Fridgy gratis og forandre den måde du håndterer din mad på."
+  ],
+  "stat_number": [
+   "130 kg",
+   "2.150 kr",
+   "53%"
+  ],
+  "stat_label": [
+   "spild / person / år",
+   "tabt / person / år",
+   "kommer fra husholdninger"
+  ],
+  "stat_sub": [
+   "Kilde: Eurostat, 2023",
+   "Penge smidt i skraldespanden",
+   "Du kan gøre en forskel"
+  ],
+  "feat_h3": [
+   "Scan kvitteringer",
+   "Reducer spild",
+   "Generer opskrifter"
+  ],
+  "feat_p": [
+   "Efter indkøb tager du et foto af din kvittering, og Fridgy tilføjer automatisk produkterne til dit digitale køleskab.",
+   "Se hvad du har, hvad der udløber snart, og få besked på det rigtige tidspunkt — så du bruger alt inden det bliver dårligt og holder op med at spilde penge.",
+   "Fridgy foreslår opskrifter ud fra de ingredienser, du allerede har derhjemme. Vælg en og lav mad uden spild."
+  ],
+  "feat_badge": "Under 10 sekunder",
+  "shot_h4": [
+   "Dit digitale køleskab",
+   "Øjeblikkelig scanning",
+   "Personlige opskrifter"
+  ],
+  "shot_p": [
+   "Alle produkter, tydeligt organiseret, med udløbsdatoer i klart sigte.",
+   "Én scannet kvittering = køleskab opdateret på få sekunder.",
+   "Madideer baseret på hvad du allerede har i dit køleskab."
+  ],
+  "plan_name": [
+   "Gratis",
+   "Premium"
+  ],
+  "plan_price": [
+   "Gratis <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "22,99 kr <span>/ måned</span><small class=\"yearly\">eller 119,99 kr / år · spar 55%</small>"
+  ],
+  "plan_features": [
+   "Kvitteringsscanninger: 5 / måned",
+   "Opskrifter pr. dag: 3",
+   "Opskriftsfornyelse",
+   "Flere køleskabe",
+   "Basisstatistik",
+   "Delt køleskab",
+   "Kvitteringsscanninger: Ubegrænsede",
+   "Opskrifter pr. dag: 3",
+   "Opskriftsfornyelse: 5 / dag",
+   "Flere køleskabe",
+   "Avanceret statistik",
+   "Delt køleskab"
+  ],
+  "plan_btn": [
+   "Download gratis",
+   "Start Premium"
+  ],
+  "plan_badge": "Mest populær",
+  "cta_h2": "Begynd at spare i dag",
+  "cta_p": "Download Fridgy gratis og forandre den måde du håndterer din mad på.",
+  "foot_tagline": "Reducer madspild. Scan kvitteringer. Generer opskrifter fra det du allerede har derhjemme.",
+  "foot_h5": [
+   "Produkt",
+   "Juridisk",
+   "Kontakt"
+  ],
+  "foot_links": [
+   [
+    "Funktioner",
+    "Hent"
+   ],
+   [
+    "Privatlivspolitik",
+    "Vilkår &amp; Betingelser"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Alle rettigheder forbeholdes.",
+  "made": "Lavet med &#x1F499; i Rumænien"
+ },
+ "sv": {
+  "title": "Fridgy - Ditt smarta kylskåp",
+  "meta_description": "Fridgy hjälper dig minska matsvinn: skanna ditt kassakvitto, organisera ditt kylskåp och få recept genererade från det du redan har hemma.",
+  "og_title": "Fridgy — Mindre svinn, fler recept",
+  "og_description": "Skanna kvitton, organisera ditt kylskåp och laga mat med det du redan har hemma.",
+  "nav": [
+   "Ladda ner",
+   "Ladda ner gratis",
+   "Ladda ner gratis",
+   "Starta Premium",
+   "Ladda ner"
+  ],
+  "nav_cta": "Ladda ner gratis",
+  "pill": "Ditt smarta kylskåp",
+  "h1": "3&nbsp;000 kr slängs i soporna<br><span class=\"grad\">varje år. Vi löser det.</span>",
+  "hero_sub": "Varje europé slänger ungefär <strong>~130 kg</strong> mat per år — ungefär <strong>3&nbsp;000 kr</strong> i soporna. Fridgy hjälper dig organisera din mat och meddelar dig innan den går ut. Och för att ingenting ska gå till spillo föreslår appen läckra recept som tar vara på allt du har hemma.",
+  "store_labels": [
+   "Tillgänglig på",
+   "Ladda ner från",
+   "Tillgänglig på",
+   "Ladda ner från"
+  ],
+  "tags": [
+   "Siffrorna talar",
+   "Varför Fridgy",
+   "Se appen",
+   "Planer"
+  ],
+  "h2": [
+   "Matsvinn i siffror",
+   "Allt du behöver för att sluta kasta mat",
+   "Modern, snabb, intuitiv",
+   "Gratis vs Premium",
+   "Börja spara redan idag"
+  ],
+  "sec_p": [
+   "Tre enkla funktioner som förändrar hur du handlar och lagar mat.",
+   "En upplevelse designad ned till minsta detalj.",
+   "Ladda ner Fridgy gratis och förändra hur du hanterar din mat."
+  ],
+  "stat_number": [
+   "130 kg",
+   "3 000 kr",
+   "53%"
+  ],
+  "stat_label": [
+   "svinn / person / år",
+   "förlorat / person / år",
+   "kommer från hushållen"
+  ],
+  "stat_sub": [
+   "Källa: Eurostat, 2023",
+   "Pengar kastade i soporna",
+   "Du kan göra skillnad"
+  ],
+  "feat_h3": [
+   "Skanna kvitton",
+   "Minska svinnet",
+   "Generera recept"
+  ],
+  "feat_p": [
+   "Ta en bild på kvittot efter din handel och Fridgy lägger automatiskt till produkterna i ditt digitala kylskåp.",
+   "Se vad du har, vad som snart går ut och få en notis i rätt tid — så att du använder allt innan det blir dåligt och slutar slösa pengar.",
+   "Fridgy föreslår recept baserade på de ingredienser du redan har hemma. Välj ett och laga mat utan svinn."
+  ],
+  "feat_badge": "Under 10 sekunder",
+  "shot_h4": [
+   "Ditt digitala kylskåp",
+   "Omedelbar skanning",
+   "Personliga recept"
+  ],
+  "shot_p": [
+   "Alla produkter, tydligt organiserade, med utgångsdatum väl synliga.",
+   "Ett skannat kvitto = kylskåpet uppdaterat på sekunder.",
+   "Matlagningsidéer baserade på vad du redan har i kylskåpet."
+  ],
+  "plan_name": [
+   "Gratis",
+   "Premium"
+  ],
+  "plan_price": [
+   "Gratis <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "34,99 kr <span>/ månad</span><small class=\"yearly\">eller 179,99 kr / år · spara 55%</small>"
+  ],
+  "plan_features": [
+   "Kvittoskanningar: 5 / månad",
+   "Recept per dag: 3",
+   "Receptåterskapning",
+   "Flera kylskåp",
+   "Grundläggande statistik",
+   "Delat kylskåp",
+   "Kvittoskanningar: Obegränsade",
+   "Recept per dag: 3",
+   "Receptåterskapning: 5 / dag",
+   "Flera kylskåp",
+   "Avancerad statistik",
+   "Delat kylskåp"
+  ],
+  "plan_btn": [
+   "Ladda ner gratis",
+   "Starta Premium"
+  ],
+  "plan_badge": "Mest populär",
+  "cta_h2": "Börja spara redan idag",
+  "cta_p": "Ladda ner Fridgy gratis och förändra hur du hanterar din mat.",
+  "foot_tagline": "Minska matsvinn. Skanna kvitton. Generera recept från det du redan har hemma.",
+  "foot_h5": [
+   "Produkt",
+   "Juridiskt",
+   "Kontakt"
+  ],
+  "foot_links": [
+   [
+    "Funktioner",
+    "Ladda ner"
+   ],
+   [
+    "Integritetspolicy",
+    "Användarvillkor"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Alla rättigheter förbehållna.",
+  "made": "Made with &#x1F499; in Romania"
+ },
+ "hu": {
+  "title": "Fridgy - Az okos hűtőd",
+  "meta_description": "Szkenneld a blokkot, rendezd a hűtőd, csökkentsd a pazarlást, spórolj pénzt.",
+  "og_title": "Fridgy — Kevesebb pazarlás, több recept",
+  "og_description": "Szkennelj blokkokat, rendezd a hűtőd és főzz abból, amid már otthon van.",
+  "nav": [
+   "Letöltés",
+   "Ingyenes letöltés",
+   "Ingyenes letöltés",
+   "Premium indítása",
+   "Letöltés"
+  ],
+  "nav_cta": "Ingyenes letöltés",
+  "pill": "Az okos hűtőd",
+  "h1": "Évente 130 kg étel a kukában.<br><span class=\"grad\">Mi segítünk megállítani.</span>",
+  "hero_sub": "Minden európai évente <strong>~130 kg</strong> élelmiszert pazarol el — ez körülbelül <strong>115 000 Ft</strong> kidobott pénz. A Fridgy segít rendszerezni az ételeidet és időben figyelmeztet, mielőtt lejárnának. És hogy semmi ne menjen kárba, finom recepteket javasol.",
+  "store_labels": [
+   "Elérhető a",
+   "Letöltés az",
+   "Elérhető a",
+   "Letöltés az"
+  ],
+  "tags": [
+   "A számok beszélnek",
+   "Miért Fridgy",
+   "Nézd meg az appot",
+   "Csomagok"
+  ],
+  "h2": [
+   "Élelmiszerpazarlás számokban",
+   "Minden, amire szükséged van, hogy ne dobj ki több ételt",
+   "Modern, gyors, intuitív",
+   "Free vs Premium",
+   "Kezdj el spórolni ma"
+  ],
+  "sec_p": [
+   "Három egyszerű funkció, amely megváltoztatja a vásárlási és főzési szokásaidat.",
+   "A legapróbb részletekig átgondolt élmény.",
+   "Töltsd le a Fridgy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat."
+  ],
+  "stat_number": [
+   "130 kg",
+   "115 000 Ft",
+   "53%"
+  ],
+  "stat_label": [
+   "pazarlás / fő / év",
+   "veszteség / fő / év",
+   "háztartásokból származik"
+  ],
+  "stat_sub": [
+   "Forrás: Eurostat, 2023",
+   "Kidobott pénz",
+   "Te is tehetsz ellene"
+  ],
+  "feat_h3": [
+   "Blokk szkennelés",
+   "Pazarlás csökkentése",
+   "Receptek generálása"
+  ],
+  "feat_p": [
+   "Vásárlás után fotózd le a blokkot és a Fridgy automatikusan hozzáadja a termékeket a digitális hűtődhöz.",
+   "Lásd mit tartasz, mi jár le hamarosan és kapj értesítéseket a megfelelő időben — hogy mindent időben felhasználj és ne dobd ki a pénzed.",
+   "A Fridgy recepteket javasol a már otthon lévő hozzávalókból. Válassz egyet és főzz pazarlás nélkül."
+  ],
+  "feat_badge": "10 másodperc alatt",
+  "shot_h4": [
+   "Digitális hűtőd",
+   "Azonnali szkennelés",
+   "Személyre szabott receptek"
+  ],
+  "shot_p": [
+   "Minden termék, áttekinthetően rendezve, lejárati dátumokkal.",
+   "Egy szkennelt blokk = hűtő frissítve másodpercek alatt.",
+   "Főzési ötletek a hűtődben lévő hozzávalók alapján."
+  ],
+  "plan_name": [
+   "Free",
+   "Premium"
+  ],
+  "plan_price": [
+   "Ingyenes <span>&nbsp;</span><small class=\"yearly\">&nbsp;</small>",
+   "1 190 Ft <span>/ hónap</span><small class=\"yearly\">vagy 6 490 Ft / év · spórolj 55%</small>"
+  ],
+  "plan_features": [
+   "Blokk szkennelés: 5 / hónap",
+   "Receptek naponta: 3",
+   "Recept újragenerálás",
+   "Több hűtő",
+   "Alap statisztikák",
+   "Megosztott hűtő",
+   "Blokk szkennelés: Korlátlan",
+   "Receptek naponta: 3",
+   "Recept újragenerálás: 5 / nap",
+   "Több hűtő",
+   "Haladó statisztikák",
+   "Megosztott hűtő"
+  ],
+  "plan_btn": [
+   "Ingyenes letöltés",
+   "Premium indítása"
+  ],
+  "plan_badge": "Legnépszerűbb",
+  "cta_h2": "Kezdj el spórolni ma",
+  "cta_p": "Töltsd le a Fridgy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat.",
+  "foot_tagline": "Csökkentsd az élelmiszerpazarlást. Szkennelj blokkokat. Generálj recepteket abból, amid már otthon van.",
+  "foot_h5": [
+   "Termék",
+   "Jogi",
+   "Kapcsolat"
+  ],
+  "foot_links": [
+   [
+    "Funkciók",
+    "Letöltés"
+   ],
+   [
+    "Adatvédelem",
+    "Felhasználási feltételek"
+   ],
+   [
+    "contact@fridgy.org"
+   ]
+  ],
+  "copy": "Fridgy. Minden jog fenntartva.",
+  "made": "Szeretettel készült &#x1F499; Romániában"
+ }
+}

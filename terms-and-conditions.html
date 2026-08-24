@@ -4,165 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions - Fridgy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/fridgy-logo.png" />
+    <meta name="theme-color" content="#070b18" />
+    <meta name="color-scheme" content="dark" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root{
+            --bg:#070b18;
+            --ink:#f2f6ff; --muted:#c2cde6; --dim:#93a3c4;
+            --surface:rgba(255,255,255,.045);
+            --line:rgba(255,255,255,.10);
+            --accent:#60a5fa;
+            --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #eef5fe;
-            padding: 20px;
-            overflow-x: hidden;
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{-webkit-text-size-adjust:100%;background:var(--bg)}
+        body{
+            font-family:var(--font);
+            line-height:1.7;
+            color:var(--muted);
+            background:var(--bg);
+            -webkit-font-smoothing:antialiased;
+            padding:20px;
+            overflow-x:hidden;
         }
+
+        /* fundalul cu bule, ca pe landing */
         .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-        .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
-        .b1{width:560px;height:560px;background:#6daeff;top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
-        .b2{width:520px;height:520px;background:#1f4ec5;top:240px;right:-180px;animation:float2 22s ease-in-out infinite}
-        .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:float1 26s ease-in-out infinite}
+        .blob{position:absolute;border-radius:50%;filter:blur(100px)}
+        .b1{width:46vw;height:46vw;min-width:440px;min-height:440px;background:#2563eb;top:-14%;left:-10%;opacity:.5;animation:float1 24s ease-in-out infinite}
+        .b2{width:40vw;height:40vw;min-width:380px;min-height:380px;background:#7c3aed;top:6%;right:-12%;opacity:.45;animation:float2 28s ease-in-out infinite}
+        .b3{width:38vw;height:38vw;min-width:340px;min-height:340px;background:#1d4ed8;bottom:-12%;left:-6%;opacity:.4;animation:float1 30s ease-in-out infinite}
         @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
         @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255,255,255,.85);
-            backdrop-filter: blur(14px);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        @media (prefers-reduced-motion:reduce){.blob{animation:none}}
+
+        .container{
+            position:relative;
+            z-index:1;
+            max-width:820px;
+            margin:0 auto;
+            background:rgba(10,16,32,.72);
+            backdrop-filter:blur(20px) saturate(1.4);
+            -webkit-backdrop-filter:blur(20px) saturate(1.4);
+            border:1px solid var(--line);
+            padding:40px;
+            border-radius:26px;
+            box-shadow:0 30px 80px -40px rgba(0,0,0,.9);
         }
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            font-size: 2rem;
+
+        h1{color:var(--ink);margin-bottom:10px;font-size:2rem;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+        h2{
+            color:var(--ink);
+            margin-top:34px;
+            margin-bottom:15px;
+            font-size:1.25rem;
+            font-weight:700;
+            letter-spacing:-.02em;
+            border-bottom:1px solid var(--line);
+            padding-bottom:10px;
         }
-        h2 {
-            color: #2d3748;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
+        h3{color:var(--ink);margin-top:22px;margin-bottom:10px;font-size:1.02rem;font-weight:700}
+        p{margin-bottom:15px}
+        ul{margin-bottom:15px;padding-left:22px}
+        li{margin-bottom:8px}
+        li::marker{color:var(--dim)}
+        strong{color:var(--ink);font-weight:700}
+
+        .last-updated{color:var(--dim);font-size:.9rem;margin-bottom:30px}
+
+        .warning{
+            background:rgba(245,158,11,.08);
+            border:1px solid rgba(245,158,11,.28);
+            border-left:3px solid #f59e0b;
+            padding:16px 18px;
+            margin:20px 0;
+            border-radius:6px 14px 14px 6px;
         }
-        p {
-            margin-bottom: 15px;
-            color: #4a5568;
+        .warning p{margin-bottom:10px;color:#fcd9a0}
+        .warning strong{color:#fde3b8}
+        .warning ul{margin-bottom:0}
+        .warning li{color:#fcd9a0}
+
+        .contact-box{
+            background:rgba(52,211,153,.07);
+            border:1px solid rgba(52,211,153,.26);
+            padding:20px;
+            border-radius:14px;
+            margin-top:20px;
         }
-        ul {
-            margin-bottom: 15px;
-            padding-left: 25px;
+        .contact-box p{color:#a7f3d0;margin-bottom:5px}
+        .contact-box strong{color:#d1fae5}
+
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+
+        .company-info{
+            background:var(--surface);
+            border:1px solid var(--line);
+            padding:16px 18px;
+            border-radius:14px;
+            margin:15px 0;
         }
-        li {
-            margin-bottom: 8px;
-            color: #4a5568;
+        .company-info p{margin-bottom:5px}
+
+        /* antet: marca + link inapoi la site, plus selectorul de limba */
+        .page-head{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-bottom:28px;
         }
-        .last-updated {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-        .intro {
-            background-color: #f0f9ff;
-            border-left: 4px solid #3b82f6;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .intro p {
-            color: #1e40af;
-            margin-bottom: 10px;
-        }
-        .intro p:last-child {
-            margin-bottom: 0;
-        }
-        .warning {
-            background-color: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .warning p {
-            color: #92400e;
-            margin-bottom: 0;
-        }
-        .contact-box {
-            background-color: #f0fdf4;
-            border: 1px solid #86efac;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .contact-box p {
-            color: #166534;
-            margin-bottom: 5px;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .company-info {
-            background-color: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        .company-info p {
-            margin-bottom: 5px;
-        }
-        .header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 12px;
-        }
-        .header-row h1 {
-            flex: 1;
-            min-width: 0;
-        }
-        .top-lang-switcher {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 24px;
-        }
+        .brand{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:18px;
+            letter-spacing:-.03em;color:var(--ink)}
+        .brand:hover{text-decoration:none;opacity:.85}
+        .brand img{width:34px;height:34px;object-fit:contain;display:block}
+        .brand span{display:inline-flex;align-items:center;gap:8px}
+        .brand small{font-weight:600;font-size:13px;color:var(--dim);letter-spacing:0}
+
+        .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:0}
+        .header-row h1{flex:1;min-width:0}
+
         .lang-drop{position:relative;display:inline-block}
-        .lang-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(14,122,254,.1);
-            color:#1f4ec5;font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
-            border:1px solid rgba(31,78,197,.18);cursor:pointer;transition:background .2s;
-            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-        .lang-btn:hover{background:rgba(14,122,254,.2)}
-        .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:rgba(255,255,255,.95);
-            backdrop-filter:blur(14px);border:1px solid rgba(31,78,197,.12);border-radius:12px;
-            box-shadow:0 8px 24px -8px rgba(31,78,197,.2);min-width:130px;z-index:100}
+        .lang-btn{display:inline-flex;align-items:center;gap:6px;background:var(--surface);
+            color:var(--ink);font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;
+            border:1px solid var(--line);cursor:pointer;transition:background .2s;font-family:var(--font)}
+        .lang-btn:hover{background:rgba(255,255,255,.10)}
+        .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;
+            background:rgba(12,18,36,.96);backdrop-filter:blur(20px);border:1px solid var(--line);
+            border-radius:14px;box-shadow:0 20px 44px -20px rgba(0,0,0,.95);min-width:140px;z-index:100;
+            overflow:hidden}
         .lang-drop:hover .lang-drop-menu{display:block}
         .lang-drop-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
-        .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:#0b1b3a;
-            transition:background .2s;cursor:pointer;text-decoration:none}
-        .lang-drop-menu a:hover{background:rgba(14,122,254,.08)}
-        .lang-drop-menu a.active{color:#0E7AFE;font-weight:700}
+        .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--muted);
+            transition:background .2s,color .2s;cursor:pointer;text-decoration:none}
+        .lang-drop-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink);text-decoration:none}
+        .lang-drop-menu a.active{color:var(--accent);font-weight:700}
+
+        .content{display:none}
+
+        @media (max-width:640px){
+            body{padding:12px}
+            .container{padding:26px 20px;border-radius:20px}
+            h1{font-size:1.55rem}
+        }
     </style>
 </head>
 <body>
 <div class="mesh" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
 <div class="container">
 
-    <div class="top-lang-switcher">
+    <div class="page-head">
+        <a class="brand" href="/" id="back-link"><img src="/fridgy-logo.png" alt="" /><span>Fridgy<small id="back-label">&larr; Back to site</small></span></a>
         <div class="lang-drop">
             <span class="lang-btn" id="lang-label">EN &#9662;</span>
             <div class="lang-drop-menu">
-                <a onclick="switchLang('ro')">Română</a>
+                <a onclick="switchLang('ro')">Rom&acirc;n&#259;</a>
                 <a onclick="switchLang('en')">English</a>
                 <a onclick="switchLang('de')">Deutsch</a>
                 <a onclick="switchLang('hu')">Magyar</a>
-                <a onclick="switchLang('fr')">Français</a>
+                <a onclick="switchLang('fr')">Fran&ccedil;ais</a>
                 <a onclick="switchLang('nl')">Nederlands</a>
                 <a onclick="switchLang('da')">Dansk</a>
                 <a onclick="switchLang('sv')">Svenska</a>
@@ -175,7 +180,7 @@
         <div class="header-row">
             <h1>Termeni și Condiții - Fridgy</h1>
         </div>
-        <p class="last-updated">Ultima actualizare: 6 mai 2026</p>
+        <p class="last-updated">Ultima actualizare: 24 august 2026</p>
 
         <div class="intro">
             <p>Acești Termeni și Condiții („Termenii") reglementează utilizarea aplicației mobile Fridgy.</p>
@@ -186,18 +191,19 @@
         <p>Aplicația Fridgy este operată de:</p>
         <div class="company-info">
             <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
-            <p>Romania</p>
+            <p>România</p>
             <p>Email de contact: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
         </div>
 
         <h2>2. Descrierea serviciului</h2>
-        <p>Fridgy este o aplicație destinată gestionării produselor alimentare, permițând utilizatorilor să adauge produse și să primească notificări privind datele de expirare.</p>
+        <p>Fridgy este o aplicație destinată gestionării produselor alimentare. Aplicația permite adăugarea produselor manual sau prin fotografierea bonului fiscal, din care produsele sunt recunoscute automat, trimite notificări privind datele de expirare, generează sugestii de rețete pe baza produselor disponibile, calculează statistici de consum și de risipă și permite partajarea unui frigider cu alți utilizatori.</p>
         <p>Aplicația este disponibilă în versiune gratuită și Premium. Vezi secțiunea 2.1 pentru detalii despre abonamentul Premium.</p>
 
         <h3>2.1. Abonament Premium</h3>
-        <p>Fridgy oferă un abonament Premium cu următoarele condiții:</p>
+        <p>Abonamentul Premium include scanări nelimitate de bonuri, un număr mai mare de regenerări de rețete pe zi și acces la statisticile avansate. Limitele exacte ale versiunii gratuite și ale abonamentului Premium sunt afișate în aplicație, în secțiunea de abonament.</p>
+            <p>Abonamentul Premium se supune următoarelor condiții:</p>
         <ul>
-            <li>Prețul: €2.99/lună sau €15.99/an</li>
+            <li>Prețul curent este afișat în aplicație și în App Store sau Google Play înainte de cumpărare</li>
             <li>Abonamentul se reînnoiește automat</li>
             <li>Poate fi anulat oricând din setările App Store sau Google Play</li>
             <li>Plățile sunt gestionate de Apple/Google — politica de rambursare a acestora se aplică</li>
@@ -241,6 +247,15 @@
         </ul>
         <p>Fridgy nu verifică și nu garantează corectitudinea acestor informații.</p>
 
+            <h3>6.1. Rețete generate automat</h3>
+            <p>Rețetele propuse de Fridgy sunt generate automat, pe baza produselor adăugate în aplicație, și au caracter orientativ.</p>
+            <p>Fridgy nu garantează că o rețetă este potrivită pentru dumneavoastră. Înainte de a găti, verificați:</p>
+            <ul>
+                <li>ingredientele și eventualii alergeni</li>
+                <li>starea reală și data de expirare reală a produselor</li>
+                <li>compatibilitatea cu orice regim alimentar sau afecțiune medicală</li>
+            </ul>
+            <p>Rețetele nu constituie sfat medical sau nutrițional. Fridgy nu răspunde pentru consecințele preparării sau consumării unei rețete generate în aplicație.</p>
         <h2>7. Frigidere partajate</h2>
         <p>Fridgy permite utilizatorilor să partajeze frigidere cu alți utilizatori. La utilizarea frigiderelor partajate:</p>
         <ul>
@@ -285,7 +300,7 @@
 
         <h2>12. Legea aplicabilă</h2>
         <p>Acești Termeni sunt guvernați de legea română.</p>
-        <p>Orice litigiu va fi soluționat de instanțele competente din Romania.</p>
+        <p>Orice litigiu va fi soluționat de instanțele competente din România.</p>
 
         <h2>13. Modificarea termenilor</h2>
         <p>Ne rezervăm dreptul de a modifica acești Termeni.</p>
@@ -304,7 +319,7 @@
         <div class="header-row">
             <h1>Terms and Conditions - Fridgy</h1>
         </div>
-        <p class="last-updated">Last updated: May 6, 2026</p>
+        <p class="last-updated">Last updated: August 24, 2026</p>
 
         <div class="intro">
             <p>These Terms and Conditions ("Terms") govern the use of the Fridgy mobile application.</p>
@@ -320,13 +335,14 @@
         </div>
 
         <h2>2. Service description</h2>
-        <p>Fridgy is an application designed for managing food products, allowing users to add products and receive notifications regarding expiration dates.</p>
+        <p>Fridgy is an application designed for managing food products. The application lets users add products manually or by photographing a receipt, from which the products are recognised automatically; it sends notifications about expiration dates, generates recipe suggestions based on the products available, calculates consumption and waste statistics, and allows a fridge to be shared with other users.</p>
         <p>The application is available in free and Premium versions. See section 2.1 for Premium subscription details.</p>
 
         <h3>2.1. Premium Subscription</h3>
-        <p>Fridgy offers a Premium subscription with the following conditions:</p>
+        <p>The Premium subscription includes unlimited receipt scans, a higher number of recipe regenerations per day and access to advanced statistics. The exact limits of the free version and of the Premium subscription are shown in the application, in the subscription section.</p>
+            <p>The Premium subscription is subject to the following conditions:</p>
         <ul>
-            <li>Price: €2.99/month or €15.99/year</li>
+            <li>The current price is shown in the application and in the App Store or Google Play before purchase</li>
             <li>The subscription renews automatically</li>
             <li>It can be cancelled at any time from the App Store or Google Play settings</li>
             <li>Payments are managed by Apple/Google — their refund policy applies</li>
@@ -370,6 +386,15 @@
         </ul>
         <p>Fridgy does not verify and does not guarantee the accuracy of this information.</p>
 
+            <h3>6.1. Automatically generated recipes</h3>
+            <p>The recipes suggested by Fridgy are generated automatically from the products added to the application and are for guidance only.</p>
+            <p>Fridgy does not guarantee that a recipe is suitable for you. Before cooking, check:</p>
+            <ul>
+                <li>the ingredients and any allergens</li>
+                <li>the actual condition and actual expiration date of the products</li>
+                <li>compatibility with any diet or medical condition</li>
+            </ul>
+            <p>Recipes do not constitute medical or nutritional advice. Fridgy is not liable for the consequences of preparing or consuming a recipe generated in the application.</p>
         <h2>7. Shared fridges</h2>
         <p>Fridgy allows users to share fridges with other users. When using shared fridges:</p>
         <ul>
@@ -433,7 +458,7 @@
         <div class="header-row">
             <h1>Allgemeine Geschäftsbedingungen - Fridgy</h1>
         </div>
-        <p class="last-updated">Zuletzt aktualisiert: 6. Mai 2026</p>
+        <p class="last-updated">Zuletzt aktualisiert: 24. August 2026</p>
 
         <div class="intro">
             <p>Diese Allgemeinen Geschäftsbedingungen („AGB") regeln die Nutzung der mobilen Anwendung Fridgy.</p>
@@ -449,13 +474,14 @@
         </div>
 
         <h2>2. Beschreibung des Dienstes</h2>
-        <p>Fridgy ist eine Anwendung zur Verwaltung von Lebensmitteln, mit der Benutzer Produkte hinzufügen und Benachrichtigungen zu Ablaufdaten erhalten können.</p>
+        <p>Fridgy ist eine Anwendung zur Verwaltung von Lebensmitteln. Mit der Anwendung lassen sich Produkte manuell hinzufügen oder per Foto des Kassenbons automatisch erfassen; sie sendet Benachrichtigungen zu Ablaufdaten, erstellt Rezeptvorschläge auf Basis der vorhandenen Produkte, berechnet Verbrauchs- und Verschwendungsstatistiken und ermöglicht es, einen Kühlschrank mit anderen Nutzern zu teilen.</p>
         <p>Die Anwendung ist in einer kostenlosen und einer Premium-Version verfügbar. Einzelheiten zum Premium-Abonnement finden Sie in Abschnitt 2.1.</p>
 
         <h3>2.1. Premium-Abonnement</h3>
-        <p>Fridgy bietet ein Premium-Abonnement mit den folgenden Bedingungen an:</p>
+        <p>Das Premium-Abonnement umfasst unbegrenzte Kassenbon-Scans, eine höhere Anzahl an Rezept-Regenerierungen pro Tag und Zugriff auf die erweiterten Statistiken. Die genauen Grenzen der kostenlosen Version und des Premium-Abonnements werden in der Anwendung im Abo-Bereich angezeigt.</p>
+            <p>Für das Premium-Abonnement gelten die folgenden Bedingungen:</p>
         <ul>
-            <li>Preis: €2,99/Monat oder €15,99/Jahr</li>
+            <li>Der aktuelle Preis wird vor dem Kauf in der Anwendung und im App Store bzw. bei Google Play angezeigt</li>
             <li>Das Abonnement verlängert sich automatisch</li>
             <li>Es kann jederzeit über die Einstellungen des App Store oder Google Play gekündigt werden</li>
             <li>Zahlungen werden von Apple/Google verwaltet — deren Rückerstattungsrichtlinien gelten</li>
@@ -499,6 +525,15 @@
         </ul>
         <p>Fridgy überprüft und garantiert nicht die Richtigkeit dieser Informationen.</p>
 
+            <h3>6.1. Automatisch erstellte Rezepte</h3>
+            <p>Die von Fridgy vorgeschlagenen Rezepte werden automatisch aus den in der Anwendung hinzugefügten Produkten erstellt und dienen nur als Orientierung.</p>
+            <p>Fridgy garantiert nicht, dass ein Rezept für Sie geeignet ist. Prüfen Sie vor dem Kochen:</p>
+            <ul>
+                <li>die Zutaten und mögliche Allergene</li>
+                <li>den tatsächlichen Zustand und das tatsächliche Ablaufdatum der Produkte</li>
+                <li>die Verträglichkeit mit einer Ernährungsform oder einer Erkrankung</li>
+            </ul>
+            <p>Rezepte stellen keine medizinische oder ernährungsbezogene Beratung dar. Fridgy haftet nicht für die Folgen der Zubereitung oder des Verzehrs eines in der Anwendung erstellten Rezepts.</p>
         <h2>7. Geteilte Kühlschränke</h2>
         <p>Fridgy ermöglicht es Benutzern, Kühlschränke mit anderen Benutzern zu teilen. Bei der Nutzung geteilter Kühlschränke:</p>
         <ul>
@@ -562,7 +597,7 @@
         <div class="header-row">
             <h1>Általános Szerződési Feltételek - Fridgy</h1>
         </div>
-        <p class="last-updated">Utoljára frissítve: 2026. május 6.</p>
+        <p class="last-updated">Utoljára frissítve: 2026. augusztus 24.</p>
 
         <div class="intro">
             <p>Jelen Általános Szerződési Feltételek („ÁSZF") szabályozzák a Fridgy mobil alkalmazás használatát.</p>
@@ -578,13 +613,14 @@
         </div>
 
         <h2>2. A szolgáltatás leírása</h2>
-        <p>A Fridgy egy élelmiszerek kezelésére tervezett alkalmazás, amely lehetővé teszi a felhasználók számára termékek hozzáadását és lejárati dátumokkal kapcsolatos értesítések fogadását.</p>
-        <p>Az alkalmazás ingyenes és Prémium verzióban érhető el. A Prémium előfizetés részleteiért lásd a 2.1. szakaszt.</p>
+        <p>A Fridgy egy élelmiszerek kezelésére tervezett alkalmazás. Lehetővé teszi a termékek kézi hozzáadását vagy a blokk lefényképezését, amelyről a termékeket automatikusan felismeri; értesítéseket küld a lejárati dátumokról, receptjavaslatokat készít a meglévő termékekből, fogyasztási és pazarlási statisztikákat számol, valamint lehetővé teszi egy hűtő megosztását más felhasználókkal.</p>
+        <p>Az alkalmazás ingyenes és Premium verzióban érhető el. A Premium előfizetés részleteiért lásd a 2.1. szakaszt.</p>
 
-        <h3>2.1. Prémium előfizetés</h3>
-        <p>A Fridgy Prémium előfizetést kínál az alábbi feltételekkel:</p>
+        <h3>2.1. Premium előfizetés</h3>
+        <p>A Premium előfizetés korlátlan blokkszkennelést, naponta több recept-újragenerálást és a részletes statisztikákhoz való hozzáférést tartalmazza. Az ingyenes verzió és a Premium előfizetés pontos korlátai az alkalmazás előfizetési szakaszában láthatók.</p>
+            <p>A Premium előfizetésre az alábbi feltételek vonatkoznak:</p>
         <ul>
-            <li>Ár: €2,99/hó vagy €15,99/év</li>
+            <li>Az aktuális ár a vásárlás előtt megjelenik az alkalmazásban, valamint az App Store-ban vagy a Google Play-en</li>
             <li>Az előfizetés automatikusan megújul</li>
             <li>Az App Store vagy a Google Play beállításaiban bármikor lemondható</li>
             <li>A fizetéseket az Apple/Google kezeli — az ő visszatérítési szabályzatuk érvényes</li>
@@ -628,6 +664,15 @@
         </ul>
         <p>A Fridgy nem ellenőrzi és nem garantálja ezen információk pontosságát.</p>
 
+            <h3>6.1. Automatikusan generált receptek</h3>
+            <p>A Fridgy által javasolt receptek automatikusan, az alkalmazásban rögzített termékek alapján készülnek, és csak tájékoztató jellegűek.</p>
+            <p>A Fridgy nem garantálja, hogy egy recept megfelelő az Ön számára. Főzés előtt ellenőrizze:</p>
+            <ul>
+                <li>a hozzávalókat és az esetleges allergéneket</li>
+                <li>a termékek tényleges állapotát és tényleges lejárati dátumát</li>
+                <li>az összeegyeztethetőséget bármilyen étrenddel vagy egészségi állapottal</li>
+            </ul>
+            <p>A receptek nem minősülnek orvosi vagy táplálkozási tanácsnak. A Fridgy nem felel az alkalmazásban generált recept elkészítésének vagy elfogyasztásának következményeiért.</p>
         <h2>7. Megosztott hűtőszekrények</h2>
         <p>A Fridgy lehetővé teszi a felhasználóknak, hogy hűtőszekrényeiket más felhasználókkal osszák meg. Megosztott hűtőszekrények használatakor:</p>
         <ul>
@@ -691,7 +736,7 @@
         <div class="header-row">
             <h1>Conditions Générales d'Utilisation - Fridgy</h1>
         </div>
-        <p class="last-updated">Dernière mise à jour : 6 mai 2026</p>
+        <p class="last-updated">Dernière mise à jour : 24 août 2026</p>
 
         <div class="intro">
             <p>Les présentes Conditions Générales d'Utilisation (« CGU ») régissent l'utilisation de l'application mobile Fridgy.</p>
@@ -707,13 +752,14 @@
         </div>
 
         <h2>2. Description du service</h2>
-        <p>Fridgy est une application conçue pour gérer les produits alimentaires, permettant aux utilisateurs d'ajouter des produits et de recevoir des notifications concernant les dates de péremption.</p>
+        <p>Fridgy est une application conçue pour gérer les produits alimentaires. Elle permet d'ajouter des produits manuellement ou en photographiant le ticket de caisse, à partir duquel les produits sont reconnus automatiquement ; elle envoie des notifications concernant les dates de péremption, génère des suggestions de recettes à partir des produits disponibles, calcule des statistiques de consommation et de gaspillage et permet de partager un frigo avec d'autres utilisateurs.</p>
         <p>L'application est disponible en versions gratuite et Premium. Voir la section 2.1 pour les détails de l'abonnement Premium.</p>
 
         <h3>2.1. Abonnement Premium</h3>
-        <p>Fridgy propose un abonnement Premium avec les conditions suivantes :</p>
+        <p>L'abonnement Premium comprend des scans de tickets illimités, un nombre plus élevé de régénérations de recettes par jour et l'accès aux statistiques avancées. Les limites exactes de la version gratuite et de l'abonnement Premium sont affichées dans l'application, dans la section abonnement.</p>
+            <p>L'abonnement Premium est soumis aux conditions suivantes :</p>
         <ul>
-            <li>Prix : €2,99/mois ou €15,99/an</li>
+            <li>Le prix en vigueur est affiché dans l'application et sur l'App Store ou Google Play avant l'achat</li>
             <li>L'abonnement se renouvelle automatiquement</li>
             <li>Il peut être annulé à tout moment depuis les paramètres de l'App Store ou de Google Play</li>
             <li>Les paiements sont gérés par Apple/Google — leur politique de remboursement s'applique</li>
@@ -757,6 +803,15 @@
         </ul>
         <p>Fridgy ne vérifie pas et ne garantit pas l'exactitude de ces informations.</p>
 
+            <h3>6.1. Recettes générées automatiquement</h3>
+            <p>Les recettes proposées par Fridgy sont générées automatiquement à partir des produits ajoutés dans l'application et n'ont qu'une valeur indicative.</p>
+            <p>Fridgy ne garantit pas qu'une recette vous convienne. Avant de cuisiner, vérifiez :</p>
+            <ul>
+                <li>les ingrédients et les allergènes éventuels</li>
+                <li>l'état réel et la date de péremption réelle des produits</li>
+                <li>la compatibilité avec tout régime alimentaire ou toute affection médicale</li>
+            </ul>
+            <p>Les recettes ne constituent pas un conseil médical ou nutritionnel. Fridgy n'est pas responsable des conséquences de la préparation ou de la consommation d'une recette générée dans l'application.</p>
         <h2>7. Réfrigérateurs partagés</h2>
         <p>Fridgy permet aux utilisateurs de partager des réfrigérateurs avec d'autres utilisateurs. Lors de l'utilisation de réfrigérateurs partagés :</p>
         <ul>
@@ -820,7 +875,7 @@
         <div class="header-row">
             <h1>Algemene Voorwaarden - Fridgy</h1>
         </div>
-        <p class="last-updated">Laatst bijgewerkt: 6 mei 2026</p>
+        <p class="last-updated">Laatst bijgewerkt: 24 augustus 2026</p>
 
         <div class="intro">
             <p>Deze Algemene Voorwaarden ("Voorwaarden") regelen het gebruik van de mobiele applicatie Fridgy.</p>
@@ -836,13 +891,14 @@
         </div>
 
         <h2>2. Beschrijving van de dienst</h2>
-        <p>Fridgy is een applicatie voor het beheren van voedingsproducten, waarmee gebruikers producten kunnen toevoegen en meldingen kunnen ontvangen over houdbaarheidsdatums.</p>
-        <p>De applicatie is beschikbaar in gratis en Premium versies. Zie sectie 2.1 voor details over het Premium-abonnement.</p>
+        <p>Fridgy is een applicatie voor het beheren van voedingsproducten. Met de applicatie kunnen gebruikers producten handmatig toevoegen of een kassabon fotograferen, waarna de producten automatisch worden herkend; ze stuurt meldingen over houdbaarheidsdatums, genereert receptsuggesties op basis van de aanwezige producten, berekent statistieken over consumptie en verspilling en maakt het mogelijk een koelkast te delen met andere gebruikers.</p>
+        <p>De applicatie is beschikbaar in een gratis versie en een Premium-versie. Zie sectie 2.1 voor details over het Premium-abonnement.</p>
 
-        <h3>2.1. Premium abonnement</h3>
-        <p>Fridgy biedt een Premium-abonnement aan met de volgende voorwaarden:</p>
+        <h3>2.1. Premium-abonnement</h3>
+        <p>Het Premium-abonnement omvat onbeperkte kassabonscans, een hoger aantal receptregeneraties per dag en toegang tot de geavanceerde statistieken. De exacte limieten van de gratis versie en van het Premium-abonnement worden in de applicatie getoond, in het abonnementsgedeelte.</p>
+            <p>Op het Premium-abonnement zijn de volgende voorwaarden van toepassing:</p>
         <ul>
-            <li>Prijs: €2,99/maand of €15,99/jaar</li>
+            <li>De actuele prijs wordt vóór aankoop getoond in de applicatie en in de App Store of Google Play</li>
             <li>Het abonnement verlengt automatisch</li>
             <li>Het kan op elk moment worden opgezegd via de instellingen van de App Store of Google Play</li>
             <li>Betalingen worden beheerd door Apple/Google — hun terugbetalingsbeleid is van toepassing</li>
@@ -886,6 +942,15 @@
         </ul>
         <p>Fridgy verifieert de juistheid van deze informatie niet en garandeert deze ook niet.</p>
 
+            <h3>6.1. Automatisch gegenereerde recepten</h3>
+            <p>De recepten die Fridgy voorstelt, worden automatisch gegenereerd op basis van de producten die in de applicatie zijn toegevoegd en zijn uitsluitend indicatief.</p>
+            <p>Fridgy garandeert niet dat een recept geschikt voor u is. Controleer vóór het koken:</p>
+            <ul>
+                <li>de ingrediënten en eventuele allergenen</li>
+                <li>de werkelijke staat en de werkelijke houdbaarheidsdatum van de producten</li>
+                <li>de verenigbaarheid met een dieet of een medische aandoening</li>
+            </ul>
+            <p>Recepten vormen geen medisch of voedingsadvies. Fridgy is niet aansprakelijk voor de gevolgen van het bereiden of consumeren van een in de applicatie gegenereerd recept.</p>
         <h2>7. Gedeelde koelkasten</h2>
         <p>Fridgy stelt gebruikers in staat koelkasten te delen met andere gebruikers. Bij het gebruik van gedeelde koelkasten:</p>
         <ul>
@@ -949,7 +1014,7 @@
         <div class="header-row">
             <h1>Vilkår og Betingelser - Fridgy</h1>
         </div>
-        <p class="last-updated">Sidst opdateret: 6. maj 2026</p>
+        <p class="last-updated">Sidst opdateret: 24. august 2026</p>
 
         <div class="intro">
             <p>Disse Vilkår og Betingelser ("Vilkår") regulerer brugen af Fridgy mobilapplikationen.</p>
@@ -965,13 +1030,14 @@
         </div>
 
         <h2>2. Beskrivelse af tjenesten</h2>
-        <p>Fridgy er en applikation designet til at styre fødevareprodukter, der giver brugerne mulighed for at tilføje produkter og modtage notifikationer vedrørende udløbsdatoer.</p>
-        <p>Applikationen er tilgængelig i gratis og Premium versioner. Se afsnit 2.1 for detaljer om Premium-abonnement.</p>
+        <p>Fridgy er en applikation designet til at styre fødevareprodukter. Applikationen gør det muligt at tilføje produkter manuelt eller ved at fotografere kvitteringen, hvorfra produkterne genkendes automatisk; den sender notifikationer om udløbsdatoer, laver opskriftsforslag ud fra de tilgængelige produkter, beregner statistikker over forbrug og madspild og gør det muligt at dele et køleskab med andre brugere.</p>
+        <p>Applikationen er tilgængelig i en gratis version og en Premium-version. Se afsnit 2.1 for detaljer om Premium-abonnement.</p>
 
         <h3>2.1. Premium-abonnement</h3>
-        <p>Fridgy tilbyder et Premium-abonnement med følgende betingelser:</p>
+        <p>Premium-abonnementet omfatter ubegrænsede kvitteringsscanninger, et højere antal opskriftsfornyelser om dagen og adgang til de avancerede statistikker. De præcise grænser for gratisversionen og for Premium-abonnementet vises i applikationen under abonnementsafsnittet.</p>
+            <p>For Premium-abonnementet gælder følgende betingelser:</p>
         <ul>
-            <li>Pris: €2,99/måned eller €15,99/år</li>
+            <li>Den aktuelle pris vises i applikationen og i App Store eller Google Play inden købet</li>
             <li>Abonnementet fornyes automatisk</li>
             <li>Det kan til enhver tid annulleres fra App Store- eller Google Play-indstillingerne</li>
             <li>Betalinger administreres af Apple/Google — deres refusionspolitik gælder</li>
@@ -1015,6 +1081,15 @@
         </ul>
         <p>Fridgy verificerer ikke og garanterer ikke nøjagtigheden af disse oplysninger.</p>
 
+            <h3>6.1. Automatisk genererede opskrifter</h3>
+            <p>De opskrifter, Fridgy foreslår, genereres automatisk ud fra de produkter, der er tilføjet i applikationen, og er kun vejledende.</p>
+            <p>Fridgy garanterer ikke, at en opskrift er egnet til dig. Inden du laver mad, skal du kontrollere:</p>
+            <ul>
+                <li>ingredienserne og eventuelle allergener</li>
+                <li>produkternes faktiske tilstand og faktiske udløbsdato</li>
+                <li>foreneligheden med enhver kostform eller helbredstilstand</li>
+            </ul>
+            <p>Opskrifter udgør ikke medicinsk eller ernæringsmæssig rådgivning. Fridgy er ikke ansvarlig for følgerne af at tilberede eller indtage en opskrift genereret i applikationen.</p>
         <h2>7. Delte køleskabe</h2>
         <p>Fridgy giver brugerne mulighed for at dele køleskabe med andre brugere. Når du bruger delte køleskabe:</p>
         <ul>
@@ -1078,7 +1153,7 @@
         <div class="header-row">
             <h1>Villkor och Bestämmelser - Fridgy</h1>
         </div>
-        <p class="last-updated">Senast uppdaterad: 6 maj 2026</p>
+        <p class="last-updated">Senast uppdaterad: 24 augusti 2026</p>
 
         <div class="intro">
             <p>Dessa Villkor och Bestämmelser ("Villkor") styr användningen av Fridgy mobilapplikation.</p>
@@ -1094,13 +1169,14 @@
         </div>
 
         <h2>2. Beskrivning av tjänsten</h2>
-        <p>Fridgy är en applikation utformad för att hantera livsmedelsprodukter, vilket gör det möjligt för användare att lägga till produkter och få aviseringar om utgångsdatum.</p>
-        <p>Applikationen är tillgänglig i gratis och Premium versioner. Se avsnitt 2.1 för detaljer om Premium-prenumeration.</p>
+        <p>Fridgy är en applikation utformad för att hantera livsmedelsprodukter. Applikationen gör det möjligt att lägga till produkter manuellt eller genom att fotografera kvittot, varifrån produkterna känns igen automatiskt; den skickar aviseringar om utgångsdatum, tar fram receptförslag utifrån de tillgängliga produkterna, beräknar statistik över konsumtion och matsvinn och gör det möjligt att dela ett kylskåp med andra användare.</p>
+        <p>Applikationen är tillgänglig i en gratisversion och en Premium-version. Se avsnitt 2.1 för detaljer om Premium-prenumeration.</p>
 
         <h3>2.1. Premium-prenumeration</h3>
-        <p>Fridgy erbjuder en Premium-prenumeration med följande villkor:</p>
+        <p>Premium-prenumerationen omfattar obegränsade kvittoskanningar, ett högre antal receptåterskapningar per dag och tillgång till den avancerade statistiken. De exakta gränserna för gratisversionen och för Premium-prenumerationen visas i applikationen, i prenumerationsavsnittet.</p>
+            <p>För Premium-prenumerationen gäller följande villkor:</p>
         <ul>
-            <li>Pris: €2,99/månad eller €15,99/år</li>
+            <li>Det aktuella priset visas i applikationen och i App Store eller Google Play före köpet</li>
             <li>Prenumerationen förnyas automatiskt</li>
             <li>Den kan avbrytas när som helst från App Store- eller Google Play-inställningarna</li>
             <li>Betalningar hanteras av Apple/Google — deras återbetalningspolicy gäller</li>
@@ -1144,6 +1220,15 @@
         </ul>
         <p>Fridgy verifierar inte och garanterar inte riktigheten av denna information.</p>
 
+            <h3>6.1. Automatiskt genererade recept</h3>
+            <p>Recepten som Fridgy föreslår genereras automatiskt utifrån de produkter som lagts till i applikationen och är endast vägledande.</p>
+            <p>Fridgy garanterar inte att ett recept passar dig. Innan du lagar mat, kontrollera:</p>
+            <ul>
+                <li>ingredienserna och eventuella allergener</li>
+                <li>produkternas faktiska skick och faktiska utgångsdatum</li>
+                <li>förenligheten med varje kosthållning eller medicinskt tillstånd</li>
+            </ul>
+            <p>Recept utgör inte medicinsk eller näringsmässig rådgivning. Fridgy ansvarar inte för följderna av att tillaga eller äta ett recept som genererats i applikationen.</p>
         <h2>7. Delade kylskåp</h2>
         <p>Fridgy gör det möjligt för användare att dela kylskåp med andra användare. När du använder delade kylskåp:</p>
         <ul>
@@ -1216,6 +1301,11 @@
         sv: 'Villkor och Bestämmelser - Fridgy'
     };
 
+    var backLabels = {
+        ro: '\u2190 \u00CEnapoi la site', en: '\u2190 Back to site', de: '\u2190 Zur\u00FCck zur Website',
+        hu: '\u2190 Vissza az oldalra', fr: '\u2190 Retour au site', nl: '\u2190 Terug naar de site',
+        da: '\u2190 Tilbage til sitet', sv: '\u2190 Tillbaka till sajten'
+    };
     var supportedLangs = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
 
     function detectLang() {
@@ -1249,6 +1339,10 @@
         if(active) active.classList.add('active');
         document.title = titles[lang] || titles['en'];
         document.documentElement.lang = lang;
+        var back = document.getElementById('back-link');
+        if (back) back.setAttribute('href', lang === 'ro' ? '/' : '/' + lang);
+        var backLabel = document.getElementById('back-label');
+        if (backLabel) backLabel.textContent = backLabels[lang] || backLabels['en'];
     }
 
     function switchLang(lang) {

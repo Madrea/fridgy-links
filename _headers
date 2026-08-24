@@ -13,3 +13,6 @@
 /well-known/assetlinks.json
   Content-Type: application/json
   Access-Control-Allow-Origin: *
+
+/_build/*
+  X-Robots-Tag: noindex, nofollow

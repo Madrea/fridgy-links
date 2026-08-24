@@ -2,528 +2,559 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#1f4ec5" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#070b18" />
+<meta name="color-scheme" content="dark" />
 <title>Fridgy - Your smart fridge</title>
 <meta name="description" content="Fridgy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home." />
-<link rel="icon" type="image/png" href="/fridgy-logo.png" />
-
-<!-- Open Graph / social preview -->
+<link rel="canonical" href="https://fridgy.org/en" />
+<link rel="alternate" hreflang="ro" href="https://fridgy.org/" />
+<link rel="alternate" hreflang="en" href="https://fridgy.org/en" />
+<link rel="alternate" hreflang="de" href="https://fridgy.org/de" />
+<link rel="alternate" hreflang="hu" href="https://fridgy.org/hu" />
+<link rel="alternate" hreflang="fr" href="https://fridgy.org/fr" />
+<link rel="alternate" hreflang="nl" href="https://fridgy.org/nl" />
+<link rel="alternate" hreflang="da" href="https://fridgy.org/da" />
+<link rel="alternate" hreflang="sv" href="https://fridgy.org/sv" />
+<link rel="alternate" hreflang="x-default" href="https://fridgy.org/" />
 <meta property="og:title" content="Fridgy — Less waste, more recipes" />
 <meta property="og:description" content="Scan receipts, organize your fridge and cook with what you already have at home." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fridgy.org" />
-
+<meta property="og:url" content="https://fridgy.org/en" />
+<meta property="og:image" content="https://fridgy.org/img/og-en.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="/fridgy-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
 <style>
-  :root{
-    --brand-1:#6daeff;
-    --brand-2:#1f4ec5;
-    --brand-deep:#0f2578;
-    --primary:#0E7AFE;
-    --ink:#0b1b3a;
-    --muted:#5b6b8c;
-    --bg:#eef5fe;
-    --card:rgba(255,255,255,.72);
-    --radius:26px;
-    --shadow:0 24px 60px -20px rgba(31,78,197,.45);
-    --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
-  body{
-    font-family:var(--font);
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.6;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  section{position:relative;z-index:1}
-  .wrap{width:min(1160px,92vw);margin:0 auto}
+:root{
+  --bg:#070b18;
+  --ink:#f2f6ff; --muted:#93a3c4; --dim:#6f7f9f;
+  --surface:rgba(255,255,255,.045);
+  --surface-2:rgba(255,255,255,.075);
+  --line:rgba(255,255,255,.10);
+  --line-2:rgba(255,255,255,.20);
+  --accent:#60a5fa; --accent-2:#a78bfa;
+  --r-lg:30px; --r-md:20px;
+  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+.wrap{width:min(var(--maxw),92vw);margin:0 auto}
+.grad{background:linear-gradient(100deg,#7dd3fc,#60a5fa 42%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.12em}
 
-  /* ---------- fundal mesh animat ---------- */
-  .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
-  .b1{width:560px;height:560px;background:var(--brand-1);top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
-  .b2{width:520px;height:520px;background:var(--brand-2);top:240px;right:-180px;animation:float2 22s ease-in-out infinite}
-  .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:float1 26s ease-in-out infinite}
-  @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
-  @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
+/* ---------- fundal global ---------- */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg i{position:absolute;display:block;border-radius:50%;filter:blur(100px)}
+.g1{width:46vw;height:46vw;min-width:440px;min-height:440px;background:#2563eb;top:-14%;left:-10%;opacity:.62;animation:d1 24s ease-in-out infinite}
+.g2{width:40vw;height:40vw;min-width:380px;min-height:380px;background:#7c3aed;top:4%;right:-12%;opacity:.58;animation:d2 28s ease-in-out infinite}
+.g3{width:38vw;height:38vw;min-width:340px;min-height:340px;background:#06b6d4;top:44%;left:26%;opacity:.30;animation:d1 32s ease-in-out infinite}
+.g4{width:42vw;height:42vw;min-width:380px;min-height:380px;background:#4338ca;top:70%;right:-8%;opacity:.42;animation:d2 30s ease-in-out infinite}
+.g5{width:38vw;height:38vw;min-width:340px;min-height:340px;background:#1d4ed8;bottom:-12%;left:-6%;opacity:.44;animation:d1 26s ease-in-out infinite}
+@keyframes d1{50%{transform:translate(6%,-7%) scale(1.14)}}
+@keyframes d2{50%{transform:translate(-7%,6%) scale(1.16)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer{position:relative;z-index:2}
 
-  /* ---------- navbar ---------- */
-  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);
-    background:rgba(238,245,254,.7);border-bottom:1px solid rgba(31,78,197,.08)}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.02em}
-  .logo img{width:72px;height:72px;object-fit:contain;display:block}
-  .logo span{color:var(--primary)}
-  .nav-links{display:flex;align-items:center;gap:34px;font-weight:600;font-size:15px;color:var(--muted)}
-  .nav-links a{transition:color .2s}
-  .nav-links a:hover{color:var(--primary)}
-  .nav-cta{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));color:#fff;
-    padding:11px 22px;border-radius:999px;font-weight:700;font-size:14px;
-    box-shadow:0 10px 24px -8px rgba(31,78,197,.6);transition:transform .2s}
-  .nav-cta:hover{transform:translateY(-2px)}
-  .lang-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(14,122,254,.1);
-    color:var(--brand-2);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
-    border:1px solid rgba(31,78,197,.18);transition:background .2s}
-  .lang-btn:hover{background:rgba(14,122,254,.2)}
-  .lang-drop{position:relative}
-  .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:rgba(255,255,255,.95);
-    backdrop-filter:blur(14px);border:1px solid rgba(31,78,197,.12);border-radius:12px;
-    box-shadow:0 8px 24px -8px rgba(31,78,197,.2);min-width:130px;z-index:100}
-  .lang-drop:hover .lang-drop-menu{display:block}
-  .lang-drop-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
-  .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--ink);transition:background .2s}
-  .lang-drop-menu a:hover{background:rgba(14,122,254,.08)}
-  .lang-drop-menu a.active{color:var(--primary);font-weight:700}
-  @media(max-width:760px){.nav-links a:not(.nav-cta):not(.lang-btn){display:none}.lang-drop>a:not(.lang-btn){display:none}}
+/* ---------- nav ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:60}
+nav{display:flex;align-items:center;justify-content:space-between;gap:18px;
+  margin:14px auto 0;width:min(var(--maxw),94vw);padding:10px 12px 10px 18px;border-radius:999px;
+  background:rgba(10,16,32,.5);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);
+  border:1px solid var(--line);transition:background .35s,border-color .35s,box-shadow .35s}
+body.scrolled nav{background:rgba(8,13,27,.82);border-color:var(--line-2);box-shadow:0 18px 44px -22px rgba(0,0,0,.9)}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand img{width:40px;height:40px;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px}
+.nav-links>a{padding:8px 14px;border-radius:999px;color:var(--muted);transition:color .2s,background .2s}
+.nav-links>a:hover{color:var(--ink);background:rgba(255,255,255,.07)}
+.nav-cta{background:linear-gradient(135deg,#4b9bff,#7c5cff);color:#fff!important;padding:11px 20px!important;
+  border-radius:999px;font-weight:700;box-shadow:0 10px 26px -10px rgba(80,110,255,.9);transition:transform .25s,box-shadow .25s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 34px -12px rgba(80,110,255,1)}
+.lang{position:relative}
+.lang-btn{display:inline-flex;align-items:center;gap:5px;font-weight:700;font-size:13px;padding:9px 13px;border-radius:999px;
+  background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--ink);transition:background .2s}
+.lang-btn:hover{background:rgba(255,255,255,.13)}
+.lang-menu{position:absolute;top:calc(100% + 10px);right:0;min-width:172px;padding:7px;border-radius:16px;
+  background:rgba(14,21,40,.97);backdrop-filter:blur(18px);border:1px solid var(--line-2);
+  box-shadow:0 24px 50px -18px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(-8px);transition:.22s ease}
+.lang:hover .lang-menu,.lang:focus-within .lang-menu{opacity:1;visibility:visible;transform:none}
+.lang-menu a{display:block;padding:9px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted)}
+.lang-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink)}
+.lang-menu a.active{color:#9ec5ff;font-weight:800}
+@media(max-width:900px){.nav-links>a:not(.nav-cta){display:none}}
 
-  /* ---------- hero ---------- */
-  .hero-top{margin-top:90px;margin-bottom:22px;text-align:center}
-  .hero-row{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-  .hero-bottom{margin-top:22px;padding-bottom:70px;text-align:center}
-  .hero-bottom .sub{margin-left:auto;margin-right:auto}
-  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(14,122,254,.1);
-    color:var(--brand-2);font-weight:700;font-size:13px;padding:8px 16px;border-radius:999px;
-    border:1px solid rgba(31,78,197,.18);margin-bottom:22px}
-  .pill .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
-  h1{font-size:clamp(38px,5.4vw,62px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
-  h1 .grad{background:linear-gradient(120deg,var(--brand-1),var(--brand-2) 55%,var(--brand-deep));
-    -webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero p.sub{font-size:clamp(17px,1.6vw,20px);color:var(--muted);margin:22px 0 34px;max-width:520px}
-  .store-row{display:flex;gap:14px;flex-wrap:wrap}
-  .store-btn{display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;
-    padding:13px 22px;border-radius:16px;transition:transform .22s,box-shadow .22s;
-    box-shadow:0 16px 30px -16px rgba(11,27,58,.7)}
-  .store-btn:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(11,27,58,.8)}
-  .store-btn svg{width:26px;height:26px;flex:none}
-  .store-btn small{display:block;font-size:11px;opacity:.75;line-height:1.2;font-weight:500}
-  .store-btn b{display:block;font-size:17px;font-weight:700;line-height:1.2}
-  .trust{margin-top:26px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px;font-weight:600}
-  .stars{color:#f5b400;letter-spacing:2px}
+/* ---------- hero ---------- */
+.hero{padding:150px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;
+  padding:8px 16px 8px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#cfe0ff}
+.pill i{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(74,222,128,0)}}
+h1{font-size:clamp(38px,5.6vw,72px);line-height:1.03;letter-spacing:-.035em;font-weight:800;margin:24px 0 20px}
+.hero p.sub{color:var(--muted);font-size:clamp(15.5px,1.25vw,18px);max-width:56ch}
+.hero p.sub strong{color:#e6eeff;font-weight:700}
+.store-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.store-btn{display:inline-flex;align-items:center;gap:12px;padding:13px 22px;border-radius:16px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line-2);color:#fff;
+  transition:transform .25s,background .25s,border-color .25s}
+.store-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.34)}
+.store-btn svg{width:24px;height:24px;flex:none}
+.store-btn small{display:block;font-size:11px;opacity:.72;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
+.store-btn b{display:block;font-size:16.5px;font-weight:700;line-height:1.25}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:420px}
+.hero-visual img{width:min(100%,470px);filter:drop-shadow(0 50px 70px rgba(0,0,0,.6));animation:bob 7s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-18px)}}
+.hero-visual::before{content:"";position:absolute;width:75%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(96,165,250,.34),transparent 68%);filter:blur(45px)}
 
-  /* ---------- phone hero mockup ---------- */
-  .hero-visual{display:flex;justify-content:center;position:relative}
-  .glow{display:none}
-  .hero-visual .frame,.shot .frame{background:none;border-radius:0;padding:0;box-shadow:none}
-  .hero-visual .frame{width:100%;max-width:300px;animation:bob 6s ease-in-out infinite}
-  @keyframes bob{50%{transform:translateY(-16px)}}
-  .screen{border-radius:0;overflow:hidden;margin-bottom:-6px}
-  .screen img{width:100%;display:block}
-  .shot .frame{filter:drop-shadow(0 16px 30px rgba(31,78,197,.18))}
-  .hero-visual .frame{filter:drop-shadow(0 16px 30px rgba(31,78,197,.18))}
+/* ---------- stats ---------- */
+.stats{padding:76px 0 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{padding:26px 24px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);
+  backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,background .3s}
+.stat:hover{transform:translateY(-5px);border-color:var(--line-2);background:var(--surface-2)}
+.stat b{display:block;font-size:clamp(30px,3.4vw,42px);font-weight:800;letter-spacing:-.035em;line-height:1.08;padding-bottom:.1em;
+  background:linear-gradient(120deg,#fff,#9ec5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat em{display:block;font-style:normal;margin-top:10px;font-size:14.5px;font-weight:700;color:#dce7ff}
+.stat i{display:block;font-style:normal;margin-top:4px;font-size:12.5px;color:var(--dim)}
 
-  @media(max-width:900px){
-    .hero-top{margin-top:30px;margin-bottom:14px}
-    .hero-row{grid-template-columns:1fr .45fr;gap:16px;align-items:center}
-    .hero-bottom{margin-top:16px;padding-bottom:30px}
-    .hero-visual .frame{max-width:140px}
-    h1{font-size:clamp(24px,6vw,34px)}
-    .hero-bottom .sub{font-size:13px;margin:0 0 16px}
-    .store-row{justify-content:center;width:100%}
-    .trust{justify-content:center;width:100%}
-    .store-btn{padding:10px 14px}
-    .store-btn b{font-size:14px}
-    .store-btn svg{width:20px;height:20px}
-  }
+/* ---------- section heads ---------- */
+.block{padding:104px 0}
+.block.pt0{padding-top:0}
+/* Ancore: bara de navigare e fixa si se termina pe la 81px. Sectiunile cu padding-top
+   normal trec de ea singure; cele fara padding si-ar aseza titlul sub bara, deci primesc
+   un offset la scroll cat sa ramana aceeasi distanta fata de bara ca la #pasi. */
+.block.pt0{scroll-margin-top:104px}
+#download{scroll-margin-top:37px}
+.sec-head{max-width:680px;margin:0 auto 58px;text-align:center}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:#8fbaff;margin-bottom:16px}
+h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font-weight:800}
+.sec-head p{margin-top:16px;color:var(--muted);font-size:17px}
 
-  /* ---------- sectiuni ---------- */
-  .sec-head{text-align:center;max-width:640px;margin:0 auto 56px}
-  .sec-head .tag{color:var(--primary);font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.12em}
-  .sec-head h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;letter-spacing:-.02em;margin:14px 0 12px}
-  .sec-head p{color:var(--muted);font-size:17px}
-  .block{padding:96px 0}
+/* ---------- pasi (static) ---------- */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stepc{position:relative;display:flex;flex-direction:column;overflow:hidden;border-radius:var(--r-lg);
+  background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(12px);
+  transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,background .4s}
+.stepc:hover{transform:translateY(-6px);border-color:var(--line-2);background:var(--surface-2)}
+.stepc>h3,.stepc>p,.stepc>.step-n{padding-left:32px;padding-right:32px}
+.step-n{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;
+  font-weight:800;font-size:16px;color:#fff;background:linear-gradient(135deg,#4b9bff,#7c5cff);
+  box-shadow:0 12px 26px -10px rgba(80,110,255,.85);margin:32px 0 18px 32px;padding:0!important}
+.stepc h3{font-size:clamp(20px,1.8vw,25px);letter-spacing:-.025em;font-weight:800;margin-bottom:10px;line-height:1.2}
+.stepc p{color:var(--muted);font-size:15.5px;flex:1}
+.stepc-media{position:relative;margin-top:26px;flex:none;height:clamp(420px,38vw,520px);overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;padding:0 14px}
+.stepc-media img{height:100%;width:auto;max-width:100%;
+  filter:drop-shadow(0 26px 44px rgba(0,0,0,.5))}
 
-  /* features */
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .feat{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
-    border-radius:var(--radius);padding:34px 30px;transition:transform .3s,box-shadow .3s}
-  .feat:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
-  .feat .ic{width:60px;height:60px;border-radius:18px;display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--brand-1),var(--brand-2));color:#fff;margin-bottom:22px;
-    box-shadow:0 14px 26px -10px rgba(31,78,197,.6)}
-  .feat .ic svg{width:30px;height:30px}
-  .feat h3{font-size:21px;font-weight:800;margin-bottom:10px;letter-spacing:-.01em}
-  .feat p{color:var(--muted);font-size:15.5px}
-  @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+/* banda cu notificarea, sub cei 3 pasi */
+.nband{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,3vw,48px);
+  align-items:center;margin-top:18px;padding:clamp(26px,2.6vw,38px) clamp(24px,3vw,44px);
+  border-radius:var(--r-lg);background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(12px);
+  transition:border-color .4s,background .4s}
+.nband:hover{border-color:var(--line-2);background:var(--surface-2)}
+.nband-copy{display:flex;align-items:flex-start;gap:16px}
+.nband-ico{flex:none;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:15px;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff);box-shadow:0 12px 26px -10px rgba(80,110,255,.85)}
+.nband-ico svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nband h3{font-size:clamp(20px,1.8vw,25px);letter-spacing:-.025em;font-weight:800;line-height:1.2;margin-bottom:8px}
+.nband p{color:var(--muted);font-size:15.5px;max-width:40ch}
+.nband-shot{display:flex;justify-content:flex-end}
+.nband-shot img{width:100%;max-width:440px;height:auto;border-radius:14px;
+  filter:drop-shadow(0 22px 40px rgba(0,0,0,.65))}
+@media(max-width:960px){.steps3{grid-template-columns:1fr}
+  .stepc-media{height:470px}
+  .nband{grid-template-columns:1fr;gap:24px}
+  .nband-shot{justify-content:flex-start}
+  .nband-shot img{max-width:100%}}
 
-  /* showcase / screenshots */
-  .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
-  .shot{display:flex;flex-direction:column;align-items:center;gap:18px}
-  .shot .frame{width:100%;max-width:340px;transition:transform .35s}
-  .shot:hover .frame{transform:translateY(-10px)}
-  .shot h4{font-weight:800;font-size:19px}
-  .shot p{color:var(--muted);font-size:14.5px;text-align:center;max-width:260px}
-  @media(max-width:900px){.shots{grid-template-columns:1fr;gap:40px}
-    .shot .frame{max-width:300px;margin:0 auto}
-  }
+/* ---------- bento ---------- */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.cell{position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--surface);
+  border:1px solid var(--line);backdrop-filter:blur(12px);min-height:430px;height:100%;
+  display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,background .4s}
+.cell::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .4s;pointer-events:none;z-index:3;
+  background:radial-gradient(440px circle at var(--mx,50%) var(--my,50%),rgba(124,160,255,.14),transparent 62%)}
+.cell:hover{transform:translateY(-6px);border-color:var(--line-2);background:var(--surface-2)}
+.cell:hover::before{opacity:1}
+.bento>.rv{display:grid}
+.span-12{grid-column:span 12}.span-6{grid-column:span 6}
+.cell-body{padding:36px 34px 12px;position:relative;z-index:2}
+.cell.full .cell-body{padding:40px 40px 6px;text-align:center}
+.cell-body h3{font-size:clamp(20px,1.9vw,26px);letter-spacing:-.025em;font-weight:800;margin-bottom:10px;line-height:1.2;max-width:20ch}
+.cell.full .cell-body h3{font-size:clamp(24px,2.4vw,34px);max-width:24ch;margin-left:auto;margin-right:auto}
+.cell-body p{color:var(--muted);font-size:15.5px;max-width:36ch}
+.cell.full .cell-body p{max-width:56ch;margin-left:auto;margin-right:auto}
+.cell-media{position:relative;flex:1 1 auto;min-height:230px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;padding:0 24px}
+.cell-media img{max-width:100%;max-height:100%;width:auto;object-fit:contain}
+.m-toast img{width:min(100%,370px);max-height:none;transform:rotate(-2.2deg);
+  filter:drop-shadow(0 26px 44px rgba(0,0,0,.65))}
+.m-big{flex:none;height:clamp(340px,32vw,470px);padding:14px 24px 0!important;align-items:flex-end!important}
+.m-big img{height:100%;width:auto;max-width:100%;max-height:none;
+  filter:drop-shadow(0 34px 54px rgba(0,0,0,.55))}
+.m-phone{padding:0!important;align-items:flex-start!important;
+  -webkit-mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,0) 100%);
+  mask-image:linear-gradient(to bottom,#000 72%,rgba(0,0,0,0) 100%)}
+.m-phone img{position:absolute;top:0;left:50%;transform:translateX(-50%);width:258px;max-width:84%;max-height:none;
+  filter:drop-shadow(0 24px 42px rgba(0,0,0,.5))}
+.m-tilt{padding:20px 18px!important}
+.m-tilt img{width:min(100%,320px);height:auto;max-height:none;
+  filter:drop-shadow(0 24px 42px rgba(0,0,0,.5))}
+.cell-kpi{flex:1;display:flex;align-items:center;justify-content:center;padding:20px 30px 42px}
+.cell-kpi span{font-size:clamp(54px,7vw,92px);font-weight:800;letter-spacing:-.05em;
+  background:linear-gradient(120deg,#7dd3fc,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cell-kpi svg{width:clamp(80px,9vw,120px);height:auto;stroke:url(#kg);fill:none;stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.92}
+@media(max-width:980px){
+  .span-12,.span-6{grid-column:span 12}
+  .cell{min-height:0}
+  .cell.full .cell-body{padding:32px 28px 6px}
+  .m-big{height:clamp(330px,52vw,470px)}
+  .m-phone img{width:262px;max-width:76%}
+  .cell-media{min-height:300px}
+  .m-tilt img{width:min(100%,300px)}
+  .m-toast{min-height:230px}
+}
+@media(max-width:520px){
+  .m-big{height:360px}
+}
 
-  /* steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s}
-  .step{position:relative;padding-left:8px;text-align:center}
-  .step .step-icon{position:relative;width:68px;height:68px;border-radius:20px;display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--brand-1),var(--brand-2));color:#fff;margin:0 auto 20px;
-    box-shadow:0 14px 26px -10px rgba(31,78,197,.6)}
-  .step .step-icon svg{width:32px;height:32px}
-  .step .n{position:absolute;bottom:-12px;right:-12px;width:30px;height:30px;border-radius:50%;background:#fff;
-    border:2px solid var(--primary);display:flex;align-items:center;justify-content:center;
-    font-weight:800;font-size:14px;color:var(--primary);box-shadow:0 4px 10px -4px rgba(31,78,197,.4)}
-  .step h4{font-size:20px;font-weight:800;margin-bottom:8px}
-  .step p{color:var(--muted);font-size:15px}
-  @media(max-width:900px){.steps{grid-template-columns:1fr;gap:34px}}
+/* ---------- familie (frigider partajat) ---------- */
+.fam{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,64px);align-items:center;
+  padding:clamp(30px,3.4vw,54px);border-radius:var(--r-lg);background:var(--surface);
+  border:1px solid var(--line);backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.fam::before{content:"";position:absolute;width:420px;height:420px;top:-190px;left:-140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(96,165,250,.30),transparent 68%);filter:blur(50px);pointer-events:none}
+.fam-copy{position:relative;z-index:2}
+.fam-copy .tag{margin-bottom:14px}
+.fam-copy h2{font-size:clamp(28px,3.3vw,44px)}
+.fam-sub{margin-top:16px;color:var(--muted);font-size:17px;max-width:46ch}
+.fam-list{list-style:none;margin:30px 0 0;display:grid;gap:18px}
+.fam-list li{display:flex;align-items:flex-start;gap:14px}
+.fam-ck{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:11px;
+  background:linear-gradient(135deg,rgba(75,155,255,.26),rgba(124,92,255,.22));border:1px solid rgba(150,170,255,.32);
+  box-shadow:0 10px 22px -12px rgba(80,110,255,.9)}
+.fam-ck svg{width:17px;height:17px;fill:none;stroke:#bcd4ff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.fam-list b{display:block;font-size:16.5px;font-weight:800;letter-spacing:-.015em;line-height:1.35}
+.fam-list em{display:block;font-style:normal;margin-top:3px;color:var(--muted);font-size:15px;max-width:42ch}
+.fam-note{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:10px 16px 10px 12px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:13.5px;font-weight:700;color:#cfe0ff}
+.fam-note svg{width:18px;height:18px;flex:none;fill:none;stroke:#8fbaff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.fam-shot{position:relative;display:flex;justify-content:center;align-items:center;min-height:clamp(420px,40vw,560px)}
+.fam-shot::before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(124,92,255,.32),transparent 68%);filter:blur(44px)}
+.fam-shot img{position:relative;height:clamp(420px,40vw,560px);width:auto;max-width:100%;
+  filter:drop-shadow(0 40px 62px rgba(0,0,0,.6))}
+.fam-solo{grid-template-columns:1fr;text-align:center}
+.fam-solo .fam-sub,.fam-solo .fam-list em{margin-left:auto;margin-right:auto}
+.fam-solo .fam-list{max-width:520px;margin-left:auto;margin-right:auto}
+.fam-solo .fam-list li{text-align:left}
+@media(max-width:980px){
+  .fam{grid-template-columns:1fr;text-align:left}
+  .fam-shot{min-height:0;margin-top:6px}
+  .fam-shot img{height:clamp(360px,72vw,520px)}
+}
+@media(max-width:520px){
+  .fam{padding:26px 20px}
+  .fam-list em{font-size:14.5px}
+}
 
-  /* pricing table */
-  .pricing-wrap{display:grid;grid-template-columns:1fr 1fr;max-width:720px;margin:0 auto;gap:24px}
-  .pricing-card{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
-    border-radius:var(--radius);padding:36px 30px;display:flex;flex-direction:column;gap:20px;
-    transition:transform .3s,box-shadow .3s}
-  .pricing-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .pricing-card.premium{border:2px solid var(--brand-2);position:relative;
-    box-shadow:0 20px 50px -16px rgba(31,78,197,.35)}
-  .plan-badge-slot{min-height:31px}
-  .pricing-card .plan-badge{display:inline-block;background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
-    color:#fff;font-weight:800;font-size:13px;padding:6px 16px;border-radius:999px;
-    text-transform:uppercase;letter-spacing:.06em}
-  .pricing-card .plan-name{font-size:22px;font-weight:800;color:var(--ink)}
-  .pricing-card .plan-price{font-size:clamp(32px,4vw,42px);font-weight:800;letter-spacing:-.02em}
-  .pricing-card .plan-price span{font-size:15px;font-weight:600;color:var(--muted)}
-  .pricing-card .plan-price .yearly{display:block;font-size:13px;font-weight:600;color:#888;margin-top:2px;
-    background:none;-webkit-background-clip:initial;background-clip:initial;-webkit-text-fill-color:#888;letter-spacing:normal}
-  .pricing-card.premium .plan-price{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent}
-  .pricing-card .plan-features{list-style:none;display:flex;flex-direction:column;gap:14px;flex:1}
-  .pricing-card .plan-features li{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--ink)}
-  .pricing-card .plan-features .check{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;
-    justify-content:center;flex:none;font-size:13px;font-weight:700}
-  .pricing-card .plan-features .check.yes{background:rgba(34,197,94,.15);color:#16a34a}
-  .pricing-card .plan-features .check.no{background:rgba(100,116,139,.1);color:#94a3b8}
-  .pricing-card .plan-btn{display:block;text-align:center;padding:14px;border-radius:14px;font-weight:700;
-    font-size:15px;transition:transform .2s,box-shadow .2s;margin-top:auto}
-  .pricing-card .plan-btn:hover{transform:translateY(-2px)}
-  .pricing-card .plan-btn.btn-free{background:rgba(14,122,254,.08);color:var(--brand-2);
-    border:1px solid rgba(31,78,197,.18)}
-  .pricing-card .plan-btn.btn-premium{background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
-    color:#fff;box-shadow:0 10px 24px -8px rgba(31,78,197,.6)}
-  @media(max-width:600px){.pricing-wrap{grid-template-columns:1fr;gap:16px;max-width:400px;margin:0 auto}
-    .pricing-card{padding:20px 16px;gap:14px}
-    .pricing-card .plan-name{font-size:18px}
-    .pricing-card .plan-price{font-size:clamp(24px,5vw,32px)}
-    .pricing-card .plan-features li{font-size:13px}
-    .plan-badge-slot{min-height:27px}
-    .pricing-card .plan-badge{font-size:11px;padding:4px 10px}
-  }
+/* ---------- pricing ---------- */
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
+.plan{position:relative;padding:38px 34px;border-radius:var(--r-lg);background:var(--surface);
+  border:1px solid var(--line);backdrop-filter:blur(12px);display:flex;flex-direction:column}
+.plan.pro{background:linear-gradient(165deg,rgba(88,110,255,.16),rgba(124,92,255,.07));
+  border-color:rgba(150,170,255,.34);overflow:hidden}
+.plan.pro::before{content:"";position:absolute;width:340px;height:340px;top:-170px;right:-130px;border-radius:50%;
+  background:radial-gradient(circle,rgba(124,92,255,.55),transparent 66%);filter:blur(44px)}
+.plan-badge{position:absolute;top:20px;right:20px;font-size:11.5px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;padding:7px 14px;border-radius:999px;background:linear-gradient(135deg,#4b9bff,#7c5cff);color:#fff;z-index:2}
+.plan-name{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);position:relative;z-index:2}
+.plan-price{margin:14px 0 4px;font-size:clamp(34px,4vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.05;position:relative;z-index:2}
+.plan-price span{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:normal;margin-left:4px}
+.plan-year{display:block;min-height:22px;font-size:13.5px;font-weight:600;color:#8fd0ff;position:relative;z-index:2}
+.plan ul{list-style:none;margin:26px 0 30px;display:grid;gap:13px;position:relative;z-index:2}
+.plan li{display:flex;gap:11px;align-items:flex-start;font-size:15px;font-weight:500;color:#dbe6ff}
+.ck{flex:none;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:2px}
+.ck.y{background:rgba(74,222,128,.16);color:#6ee7a0}
+.ck.n{background:rgba(148,163,184,.16);color:#94a3b8}
+.plan-btn{margin-top:auto;text-align:center;padding:15px 22px;border-radius:15px;font-weight:800;font-size:15.5px;
+  transition:transform .25s,box-shadow .25s,background .25s;position:relative;z-index:2}
+.btn-free{background:rgba(255,255,255,.07);border:1px solid var(--line-2)}
+.btn-free:hover{transform:translateY(-2px);background:rgba(255,255,255,.13)}
+.btn-pro{background:linear-gradient(135deg,#4b9bff,#7c5cff);color:#fff;box-shadow:0 16px 34px -14px rgba(80,110,255,1)}
+.btn-pro:hover{transform:translateY(-2px);box-shadow:0 22px 44px -14px rgba(80,110,255,1)}
+@media(max-width:800px){.plans{grid-template-columns:1fr}}
 
-  /* CTA band */
-  .cta{background:linear-gradient(125deg,var(--brand-1),var(--brand-2) 55%,var(--brand-deep));
-    border-radius:40px;padding:70px 50px;text-align:center;color:#fff;position:relative;overflow:hidden;
-    box-shadow:var(--shadow)}
-  .cta::after{content:"";position:absolute;inset:0;
-    background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.22),transparent 50%)}
-  .cta h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;position:relative}
-  .cta p{opacity:.9;font-size:18px;margin:16px auto 32px;max-width:520px;position:relative}
-  .cta .store-row{justify-content:center;position:relative}
-  .cta .store-btn{background:#fff;color:var(--ink)}
+/* ---------- cta ---------- */
+.cta-inner{position:relative;text-align:center;max-width:760px;margin:0 auto;padding:70px 34px;
+  border-radius:44px;background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(14px);overflow:hidden}
+.cta-inner::before{content:"";position:absolute;width:520px;height:520px;top:-300px;left:50%;transform:translateX(-50%);
+  border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,.4),transparent 66%);filter:blur(50px)}
+.cta-inner>*{position:relative;z-index:2}
+.cta-inner h2{font-size:clamp(32px,4.4vw,54px)}
+.cta-inner p{margin-top:18px;color:var(--muted);font-size:17.5px}
+.cta-inner .store-row{justify-content:center;margin-top:34px}
 
-  /* footer */
-  footer{padding:70px 0 50px;margin-top:90px;border-top:1px solid rgba(31,78,197,.1)}
-  .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
-  .foot .logo{font-size:24px;margin-bottom:14px}
-  .foot .logo img{width:96px;height:96px}
-  .foot p{color:var(--muted);font-size:14.5px;max-width:300px}
-  .foot-links{display:flex;gap:60px;flex-wrap:wrap}
-  .foot-col h5{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);
-    font-weight:800;margin-bottom:16px}
-  .foot-col a{display:block;color:var(--muted);font-size:15px;margin-bottom:12px;transition:color .2s}
-  .foot-col a:hover{color:var(--primary)}
-  .copy{margin-top:50px;padding-top:26px;border-top:1px solid rgba(31,78,197,.1);
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13.5px}
-  @media(max-width:600px){
-    footer{padding:40px 0 30px;margin-top:50px}
-    .foot{flex-direction:column;align-items:center;text-align:center;gap:24px}
-    .foot p{max-width:100%}
-    .foot .logo{justify-content:center}
-    .foot-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;width:100%}
-    .foot-links .foot-col:last-child{grid-column:1/-1;text-align:center}
-    .foot-col{text-align:center}
-    .copy{justify-content:center;text-align:center;flex-direction:column;align-items:center}
-  }
+/* ---------- footer ---------- */
+footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);color:var(--muted)}
+.foot{display:grid;grid-template-columns:1.3fr 2fr;gap:44px}
+.foot .brand{color:var(--ink);margin-bottom:14px}
+.foot p{font-size:14.5px;max-width:38ch}
+.foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.foot-cols h5{color:var(--ink);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.foot-cols a{display:block;font-size:14.5px;padding:5px 0;transition:color .2s}
+.foot-cols a:hover{color:var(--ink)}
+.copy{margin-top:52px;padding-top:24px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13.5px;color:var(--dim)}
+@media(max-width:800px){.foot{grid-template-columns:1fr}.foot-cols{grid-template-columns:1fr 1fr}}
 
-  /* stats row */
-  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .stat-card{background:var(--card);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);
-    border-radius:var(--radius);padding:42px 28px;text-align:center;display:flex;flex-direction:column;
-    gap:8px;transition:transform .3s,box-shadow .3s}
-  .stat-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
-  .stat-number{font-size:clamp(46px,5.5vw,72px);font-weight:800;letter-spacing:-.03em;
-    background:linear-gradient(135deg,var(--brand-1),var(--brand-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.3}
-  .stat-label{font-size:16px;font-weight:700;color:var(--ink);margin-top:4px}
-  .stat-sub{font-size:13px;color:var(--muted);font-weight:500}
-  @media(max-width:900px){.stats-row{grid-template-columns:1fr;gap:12px}
-    .stat-card{padding:20px 16px}
-  }
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
 
-  /* anchor offset for sticky header */
-  [id]{scroll-margin-top:120px}
-
-  /* reveal on scroll */
-  .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none}
-    .phone,.blob{animation:none}
-  }
+@media(max-width:900px){
+  .hero{padding-top:118px}
+  .hero-grid{grid-template-columns:1fr;gap:26px;text-align:center}
+  .hero p.sub{margin:0 auto}
+  .store-row{justify-content:center}
+  .hero-visual{min-height:0;margin-top:6px}
+  .hero-visual img{width:min(62%,250px)}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .block{padding:74px 0}
+  .stats{padding:54px 0 0}
+  nav{padding:8px 8px 8px 14px;gap:8px}
+  .brand{font-size:17px}
+  .brand img{width:34px;height:34px}
+  .nav-links{gap:6px}
+  .nav-cta{padding:10px 15px!important;font-size:13.5px;white-space:nowrap}
+  .lang-btn{padding:8px 11px}
+  .cta-inner{padding:52px 24px;border-radius:32px}
+  footer{margin-top:60px}
+  .bg i{filter:blur(70px)}
+}
+@media(max-width:359px){.brand span{display:none}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-
-<!-- ===== fundal mesh ===== -->
-<div class="mesh" aria-hidden="true">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-</div>
+<div class="bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g3"></i><i class="g4"></i><i class="g5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="kg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs></svg>
 
 <header>
-  <div class="wrap">
-    <nav>
-      <a href="/" class="logo" aria-label="Fridgy">
-        <img src="/fridgy-logo.png" alt="Fridgy" />
-      </a>
-      <div class="nav-links">
-        <a href="#functii">Why Fridgy</a>
-        <a href="#planuri">Plans</a>
-        <a href="#download">Download</a>
-        <div class="lang-drop">
-          <span class="lang-btn">EN &#9662;</span>
-          <div class="lang-drop-menu">
-            <a href="/" onclick="localStorage.setItem('fridgy-lang','ro')">Română</a>
-            <a href="/en" class="active" onclick="localStorage.setItem('fridgy-lang','en')">English</a>
-            <a href="/de" onclick="localStorage.setItem('fridgy-lang','de')">Deutsch</a>
-            <a href="/hu" onclick="localStorage.setItem('fridgy-lang','hu')">Magyar</a>
-            <a href="/fr" onclick="localStorage.setItem('fridgy-lang','fr')">Français</a>
-            <a href="/nl" onclick="localStorage.setItem('fridgy-lang','nl')">Nederlands</a>
-            <a href="/da" onclick="localStorage.setItem('fridgy-lang','da')">Dansk</a>
-            <a href="/sv" onclick="localStorage.setItem('fridgy-lang','sv')">Svenska</a>
-          </div>
-        </div>
-        <a href="#download" class="nav-cta">Download free</a>
+  <nav>
+    <a href="/en" class="brand" aria-label="Fridgy"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></a>
+    <div class="nav-links">
+      <a href="#pasi">How it works</a>
+      <a href="#functii">Why Fridgy</a>
+      <a href="#planuri">Plans</a>
+      <div class="lang">
+        <button class="lang-btn" aria-haspopup="true" aria-expanded="false">EN<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="lang-menu"><a href="/" onclick="try{localStorage.setItem('fridgy-lang','ro')}catch(e){}">Română</a><a href="/en" class="active" onclick="try{localStorage.setItem('fridgy-lang','en')}catch(e){}">English</a><a href="/de" onclick="try{localStorage.setItem('fridgy-lang','de')}catch(e){}">Deutsch</a><a href="/hu" onclick="try{localStorage.setItem('fridgy-lang','hu')}catch(e){}">Magyar</a><a href="/fr" onclick="try{localStorage.setItem('fridgy-lang','fr')}catch(e){}">Français</a><a href="/nl" onclick="try{localStorage.setItem('fridgy-lang','nl')}catch(e){}">Nederlands</a><a href="/da" onclick="try{localStorage.setItem('fridgy-lang','da')}catch(e){}">Dansk</a><a href="/sv" onclick="try{localStorage.setItem('fridgy-lang','sv')}catch(e){}">Svenska</a></div>
       </div>
-    </nav>
-  </div>
+      <a href="#download" class="nav-cta">Download free</a>
+    </div>
+  </nav>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="block" style="padding-top:0;padding-bottom:0">
+<main>
+<section class="hero">
   <div class="wrap">
-    <div class="hero-top reveal">
-      <span class="pill">Your smart fridge</span>
-    </div>
-    <div class="hero-row reveal">
-      <div class="hero-text">
+    <div class="hero-grid">
+      <div class="rv">
+        <span class="pill"><i></i>Your smart fridge</span>
         <h1>&euro;290 thrown in the trash<br><span class="grad">every year. We fix that.</span></h1>
-      </div>
-      <div class="hero-visual">
-        <div class="glow"></div>
-        <div class="frame"><div class="screen">
-            <img src="/scan_en.png" alt="Fridgy" />
-        </div></div>
-      </div>
+        <p class="sub">Every European wastes around <strong>~130 kg</strong> of food per year — roughly <strong>&euro;290</strong> thrown away. Fridgy helps you organize your food and notifies you before it expires. And so nothing goes to waste, it suggests delicious recipes to put it all to good use.</p>
+        <div class="store-row">
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Available on</small><b>Google Play</b></span></a>
+      <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download from</small><b>App Store</b></span></a>
     </div>
-    <div class="hero-bottom reveal">
-      <p class="sub">Every European wastes around <strong>~130 kg</strong> of food per year — roughly <strong>&euro;290</strong> thrown away. Fridgy helps you organize your food and notifies you before it expires. And so nothing goes to waste, it suggests delicious recipes to put it all to good use.</p>
-      <div class="store-row" style="margin-top:28px">
-        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
-          <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
-          <span><small>Available on</small><b>Google Play</b></span>
-        </a>
-        <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
-          <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
-          <span><small>Download from</small><b>App Store</b></span>
-        </a>
       </div>
+      <div class="hero-visual rv"><img src="/img/en/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" /></div>
     </div>
   </div>
 </section>
 
-<!-- ===== STATS ROW ===== -->
-<section class="block" style="padding-top:20px;padding-bottom:0">
+<section class="stats">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">The numbers speak</div>
-      <h2>Food waste in numbers</h2>
-    </div>
-    <div class="stats-row">
-      <div class="stat-card reveal">
-        <span class="stat-number">130 kg</span>
-        <span class="stat-label">waste / person / year</span>
-        <span class="stat-sub">Source: Eurostat, 2023</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-number">&euro;290</span>
-        <span class="stat-label">lost / person / year</span>
-        <span class="stat-sub">Money thrown in the trash</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-number">53%</span>
-        <span class="stat-label">comes from households</span>
-        <span class="stat-sub">You can make a difference</span>
-      </div>
+    <div class="stats-grid">
+      <div class="stat rv"><b data-count>130 kg</b><em>waste / person / year</em><i>Source: Eurostat, 2023</i></div>
+      <div class="stat rv"><b data-count>&euro;290</b><em>lost / person / year</em><i>Money thrown in the trash</i></div>
+      <div class="stat rv"><b data-count>53%</b><em>comes from households</em><i>You can make a difference</i></div>
+      <div class="stat rv"><b>10 sec</b><em>to scan a receipt</em><i>And everything is sorted</i></div>
     </div>
   </div>
 </section>
 
-<!-- ===== FUNCTII ===== -->
-<section class="block" id="functii">
+<section class="block" id="pasi">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">Why Fridgy</div>
-      <h2>Everything you need to stop throwing away food</h2>
-      <p>Three simple features that change the way you shop and cook.</p>
+    <div class="sec-head rv">
+      <div class="tag">How it works</div>
+      <h2>Three steps to zero waste</h2>
+      <p>From receipt to dinner, without keeping track yourself.</p>
     </div>
-    <div class="grid3">
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 8h6M11 12h6M11 16h4"/></svg></div>
-        <h3>Scan receipts</h3>
-        <p>After shopping, take a photo of your receipt and Fridgy automatically adds the products to your digital fridge.</p>
-        <span style="display:inline-block;margin-top:12px;background:rgba(34,197,94,.12);color:#16a34a;font-weight:700;font-size:13px;padding:6px 14px;border-radius:999px;">&#9889; Under 10 seconds</span>
+    <div class="steps3">
+      <article class="stepc rv">
+        <div class="step-n">1</div>
+        <h3>Scan the receipt</h3>
+        <p>Snap a photo of your receipt. Products are added automatically, with an estimated expiry date you can change.</p>
+        <div class="stepc-media"><img src="/img/en/scan.webp" alt="" loading="lazy" decoding="async" /></div>
+      </article>
+      <article class="stepc rv">
+        <div class="step-n">2</div>
+        <h3>Watch your fridge</h3>
+        <p>Your whole fridge on one screen. Search, filter and see at a glance what has expired and what needs eating soon.</p>
+        <div class="stepc-media"><img src="/img/en/fridge.webp" alt="" loading="lazy" decoding="async" /></div>
+      </article>
+      <article class="stepc rv">
+        <div class="step-n">3</div>
+        <h3>Cook what you have</h3>
+        <p>We don't just help you watch your fridge — we hand you the solution: simple, tasty recipes from what's about to expire.</p>
+        <div class="stepc-media"><img src="/img/en/recipes.webp" alt="" loading="lazy" decoding="async" /></div>
+      </article>
+    </div>
+    <div class="nband rv">
+      <div class="nband-copy">
+        <span class="nband-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+        <div>
+          <h3>We let you know in time</h3>
+          <p>Notifications at the right moment, so you know what is about to expire.</p>
+        </div>
       </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Reduce waste</h3>
-        <p>See what you have, what expires soon and get notified at the right time — so you use everything before it goes bad and stop wasting money.</p>
-      </div>
-      <div class="feat reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 1 6 6c0 2.5-1.5 4-3 5v2H9v-2c-1.5-1-3-2.5-3-5a6 6 0 0 1 6-6z"/><path d="M9 19h6M10 22h4"/></svg></div>
-        <h3>Generate recipes</h3>
-        <p>Fridgy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste.</p>
-      </div>
+      <div class="nband-shot"><img src="/img/en/notify.webp" alt="" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
 
-<!-- ===== SCREENSHOTS ===== -->
-<section class="block" style="padding-top:0">
+<section class="block pt0" id="functii">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="tag">See the app</div>
-      <h2>Modern, fast, intuitive</h2>
-      <p>An experience designed down to the smallest detail.</p>
+    <div class="sec-head rv">
+      <div class="tag">Not just keeping track</div>
+      <h2>Fridgy shows you where the money goes</h2>
+      <p>Save rate, money recovered, and the categories you waste the most on.</p>
     </div>
-    <div class="shots">
-      <div class="shot reveal">
-        <div class="frame"><div class="screen">
-          <img src="/fridge_en.png" alt="Fridgy" />
-        </div></div>
-        <h4>Your digital fridge</h4>
-        <p>All products, clearly organized, with expiry dates in plain sight.</p>
+    <div class="bento">
+      <div class="rv span-12"><article class="cell full">
+      <div class="cell-body">
+        <h3>See how much you saved</h3>
+        <p>Save rate and money recovered, month after month.</p>
       </div>
-      <div class="shot reveal">
-        <div class="frame"><div class="screen">
-          <img src="/scan_en.png" alt="Fridgy" />
-        </div></div>
-        <h4>Instant scanning</h4>
-        <p>One scanned receipt = fridge updated in seconds.</p>
+      <div class="cell-media m-big"><img src="/img/en/profile.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Watch your habits change</h3>
+        <p>Month after month you buy the same, but throw away less.</p>
       </div>
-      <div class="shot reveal">
-        <div class="frame"><div class="screen">
-          <img src="/recipe_en.png" alt="Fridgy" />
-        </div></div>
-        <h4>Personalized recipes</h4>
-        <p>Cooking ideas based on what you already have in your fridge.</p>
+      <div class="cell-media m-tilt"><img src="/img/en/habits.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Find out where you waste</h3>
+        <p>The top categories that need attention.</p>
       </div>
+      <div class="cell-media m-tilt"><img src="/img/en/waste.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
     </div>
   </div>
 </section>
 
-<!-- ===== PRICING ===== -->
-<section class="block" id="planuri" style="padding-top:0">
+<section class="block pt0" id="familie">
   <div class="wrap">
-    <div class="sec-head reveal">
+    <div class="fam">
+      <div class="fam-copy rv">
+        <div class="tag">Together</div>
+        <h2>One fridge for the whole family</h2>
+        <p class="fam-sub">Any fridge can be shared with whoever you want. Same products, same quantities, updated for everyone in real time.</p>
+        <ul class="fam-list">
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>As many fridges as you need</b><em>Home, the cabin, the office — each with its own products.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Invites in seconds</b><em>Send an email invite — as soon as it is accepted, you share the same fridge.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>In sync for everyone</b><em>Someone adds or uses a product? The change shows up instantly for everyone, and every member of the fridge gets a notification.</em></div></li>
+        </ul>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Included in the free plan too.</span></p>
+      </div>
+      <div class="fam-shot rv"><img src="/img/en/family.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="planuri">
+  <div class="wrap">
+    <div class="sec-head rv">
       <div class="tag">Plans</div>
       <h2>Free vs Premium</h2>
     </div>
-    <div class="pricing-wrap">
-      <div class="pricing-card reveal">
-        <div class="plan-badge-slot"></div>
+    <div class="plans">
+      <div class="plan rv">
         <div class="plan-name">Free</div>
-        <div class="plan-price">Free <span>&nbsp;</span><small class="yearly">&nbsp;</small></div>
-        <ul class="plan-features">
-          <li><span class="check yes">&#10003;</span> Receipt scans: 5 / month</li>
-          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
-          <li><span class="check no">&#10005;</span> Recipe regeneration</li>
-          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
-          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
-          <li><span class="check yes">&#10003;</span> Shared fridge</li>
-        </ul>
+        <div class="plan-price">Free</div>
+        <span class="plan-year"></span>
+        <ul><li><span class="ck y">&#10003;</span>Receipt scans: 5 / month</li><li><span class="ck y">&#10003;</span>Recipes per day: 3</li><li><span class="ck n">&#10005;</span>Recipe regeneration</li><li><span class="ck y">&#10003;</span>Multiple fridges</li><li><span class="ck y">&#10003;</span>Basic statistics</li><li><span class="ck y">&#10003;</span>Shared fridge</li></ul>
         <a href="#download" class="plan-btn btn-free">Download free</a>
       </div>
-      <div class="pricing-card premium reveal">
-        <div class="plan-badge-slot"><span class="plan-badge">Most popular</span></div>
+      <div class="plan pro rv">
+        <span class="plan-badge">Most popular</span>
         <div class="plan-name">Premium</div>
-        <div class="plan-price">&euro;2.99 <span>/ month</span><small class="yearly">or &euro;15.99 / year · save 55%</small></div>
-        <ul class="plan-features">
-          <li><span class="check yes">&#10003;</span> Receipt scans: Unlimited</li>
-          <li><span class="check yes">&#10003;</span> Recipes per day: 3</li>
-          <li><span class="check yes">&#10003;</span> Recipe regeneration: 5 / day</li>
-          <li><span class="check yes">&#10003;</span> Multiple fridges</li>
-          <li><span class="check yes">&#10003;</span> Advanced statistics</li>
-          <li><span class="check yes">&#10003;</span> Shared fridge</li>
-        </ul>
-        <a href="#download" class="plan-btn btn-premium">Start Premium</a>
+        <div class="plan-price">&euro;2.99 <span>/ month</span></div>
+        <span class="plan-year">or &euro;15.99 / year · save 55%</span>
+        <ul><li><span class="ck y">&#10003;</span>Receipt scans: Unlimited</li><li><span class="ck y">&#10003;</span>Recipes per day: 3</li><li><span class="ck y">&#10003;</span>Recipe regeneration: 5 / day</li><li><span class="ck y">&#10003;</span>Multiple fridges</li><li><span class="ck y">&#10003;</span>Advanced statistics</li><li><span class="ck y">&#10003;</span>Shared fridge</li></ul>
+        <a href="#download" class="plan-btn btn-pro">Start Premium</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="block" id="download" style="padding-top:0">
+<section class="block pt0" id="download">
   <div class="wrap">
-    <div class="cta reveal">
+    <div class="cta-inner rv">
       <h2>Start saving today</h2>
       <p>Download Fridgy for free and transform the way you manage your food.</p>
       <div class="store-row">
-        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play">
-          <svg viewBox="0 0 512 512" fill="currentColor"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg>
-          <span><small>Available on</small><b>Google Play</b></span>
-        </a>
-        <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store">
-          <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg>
-          <span><small>Download from</small><b>App Store</b></span>
-        </a>
-      </div>
+      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Available on</small><b>Google Play</b></span></a>
+      <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download from</small><b>App Store</b></span></a>
+    </div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div class="reveal">
-        <div class="logo">
-          <img src="/fridgy-logo.png" alt="Fridgy" />
-        </div>
+      <div>
+        <div class="brand"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></div>
         <p>Reduce food waste. Scan receipts. Generate recipes from what you already have at home.</p>
       </div>
-      <div class="foot-links reveal">
-        <div class="foot-col">
+      <div class="foot-cols">
+        <div>
           <h5>Product</h5>
           <a href="#functii">Features</a>
           <a href="#pasi">How it works</a>
           <a href="#download">Download</a>
         </div>
-        <div class="foot-col">
+        <div>
           <h5>Legal</h5>
-          <a href="/privacy-policy.html?lang=en">Privacy Policy</a>
-          <a href="/terms-and-conditions.html?lang=en">Terms &amp; Conditions</a>
+          <a href="/privacy-policy.html?lang=en" target="_blank" rel="noopener">Privacy Policy</a>
+          <a href="/terms-and-conditions.html?lang=en" target="_blank" rel="noopener">Terms &amp; Conditions</a>
         </div>
-        <div class="foot-col">
+        <div>
           <h5>Contact</h5>
           <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>
         </div>
@@ -537,15 +568,57 @@
 </footer>
 
 <script>
-  localStorage.setItem('fridgy-lang','en');
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  }, {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el,i){
-    el.style.transitionDelay = (i % 3) * 90 + 'ms';
-    io.observe(el);
+(function(){
+  try{localStorage.setItem('fridgy-lang','en')}catch(e){}
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var onScroll=function(){ document.body.classList.toggle('scrolled', window.scrollY>40); };
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el,i){ el.style.transitionDelay=(i%4*70)+'ms'; io.observe(el); });
+
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var raw=el.textContent, m=raw.match(/\d[\d.,\u00a0 ]*\d|\d/); if(!m||reduce) return;
+    var numStr=m[0];
+    // ". / ," inseamna zecimale doar daca e singurul separator si are exact 2 cifre dupa
+    var dm=numStr.match(/^(\d+)([.,])(\d{2})$/);
+    var dec=dm?2:0, decSep=dm?dm[2]:'.', grpSep='';
+    if(!dm){ var g=numStr.match(/[.,\u00a0 ]/); grpSep=g?g[0]:''; }
+    var target=parseFloat(dm ? dm[1]+'.'+dm[3] : numStr.replace(/[.,\u00a0 ]/g,''));
+    var fmt=function(v){
+      var p=v.toFixed(dec).split('.');
+      if(grpSep) p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,grpSep);
+      return p[1]?p[0]+decSep+p[1]:p[0];
+    };
+    var co=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return; co.disconnect();
+        var t0=null, D=1300;
+        function tick(ts){
+          if(!t0) t0=ts; var p=Math.min((ts-t0)/D,1), v=target*(1-Math.pow(1-p,3));
+          el.textContent=raw.replace(numStr, fmt(v));
+          if(p<1) requestAnimationFrame(tick); else el.textContent=raw;
+        }
+        requestAnimationFrame(tick);
+      });
+    },{threshold:.5});
+    co.observe(el);
   });
+
+  if(!reduce && matchMedia('(hover:hover)').matches){
+    document.querySelectorAll('.cell').forEach(function(c){
+      c.addEventListener('pointermove', function(ev){
+        var r=c.getBoundingClientRect();
+        c.style.setProperty('--mx',(ev.clientX-r.left)+'px');
+        c.style.setProperty('--my',(ev.clientY-r.top)+'px');
+      });
+    });
+  }
+})();
 </script>
 </body>
 </html>

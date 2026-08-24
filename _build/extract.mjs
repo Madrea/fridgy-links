@@ -1,0 +1,47 @@
+import fs from 'fs';
+const LANGS = {ro:'_build/old/index.html', en:'_build/old/en.html', de:'_build/old/de.html', fr:'_build/old/fr.html',
+               nl:'_build/old/nl.html', da:'_build/old/da.html', sv:'_build/old/sv.html', hu:'_build/old/hu.html'};
+const clean = s => s ? s.replace(/\s+/g,' ').trim() : null;
+const out = {};
+for (const [code, file] of Object.entries(LANGS)) {
+  const h = fs.readFileSync('/home/madrea_mircea/fridgy-links/'+file,'utf8');
+  const one = (re, i=1) => { const m = h.match(re); return m ? clean(m[i]) : null; };
+  const all = (re) => [...h.matchAll(re)].map(m => clean(m[1]));
+  const t = {};
+  t.title = one(/<title>([^<]+)<\/title>/);
+  t.meta_description = one(/<meta name="description" content="([^"]+)"/);
+  t.og_title = one(/<meta property="og:title" content="([^"]+)"/);
+  t.og_description = one(/<meta property="og:description" content="([^"]+)"/);
+  t.nav = all(/<a href="#(?:functii|pasi|planuri|download)"[^>]*>([^<]+)<\/a>/g);
+  t.nav_cta = one(/<a href="#download" class="nav-cta">([^<]+)</);
+  t.pill = one(/<span class="pill">([^<]+)</);
+  t.h1 = one(/<h1>([\s\S]*?)<\/h1>/);
+  t.hero_sub = one(/<p class="sub">([\s\S]*?)<\/p>/);
+  t.store_labels = all(/<small>([^<]+)<\/small>/g);
+  t.tags = all(/<div class="tag">([^<]+)<\/div>/g);
+  t.h2 = all(/<h2>([\s\S]*?)<\/h2>/g);
+  t.sec_p = all(/<div class="sec-head reveal">[\s\S]*?<p>([\s\S]*?)<\/p>/g);
+  t.stat_number = all(/<span class="stat-number">([^<]+)</g);
+  t.stat_label = all(/<span class="stat-label">([^<]+)</g);
+  t.stat_sub = all(/<span class="stat-sub">([^<]+)</g);
+  t.feat_h3 = all(/<h3>([^<]+)<\/h3>/g);
+  t.feat_p = all(/<h3>[^<]+<\/h3>\s*<p>([\s\S]*?)<\/p>/g);
+  t.feat_badge = one(/border-radius:999px;">&#9889;([^<]+)</);
+  t.shot_h4 = all(/<h4>([^<]+)<\/h4>/g);
+  t.shot_p = all(/<h4>[^<]+<\/h4>\s*<p>([\s\S]*?)<\/p>/g);
+  t.plan_name = all(/<div class="plan-name">([^<]+)</g);
+  t.plan_price = all(/<div class="plan-price">([\s\S]*?)<\/div>/g);
+  t.plan_features = all(/<li><span class="check (?:yes|no)">[^<]*<\/span>([^<]*)<\/li>/g);
+  t.plan_btn = all(/class="plan-btn [^"]*">([^<]+)</g);
+  t.plan_badge = one(/<span class="plan-badge">([^<]+)</);
+  t.cta_h2 = one(/<div class="cta reveal">\s*<h2>([\s\S]*?)<\/h2>/);
+  t.cta_p = one(/<div class="cta reveal">[\s\S]*?<p>([\s\S]*?)<\/p>/);
+  t.foot_tagline = one(/<\/div>\s*<p>([\s\S]*?)<\/p>\s*<\/div>\s*<div class="foot-links/);
+  t.foot_h5 = all(/<h5>([^<]+)<\/h5>/g);
+  t.foot_links = all(/<div class="foot-col">[\s\S]*?<\/h5>([\s\S]*?)<\/div>/g).map(b=>[...b.matchAll(/>([^<>]+)</g)].map(m=>clean(m[1])).filter(Boolean));
+  t.copy = one(/<div class="copy">\s*<span>&copy;\s*<span id="yr"><\/span>\s*([\s\S]*?)<\/span>/);
+  t.made = one(/<span>([^<]*&#x1F499;[^<]*)<\/span>/);
+  out[code] = t;
+}
+fs.writeFileSync('/home/madrea_mircea/fridgy-links/_build/strings.json', JSON.stringify(out,null,2));
+console.log('ro sample:', JSON.stringify(out.ro,null,1).slice(0,1600));

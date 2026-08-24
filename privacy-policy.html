@@ -4,151 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Fridgy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/fridgy-logo.png" />
+    <meta name="theme-color" content="#070b18" />
+    <meta name="color-scheme" content="dark" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root{
+            --bg:#070b18;
+            --ink:#f2f6ff; --muted:#c2cde6; --dim:#93a3c4;
+            --surface:rgba(255,255,255,.045);
+            --line:rgba(255,255,255,.10);
+            --accent:#60a5fa;
+            --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #eef5fe;
-            padding: 20px;
-            overflow-x: hidden;
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{-webkit-text-size-adjust:100%;background:var(--bg)}
+        body{
+            font-family:var(--font);
+            line-height:1.7;
+            color:var(--muted);
+            background:var(--bg);
+            -webkit-font-smoothing:antialiased;
+            padding:20px;
+            overflow-x:hidden;
         }
+
+        /* fundalul cu bule, ca pe landing */
         .mesh{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-        .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
-        .b1{width:560px;height:560px;background:#6daeff;top:-180px;left:-140px;animation:float1 18s ease-in-out infinite}
-        .b2{width:520px;height:520px;background:#1f4ec5;top:240px;right:-180px;animation:float2 22s ease-in-out infinite}
-        .b3{width:440px;height:440px;background:#a9ccff;bottom:-200px;left:30%;animation:float1 26s ease-in-out infinite}
+        .blob{position:absolute;border-radius:50%;filter:blur(100px)}
+        .b1{width:46vw;height:46vw;min-width:440px;min-height:440px;background:#2563eb;top:-14%;left:-10%;opacity:.5;animation:float1 24s ease-in-out infinite}
+        .b2{width:40vw;height:40vw;min-width:380px;min-height:380px;background:#7c3aed;top:6%;right:-12%;opacity:.45;animation:float2 28s ease-in-out infinite}
+        .b3{width:38vw;height:38vw;min-width:340px;min-height:340px;background:#1d4ed8;bottom:-12%;left:-6%;opacity:.4;animation:float1 30s ease-in-out infinite}
         @keyframes float1{50%{transform:translate(40px,-50px) scale(1.08)}}
         @keyframes float2{50%{transform:translate(-50px,40px) scale(1.1)}}
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255,255,255,.85);
-            backdrop-filter: blur(14px);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        @media (prefers-reduced-motion:reduce){.blob{animation:none}}
+
+        .container{
+            position:relative;
+            z-index:1;
+            max-width:820px;
+            margin:0 auto;
+            background:rgba(10,16,32,.72);
+            backdrop-filter:blur(20px) saturate(1.4);
+            -webkit-backdrop-filter:blur(20px) saturate(1.4);
+            border:1px solid var(--line);
+            padding:40px;
+            border-radius:26px;
+            box-shadow:0 30px 80px -40px rgba(0,0,0,.9);
         }
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            font-size: 2rem;
+
+        h1{color:var(--ink);margin-bottom:10px;font-size:2rem;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+        h2{
+            color:var(--ink);
+            margin-top:34px;
+            margin-bottom:15px;
+            font-size:1.25rem;
+            font-weight:700;
+            letter-spacing:-.02em;
+            border-bottom:1px solid var(--line);
+            padding-bottom:10px;
         }
-        h2 {
-            color: #2d3748;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
+        h3{color:var(--ink);margin-top:22px;margin-bottom:10px;font-size:1.02rem;font-weight:700}
+        p{margin-bottom:15px}
+        ul{margin-bottom:15px;padding-left:22px}
+        li{margin-bottom:8px}
+        li::marker{color:var(--dim)}
+        strong{color:var(--ink);font-weight:700}
+
+        .last-updated{color:var(--dim);font-size:.9rem;margin-bottom:30px}
+
+        .warning{
+            background:rgba(245,158,11,.08);
+            border:1px solid rgba(245,158,11,.28);
+            border-left:3px solid #f59e0b;
+            padding:16px 18px;
+            margin:20px 0;
+            border-radius:6px 14px 14px 6px;
         }
-        h3 {
-            color: #4a5568;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+        .warning p{margin-bottom:10px;color:#fcd9a0}
+        .warning strong{color:#fde3b8}
+        .warning ul{margin-bottom:0}
+        .warning li{color:#fcd9a0}
+
+        .contact-box{
+            background:rgba(52,211,153,.07);
+            border:1px solid rgba(52,211,153,.26);
+            padding:20px;
+            border-radius:14px;
+            margin-top:20px;
         }
-        p {
-            margin-bottom: 15px;
-            color: #4a5568;
+        .contact-box p{color:#a7f3d0;margin-bottom:5px}
+        .contact-box strong{color:#d1fae5}
+
+        a{color:var(--accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+
+        .company-info{
+            background:var(--surface);
+            border:1px solid var(--line);
+            padding:16px 18px;
+            border-radius:14px;
+            margin:15px 0;
         }
-        ul {
-            margin-bottom: 15px;
-            padding-left: 25px;
+        .company-info p{margin-bottom:5px}
+
+        /* antet: marca + link inapoi la site, plus selectorul de limba */
+        .page-head{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-bottom:28px;
         }
-        li {
-            margin-bottom: 8px;
-            color: #4a5568;
-        }
-        .last-updated {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-        .warning {
-            background-color: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .warning p {
-            margin-bottom: 10px;
-            color: #92400e;
-        }
-        .warning ul {
-            margin-bottom: 0;
-        }
-        .warning li {
-            color: #92400e;
-        }
-        .contact-box {
-            background-color: #f0fdf4;
-            border: 1px solid #86efac;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .contact-box p {
-            color: #166534;
-            margin-bottom: 5px;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .company-info {
-            background-color: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 15px 0;
-        }
-        .company-info p {
-            margin-bottom: 5px;
-        }
-        .header-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 0;
-        }
-        .header-row h1 {
-            flex: 1;
-            min-width: 0;
-        }
+        .brand{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:18px;
+            letter-spacing:-.03em;color:var(--ink)}
+        .brand:hover{text-decoration:none;opacity:.85}
+        .brand img{width:34px;height:34px;object-fit:contain;display:block}
+        .brand span{display:inline-flex;align-items:center;gap:8px}
+        .brand small{font-weight:600;font-size:13px;color:var(--dim);letter-spacing:0}
+
+        .header-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:0}
+        .header-row h1{flex:1;min-width:0}
+
         .lang-drop{position:relative;display:inline-block}
-        .lang-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(14,122,254,.1);
-            color:#1f4ec5;font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;
-            border:1px solid rgba(31,78,197,.18);cursor:pointer;transition:background .2s;
-            font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-        .lang-btn:hover{background:rgba(14,122,254,.2)}
-        .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;background:rgba(255,255,255,.95);
-            backdrop-filter:blur(14px);border:1px solid rgba(31,78,197,.12);border-radius:12px;
-            box-shadow:0 8px 24px -8px rgba(31,78,197,.2);min-width:130px;z-index:100}
+        .lang-btn{display:inline-flex;align-items:center;gap:6px;background:var(--surface);
+            color:var(--ink);font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;
+            border:1px solid var(--line);cursor:pointer;transition:background .2s;font-family:var(--font)}
+        .lang-btn:hover{background:rgba(255,255,255,.10)}
+        .lang-drop-menu{display:none;position:absolute;top:100%;right:0;margin-top:6px;
+            background:rgba(12,18,36,.96);backdrop-filter:blur(20px);border:1px solid var(--line);
+            border-radius:14px;box-shadow:0 20px 44px -20px rgba(0,0,0,.95);min-width:140px;z-index:100;
+            overflow:hidden}
         .lang-drop:hover .lang-drop-menu{display:block}
         .lang-drop-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
-        .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:#0b1b3a;
-            transition:background .2s;cursor:pointer;text-decoration:none}
-        .lang-drop-menu a:hover{background:rgba(14,122,254,.08)}
-        .lang-drop-menu a.active{color:#0E7AFE;font-weight:700}
-        .top-lang-switcher {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 24px;
-        }
-        .content {
-            display: none;
+        .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--muted);
+            transition:background .2s,color .2s;cursor:pointer;text-decoration:none}
+        .lang-drop-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink);text-decoration:none}
+        .lang-drop-menu a.active{color:var(--accent);font-weight:700}
+
+        .content{display:none}
+
+        @media (max-width:640px){
+            body{padding:12px}
+            .container{padding:26px 20px;border-radius:20px}
+            h1{font-size:1.55rem}
         }
     </style>
 </head>
@@ -156,15 +158,16 @@
 <div class="mesh" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
 <div class="container">
 
-    <div class="top-lang-switcher">
+    <div class="page-head">
+        <a class="brand" href="/" id="back-link"><img src="/fridgy-logo.png" alt="" /><span>Fridgy<small id="back-label">&larr; Back to site</small></span></a>
         <div class="lang-drop">
             <span class="lang-btn" id="lang-label">EN &#9662;</span>
             <div class="lang-drop-menu">
-                <a onclick="switchLang('ro')">Română</a>
+                <a onclick="switchLang('ro')">Rom&acirc;n&#259;</a>
                 <a onclick="switchLang('en')">English</a>
                 <a onclick="switchLang('de')">Deutsch</a>
                 <a onclick="switchLang('hu')">Magyar</a>
-                <a onclick="switchLang('fr')">Français</a>
+                <a onclick="switchLang('fr')">Fran&ccedil;ais</a>
                 <a onclick="switchLang('nl')">Nederlands</a>
                 <a onclick="switchLang('da')">Dansk</a>
                 <a onclick="switchLang('sv')">Svenska</a>
@@ -175,185 +178,204 @@
     <!-- ROMANIAN -->
     <div class="content" data-lang="ro" style="display:none">
         <div class="header-row">
-            <h1>Politica de Confidentialitate - Fridgy</h1>
+            <h1>Politica de Confidențialitate - Fridgy</h1>
         </div>
-        <p class="last-updated">Ultima actualizare: 20 mai 2026</p>
+        <p class="last-updated">Ultima actualizare: 24 august 2026</p>
 
-        <p>Aceasta Politica de Confidentialitate descrie modul in care aplicatia Fridgy colecteaza, utilizeaza si protejeaza datele cu caracter personal ale utilizatorilor sai.</p>
-        <p>Prin utilizarea aplicatiei Fridgy, sunteti de acord cu practicile descrise in aceasta politica.</p>
+        <p>Această Politică de Confidențialitate descrie modul în care aplicația Fridgy colectează, utilizează și protejează datele cu caracter personal ale utilizatorilor săi.</p>
+        <p>Prin utilizarea aplicației Fridgy, sunteți de acord cu practicile descrise în această politică.</p>
 
         <h2>1. Cine suntem</h2>
-        <p>Aplicatia Fridgy este operata de:</p>
+        <p>Aplicația Fridgy este operată de:</p>
         <div class="company-info">
             <p><strong>MADREA MIRCEA MATEI PERSOANA FIZICA AUTORIZATA</strong></p>
-            <p>Romania</p>
+            <p>România</p>
             <p>Email de contact: <a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
         </div>
-        <p>In sensul legislatiei privind protectia datelor cu caracter personal, noi suntem operatorul de date.</p>
+        <p>În sensul legislației privind protecția datelor cu caracter personal, noi suntem operatorul de date.</p>
 
-        <h2>2. Ce date colectam</h2>
-        <p>Colectam doar datele strict necesare pentru functionarea aplicatiei.</p>
+        <h2>2. Ce date colectăm</h2>
+        <p>Colectăm doar datele strict necesare pentru funcționarea aplicației.</p>
 
         <h3>2.1. Date de cont</h3>
         <ul>
             <li>adresa de email</li>
-            <li>nume de utilizator sau nume afisat</li>
-            <li>metoda de autentificare (email/parola sau cont Google)</li>
+            <li>nume de utilizator sau nume afișat</li>
+            <li>metoda de autentificare (email/parolă sau cont Google)</li>
         </ul>
 
-        <h3>2.2. Date introduse de utilizator in aplicatie</h3>
+        <h3>2.2. Date introduse de utilizator în aplicație</h3>
         <ul>
-            <li>produse adaugate in aplicatie</li>
+            <li>produse adăugate în aplicație, cu cantități și, opțional, prețuri</li>
             <li>date de expirare ale produselor</li>
-            <li>setari ale aplicatiei (limba, preferinte de notificare)</li>
+            <li>imagini ale bonurilor fiscale, fotografiate de utilizator pentru adăugarea automată a produselor</li>
+            <li>istoricul produselor consumate sau aruncate, pe baza căruia se calculează statisticile de risipă și de economii</li>
+            <li>frigiderele create și membrii cu care sunt partajate</li>
+            <li>setări ale aplicației (limba, preferințe de notificare, restricții alimentare pentru rețete)</li>
         </ul>
 
         <h3>2.3. Date tehnice</h3>
         <ul>
-            <li>token-uri pentru notificari push</li>
-            <li>identificatori tehnici necesari functionarii aplicatiei</li>
-            <li>date despre utilizarea aplicatiei (ecrane vizitate, actiuni efectuate)</li>
-            <li>inregistrari ale sesiunilor de utilizare (interactiunile cu interfata, fara inregistrarea datelor sensibile precum parole sau date de plata)</li>
-            <li>informatii despre dispozitiv (model, sistem de operare, versiune aplicatie)</li>
-            <li>limba si tara dispozitivului</li>
+            <li>token-uri pentru notificări push</li>
+            <li>identificatori tehnici necesari funcționării aplicației</li>
+            <li>date despre utilizarea aplicației (ecrane vizitate, acțiuni efectuate)</li>
+            <li>înregistrări ale sesiunilor de utilizare (interacțiunile cu interfața, fără înregistrarea datelor sensibile precum parole sau date de plată)</li>
+            <li>informații despre dispozitiv (model, sistem de operare, versiune aplicație)</li>
+            <li>limba și țara dispozitivului</li>
         </ul>
 
         <div class="warning">
-            <p><strong>Nu colectam date sensibile, precum:</strong></p>
+            <p><strong>Nu colectăm date sensibile, precum:</strong></p>
             <ul>
                 <li>date medicale</li>
                 <li>date de card sau bancare</li>
                 <li>date biometrice</li>
-                <li>locatie precisa</li>
+                <li>locație precisă</li>
             </ul>
-            <p>Preturile produselor introduse de utilizator sunt stocate in contul sau si nu sunt partajate cu terti.</p>
+            <p>Prețurile produselor introduse de utilizator sunt stocate în contul său și nu sunt partajate cu terți.</p>
         </div>
 
-        <h2>3. Scopul prelucrarii datelor</h2>
+        <h2>3. Scopul prelucrării datelor</h2>
         <p>Datele colectate sunt utilizate exclusiv pentru:</p>
         <ul>
-            <li>crearea si administrarea contului de utilizator</li>
-            <li>furnizarea functionalitatilor principale ale aplicatiei</li>
-            <li>salvarea si gestionarea produselor utilizatorului</li>
-            <li>trimiterea notificarilor legate de expirarea produselor</li>
-            <li>functionarea tehnica si securitatea aplicatiei</li>
-            <li>imbunatatirea experientei utilizatorului</li>
+            <li>crearea și administrarea contului de utilizator</li>
+            <li>furnizarea funcționalităților principale ale aplicației</li>
+            <li>salvarea și gestionarea produselor utilizatorului</li>
+            <li>recunoașterea automată a produselor din bonurile fiscale fotografiate</li>
+            <li>generarea de rețete pe baza produselor disponibile în frigider</li>
+            <li>calcularea statisticilor de consum, de risipă și de economii ale utilizatorului</li>
+            <li>partajarea frigiderelor între utilizatorii invitați de proprietar</li>
+            <li>trimiterea notificărilor legate de expirarea produselor</li>
+            <li>funcționarea tehnică și securitatea aplicației</li>
+            <li>îmbunătățirea experienței utilizatorului</li>
         </ul>
 
-        <h2>4. Temeiul legal al prelucrarii</h2>
-        <p>Datele cu caracter personal sunt prelucrate in baza urmatoarelor temeiuri legale:</p>
+        <h2>4. Temeiul legal al prelucrării</h2>
+        <p>Datele cu caracter personal sunt prelucrate în baza următoarelor temeiuri legale:</p>
         <ul>
-            <li>executarea serviciului furnizat prin aplicatia Fridgy</li>
-            <li>consimtamantul utilizatorului</li>
-            <li>interesul legitim de a asigura securitatea, stabilitatea si buna functionare a aplicatiei</li>
+            <li>executarea serviciului furnizat prin aplicația Fridgy</li>
+            <li>consimțământul utilizatorului</li>
+            <li>interesul legitim de a asigura securitatea, stabilitatea și buna funcționare a aplicației</li>
         </ul>
-        <p>Atunci cand prelucrarea se bazeaza pe consimtamant, utilizatorul isi poate retrage consimtamantul in orice moment, fara a afecta legalitatea prelucrarii efectuate anterior retragerii acestuia.</p>
+        <p>Atunci când prelucrarea se bazează pe consimțământ, utilizatorul își poate retrage consimțământul în orice moment, fără a afecta legalitatea prelucrării efectuate anterior retragerii acestuia.</p>
 
-        <h2>5. Stocarea si securitatea datelor</h2>
-        <p>Datele cu caracter personal sunt stocate pe servere securizate si sunt protejate prin:</p>
+        <h2>5. Stocarea și securitatea datelor</h2>
+        <p>Datele cu caracter personal sunt stocate pe servere securizate și sunt protejate prin:</p>
         <ul>
-            <li>acces restrictionat</li>
-            <li>masuri tehnice si organizatorice adecvate</li>
-            <li>comunicare criptata (HTTPS)</li>
+            <li>acces restricționat</li>
+            <li>măsuri tehnice și organizatorice adecvate</li>
+            <li>comunicare criptată (HTTPS)</li>
         </ul>
-        <p>Depunem eforturi rezonabile pentru a proteja datele personale impotriva accesului neautorizat, pierderii, distrugerii sau divulgarii acestora.</p>
+        <p>Depunem eforturi rezonabile pentru a proteja datele personale împotriva accesului neautorizat, pierderii, distrugerii sau divulgării acestora.</p>
 
         <h2>6. Partajarea datelor</h2>
-        <p>Nu vindem, nu inchiriem si nu transferam datele personale ale utilizatorilor catre terti in scopuri comerciale.</p>
-        <p>Datele pot fi prelucrate de furnizori de servicii de incredere exclusiv in scopuri tehnice, cum ar fi:</p>
+        <p>Nu vindem, nu închiriem și nu transferăm datele personale ale utilizatorilor către terți în scopuri comerciale.</p>
+        <p>Datele pot fi prelucrate de furnizori de servicii de încredere exclusiv în scopuri tehnice, cum ar fi:</p>
         <ul>
-            <li>servicii de gazduire (hosting)</li>
-            <li>servicii de livrare a notificarilor push (Expo, Apple, Google)</li>
-            <li>servicii AI de extragere text (Google Cloud Vision, Google Gemini)</li>
-            <li>servicii de procesare plati (RevenueCat, Apple, Google)</li>
-            <li>servicii de analiza si statistici de utilizare (Firebase Analytics de la Google, PostHog)</li>
-            <li>servicii de raportare a erorilor si performantei (Firebase Crashlytics)</li>
+            <li>servicii de găzduire (hosting)</li>
+            <li>servicii de livrare a notificărilor push (Expo, Apple, Google)</li>
+            <li>servicii AI pentru extragerea textului din bonuri și pentru generarea rețetelor (Google Cloud Vision, Google Gemini)</li>
+            <li>servicii de procesare plăți (RevenueCat, Apple, Google)</li>
+            <li>servicii de analiză și statistici de utilizare (Firebase Analytics de la Google, PostHog)</li>
+            <li>servicii de raportare a erorilor și performanței (Firebase Crashlytics)</li>
         </ul>
         <p>Imaginile bonurilor fiscale sunt procesate prin servicii AI (Google Cloud Vision, Google Gemini) exclusiv pentru extragerea textului. Imaginile nu sunt stocate permanent pe serverele noastre.</p>
-        <p>Platile pentru abonamentul Premium sunt procesate prin RevenueCat si Apple/Google. Nu avem acces la datele cardului tau.</p>
-        <p>Acesti furnizori au acces doar la datele strict necesare pentru furnizarea serviciilor respective si sunt obligati sa respecte confidentialitatea datelor.</p>
+        <p>Atunci când utilizatorul cere generarea unei rețete, lista produselor din frigiderul selectat și, dacă au fost setate, restricțiile alimentare sunt trimise către Google Gemini exclusiv pentru a obține sugestia de rețetă. Nu trimitem adresa de email, numele utilizatorului sau alte date de identificare.</p>
+        <p>Plățile pentru abonamentul Premium sunt procesate prin RevenueCat și Apple/Google. Nu avem acces la datele cardului dumneavoastră.</p>
+        <p>Acești furnizori au acces doar la datele strict necesare pentru furnizarea serviciilor respective și sunt obligați să respecte confidențialitatea datelor.</p>
 
-        <h2>6.1. Analytics si inregistrarea sesiunilor</h2>
-        <p>Pentru a intelege cum este utilizata aplicatia si pentru a o imbunatati continuu, folosim doua servicii de analiza:</p>
+        <h2>6.1. Analytics și înregistrarea sesiunilor</h2>
+        <p>Pentru a înțelege cum este utilizată aplicația și pentru a o îmbunătăți continuu, folosim două servicii de analiză:</p>
 
         <h3>Firebase Analytics (Google Ireland Limited)</h3>
-        <p>Colecteaza date anonime despre utilizarea aplicatiei:</p>
+        <p>Colectează date anonime despre utilizarea aplicației:</p>
         <ul>
-            <li>ecranele vizitate si actiunile efectuate</li>
-            <li>frecventa de utilizare a functionalitatilor</li>
-            <li>rapoarte de eroare si performanta</li>
-            <li>informatii tehnice despre dispozitiv</li>
+            <li>ecranele vizitate și acțiunile efectuate</li>
+            <li>frecvența de utilizare a funcționalităților</li>
+            <li>rapoarte de eroare și performanță</li>
+            <li>informații tehnice despre dispozitiv</li>
         </ul>
-        <p>Datele sunt stocate pe infrastructura Google Cloud in Uniunea Europeana.</p>
-        <p>Politica de confidentialitate Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
+        <p>Datele sunt stocate pe infrastructura Google Cloud în Uniunea Europeană.</p>
+        <p>Politica de confidențialitate Firebase: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
 
         <h3>PostHog (PostHog Inc.)</h3>
-        <p>Colecteaza date despre interactiunea utilizatorului cu aplicatia, inclusiv inregistrari ale sesiunilor de utilizare. Inregistrarile sunt similare unor materiale video care arata navigarea prin aplicatie, exclusiv interfata aplicatiei Fridgy.</p>
-        <p>Inregistrarile NU contin:</p>
+        <p>Colectează date despre interacțiunea utilizatorului cu aplicația, inclusiv înregistrări ale sesiunilor de utilizare. Înregistrările sunt similare unor materiale video care arată navigarea prin aplicație, exclusiv interfața aplicației Fridgy.</p>
+        <p>Înregistrările NU conțin:</p>
         <ul>
-            <li>continutul campurilor de parola (mascat automat)</li>
-            <li>date de plata (procesate de Apple/Google in dialoguri native, in afara aplicatiei)</li>
-            <li>continutul altor aplicatii de pe dispozitiv</li>
-            <li>imagini din camera sau galerie in afara contextului aplicatiei</li>
+            <li>conținutul câmpurilor de parolă (mascat automat)</li>
+            <li>date de plată (procesate de Apple/Google în dialoguri native, în afara aplicației)</li>
+            <li>conținutul altor aplicații de pe dispozitiv</li>
+            <li>imagini din cameră sau galerie în afara contextului aplicației</li>
         </ul>
-        <p>Doar aproximativ 25% din sesiuni sunt inregistrate, selectate aleator, pentru a respecta volumul de date colectate.</p>
-        <p>Datele sunt stocate pe infrastructura PostHog Cloud in Uniunea Europeana (Frankfurt, Germania).</p>
-        <p>Politica de confidentialitate PostHog: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
+        <p>Doar aproximativ 25% din sesiuni sunt înregistrate, selectate aleator, pentru a limita volumul de date colectate.</p>
+        <p>Datele sunt stocate pe infrastructura PostHog Cloud în Uniunea Europeană (Frankfurt, Germania).</p>
+        <p>Politica de confidențialitate PostHog: <a href="https://posthog.com/privacy" target="_blank">https://posthog.com/privacy</a></p>
 
         <h3>Dezactivare</h3>
-        <p>Utilizatorii pot solicita oprirea colectarii datelor de analiza si a inregistrarii sesiunilor contactandu-ne la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vom procesa cererea in maxim 30 de zile, conform GDPR.</p>
+        <p>Utilizatorii pot solicita oprirea colectării datelor de analiză și a înregistrării sesiunilor contactându-ne la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vom procesa cererea în maximum 30 de zile, conform GDPR.</p>
 
-        <h2>7. Transferuri de date in afara Uniunii Europene</h2>
-        <p>Datele cu caracter personal sunt stocate, in principal, in Uniunea Europeana. Furnizorii nostri de servicii (Firebase, PostHog, RevenueCat) folosesc infrastructura UE pentru stocarea principala a datelor.</p>
-        <p>In situatii limitate, anumite date tehnice pot fi prelucrate de serviciile partenere in afara UE (de exemplu, pentru anumite operatiuni ale Google sau Apple). In astfel de cazuri, ne asiguram ca sunt aplicate garantii adecvate pentru protectia datelor, conform Standard Contractual Clauses (SCC) sau alte mecanisme prevazute de GDPR.</p>
-
-        <h2>8. Notificari push</h2>
-        <p>Aplicatia Fridgy poate trimite notificari push legate de produsele utilizatorului si datele de expirare.</p>
-        <p>Notificarile:</p>
+        <h2>6.2. Frigidere partajate</h2>
+        <p>Fridgy permite partajarea unui frigider cu alți utilizatori. Partajarea se face doar la inițiativa proprietarului frigiderului, prin invitație trimisă pe email.</p>
+        <p>Într-un frigider partajat, ceilalți membri pot vedea:</p>
         <ul>
-            <li>sunt optionale</li>
-            <li>pot fi dezactivate oricand din setarile aplicatiei sau ale dispozitivului</li>
+            <li>produsele din frigiderul respectiv, cu cantitățile, datele de expirare și prețurile introduse</li>
+            <li>numele afișat și adresa de email ale celorlalți membri și ale persoanelor invitate</li>
+            <li>modificările făcute în frigiderul partajat de oricare dintre membri</li>
+        </ul>
+        <p>Statisticile personale, produsele din frigiderele nepartajate și setările contului rămân vizibile doar utilizatorului.</p>
+        <p>Proprietarul poate elimina oricând un membru, iar orice membru poate părăsi un frigider partajat. După aceea, accesul la produsele din frigiderul respectiv încetează.</p>
+
+        <h2>7. Transferuri de date în afara Uniunii Europene</h2>
+        <p>Datele cu caracter personal sunt stocate, în principal, în Uniunea Europeană. Furnizorii noștri de servicii (Firebase, PostHog, RevenueCat) folosesc infrastructura UE pentru stocarea principală a datelor.</p>
+        <p>În situații limitate, anumite date tehnice pot fi prelucrate de serviciile partenere în afara UE (de exemplu, pentru anumite operațiuni ale Google sau Apple). În astfel de cazuri, ne asigurăm că sunt aplicate garanții adecvate pentru protecția datelor, conform Clauzelor Contractuale Standard (SCC) sau altor mecanisme prevăzute de GDPR.</p>
+
+        <h2>8. Notificări push</h2>
+        <p>Aplicația Fridgy poate trimite notificări push legate de produsele utilizatorului și datele de expirare.</p>
+        <p>Notificările:</p>
+        <ul>
+            <li>sunt opționale</li>
+            <li>pot fi dezactivate oricând din setările aplicației sau ale dispozitivului</li>
         </ul>
 
-        <h2>9. Perioada de pastrare a datelor</h2>
-        <p>Datele cu caracter personal sunt pastrate:</p>
+        <h2>9. Perioada de păstrare a datelor</h2>
+        <p>Datele cu caracter personal sunt păstrate:</p>
         <ul>
-            <li>pe durata existentei contului de utilizator</li>
-            <li>pana cand utilizatorul isi sterge contul</li>
+            <li>pe durata existenței contului de utilizator</li>
+            <li>până când utilizatorul își șterge contul</li>
         </ul>
-        <p>Dupa stergerea contului, datele sunt eliminate permanent din sistemele noastre, cu exceptia situatiilor in care legislatia aplicabila impune pastrarea anumitor informatii pentru o perioada determinata.</p>
+        <p>După ștergerea contului, datele sunt eliminate permanent din sistemele noastre, cu excepția situațiilor în care legislația aplicabilă impune păstrarea anumitor informații pentru o perioadă determinată.</p>
 
         <h2>10. Drepturile utilizatorilor</h2>
-        <p>Conform legislatiei privind protectia datelor cu caracter personal, utilizatorii beneficiaza de urmatoarele drepturi:</p>
+        <p>Conform legislației privind protecția datelor cu caracter personal, utilizatorii beneficiază de următoarele drepturi:</p>
         <ul>
             <li>dreptul de acces la datele lor</li>
             <li>dreptul de rectificare a datelor</li>
-            <li>dreptul de stergere a contului si a datelor asociate</li>
-            <li>dreptul de retragere a consimtamantului</li>
-            <li>dreptul de a solicita informatii privind prelucrarea datelor</li>
+            <li>dreptul de ștergere a contului și a datelor asociate</li>
+            <li>dreptul de retragere a consimțământului</li>
+            <li>dreptul de a solicita informații privind prelucrarea datelor</li>
         </ul>
-        <p>Pentru exercitarea acestor drepturi, ne puteti contacta la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
-        <p>Utilizatorii au, de asemenea, dreptul de a depune o plangere la autoritatea competenta in materie de protectia datelor:</p>
+        <p>Pentru exercitarea acestor drepturi, ne puteți contacta la <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>.</p>
+        <p>Utilizatorii au, de asemenea, dreptul de a depune o plângere la autoritatea competentă în materie de protecția datelor:</p>
         <div class="company-info">
-            <p><strong>Autoritatea Nationala de Supraveghere a Prelucrarii Datelor cu Caracter Personal (ANSPDCP)</strong></p>
+            <p><strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong></p>
             <p>Website: <a href="https://www.dataprotection.ro" target="_blank">https://www.dataprotection.ro</a></p>
         </div>
 
-        <h2>11. Stergerea contului</h2>
-        <p>Utilizatorii isi pot sterge contul direct din aplicatie, din sectiunea de setari.</p>
-        <p>Prin stergerea contului:</p>
+        <h2>11. Ștergerea contului</h2>
+        <p>Utilizatorii își pot șterge contul direct din aplicație, din secțiunea de setări.</p>
+        <p>Prin ștergerea contului:</p>
         <ul>
             <li>toate datele personale asociate sunt eliminate permanent</li>
-            <li>accesul la aplicatie este revocat</li>
+            <li>accesul la aplicație este revocat</li>
         </ul>
 
-        <h2>12. Modificari ale politicii de confidentialitate</h2>
-        <p>Ne rezervam dreptul de a actualiza aceasta Politica de Confidentialitate.</p>
-        <p>In cazul modificarilor semnificative, utilizatorii vor fi informati prin aplicatie sau prin alte mijloace adecvate.</p>
-        <p>Data ultimei actualizari va fi afisata in partea de sus a documentului.</p>
+        <h2>12. Modificări ale politicii de confidențialitate</h2>
+        <p>Ne rezervăm dreptul de a actualiza această Politică de Confidențialitate.</p>
+        <p>În cazul modificărilor semnificative, utilizatorii vor fi informați prin aplicație sau prin alte mijloace adecvate.</p>
+        <p>Data ultimei actualizări va fi afișată în partea de sus a documentului.</p>
 
         <h2>13. Contact</h2>
-        <p>Pentru orice intrebari sau solicitari legate de aceasta Politica de Confidentialitate sau de datele cu caracter personal, ne puteti contacta la:</p>
+        <p>Pentru orice întrebări sau solicitări legate de această Politică de Confidențialitate sau de datele cu caracter personal, ne puteți contacta la:</p>
         <div class="contact-box">
             <p><a href="mailto:contact@fridgy.org">contact@fridgy.org</a></p>
         </div>
@@ -364,7 +386,7 @@
         <div class="header-row">
             <h1>Privacy Policy - Fridgy</h1>
         </div>
-        <p class="last-updated">Last updated: May 20, 2026</p>
+        <p class="last-updated">Last updated: August 24, 2026</p>
 
         <p>This Privacy Policy describes how the Fridgy application collects, uses, and protects the personal data of its users.</p>
         <p>By using the Fridgy application, you agree to the practices described in this policy.</p>
@@ -390,9 +412,12 @@
 
         <h3>2.2. Data entered by the user in the application</h3>
         <ul>
-            <li>products added to the application</li>
+            <li>products added to the application, with quantities and, optionally, prices</li>
             <li>product expiration dates</li>
-            <li>application settings (language, notification preferences)</li>
+            <li>receipt images photographed by the user for automatic product entry</li>
+            <li>history of products consumed or thrown away, from which the waste and savings statistics are calculated</li>
+            <li>fridges created and the members they are shared with</li>
+            <li>application settings (language, notification preferences, dietary restrictions for recipes)</li>
         </ul>
 
         <h3>2.3. Technical data</h3>
@@ -422,6 +447,10 @@
             <li>creating and managing the user account</li>
             <li>providing the core functionalities of the application</li>
             <li>storing and managing the user's products</li>
+            <li>automatic recognition of products from photographed receipts</li>
+            <li>generating recipes based on the products available in the fridge</li>
+            <li>calculating the user's consumption, waste and savings statistics</li>
+            <li>sharing fridges between the users invited by the owner</li>
             <li>sending notifications regarding product expiration</li>
             <li>technical functioning and security of the application</li>
             <li>improving the user experience</li>
@@ -451,12 +480,13 @@
         <ul>
             <li>hosting services</li>
             <li>push notification delivery services (Expo, Apple, Google)</li>
-            <li>AI-based text extraction services (Google Cloud Vision, Google Gemini)</li>
+            <li>AI services for extracting text from receipts and for generating recipes (Google Cloud Vision, Google Gemini)</li>
             <li>payment processing services (RevenueCat, Apple, Google)</li>
             <li>usage analytics and statistics services (Firebase Analytics by Google, PostHog)</li>
             <li>error and performance reporting services (Firebase Crashlytics)</li>
         </ul>
         <p>Receipt images are processed through AI services (Google Cloud Vision, Google Gemini) exclusively for text extraction. Images are not permanently stored on our servers.</p>
+        <p>When the user requests a recipe, the list of products in the selected fridge and, if set, the dietary restrictions are sent to Google Gemini solely to obtain the recipe suggestion. We do not send the email address, the user's name or any other identifying data.</p>
         <p>Premium subscription payments are processed through RevenueCat and Apple/Google. We do not have access to your card details.</p>
         <p>These providers have access only to the data strictly necessary to provide their services and are required to maintain data confidentiality.</p>
 
@@ -490,6 +520,16 @@
         <h3>Opt-out</h3>
         <p>Users may request the cessation of analytics data collection and session recording by contacting us at <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. We will process the request within 30 days, in accordance with GDPR.</p>
 
+        <h2>6.2. Shared fridges</h2>
+        <p>Fridgy allows a fridge to be shared with other users. Sharing only happens at the initiative of the fridge owner, through an invitation sent by email.</p>
+        <p>In a shared fridge, the other members can see:</p>
+        <ul>
+            <li>the products in that fridge, with the quantities, expiration dates and prices entered</li>
+            <li>the display name and email address of the other members and of the invited people</li>
+            <li>the changes any member makes in the shared fridge</li>
+        </ul>
+        <p>Personal statistics, products in fridges that are not shared, and account settings remain visible only to the user.</p>
+        <p>The owner can remove a member at any time, and any member can leave a shared fridge. Access to the products in that fridge ends at that point.</p>
         <h2>7. Data transfers outside the European Union</h2>
         <p>Personal data is primarily stored in the European Union. Our service providers (Firebase, PostHog, RevenueCat) use EU infrastructure for primary data storage.</p>
         <p>In limited situations, certain technical data may be processed by partner services outside the EU (for example, for certain Google or Apple operations). In such cases, we ensure that adequate safeguards for data protection are applied, in accordance with Standard Contractual Clauses (SCC) or other mechanisms provided by GDPR.</p>
@@ -551,7 +591,7 @@
         <div class="header-row">
             <h1>Datenschutzerklärung - Fridgy</h1>
         </div>
-        <p class="last-updated">Letzte Aktualisierung: 20. Mai 2026</p>
+        <p class="last-updated">Letzte Aktualisierung: 24. August 2026</p>
 
         <p>Diese Datenschutzerklärung beschreibt, wie die Fridgy-Anwendung personenbezogene Daten ihrer Nutzer erfasst, verwendet und schützt.</p>
         <p>Durch die Nutzung der Fridgy-Anwendung stimmen Sie den in dieser Richtlinie beschriebenen Praktiken zu.</p>
@@ -577,9 +617,12 @@
 
         <h3>2.2. Vom Nutzer in der Anwendung eingegebene Daten</h3>
         <ul>
-            <li>in der Anwendung hinzugefügte Produkte</li>
+            <li>in der Anwendung hinzugefügte Produkte, mit Mengen und optional Preisen</li>
             <li>Ablaufdaten der Produkte</li>
-            <li>Anwendungseinstellungen (Sprache, Benachrichtigungseinstellungen)</li>
+            <li>Bilder von Kassenbons, die der Nutzer für die automatische Produkterfassung aufnimmt</li>
+            <li>Verlauf der verbrauchten oder weggeworfenen Produkte, auf dessen Grundlage die Statistiken zu Verschwendung und Ersparnis berechnet werden</li>
+            <li>angelegte Kühlschränke und die Mitglieder, mit denen sie geteilt werden</li>
+            <li>Anwendungseinstellungen (Sprache, Benachrichtigungseinstellungen, Ernährungseinschränkungen für Rezepte)</li>
         </ul>
 
         <h3>2.3. Technische Daten</h3>
@@ -609,6 +652,10 @@
             <li>Erstellung und Verwaltung des Benutzerkontos</li>
             <li>Bereitstellung der Kernfunktionen der Anwendung</li>
             <li>Speicherung und Verwaltung der Produkte des Nutzers</li>
+            <li>automatische Erkennung der Produkte auf fotografierten Kassenbons</li>
+            <li>Erstellung von Rezepten auf Basis der im Kühlschrank vorhandenen Produkte</li>
+            <li>Berechnung der Verbrauchs-, Verschwendungs- und Ersparnisstatistiken des Nutzers</li>
+            <li>Teilen von Kühlschränken zwischen den vom Eigentümer eingeladenen Nutzern</li>
             <li>Versenden von Benachrichtigungen über das Ablaufdatum von Produkten</li>
             <li>technischen Betrieb und Sicherheit der Anwendung</li>
             <li>Verbesserung der Benutzererfahrung</li>
@@ -638,12 +685,13 @@
         <ul>
             <li>Hosting-Dienste</li>
             <li>Zustelldienste für Push-Benachrichtigungen (Expo, Apple, Google)</li>
-            <li>KI-basierte Textextraktionsdienste (Google Cloud Vision, Google Gemini)</li>
+            <li>KI-Dienste zur Textextraktion aus Kassenbons und zur Erstellung von Rezepten (Google Cloud Vision, Google Gemini)</li>
             <li>Zahlungsabwicklungsdienste (RevenueCat, Apple, Google)</li>
             <li>Nutzungsanalyse- und Statistikdienste (Firebase Analytics von Google, PostHog)</li>
             <li>Fehler- und Leistungsberichtsdienste (Firebase Crashlytics)</li>
         </ul>
         <p>Quittungsbilder werden über KI-Dienste (Google Cloud Vision, Google Gemini) ausschließlich zur Textextraktion verarbeitet. Bilder werden nicht dauerhaft auf unseren Servern gespeichert.</p>
+        <p>Wenn der Nutzer ein Rezept anfordert, werden die Liste der Produkte im ausgewählten Kühlschrank und, sofern hinterlegt, die Ernährungseinschränkungen ausschließlich zum Abruf des Rezeptvorschlags an Google Gemini übermittelt. E-Mail-Adresse, Name des Nutzers und andere identifizierende Daten werden nicht übermittelt.</p>
         <p>Premium-Abonnementzahlungen werden über RevenueCat und Apple/Google abgewickelt. Wir haben keinen Zugang zu Ihren Kartendaten.</p>
         <p>Diese Anbieter haben nur Zugang zu den Daten, die für die Erbringung ihrer Dienste unbedingt erforderlich sind, und sind zur Wahrung der Datensicherheit verpflichtet.</p>
 
@@ -677,6 +725,16 @@
         <h3>Opt-out</h3>
         <p>Nutzer können die Einstellung der Analysedatenerhebung und Sitzungsaufzeichnung beantragen, indem sie uns unter <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> kontaktieren. Wir werden die Anfrage innerhalb von 30 Tagen gemäß der DSGVO bearbeiten.</p>
 
+        <h2>6.2. Geteilte Kühlschränke</h2>
+        <p>Fridgy ermöglicht es, einen Kühlschrank mit anderen Nutzern zu teilen. Das Teilen erfolgt ausschließlich auf Initiative des Eigentümers, über eine per E-Mail versendete Einladung.</p>
+        <p>In einem geteilten Kühlschrank sehen die anderen Mitglieder:</p>
+        <ul>
+            <li>die Produkte in diesem Kühlschrank, mit den eingetragenen Mengen, Ablaufdaten und Preisen</li>
+            <li>den Anzeigenamen und die E-Mail-Adresse der anderen Mitglieder und der eingeladenen Personen</li>
+            <li>die Änderungen, die ein Mitglied im geteilten Kühlschrank vornimmt</li>
+        </ul>
+        <p>Persönliche Statistiken, Produkte in nicht geteilten Kühlschränken und Kontoeinstellungen bleiben nur für den Nutzer sichtbar.</p>
+        <p>Der Eigentümer kann ein Mitglied jederzeit entfernen, und jedes Mitglied kann einen geteilten Kühlschrank verlassen. Danach endet der Zugriff auf die Produkte dieses Kühlschranks.</p>
         <h2>7. Datenübermittlungen außerhalb der Europäischen Union</h2>
         <p>Personenbezogene Daten werden in erster Linie in der Europäischen Union gespeichert. Unsere Dienstleister (Firebase, PostHog, RevenueCat) nutzen EU-Infrastruktur für die primäre Datenspeicherung.</p>
         <p>In begrenzten Situationen können bestimmte technische Daten von Partnerdiensten außerhalb der EU verarbeitet werden (z. B. für bestimmte Google- oder Apple-Operationen). In solchen Fällen stellen wir sicher, dass angemessene Schutzmaßnahmen für den Datenschutz angewendet werden, gemäß den Standardvertragsklauseln (SCC) oder anderen von der DSGVO vorgesehenen Mechanismen.</p>
@@ -738,7 +796,7 @@
         <div class="header-row">
             <h1>Adatvédelmi szabályzat - Fridgy</h1>
         </div>
-        <p class="last-updated">Utolsó frissítés: 2026. május 20.</p>
+        <p class="last-updated">Utolsó frissítés: 2026. augusztus 24.</p>
 
         <p>Ez az Adatvédelmi szabályzat leírja, hogyan gyűjti, használja és védi a Fridgy alkalmazás a felhasználók személyes adatait.</p>
         <p>A Fridgy alkalmazás használatával Ön elfogadja az ebben a szabályzatban leírt gyakorlatokat.</p>
@@ -764,9 +822,12 @@
 
         <h3>2.2. A felhasználó által az alkalmazásban megadott adatok</h3>
         <ul>
-            <li>az alkalmazáshoz hozzáadott termékek</li>
+            <li>az alkalmazáshoz hozzáadott termékek, mennyiséggel és opcionálisan árral</li>
             <li>termékek lejárati dátuma</li>
-            <li>alkalmazásbeállítások (nyelv, értesítési preferenciák)</li>
+            <li>a felhasználó által készített blokk-fényképek a termékek automatikus felviteléhez</li>
+            <li>az elfogyasztott vagy kidobott termékek előzményei, amelyekből a pazarlási és megtakarítási statisztikák számítódnak</li>
+            <li>a létrehozott hűtők és a tagok, akikkel meg vannak osztva</li>
+            <li>alkalmazásbeállítások (nyelv, értesítési preferenciák, receptekre vonatkozó étkezési korlátozások)</li>
         </ul>
 
         <h3>2.3. Technikai adatok</h3>
@@ -796,6 +857,10 @@
             <li>felhasználói fiók létrehozása és kezelése</li>
             <li>az alkalmazás alapfunkcióinak biztosítása</li>
             <li>a felhasználó termékeinek tárolása és kezelése</li>
+            <li>a termékek automatikus felismerése a lefényképezett blokkokról</li>
+            <li>receptek generálása a hűtőben lévő termékek alapján</li>
+            <li>a felhasználó fogyasztási, pazarlási és megtakarítási statisztikáinak kiszámítása</li>
+            <li>hűtők megosztása a tulajdonos által meghívott felhasználók között</li>
             <li>értesítések küldése a termékek lejáratával kapcsolatban</li>
             <li>az alkalmazás technikai működése és biztonsága</li>
             <li>a felhasználói élmény javítása</li>
@@ -825,12 +890,13 @@
         <ul>
             <li>tárhelyszolgáltatások</li>
             <li>push értesítési kézbesítési szolgáltatások (Expo, Apple, Google)</li>
-            <li>MI-alapú szövegkinyerési szolgáltatások (Google Cloud Vision, Google Gemini)</li>
+            <li>MI-szolgáltatások a blokkok szövegének kinyeréséhez és receptek generálásához (Google Cloud Vision, Google Gemini)</li>
             <li>fizetésfeldolgozási szolgáltatások (RevenueCat, Apple, Google)</li>
             <li>használati elemzési és statisztikai szolgáltatások (Firebase Analytics a Google-tól, PostHog)</li>
             <li>hiba- és teljesítményjelentési szolgáltatások (Firebase Crashlytics)</li>
         </ul>
         <p>A nyugtaképeket MI-szolgáltatások (Google Cloud Vision, Google Gemini) dolgozzák fel kizárólag szövegkinyerés céljából. A képek nem kerülnek tartósan tárolásra szervereinkre.</p>
+        <p>Amikor a felhasználó receptet kér, a kiválasztott hűtő terméklistája és – ha be van állítva – az étkezési korlátozások kizárólag a receptjavaslat lekérése céljából kerülnek a Google Gemini szolgáltatáshoz. E-mail-címet, felhasználónevet vagy más azonosító adatot nem küldünk.</p>
         <p>A prémium előfizetési fizetések a RevenueCat és az Apple/Google által kerülnek feldolgozásra. Nincs hozzáférésünk a kártyaadataihoz.</p>
         <p>Ezek a szolgáltatók csak az adott szolgáltatások nyújtásához feltétlenül szükséges adatokhoz férnek hozzá, és kötelesek megőrizni az adatok titkosságát.</p>
 
@@ -864,6 +930,16 @@
         <h3>Leiratkozás</h3>
         <p>A felhasználók kérhetik az elemzési adatgyűjtés és munkamenet-rögzítés leállítását, ha kapcsolatba lépnek velünk a <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> címen. A kérelmet 30 napon belül feldolgozzuk a GDPR-nak megfelelően.</p>
 
+        <h2>6.2. Megosztott hűtők</h2>
+        <p>A Fridgy lehetővé teszi, hogy egy hűtőt megossz más felhasználókkal. A megosztás kizárólag a hűtő tulajdonosának kezdeményezésére történik, e-mailben küldött meghívóval.</p>
+        <p>Egy megosztott hűtőben a többi tag látja:</p>
+        <ul>
+            <li>az adott hűtő termékeit a megadott mennyiségekkel, lejárati dátumokkal és árakkal</li>
+            <li>a többi tag és a meghívott személyek megjelenített nevét és e-mail-címét</li>
+            <li>a megosztott hűtőben bármely tag által végzett módosításokat</li>
+        </ul>
+        <p>A személyes statisztikák, a nem megosztott hűtők termékei és a fiókbeállítások csak a felhasználó számára maradnak láthatók.</p>
+        <p>A tulajdonos bármikor eltávolíthat egy tagot, és bármely tag elhagyhat egy megosztott hűtőt. Ezt követően megszűnik a hozzáférés az adott hűtő termékeihez.</p>
         <h2>7. Adattovábbítás az Európai Unión kívülre</h2>
         <p>A személyes adatok elsősorban az Európai Unióban kerülnek tárolásra. Szolgáltatóink (Firebase, PostHog, RevenueCat) uniós infrastruktúrát használnak az elsődleges adattároláshoz.</p>
         <p>Korlátozott esetekben bizonyos technikai adatokat partnercégek az EU-n kívül is feldolgozhatnak (például egyes Google vagy Apple műveletek esetén). Ilyen esetekben gondoskodunk arról, hogy megfelelő adatvédelmi garanciák kerüljenek alkalmazásra, a Szabványos Szerződési Záradékoknak (SCC) vagy a GDPR által biztosított egyéb mechanizmusoknak megfelelően.</p>
@@ -925,7 +1001,7 @@
         <div class="header-row">
             <h1>Politique de confidentialité - Fridgy</h1>
         </div>
-        <p class="last-updated">Dernière mise à jour : 20 mai 2026</p>
+        <p class="last-updated">Dernière mise à jour : 24 août 2026</p>
 
         <p>Cette Politique de confidentialité décrit comment l'application Fridgy collecte, utilise et protège les données personnelles de ses utilisateurs.</p>
         <p>En utilisant l'application Fridgy, vous acceptez les pratiques décrites dans cette politique.</p>
@@ -951,9 +1027,12 @@
 
         <h3>2.2. Données saisies par l'utilisateur dans l'application</h3>
         <ul>
-            <li>produits ajoutés à l'application</li>
+            <li>produits ajoutés à l'application, avec les quantités et, éventuellement, les prix</li>
             <li>dates d'expiration des produits</li>
-            <li>paramètres de l'application (langue, préférences de notification)</li>
+            <li>images de tickets de caisse photographiées par l'utilisateur pour l'ajout automatique des produits</li>
+            <li>historique des produits consommés ou jetés, à partir duquel sont calculées les statistiques de gaspillage et d'économies</li>
+            <li>frigos créés et membres avec lesquels ils sont partagés</li>
+            <li>paramètres de l'application (langue, préférences de notification, restrictions alimentaires pour les recettes)</li>
         </ul>
 
         <h3>2.3. Données techniques</h3>
@@ -983,6 +1062,10 @@
             <li>la création et la gestion du compte utilisateur</li>
             <li>la fourniture des fonctionnalités principales de l'application</li>
             <li>le stockage et la gestion des produits de l'utilisateur</li>
+            <li>la reconnaissance automatique des produits sur les tickets photographiés</li>
+            <li>la génération de recettes à partir des produits disponibles dans le frigo</li>
+            <li>le calcul des statistiques de consommation, de gaspillage et d'économies de l'utilisateur</li>
+            <li>le partage de frigos entre les utilisateurs invités par le propriétaire</li>
             <li>l'envoi de notifications concernant l'expiration des produits</li>
             <li>le fonctionnement technique et la sécurité de l'application</li>
             <li>l'amélioration de l'expérience utilisateur</li>
@@ -1012,12 +1095,13 @@
         <ul>
             <li>services d'hébergement</li>
             <li>services de livraison de notifications push (Expo, Apple, Google)</li>
-            <li>services d'extraction de texte basés sur l'IA (Google Cloud Vision, Google Gemini)</li>
+            <li>services d'IA pour l'extraction du texte des tickets et pour la génération de recettes (Google Cloud Vision, Google Gemini)</li>
             <li>services de traitement des paiements (RevenueCat, Apple, Google)</li>
             <li>services d'analyse d'utilisation et de statistiques (Firebase Analytics de Google, PostHog)</li>
             <li>services de rapport d'erreurs et de performance (Firebase Crashlytics)</li>
         </ul>
         <p>Les images de reçus sont traitées via des services d'IA (Google Cloud Vision, Google Gemini) exclusivement pour l'extraction de texte. Les images ne sont pas stockées définitivement sur nos serveurs.</p>
+        <p>Lorsque l'utilisateur demande une recette, la liste des produits du frigo sélectionné et, le cas échéant, les restrictions alimentaires sont envoyées à Google Gemini uniquement pour obtenir la suggestion de recette. Nous n'envoyons ni l'adresse e-mail, ni le nom de l'utilisateur, ni aucune autre donnée d'identification.</p>
         <p>Les paiements d'abonnement Premium sont traités via RevenueCat et Apple/Google. Nous n'avons pas accès à vos données de carte.</p>
         <p>Ces prestataires n'ont accès qu'aux données strictement nécessaires à la fourniture de leurs services et sont tenus de maintenir la confidentialité des données.</p>
 
@@ -1051,6 +1135,16 @@
         <h3>Désactivation</h3>
         <p>Les utilisateurs peuvent demander l'arrêt de la collecte de données analytiques et de l'enregistrement de sessions en nous contactant à <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Nous traiterons la demande dans les 30 jours, conformément au RGPD.</p>
 
+        <h2>6.2. Frigos partagés</h2>
+        <p>Fridgy permet de partager un frigo avec d'autres utilisateurs. Le partage se fait uniquement à l'initiative du propriétaire du frigo, par une invitation envoyée par e-mail.</p>
+        <p>Dans un frigo partagé, les autres membres peuvent voir :</p>
+        <ul>
+            <li>les produits de ce frigo, avec les quantités, les dates d'expiration et les prix saisis</li>
+            <li>le nom affiché et l'adresse e-mail des autres membres et des personnes invitées</li>
+            <li>les modifications apportées au frigo partagé par n'importe quel membre</li>
+        </ul>
+        <p>Les statistiques personnelles, les produits des frigos non partagés et les paramètres du compte restent visibles uniquement par l'utilisateur.</p>
+        <p>Le propriétaire peut retirer un membre à tout moment, et tout membre peut quitter un frigo partagé. L'accès aux produits de ce frigo prend alors fin.</p>
         <h2>7. Transferts de données hors de l'Union européenne</h2>
         <p>Les données personnelles sont principalement stockées dans l'Union européenne. Nos prestataires de services (Firebase, PostHog, RevenueCat) utilisent l'infrastructure de l'UE pour le stockage principal des données.</p>
         <p>Dans des situations limitées, certaines données techniques peuvent être traitées par des services partenaires en dehors de l'UE (par exemple, pour certaines opérations Google ou Apple). Dans ces cas, nous nous assurons que des garanties adéquates pour la protection des données sont appliquées, conformément aux Clauses Contractuelles Types (CCT) ou à d'autres mécanismes prévus par le RGPD.</p>
@@ -1112,7 +1206,7 @@
         <div class="header-row">
             <h1>Privacybeleid - Fridgy</h1>
         </div>
-        <p class="last-updated">Laatst bijgewerkt: 20 mei 2026</p>
+        <p class="last-updated">Laatst bijgewerkt: 24 augustus 2026</p>
 
         <p>Dit Privacybeleid beschrijft hoe de Fridgy-applicatie de persoonlijke gegevens van zijn gebruikers verzamelt, gebruikt en beschermt.</p>
         <p>Door de Fridgy-applicatie te gebruiken, stemt u in met de in dit beleid beschreven praktijken.</p>
@@ -1138,9 +1232,12 @@
 
         <h3>2.2. Door de gebruiker ingevoerde gegevens in de applicatie</h3>
         <ul>
-            <li>aan de applicatie toegevoegde producten</li>
+            <li>aan de applicatie toegevoegde producten, met hoeveelheden en eventueel prijzen</li>
             <li>vervaldatums van producten</li>
-            <li>applicatie-instellingen (taal, meldingsvoorkeuren)</li>
+            <li>foto's van kassabonnen die de gebruiker maakt om producten automatisch toe te voegen</li>
+            <li>geschiedenis van geconsumeerde of weggegooide producten, waarop de statistieken over verspilling en besparing worden gebaseerd</li>
+            <li>aangemaakte koelkasten en de leden met wie ze worden gedeeld</li>
+            <li>applicatie-instellingen (taal, meldingsvoorkeuren, dieetbeperkingen voor recepten)</li>
         </ul>
 
         <h3>2.3. Technische gegevens</h3>
@@ -1170,6 +1267,10 @@
             <li>het aanmaken en beheren van het gebruikersaccount</li>
             <li>het leveren van de kernfunctionaliteiten van de applicatie</li>
             <li>het opslaan en beheren van de producten van de gebruiker</li>
+            <li>het automatisch herkennen van producten op gefotografeerde kassabonnen</li>
+            <li>het genereren van recepten op basis van de producten in de koelkast</li>
+            <li>het berekenen van de statistieken over consumptie, verspilling en besparing van de gebruiker</li>
+            <li>het delen van koelkasten tussen gebruikers die door de eigenaar zijn uitgenodigd</li>
             <li>het verzenden van meldingen over het verlopen van producten</li>
             <li>technisch functioneren en beveiliging van de applicatie</li>
             <li>het verbeteren van de gebruikerservaring</li>
@@ -1199,12 +1300,13 @@
         <ul>
             <li>hostingdiensten</li>
             <li>bezorgdiensten voor pushmeldingen (Expo, Apple, Google)</li>
-            <li>AI-gebaseerde tekstextractiediensten (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-diensten voor het extraheren van tekst uit kassabonnen en voor het genereren van recepten (Google Cloud Vision, Google Gemini)</li>
             <li>betalingsverwerkingsdiensten (RevenueCat, Apple, Google)</li>
             <li>gebruiksanalyse- en statistiekdiensten (Firebase Analytics van Google, PostHog)</li>
             <li>fout- en prestatierapportagediensten (Firebase Crashlytics)</li>
         </ul>
         <p>Bonafbeeldingen worden verwerkt via AI-diensten (Google Cloud Vision, Google Gemini) uitsluitend voor tekstextractie. Afbeeldingen worden niet permanent opgeslagen op onze servers.</p>
+        <p>Wanneer de gebruiker om een recept vraagt, worden de productenlijst van de geselecteerde koelkast en, indien ingesteld, de dieetbeperkingen uitsluitend naar Google Gemini gestuurd om het receptvoorstel op te halen. We sturen geen e-mailadres, gebruikersnaam of andere identificerende gegevens mee.</p>
         <p>Premium abonnementsbetalingen worden verwerkt via RevenueCat en Apple/Google. Wij hebben geen toegang tot uw kaartgegevens.</p>
         <p>Deze aanbieders hebben alleen toegang tot de gegevens die strikt noodzakelijk zijn voor het leveren van hun diensten en zijn verplicht de vertrouwelijkheid van gegevens te handhaven.</p>
 
@@ -1238,6 +1340,16 @@
         <h3>Opt-out</h3>
         <p>Gebruikers kunnen verzoeken om stopzetting van de verzameling van analysegegevens en sessieopname door contact met ons op te nemen via <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Wij verwerken het verzoek binnen 30 dagen, in overeenstemming met de AVG.</p>
 
+        <h2>6.2. Gedeelde koelkasten</h2>
+        <p>Met Fridgy kun je een koelkast delen met andere gebruikers. Delen gebeurt alleen op initiatief van de eigenaar van de koelkast, via een uitnodiging per e-mail.</p>
+        <p>In een gedeelde koelkast zien de andere leden:</p>
+        <ul>
+            <li>de producten in die koelkast, met de ingevoerde hoeveelheden, vervaldatums en prijzen</li>
+            <li>de weergegeven naam en het e-mailadres van de andere leden en van de uitgenodigde personen</li>
+            <li>de wijzigingen die een lid in de gedeelde koelkast aanbrengt</li>
+        </ul>
+        <p>Persoonlijke statistieken, producten in niet-gedeelde koelkasten en accountinstellingen blijven alleen zichtbaar voor de gebruiker.</p>
+        <p>De eigenaar kan een lid op elk moment verwijderen en elk lid kan een gedeelde koelkast verlaten. Daarna eindigt de toegang tot de producten in die koelkast.</p>
         <h2>7. Gegevensoverdrachten buiten de Europese Unie</h2>
         <p>Persoonsgegevens worden primair opgeslagen in de Europese Unie. Onze dienstverleners (Firebase, PostHog, RevenueCat) gebruiken EU-infrastructuur voor primaire gegevensopslag.</p>
         <p>In beperkte situaties kunnen bepaalde technische gegevens worden verwerkt door partnerdiensten buiten de EU (bijvoorbeeld voor bepaalde Google- of Apple-operaties). In dergelijke gevallen zorgen wij ervoor dat adequate waarborgen voor gegevensbescherming worden toegepast, in overeenstemming met Standaard Contractuele Clausules (SCC) of andere mechanismen voorzien door de AVG.</p>
@@ -1299,7 +1411,7 @@
         <div class="header-row">
             <h1>Privatlivspolitik - Fridgy</h1>
         </div>
-        <p class="last-updated">Sidst opdateret: 20. maj 2026</p>
+        <p class="last-updated">Sidst opdateret: 24. august 2026</p>
 
         <p>Denne Privatlivspolitik beskriver, hvordan Fridgy-applikationen indsamler, bruger og beskytter sine brugeres personoplysninger.</p>
         <p>Ved at bruge Fridgy-applikationen accepterer du de praksisser, der er beskrevet i denne politik.</p>
@@ -1325,9 +1437,12 @@
 
         <h3>2.2. Data indtastet af brugeren i applikationen</h3>
         <ul>
-            <li>produkter tilføjet til applikationen</li>
+            <li>produkter tilføjet til applikationen, med mængder og eventuelt priser</li>
             <li>produkters udløbsdatoer</li>
-            <li>applikationsindstillinger (sprog, notifikationspræferencer)</li>
+            <li>billeder af kvitteringer, som brugeren tager for automatisk at tilføje produkter</li>
+            <li>historik over forbrugte eller kasserede produkter, som statistikkerne over madspild og besparelser beregnes ud fra</li>
+            <li>oprettede køleskabe og de medlemmer, de deles med</li>
+            <li>applikationsindstillinger (sprog, notifikationspræferencer, kostbegrænsninger til opskrifter)</li>
         </ul>
 
         <h3>2.3. Tekniske data</h3>
@@ -1357,6 +1472,10 @@
             <li>oprettelse og administration af brugerkontoen</li>
             <li>levering af applikationens kernefunktioner</li>
             <li>lagring og administration af brugerens produkter</li>
+            <li>automatisk genkendelse af produkter på fotograferede kvitteringer</li>
+            <li>generering af opskrifter ud fra produkterne i køleskabet</li>
+            <li>beregning af brugerens statistikker over forbrug, madspild og besparelser</li>
+            <li>deling af køleskabe mellem de brugere, ejeren har inviteret</li>
             <li>afsendelse af notifikationer om produkters udløb</li>
             <li>teknisk funktion og sikkerhed for applikationen</li>
             <li>forbedring af brugeroplevelsen</li>
@@ -1386,12 +1505,13 @@
         <ul>
             <li>hostingtjenester</li>
             <li>leveringstjenester for push-notifikationer (Expo, Apple, Google)</li>
-            <li>AI-baserede tekstudtrækstjenester (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-tjenester til udtrækning af tekst fra kvitteringer og til generering af opskrifter (Google Cloud Vision, Google Gemini)</li>
             <li>betalingsbehandlingstjenester (RevenueCat, Apple, Google)</li>
             <li>brugsanalyse- og statistiktjenester (Firebase Analytics fra Google, PostHog)</li>
             <li>fejl- og ydeevnerapporteringstjenester (Firebase Crashlytics)</li>
         </ul>
         <p>Kvitteringsbilleder behandles via AI-tjenester (Google Cloud Vision, Google Gemini) udelukkende til tekstudtrækning. Billeder gemmes ikke permanent på vores servere.</p>
+        <p>Når brugeren beder om en opskrift, sendes listen over produkter i det valgte køleskab og, hvis de er angivet, kostbegrænsningerne til Google Gemini udelukkende for at hente opskriftsforslaget. Vi sender ikke e-mailadresse, brugernavn eller andre identificerende oplysninger.</p>
         <p>Premium-abonnementsbetalinger behandles via RevenueCat og Apple/Google. Vi har ikke adgang til dine kortoplysninger.</p>
         <p>Disse udbydere har kun adgang til de data, der er strengt nødvendige for at levere deres tjenester, og er forpligtet til at opretholde fortrolighed om data.</p>
 
@@ -1425,6 +1545,16 @@
         <h3>Fravalg</h3>
         <p>Brugere kan anmode om ophør af indsamling af analysedata og sessionsoptagelse ved at kontakte os på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vi behandler anmodningen inden for 30 dage i overensstemmelse med GDPR.</p>
 
+        <h2>6.2. Delte køleskabe</h2>
+        <p>Fridgy giver mulighed for at dele et køleskab med andre brugere. Deling sker kun på initiativ af køleskabets ejer, via en invitation sendt på mail.</p>
+        <p>I et delt køleskab kan de øvrige medlemmer se:</p>
+        <ul>
+            <li>produkterne i det pågældende køleskab med de indtastede mængder, udløbsdatoer og priser</li>
+            <li>det viste navn og e-mailadressen på de øvrige medlemmer og på de inviterede personer</li>
+            <li>de ændringer, et medlem foretager i det delte køleskab</li>
+        </ul>
+        <p>Personlige statistikker, produkter i køleskabe, der ikke er delt, og kontoindstillinger forbliver kun synlige for brugeren.</p>
+        <p>Ejeren kan til enhver tid fjerne et medlem, og ethvert medlem kan forlade et delt køleskab. Derefter ophører adgangen til produkterne i det pågældende køleskab.</p>
         <h2>7. Dataoverførsler uden for Den Europæiske Union</h2>
         <p>Personoplysninger lagres primært i Den Europæiske Union. Vores tjenesteudbydere (Firebase, PostHog, RevenueCat) bruger EU-infrastruktur til primær datalagring.</p>
         <p>I begrænsede situationer kan visse tekniske data behandles af partnertjenester uden for EU (f.eks. for visse Google- eller Apple-operationer). I sådanne tilfælde sikrer vi, at passende beskyttelsesforanstaltninger for databeskyttelse anvendes i overensstemmelse med standardkontraktbestemmelser (SCC) eller andre mekanismer i henhold til GDPR.</p>
@@ -1486,7 +1616,7 @@
         <div class="header-row">
             <h1>Integritetspolicy - Fridgy</h1>
         </div>
-        <p class="last-updated">Senast uppdaterad: 20 maj 2026</p>
+        <p class="last-updated">Senast uppdaterad: 24 augusti 2026</p>
 
         <p>Denna Integritetspolicy beskriver hur Fridgy-applikationen samlar in, använder och skyddar sina användares personuppgifter.</p>
         <p>Genom att använda Fridgy-applikationen godkänner du de metoder som beskrivs i denna policy.</p>
@@ -1512,9 +1642,12 @@
 
         <h3>2.2. Uppgifter som användaren har angett i applikationen</h3>
         <ul>
-            <li>produkter som lagts till i applikationen</li>
+            <li>produkter som lagts till i applikationen, med mängder och eventuellt priser</li>
             <li>produkters utgångsdatum</li>
-            <li>applikationsinställningar (språk, aviseringspreferenser)</li>
+            <li>bilder på kvitton som användaren fotograferar för att lägga till produkter automatiskt</li>
+            <li>historik över konsumerade eller slängda produkter, som statistiken över matsvinn och besparingar beräknas utifrån</li>
+            <li>skapade kylskåp och de medlemmar de delas med</li>
+            <li>applikationsinställningar (språk, aviseringspreferenser, kostrestriktioner för recept)</li>
         </ul>
 
         <h3>2.3. Tekniska uppgifter</h3>
@@ -1544,6 +1677,10 @@
             <li>skapande och hantering av användarkontot</li>
             <li>tillhandahållande av applikationens kärnfunktioner</li>
             <li>lagring och hantering av användarens produkter</li>
+            <li>automatisk igenkänning av produkter på fotograferade kvitton</li>
+            <li>generering av recept utifrån produkterna i kylskåpet</li>
+            <li>beräkning av användarens statistik över konsumtion, matsvinn och besparingar</li>
+            <li>delning av kylskåp mellan de användare som ägaren har bjudit in</li>
             <li>sändning av aviseringar om produkters utgång</li>
             <li>teknisk funktion och säkerhet för applikationen</li>
             <li>förbättring av användarupplevelsen</li>
@@ -1573,12 +1710,13 @@
         <ul>
             <li>värdtjänster</li>
             <li>leveranstjänster för push-aviseringar (Expo, Apple, Google)</li>
-            <li>AI-baserade textutvinningtjänster (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-tjänster för att utvinna text ur kvitton och för att generera recept (Google Cloud Vision, Google Gemini)</li>
             <li>betalningstjänster (RevenueCat, Apple, Google)</li>
             <li>användningsanalys- och statistiktjänster (Firebase Analytics från Google, PostHog)</li>
             <li>fel- och prestandarapporteringstjänster (Firebase Crashlytics)</li>
         </ul>
         <p>Kvittobilder behandlas via AI-tjänster (Google Cloud Vision, Google Gemini) uteslutande för textutvinning. Bilder lagras inte permanent på våra servrar.</p>
+        <p>När användaren begär ett recept skickas listan över produkter i det valda kylskåpet och, om de är angivna, kostrestriktionerna till Google Gemini enbart för att hämta receptförslaget. Vi skickar inte e-postadress, användarnamn eller andra identifierande uppgifter.</p>
         <p>Premium-prenumerationsbetalningar behandlas via RevenueCat och Apple/Google. Vi har inte tillgång till dina kortuppgifter.</p>
         <p>Dessa leverantörer har endast tillgång till de uppgifter som är strikt nödvändiga för att tillhandahålla sina tjänster och är skyldiga att upprätthålla konfidentialitet om uppgifter.</p>
 
@@ -1612,6 +1750,16 @@
         <h3>Avanmälan</h3>
         <p>Användare kan begära att analysdatainsamling och sessionsinspelning upphör genom att kontakta oss på <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Vi behandlar begäran inom 30 dagar i enlighet med GDPR.</p>
 
+        <h2>6.2. Delade kylskåp</h2>
+        <p>Fridgy gör det möjligt att dela ett kylskåp med andra användare. Delning sker enbart på initiativ av kylskåpets ägare, via en inbjudan som skickas med e-post.</p>
+        <p>I ett delat kylskåp kan de övriga medlemmarna se:</p>
+        <ul>
+            <li>produkterna i kylskåpet, med de angivna mängderna, utgångsdatumen och priserna</li>
+            <li>visningsnamn och e-postadress för övriga medlemmar och för inbjudna personer</li>
+            <li>de ändringar som någon medlem gör i det delade kylskåpet</li>
+        </ul>
+        <p>Personlig statistik, produkter i kylskåp som inte delas och kontoinställningar förblir synliga endast för användaren.</p>
+        <p>Ägaren kan när som helst ta bort en medlem, och varje medlem kan lämna ett delat kylskåp. Därefter upphör åtkomsten till produkterna i det kylskåpet.</p>
         <h2>7. Dataöverföringar utanför Europeiska unionen</h2>
         <p>Personuppgifter lagras primärt inom Europeiska unionen. Våra tjänsteleverantörer (Firebase, PostHog, RevenueCat) använder EU-infrastruktur för primär datalagring.</p>
         <p>I begränsade situationer kan vissa tekniska uppgifter behandlas av partnertjänster utanför EU (till exempel för vissa Google- eller Apple-operationer). I sådana fall säkerställer vi att lämpliga skyddsåtgärder för dataskydd tillämpas, i enlighet med standardavtalsklausuler (SCC) eller andra mekanismer som föreskrivs av GDPR.</p>
@@ -1682,6 +1830,11 @@
         sv: 'Integritetspolicy - Fridgy'
     };
 
+    var backLabels = {
+        ro: '\u2190 \u00CEnapoi la site', en: '\u2190 Back to site', de: '\u2190 Zur\u00FCck zur Website',
+        hu: '\u2190 Vissza az oldalra', fr: '\u2190 Retour au site', nl: '\u2190 Terug naar de site',
+        da: '\u2190 Tilbage til sitet', sv: '\u2190 Tillbaka till sajten'
+    };
     var supportedLangs = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
 
     function detectLang() {
@@ -1709,6 +1862,11 @@
             target.style.display = 'block';
         }
         document.title = pageTitles[lang] || pageTitles['en'];
+        document.documentElement.lang = lang;
+        var back = document.getElementById('back-link');
+        if (back) back.setAttribute('href', lang === 'ro' ? '/' : '/' + lang);
+        var backLabel = document.getElementById('back-label');
+        if (backLabel) backLabel.textContent = backLabels[lang] || backLabels['en'];
         var codes = {ro:'RO',en:'EN',de:'DE',hu:'HU',fr:'FR',nl:'NL',da:'DA',sv:'SV'};
         document.getElementById('lang-label').innerHTML = (codes[lang]||'EN') + ' &#9662;';
         var links = document.querySelectorAll('.lang-drop-menu a');
