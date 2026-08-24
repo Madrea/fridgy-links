@@ -163,14 +163,14 @@
         <div class="lang-drop">
             <span class="lang-btn" id="lang-label">EN &#9662;</span>
             <div class="lang-drop-menu">
-                <a onclick="switchLang('ro')">Rom&acirc;n&#259;</a>
-                <a onclick="switchLang('en')">English</a>
-                <a onclick="switchLang('de')">Deutsch</a>
-                <a onclick="switchLang('hu')">Magyar</a>
-                <a onclick="switchLang('fr')">Fran&ccedil;ais</a>
-                <a onclick="switchLang('nl')">Nederlands</a>
-                <a onclick="switchLang('da')">Dansk</a>
-                <a onclick="switchLang('sv')">Svenska</a>
+                <a data-l="ro" onclick="switchLang('ro')">Rom&acirc;n&#259;</a>
+                <a data-l="en" onclick="switchLang('en')">English</a>
+                <a data-l="de" onclick="switchLang('de')">Deutsch</a>
+                <a data-l="hu" onclick="switchLang('hu')">Magyar</a>
+                <a data-l="fr" onclick="switchLang('fr')">Fran&ccedil;ais</a>
+                <a data-l="nl" onclick="switchLang('nl')">Nederlands</a>
+                <a data-l="da" onclick="switchLang('da')">Dansk</a>
+                <a data-l="sv" onclick="switchLang('sv')">Svenska</a>
             </div>
         </div>
     </div>
@@ -1306,6 +1306,16 @@
         hu: '\u2190 Vissza az oldalra', fr: '\u2190 Retour au site', nl: '\u2190 Terug naar de site',
         da: '\u2190 Tilbage til sitet', sv: '\u2190 Tillbaka till sajten'
     };
+    var langNames = {
+        ro:{ro:'Rom\u00e2n\u0103',en:'Englez\u0103',de:'German\u0103',hu:'Maghiar\u0103',fr:'Francez\u0103',nl:'Neerlandez\u0103',da:'Danez\u0103',sv:'Suedez\u0103'},
+        en:{ro:'Romanian',en:'English',de:'German',hu:'Hungarian',fr:'French',nl:'Dutch',da:'Danish',sv:'Swedish'},
+        de:{ro:'Rum\u00e4nisch',en:'Englisch',de:'Deutsch',hu:'Ungarisch',fr:'Franz\u00f6sisch',nl:'Niederl\u00e4ndisch',da:'D\u00e4nisch',sv:'Schwedisch'},
+        hu:{ro:'Rom\u00e1n',en:'Angol',de:'N\u00e9met',hu:'Magyar',fr:'Francia',nl:'Holland',da:'D\u00e1n',sv:'Sv\u00e9d'},
+        fr:{ro:'Roumain',en:'Anglais',de:'Allemand',hu:'Hongrois',fr:'Fran\u00e7ais',nl:'N\u00e9erlandais',da:'Danois',sv:'Su\u00e9dois'},
+        nl:{ro:'Roemeens',en:'Engels',de:'Duits',hu:'Hongaars',fr:'Frans',nl:'Nederlands',da:'Deens',sv:'Zweeds'},
+        da:{ro:'Rum\u00e6nsk',en:'Engelsk',de:'Tysk',hu:'Ungarsk',fr:'Fransk',nl:'Nederlandsk',da:'Dansk',sv:'Svensk'},
+        sv:{ro:'Rum\u00e4nska',en:'Engelska',de:'Tyska',hu:'Ungerska',fr:'Franska',nl:'Nederl\u00e4ndska',da:'Danska',sv:'Svenska'}
+    };
     var supportedLangs = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
 
     function detectLang() {
@@ -1333,6 +1343,9 @@
         }
         var codes = {ro:'RO',en:'EN',de:'DE',hu:'HU',fr:'FR',nl:'NL',da:'DA',sv:'SV'};
         document.getElementById('lang-label').innerHTML = (codes[lang]||'EN') + ' &#9662;';
+        var names = langNames[lang] || langNames['en'];
+        var opts = document.querySelectorAll('.lang-drop-menu a[data-l]');
+        for(var k=0;k<opts.length;k++){ opts[k].textContent = names[opts[k].getAttribute('data-l')]; }
         var links = document.querySelectorAll('.lang-drop-menu a');
         for(var j=0;j<links.length;j++){links[j].classList.remove('active');}
         var active = document.querySelector('.lang-drop-menu a[onclick*="\''+lang+'\'"]');

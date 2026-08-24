@@ -3,7 +3,7 @@ export const NEW = {
 ro:{nav_how:"Cum funcționează",steps_tag:"Cum funcționează",steps_heading:"Trei pași până la zero risipă",steps_sub:"De la bon la masa de seară, fără să ții tu socoteala.",
  step1_title:"Scanezi bonul",step1_desc:"Faci o poză bonului. Produsele intră automat, cu o dată de expirare estimativă, care poate fi modificată.",
  step2_title:"Urmărești frigiderul",step2_desc:"Tot frigiderul într-un singur ecran. Cauți, filtrezi și vezi dintr-o privire ce a expirat și ce trebuie consumat repede.",
- step3_title:"Gătești din ce ai",step3_desc:"Nu te ajutăm doar să-ți urmărești frigiderul, ci îți dăm și soluția: rețete simple și gustoase din produsele care expiră.",
+ step3_title:"Gătești cu ce ai",step3_desc:"Nu te ajutăm doar să-ți urmărești frigiderul, ci îți dăm și soluția: rețete simple și gustoase din produsele care expiră.",
  bento_tag:"Nu doar ține evidența",bento_heading:"Fridgy îți arată unde pierzi bani",bento_sub:"Rata de salvare, banii recuperați și categoriile pe care risipești cel mai mult.",
  b_notify_title:"Te notificăm din timp",b_notify_desc:"Notificări la momentul potrivit, ca să știi ce alimente urmează să expire.",
  b_stats_title:"Vezi cât ai salvat",b_stats_desc:"Rată de salvare, bani recuperați, lună de lună.",
@@ -105,5 +105,15 @@ hu:{nav_how:"Hogyan működik",steps_tag:"Hogyan működik",steps_heading:"Háro
  fam_points:[["Annyi hűtő, amennyit szeretnél","Otthon, a nyaraló, az iroda — mind a saját termékeivel."],["Meghívás pár másodperc alatt","Elküldöd a meghívót e-mailben — amint elfogadják, ugyanazt a hűtőt látjátok."],["Mindenkinél szinkronban","Valaki hozzáad vagy elfogyaszt valamit? A változást azonnal mindenki látja, és a hűtő minden tagja értesítést kap."]],fam_note:"Az ingyenes csomagban is benne van.",
  trust:"Ingyenes kezdés · Nincs kártya",stat4_number:"10 mp",stat4_label:"egy blokk beolvasása",stat4_sub:"És minden a helyén van",scroll:"Görgess"}
 };
-export const LANG_NAMES = {ro:"Română",en:"English",de:"Deutsch",hu:"Magyar",fr:"Français",nl:"Nederlands",da:"Dansk",sv:"Svenska"};
+// Numele limbilor, traduse in fiecare limba: LANG_NAMES[limba paginii][limba din meniu].
+export const LANG_NAMES = {
+ ro:{ro:"Română",en:"Engleză",de:"Germană",hu:"Maghiară",fr:"Franceză",nl:"Neerlandeză",da:"Daneză",sv:"Suedeză"},
+ en:{ro:"Romanian",en:"English",de:"German",hu:"Hungarian",fr:"French",nl:"Dutch",da:"Danish",sv:"Swedish"},
+ de:{ro:"Rumänisch",en:"Englisch",de:"Deutsch",hu:"Ungarisch",fr:"Französisch",nl:"Niederländisch",da:"Dänisch",sv:"Schwedisch"},
+ hu:{ro:"Román",en:"Angol",de:"Német",hu:"Magyar",fr:"Francia",nl:"Holland",da:"Dán",sv:"Svéd"},
+ fr:{ro:"Roumain",en:"Anglais",de:"Allemand",hu:"Hongrois",fr:"Français",nl:"Néerlandais",da:"Danois",sv:"Suédois"},
+ nl:{ro:"Roemeens",en:"Engels",de:"Duits",hu:"Hongaars",fr:"Frans",nl:"Nederlands",da:"Deens",sv:"Zweeds"},
+ da:{ro:"Rumænsk",en:"Engelsk",de:"Tysk",hu:"Ungarsk",fr:"Fransk",nl:"Nederlandsk",da:"Dansk",sv:"Svensk"},
+ sv:{ro:"Rumänska",en:"Engelska",de:"Tyska",hu:"Ungerska",fr:"Franska",nl:"Nederländska",da:"Danska",sv:"Svenska"}
+};
 export const LANG_ORDER = ["ro","en","de","hu","fr","nl","da","sv"];

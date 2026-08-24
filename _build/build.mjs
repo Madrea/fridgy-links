@@ -30,7 +30,7 @@ function storeRow(t){
 function langMenu(code){
   return `<div class="lang">
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">${code.toUpperCase()}<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="lang-menu">${LANG_ORDER.map(c=>`<a href="${urlFor(c)}"${c===code?' class="active"':''} onclick="try{localStorage.setItem('fridgy-lang','${c}')}catch(e){}">${LANG_NAMES[c]}</a>`).join('')}</div>
+        <div class="lang-menu">${LANG_ORDER.map(c=>`<a href="${urlFor(c)}" hreflang="${c}"${c===code?' class="active"':''} onclick="try{localStorage.setItem('fridgy-lang','${c}')}catch(e){}">${LANG_NAMES[code][c]}</a>`).join('')}</div>
       </div>`;
 }
 
