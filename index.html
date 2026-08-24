@@ -247,7 +247,12 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
 /* ---------- familie (frigider partajat) ---------- */
 .fam{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,64px);align-items:center;
   padding:clamp(30px,3.4vw,54px);border-radius:var(--r-lg);background:var(--surface);
-  border:1px solid var(--line);backdrop-filter:blur(12px);position:relative;overflow:hidden}
+  border:1px solid var(--line);position:relative;overflow:hidden}
+/* Fara backdrop-filter aici, intentionat: e singurul bloc care combina colturi rotunjite,
+   overflow:hidden si o aureola aprinsa chiar in coltul din stanga sus. Pe unele motoare
+   (Safari/iOS) stratul de backdrop se decupeaza dupa dreptunghi, nu dupa colturi, si apare
+   o muchie dreapta langa cea rotunjita. Fundalul fiind aproape transparent, blur-ul din
+   spate nu se observa oricum. */
 .fam::before{content:"";position:absolute;width:420px;height:420px;top:-190px;left:-140px;border-radius:50%;
   background:radial-gradient(circle,rgba(96,165,250,.30),transparent 68%);filter:blur(50px);pointer-events:none}
 .fam-copy{position:relative;z-index:2}
