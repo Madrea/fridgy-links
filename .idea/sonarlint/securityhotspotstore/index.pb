@@ -340,3 +340,11 @@ G.idea/sonarlint/issuestore/4/1/41f4b35c9680c7f0bd34bc6b0c94da31c078d769,c\5\c5
 da/index.html,0\d\0dd7c5d5a3ec2ca099747a47df1036dd3671eeb9
 =
 nl/index.html,2\e\2ed3fc5c1e88338d1b9d3561fa843ef2343a7ac5
+A
+_build/og-shot.sh,5\e\5eb37edfeea190ac76e033906f88c19a2549facb
+F
+_build/refresh-shot.py,4\a\4ae47ba98a65fee07487b7b8a1ad0d4e09c99e98
+A
+_build/og/nl.html,9\a\9a7dddad36927e2c66db2c0d79de74020fa8a798
+A
+_build/og/fr.html,b\0\b0e543b9edff4ce8e17ff3a4a039bb4ea49aa799
