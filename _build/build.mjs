@@ -102,8 +102,9 @@ function page(code){
   const pPer = strip((price.match(/<span>([\s\S]*?)<\/span>/)||[])[1]||'');
   const pYear = strip((price.match(/<small[^>]*>([\s\S]*?)<\/small>/)||[])[1]||'');
   const freePrice = strip(t.plan_price[0]||'');
-  const freeFeat = t.plan_features.slice(0,6);
-  const premFeat = t.plan_features.slice(6,12);
+  const half = t.plan_features.length / 2;
+  const freeFeat = t.plan_features.slice(0,half);
+  const premFeat = t.plan_features.slice(half);
   const alt = LANG_ORDER.map(c=>`<link rel="alternate" hreflang="${c}" href="https://fridgy.org${urlFor(c)}" />`).join('\n');
   const heroImg = has(code,'scan') ? `<img src="/img/${code}/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" />` : '';
 
@@ -562,7 +563,7 @@ ${familySection(code,t)}
         <div class="plan-name">${t.plan_name[0]}</div>
         <div class="plan-price">${freePrice}</div>
         <span class="plan-year"></span>
-        <ul>${freeFeat.map((f,i)=>`<li><span class="ck ${i===2?'n':'y'}">${i===2?'&#10005;':'&#10003;'}</span>${f}</li>`).join('')}</ul>
+        <ul>${freeFeat.map(f=>`<li><span class="ck y">&#10003;</span>${f}</li>`).join('')}</ul>
         <a href="#download" class="plan-btn btn-free">${t.plan_btn[0]}</a>
       </div>
       <div class="plan pro rv">

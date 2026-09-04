@@ -90,13 +90,11 @@
   "plan_features": [
    "Scanări bon: 5 / lună",
    "Rețete pe zi: 3",
-   "Regenerare rețete",
    "Frigidere multiple",
    "Statistici de bază",
    "Frigider partajat",
    "Scanări bon: Nelimitate",
-   "Rețete pe zi: 3",
-   "Regenerare rețete: 5 / zi",
+   "Rețete pe zi: 18",
    "Frigidere multiple",
    "Statistici avansate",
    "Frigider partajat"
@@ -222,13 +220,11 @@
   "plan_features": [
    "Receipt scans: 5 / month",
    "Recipes per day: 3",
-   "Recipe regeneration",
    "Multiple fridges",
    "Basic statistics",
    "Shared fridge",
    "Receipt scans: Unlimited",
-   "Recipes per day: 3",
-   "Recipe regeneration: 5 / day",
+   "Recipes per day: 18",
    "Multiple fridges",
    "Advanced statistics",
    "Shared fridge"
@@ -350,13 +346,11 @@
   "plan_features": [
    "Kassenbon-Scans: 5 / Monat",
    "Rezepte pro Tag: 3",
-   "Rezept-Regenerierung",
    "Mehrere Kühlschränke",
    "Basis-Statistiken",
    "Geteilter Kühlschrank",
    "Kassenbon-Scans: Unbegrenzt",
-   "Rezepte pro Tag: 3",
-   "Rezept-Regenerierung: 5 / Tag",
+   "Rezepte pro Tag: 18",
    "Mehrere Kühlschränke",
    "Erweiterte Statistiken",
    "Geteilter Kühlschrank"
@@ -477,13 +471,11 @@
   "plan_features": [
    "Scans de tickets : 5 / mois",
    "Recettes par jour : 3",
-   "Régénération de recettes",
    "Plusieurs frigos",
    "Statistiques de base",
    "Frigo partagé",
    "Scans de tickets : Illimitées",
-   "Recettes par jour : 3",
-   "Régénération de recettes : 5 / jour",
+   "Recettes par jour : 18",
    "Plusieurs frigos",
    "Statistiques avancées",
    "Frigo partagé"
@@ -605,13 +597,11 @@
   "plan_features": [
    "Kassabonscans: 5 / maand",
    "Recepten per dag: 3",
-   "Recept opnieuw genereren",
    "Meerdere koelkasten",
    "Basisstatistieken",
    "Gedeelde koelkast",
    "Kassabonscans: Onbeperkt",
-   "Recepten per dag: 3",
-   "Recept opnieuw genereren: 5 / dag",
+   "Recepten per dag: 18",
    "Meerdere koelkasten",
    "Geavanceerde statistieken",
    "Gedeelde koelkast"
@@ -733,13 +723,11 @@
   "plan_features": [
    "Kvitteringsscanninger: 5 / måned",
    "Opskrifter pr. dag: 3",
-   "Opskriftsfornyelse",
    "Flere køleskabe",
    "Basisstatistik",
    "Delt køleskab",
    "Kvitteringsscanninger: Ubegrænsede",
-   "Opskrifter pr. dag: 3",
-   "Opskriftsfornyelse: 5 / dag",
+   "Opskrifter pr. dag: 18",
    "Flere køleskabe",
    "Avanceret statistik",
    "Delt køleskab"
@@ -860,13 +848,11 @@
   "plan_features": [
    "Kvittoskanningar: 5 / månad",
    "Recept per dag: 3",
-   "Receptåterskapning",
    "Flera kylskåp",
    "Grundläggande statistik",
    "Delat kylskåp",
    "Kvittoskanningar: Obegränsade",
-   "Recept per dag: 3",
-   "Receptåterskapning: 5 / dag",
+   "Recept per dag: 18",
    "Flera kylskåp",
    "Avancerad statistik",
    "Delat kylskåp"
@@ -987,13 +973,11 @@
   "plan_features": [
    "Blokk szkennelés: 5 / hónap",
    "Receptek naponta: 3",
-   "Recept újragenerálás",
    "Több hűtő",
    "Alap statisztikák",
    "Megosztott hűtő",
    "Blokk szkennelés: Korlátlan",
-   "Receptek naponta: 3",
-   "Recept újragenerálás: 5 / nap",
+   "Receptek naponta: 18",
    "Több hűtő",
    "Haladó statisztikák",
    "Megosztott hűtő"
