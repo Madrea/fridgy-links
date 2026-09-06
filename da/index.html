@@ -111,6 +111,16 @@ h1{font-size:clamp(38px,5.6vw,72px);line-height:1.03;letter-spacing:-.035em;font
 .store-btn svg{width:24px;height:24px;flex:none}
 .store-btn small{display:block;font-size:11px;opacity:.72;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
 .store-btn b{display:block;font-size:16.5px;font-weight:700;line-height:1.25}
+/* ---------- pre-lansare ---------- */
+.pill.soon i{background:#fbbf24;box-shadow:0 0 0 4px rgba(251,191,36,.2)}
+.cta-inner .pill{margin-top:8px}
+.store-btn.soon{position:relative;text-align:left;cursor:default;color:#c9d6f0;
+  background:rgba(255,255,255,.035);border-style:dashed;border-color:rgba(255,255,255,.22)}
+.store-btn.soon:hover{transform:none;background:rgba(255,255,255,.035);border-color:rgba(255,255,255,.22)}
+.soon-chip{position:absolute;top:-10px;right:14px;padding:3px 10px;border-radius:999px;white-space:nowrap;
+  font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff);color:#fff;box-shadow:0 8px 20px -8px rgba(80,110,255,1)}
+
 .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:420px}
 .hero-visual img{width:min(100%,470px);filter:drop-shadow(0 50px 70px rgba(0,0,0,.6));animation:bob 7s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-18px)}}
@@ -374,7 +384,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">DA<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="lang-menu"><a href="/" hreflang="ro" onclick="try{localStorage.setItem('fridgy-lang','ro')}catch(e){}">Rumænsk</a><a href="/en" hreflang="en" onclick="try{localStorage.setItem('fridgy-lang','en')}catch(e){}">Engelsk</a><a href="/de" hreflang="de" onclick="try{localStorage.setItem('fridgy-lang','de')}catch(e){}">Tysk</a><a href="/hu" hreflang="hu" onclick="try{localStorage.setItem('fridgy-lang','hu')}catch(e){}">Ungarsk</a><a href="/fr" hreflang="fr" onclick="try{localStorage.setItem('fridgy-lang','fr')}catch(e){}">Fransk</a><a href="/nl" hreflang="nl" onclick="try{localStorage.setItem('fridgy-lang','nl')}catch(e){}">Nederlandsk</a><a href="/da" hreflang="da" class="active" onclick="try{localStorage.setItem('fridgy-lang','da')}catch(e){}">Dansk</a><a href="/sv" hreflang="sv" onclick="try{localStorage.setItem('fridgy-lang','sv')}catch(e){}">Svensk</a></div>
       </div>
-      <a href="#download" class="nav-cta">Download gratis</a>
+      <a href="#download" class="nav-cta">Snart tilgængelig</a>
     </div>
   </nav>
 </header>
@@ -384,13 +394,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="hero-grid">
       <div class="rv">
-        <span class="pill"><i></i>Dit smarte køleskab</span>
+        <span class="pill soon" data-cd data-many="Lancering om {n} dage" data-one="Lancering i morgen" data-today="Lancering i dag" data-soon="Lancering meget snart"><i></i><span>Lancering om 15 dage</span></span>
         <h1>2.150 kr smidt i skraldespanden<br><span class="grad">hvert år. Vi løser det.</span></h1>
         <p class="sub">Hver europæer spilder omkring <strong>130 kg</strong> mad om året — næsten <strong>2.150 kr</strong> i skraldespanden. Fridgy hjælper dig med at holde styr på det hele, følge udløbsdatoerne og undgå madspild. Og når maden er ved at udløbe, forvandler den den til lækre opskriftsidéer.</p>
         <div class="store-row">
-      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Tilgængelig på</small><b>Google Play</b></span></a>
-      <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download fra</small><b>App Store</b></span></a>
-    </div>
+        <span class="store-btn soon"><span class="soon-chip">Snart</span><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Snart på</small><b>Google Play</b></span></span>
+        <span class="store-btn soon"><span class="soon-chip">Snart</span><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Snart i</small><b>App Store</b></span></span>
+      </div>
       </div>
       <div class="hero-visual rv"><img src="/img/da/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" /></div>
     </div>
@@ -512,7 +522,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-price">Gratis</div>
         <span class="plan-year"></span>
         <ul><li><span class="ck y">&#10003;</span>Kvitteringsscanninger: 5 / måned</li><li><span class="ck y">&#10003;</span>Opskrifter pr. dag: 3</li><li><span class="ck y">&#10003;</span>Flere køleskabe</li><li><span class="ck y">&#10003;</span>Basisstatistik</li><li><span class="ck y">&#10003;</span>Delt køleskab</li></ul>
-        <a href="#download" class="plan-btn btn-free">Download gratis</a>
+        <a href="#download" class="plan-btn btn-free">Snart tilgængelig</a>
       </div>
       <div class="plan pro rv">
         <span class="plan-badge">Mest populær</span>
@@ -520,7 +530,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-price">22,99 kr <span>/ måned</span></div>
         <span class="plan-year">eller 119,99 kr / år · spar 55%</span>
         <ul><li><span class="ck y">&#10003;</span>Kvitteringsscanninger: Ubegrænsede</li><li><span class="ck y">&#10003;</span>Opskrifter pr. dag: 18</li><li><span class="ck y">&#10003;</span>Flere køleskabe</li><li><span class="ck y">&#10003;</span>Avanceret statistik</li><li><span class="ck y">&#10003;</span>Delt køleskab</li></ul>
-        <a href="#download" class="plan-btn btn-pro">Start Premium</a>
+        <a href="#download" class="plan-btn btn-pro">Premium snart</a>
       </div>
     </div>
   </div>
@@ -529,12 +539,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 <section class="block pt0" id="download">
   <div class="wrap">
     <div class="cta-inner rv">
-      <h2>Begynd at spare i dag</h2>
-      <p>Download Fridgy gratis og forandre den måde du håndterer din mad på.</p>
+      <h2>Fridgy lanceres snart</h2>
+      <p>Appen bliver tilgængelig gratis på iOS og Android.</p>
+      <span class="pill soon" data-cd data-many="Lancering om {n} dage" data-one="Lancering i morgen" data-today="Lancering i dag" data-soon="Lancering meget snart"><i></i><span>Lancering om 15 dage</span></span>
       <div class="store-row">
-      <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Tilgængelig på</small><b>Google Play</b></span></a>
-      <a class="store-btn" href="https://apps.apple.com/app/fridgy" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download fra</small><b>App Store</b></span></a>
-    </div>
+        <span class="store-btn soon"><span class="soon-chip">Snart</span><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Snart på</small><b>Google Play</b></span></span>
+        <span class="store-btn soon"><span class="soon-chip">Snart</span><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Snart i</small><b>App Store</b></span></span>
+      </div>
     </div>
   </div>
 </section>
@@ -552,7 +563,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
           <h5>Produkt</h5>
           <a href="#functii">Funktioner</a>
           <a href="#pasi">Sådan virker det</a>
-          <a href="#download">Hent</a>
+          <a href="#download">Snart tilgængelig</a>
         </div>
         <div>
           <h5>Juridisk</h5>
@@ -623,6 +634,21 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       });
     });
   }
+
+  /* zilele pana la lansare - schimba doar data de mai jos */
+  var LAUNCH_DATE=new Date(2026,8,20);
+  (function(){
+    var t0=new Date(); t0.setHours(0,0,0,0);
+    var n=Math.round((LAUNCH_DATE-t0)/864e5);
+    document.querySelectorAll('[data-cd]').forEach(function(el){
+      var k='data-soon';
+      if(n>1) k=(n>=20 && el.hasAttribute('data-many20') && !(n%100>=1 && n%100<=19))?'data-many20':'data-many';
+      else if(n===1) k='data-one';
+      else if(n===0) k='data-today';
+      var s=el.getAttribute(k)||el.getAttribute('data-soon');
+      el.querySelector('span').textContent=s.replace('{n}',n);
+    });
+  })();
 })();
 </script>
 </body>
