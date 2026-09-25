@@ -382,7 +382,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       <a href="#planuri">Plans</a>
       <div class="lang">
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">EN<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="lang-menu"><a href="/" hreflang="ro" onclick="try{localStorage.setItem('fridgy-lang','ro')}catch(e){}">Romanian</a><a href="/en" hreflang="en" class="active" onclick="try{localStorage.setItem('fridgy-lang','en')}catch(e){}">English</a><a href="/de" hreflang="de" onclick="try{localStorage.setItem('fridgy-lang','de')}catch(e){}">German</a><a href="/hu" hreflang="hu" onclick="try{localStorage.setItem('fridgy-lang','hu')}catch(e){}">Hungarian</a><a href="/fr" hreflang="fr" onclick="try{localStorage.setItem('fridgy-lang','fr')}catch(e){}">French</a><a href="/nl" hreflang="nl" onclick="try{localStorage.setItem('fridgy-lang','nl')}catch(e){}">Dutch</a><a href="/da" hreflang="da" onclick="try{localStorage.setItem('fridgy-lang','da')}catch(e){}">Danish</a><a href="/sv" hreflang="sv" onclick="try{localStorage.setItem('fridgy-lang','sv')}catch(e){}">Swedish</a></div>
+        <div class="lang-menu"><a href="/" hreflang="ro" onclick="document.cookie='fridgy-lang=ro;path=/;max-age=31536000;samesite=lax;secure'">Romanian</a><a href="/en" hreflang="en" class="active" onclick="document.cookie='fridgy-lang=en;path=/;max-age=31536000;samesite=lax;secure'">English</a><a href="/de" hreflang="de" onclick="document.cookie='fridgy-lang=de;path=/;max-age=31536000;samesite=lax;secure'">German</a><a href="/hu" hreflang="hu" onclick="document.cookie='fridgy-lang=hu;path=/;max-age=31536000;samesite=lax;secure'">Hungarian</a><a href="/fr" hreflang="fr" onclick="document.cookie='fridgy-lang=fr;path=/;max-age=31536000;samesite=lax;secure'">French</a><a href="/nl" hreflang="nl" onclick="document.cookie='fridgy-lang=nl;path=/;max-age=31536000;samesite=lax;secure'">Dutch</a><a href="/da" hreflang="da" onclick="document.cookie='fridgy-lang=da;path=/;max-age=31536000;samesite=lax;secure'">Danish</a><a href="/sv" hreflang="sv" onclick="document.cookie='fridgy-lang=sv;path=/;max-age=31536000;samesite=lax;secure'">Swedish</a></div>
       </div>
       <a href="#download" class="nav-cta">Coming soon</a>
     </div>
@@ -585,7 +585,6 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 
 <script>
 (function(){
-  try{localStorage.setItem('fridgy-lang','en')}catch(e){}
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 

@@ -30,7 +30,7 @@ function storeRow(t){
 function langMenu(code){
   return `<div class="lang">
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">${code.toUpperCase()}<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="lang-menu">${LANG_ORDER.map(c=>`<a href="${urlFor(c)}" hreflang="${c}"${c===code?' class="active"':''} onclick="try{localStorage.setItem('fridgy-lang','${c}')}catch(e){}">${LANG_NAMES[code][c]}</a>`).join('')}</div>
+        <div class="lang-menu">${LANG_ORDER.map(c=>`<a href="${urlFor(c)}" hreflang="${c}"${c===code?' class="active"':''} onclick="document.cookie='fridgy-lang=${c};path=/;max-age=31536000;samesite=lax;secure'">${LANG_NAMES[code][c]}</a>`).join('')}</div>
       </div>`;
 }
 
@@ -108,25 +108,10 @@ function page(code){
   const alt = LANG_ORDER.map(c=>`<link rel="alternate" hreflang="${c}" href="https://fridgy.org${urlFor(c)}" />`).join('\n');
   const heroImg = has(code,'scan') ? `<img src="/img/${code}/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" />` : '';
 
-  const autoLang = code!=='ro' ? '' : `<script>
-(function(){
-  try{
-    var saved = localStorage.getItem('fridgy-lang');
-    if(saved && saved !== 'ro'){ location.replace('/' + saved); return; }
-    if(saved) return;
-  }catch(e){}
-  var lang = (navigator.language || 'en').toLowerCase();
-  if(lang.indexOf('ro')===0) return;
-  var map = {de:'/de',hu:'/hu',fr:'/fr',nl:'/nl',da:'/da',sv:'/sv'};
-  location.replace(map[lang.slice(0,2)] || '/en');
-})();
-<\/script>`;
-
 return `<!DOCTYPE html>
 <html lang="${code}">
 <head>
 <meta charset="UTF-8" />
-${autoLang}
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#070b18" />
 <meta name="color-scheme" content="dark" />
@@ -623,7 +608,6 @@ ${familySection(code,t)}
 
 <script>
 (function(){
-  try{localStorage.setItem('fridgy-lang','${code}')}catch(e){}
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
