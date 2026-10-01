@@ -138,8 +138,9 @@
             background:rgba(12,18,36,.96);backdrop-filter:blur(20px);border:1px solid var(--line);
             border-radius:14px;box-shadow:0 20px 44px -20px rgba(0,0,0,.95);min-width:140px;z-index:100;
             overflow:hidden}
-        .lang-drop:hover .lang-drop-menu{display:block}
-        .lang-drop-menu::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px}
+        .lang-drop:hover .lang-drop-menu,.lang-drop:focus-within .lang-drop-menu{display:block}
+        /* punte invizibila peste golul dintre buton si meniu (pe .lang-drop, fiindca meniul are overflow:hidden) */
+        .lang-drop::after{content:"";position:absolute;top:100%;right:0;width:100%;min-width:140px;height:8px}
         .lang-drop-menu a{display:block;padding:10px 16px;font-size:14px;font-weight:600;color:var(--muted);
             transition:background .2s,color .2s;cursor:pointer;text-decoration:none}
         .lang-drop-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink);text-decoration:none}
@@ -161,7 +162,7 @@
     <div class="page-head">
         <a class="brand" href="/" id="back-link"><img src="/fridgy-logo.png" alt="" /><span>Fridgy<small id="back-label">&larr; Back to site</small></span></a>
         <div class="lang-drop">
-            <span class="lang-btn" id="lang-label">EN &#9662;</span>
+            <span class="lang-btn" id="lang-label" tabindex="0">EN &#9662;</span>
             <div class="lang-drop-menu">
                 <a data-l="ro" onclick="switchLang('ro')">Rom&acirc;n&#259;</a>
                 <a data-l="en" onclick="switchLang('en')">English</a>
@@ -1324,6 +1325,9 @@
         if (lang && supportedLangs.indexOf(lang) !== -1) {
             return lang;
         }
+        // alegerea manuala facuta pe site (acelasi cookie ca in lang-redirect.js)
+        var cookie = document.cookie.match(/(?:^|;\s*)fridgy-lang=([a-z]{2})/);
+        if (cookie && supportedLangs.indexOf(cookie[1]) !== -1) return cookie[1];
         var stored = localStorage.getItem('fridgy-lang');
         if (stored && supportedLangs.indexOf(stored) !== -1) {
             return stored;
@@ -1363,6 +1367,7 @@
             lang = 'en';
         }
         localStorage.setItem('fridgy-lang', lang);
+        document.cookie = 'fridgy-lang=' + lang + ';path=/;max-age=31536000;samesite=lax;secure';
         var url = new URL(window.location.href);
         url.searchParams.set('lang', lang);
         history.pushState({lang: lang}, '', url.toString());
