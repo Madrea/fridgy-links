@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#070b18" />
+<meta name="color-scheme" content="dark" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>Fridgy</title>
+<link rel="icon" type="image/png" href="/fridgy-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#070b18;
+  --ink:#f2f6ff; --muted:#93a3c4; --dim:#6f7f9f;
+  --surface:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.10);
+  --line-2:rgba(255,255,255,.20);
+  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:28px;padding:32px 0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.grad{background:linear-gradient(100deg,#7dd3fc,#60a5fa 42%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.12em}
+
+/* ---------- fundal, ca pe landing ---------- */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg i{position:absolute;display:block;border-radius:50%;filter:blur(100px)}
+.g1{width:46vw;height:46vw;min-width:440px;min-height:440px;background:#2563eb;top:-14%;left:-10%;opacity:.62}
+.g2{width:40vw;height:40vw;min-width:380px;min-height:380px;background:#7c3aed;top:4%;right:-12%;opacity:.58}
+.g5{width:38vw;height:38vw;min-width:340px;min-height:340px;background:#1d4ed8;bottom:-12%;left:-6%;opacity:.44}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.brand{position:relative;z-index:2;display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;letter-spacing:-.03em}
+.brand img{width:40px;height:40px;object-fit:contain}
+
+.card{position:relative;z-index:2;text-align:center;width:min(560px,92vw);padding:52px 34px 44px;
+  border-radius:36px;background:var(--surface);border:1px solid var(--line);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);overflow:hidden}
+.card::before{content:"";position:absolute;width:520px;height:520px;top:-340px;left:50%;transform:translateX(-50%);
+  border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,.4),transparent 66%);filter:blur(50px)}
+.card>*{position:relative;z-index:2}
+h1{font-size:clamp(26px,5.2vw,36px);line-height:1.14;letter-spacing:-.03em;font-weight:800;overflow-wrap:anywhere}
+.desc{margin-top:16px;color:var(--muted);font-size:16.5px;overflow-wrap:anywhere}
+.note{margin-top:14px;color:var(--dim);font-size:14.5px}
+.note.go{color:#bcd4ff;font-weight:600}
+.hidden{display:none}
+
+.spinner{width:34px;height:34px;border:3px solid rgba(255,255,255,.14);border-top-color:#60a5fa;border-radius:50%;
+  animation:spin .8s linear infinite;margin:0 auto 18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.store-label{margin-top:34px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px;font-weight:600}
+.store-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:16px}
+.store-btn{display:inline-flex;text-align:left;align-items:center;gap:12px;padding:13px 22px;border-radius:16px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line-2);color:#fff;
+  transition:transform .25s,background .25s,border-color .25s}
+.store-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.34)}
+.store-btn svg{width:24px;height:24px;flex:none}
+.store-btn small{display:block;font-size:11px;opacity:.72;line-height:1.2;letter-spacing:.04em;text-transform:uppercase}
+.store-btn b{display:block;font-size:16.5px;font-weight:700;line-height:1.25}
+
+@media(max-width:480px){
+  .card{padding:40px 22px 34px;border-radius:30px}
+  .store-btn{flex:1 1 100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.spinner{animation-duration:2.4s}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="g1"></i><i class="g2"></i><i class="g5"></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<a href="/" class="brand" aria-label="Fridgy"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></a>
+
+<main class="card">
+  <div id="loading">
+    <div class="spinner"></div>
+    <p class="desc" id="txt-loading" style="margin-top:0"></p>
+  </div>
+
+  <div id="result" class="hidden">
+    <h1 id="txt-title"></h1>
+    <p class="desc" id="txt-desc"></p>
+    <p class="note hidden" id="txt-note"></p>
+  </div>
+
+  <div class="store-label" id="txt-store"></div>
+  <div class="store-row">
+    <a class="store-btn" id="gplay" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small id="txt-gplay"></small><b>Google Play</b></span></a>
+    <a class="store-btn" id="appstore" href="https://apps.apple.com/ro/app/id6748481042" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small id="txt-appstore"></small><b>App Store</b></span></a>
+  </div>
+</main>
+
+<script>
+(function(){
+  var API='https://api.fridgy.org/api/invitations/';
+
+  var t={
+    ro:{
+      loading:'Căutăm invitația…',
+      ok:'{inviter} te-a invitat în frigiderul {fridge}',
+      okPlain:'Ai o invitație într-un frigider pe Fridgy',
+      okDesc:'Accepți invitația din aplicație și vedeți același frigider: ce aveți, cât a mai rămas și ce expiră.',
+      hint:'Ai deja Fridgy? Deschide linkul din email pe telefon.',
+      bad:'Invitația nu e validă',
+      badDesc:'Linkul e greșit sau invitația a expirat. Roagă persoana care te-a invitat să ți-o trimită din nou.',
+      err:'Ai o invitație în Fridgy',
+      errDesc:'Nu am reușit să încărcăm detaliile acum. Deschide linkul pe telefonul pe care ai aplicația sau încearcă din nou puțin mai târziu.',
+      store:'Nu ai încă aplicația? E gratuită:',
+      go:'Te trimitem în {store} în câteva secunde…',
+      gplay:'Disponibil pe', appstore:'Descarcă din'
+    },
+    en:{
+      loading:'Looking up your invitation…',
+      ok:'{inviter} invited you to the fridge {fridge}',
+      okPlain:'You have an invitation to a fridge on Fridgy',
+      okDesc:'Accept the invitation in the app and you\'ll both see the same fridge: what\'s in it, how much is left and what\'s about to expire.',
+      hint:'Already have Fridgy? Open the link from the email on your phone.',
+      bad:'This invitation isn\'t valid',
+      badDesc:'The link is wrong or the invitation has expired. Ask the person who invited you to send it again.',
+      err:'You have a Fridgy invitation',
+      errDesc:'We couldn\'t load the details right now. Open the link on the phone where you have the app, or try again in a bit.',
+      store:'Don\'t have the app yet? It\'s free:',
+      go:'Taking you to {store} in a few seconds…',
+      gplay:'Available on', appstore:'Download from'
+    },
+    de:{
+      loading:'Wir suchen deine Einladung…',
+      ok:'{inviter} hat dich in den Kühlschrank {fridge} eingeladen',
+      okPlain:'Du hast eine Einladung in einen Kühlschrank bei Fridgy',
+      okDesc:'Nimm die Einladung in der App an, dann seht ihr denselben Kühlschrank: was drin ist, wie viel übrig ist und was bald abläuft.',
+      hint:'Du hast Fridgy schon? Öffne den Link aus der E-Mail auf deinem Handy.',
+      bad:'Diese Einladung ist nicht gültig',
+      badDesc:'Der Link ist falsch oder die Einladung ist abgelaufen. Bitte die Person, die dich eingeladen hat, sie noch einmal zu schicken.',
+      err:'Du hast eine Fridgy-Einladung',
+      errDesc:'Die Details konnten wir gerade nicht laden. Öffne den Link auf dem Handy, auf dem du die App hast, oder versuch es gleich noch einmal.',
+      store:'Du hast die App noch nicht? Sie ist kostenlos:',
+      go:'Wir leiten dich in ein paar Sekunden zu {store} weiter…',
+      gplay:'Verfügbar auf', appstore:'Laden im'
+    },
+    fr:{
+      loading:'On cherche ton invitation…',
+      ok:'{inviter} t\'invite dans le frigo {fridge}',
+      okPlain:'Tu as une invitation pour un frigo sur Fridgy',
+      okDesc:'Accepte l\'invitation dans l\'application et vous verrez le même frigo : ce qu\'il contient, ce qu\'il reste et ce qui va bientôt périmer.',
+      hint:'Tu as déjà Fridgy ? Ouvre le lien de l\'e-mail sur ton téléphone.',
+      bad:'Cette invitation n\'est pas valide',
+      badDesc:'Le lien est incorrect ou l\'invitation a expiré. Demande à la personne qui te l\'a envoyée de recommencer.',
+      err:'Tu as une invitation Fridgy',
+      errDesc:'Impossible de charger les détails pour le moment. Ouvre le lien sur le téléphone où tu as l\'application, ou réessaie dans un instant.',
+      store:'Pas encore l\'application ? Elle est gratuite :',
+      go:'On t\'emmène sur {store} dans quelques secondes…',
+      gplay:'Disponible sur', appstore:'Télécharger dans'
+    },
+    nl:{
+      loading:'We zoeken je uitnodiging op…',
+      ok:'{inviter} nodigt je uit voor de koelkast {fridge}',
+      okPlain:'Je hebt een uitnodiging voor een koelkast op Fridgy',
+      okDesc:'Accepteer de uitnodiging in de app en jullie zien dezelfde koelkast: wat erin ligt, hoeveel er nog is en wat bijna verloopt.',
+      hint:'Heb je Fridgy al? Open de link uit de e-mail op je telefoon.',
+      bad:'Deze uitnodiging is niet geldig',
+      badDesc:'De link klopt niet of de uitnodiging is verlopen. Vraag degene die je uitnodigde om hem opnieuw te sturen.',
+      err:'Je hebt een Fridgy-uitnodiging',
+      errDesc:'De details konden we nu niet laden. Open de link op de telefoon waarop je de app hebt, of probeer het zo nog eens.',
+      store:'Heb je de app nog niet? Hij is gratis:',
+      go:'We sturen je over een paar seconden door naar {store}…',
+      gplay:'Beschikbaar op', appstore:'Download in'
+    },
+    da:{
+      loading:'Vi finder din invitation…',
+      ok:'{inviter} har inviteret dig til køleskabet {fridge}',
+      okPlain:'Du har en invitation til et køleskab på Fridgy',
+      okDesc:'Acceptér invitationen i appen, så ser I det samme køleskab: hvad der er i det, hvor meget der er tilbage, og hvad der snart udløber.',
+      hint:'Har du allerede Fridgy? Åbn linket fra mailen på din telefon.',
+      bad:'Invitationen er ikke gyldig',
+      badDesc:'Linket er forkert, eller invitationen er udløbet. Bed den, der inviterede dig, om at sende den igen.',
+      err:'Du har en Fridgy-invitation',
+      errDesc:'Vi kunne ikke hente detaljerne lige nu. Åbn linket på den telefon, hvor du har appen, eller prøv igen om lidt.',
+      store:'Har du ikke appen endnu? Den er gratis:',
+      go:'Vi sender dig videre til {store} om få sekunder…',
+      gplay:'Tilgængelig på', appstore:'Download fra'
+    },
+    sv:{
+      loading:'Vi letar upp din inbjudan…',
+      ok:'{inviter} har bjudit in dig till kylskåpet {fridge}',
+      okPlain:'Du har en inbjudan till ett kylskåp på Fridgy',
+      okDesc:'Acceptera inbjudan i appen så ser ni samma kylskåp: vad som finns i det, hur mycket som är kvar och vad som snart går ut.',
+      hint:'Har du redan Fridgy? Öppna länken från mejlet på din telefon.',
+      bad:'Inbjudan är inte giltig',
+      badDesc:'Länken är fel eller så har inbjudan gått ut. Be den som bjöd in dig att skicka den igen.',
+      err:'Du har en Fridgy-inbjudan',
+      errDesc:'Vi kunde inte hämta detaljerna just nu. Öppna länken på telefonen där du har appen, eller försök igen om en stund.',
+      store:'Har du inte appen än? Den är gratis:',
+      go:'Vi skickar dig vidare till {store} om några sekunder…',
+      gplay:'Tillgänglig på', appstore:'Ladda ner från'
+    },
+    hu:{
+      loading:'Keressük a meghívódat…',
+      ok:'{inviter} meghívott ebbe a hűtőbe: {fridge}',
+      okPlain:'Meghívót kaptál egy hűtőbe a Fridgy-ben',
+      okDesc:'Fogadd el a meghívót az alkalmazásban, és ugyanazt a hűtőt látjátok: mi van benne, mennyi maradt és mi jár le hamarosan.',
+      hint:'Már megvan a Fridgy? Nyisd meg az e-mailben kapott linket a telefonodon.',
+      bad:'Ez a meghívó nem érvényes',
+      badDesc:'A link hibás, vagy a meghívó lejárt. Kérd meg azt, aki meghívott, hogy küldje el újra.',
+      err:'Fridgy-meghívód van',
+      errDesc:'Most nem sikerült betölteni a részleteket. Nyisd meg a linket azon a telefonon, amelyiken megvan az alkalmazás, vagy próbáld újra kicsit később.',
+      store:'Még nincs meg az alkalmazás? Ingyenes:',
+      go:'Pár másodperc múlva átirányítunk ide: {store}…',
+      gplay:'Elérhető a', appstore:'Letöltés az'
+    }
+  };
+
+  /* limba: ?lang= (ca la reset-password) > cookie-ul din meniul de limbi > limba browserului > engleza */
+  var browserLangs=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''];
+  function pickLang(){
+    var q=(new URLSearchParams(location.search).get('lang')||'').toLowerCase().slice(0,2);
+    if(t[q]) return q;
+    var c=/(?:^|;\s*)fridgy-lang=([a-z]{2})/.exec(document.cookie);
+    if(c&&t[c[1]]) return c[1];
+    for(var i=0;i<browserLangs.length;i++){
+      var l=String(browserLangs[i]).toLowerCase().slice(0,2);
+      if(t[l]) return l;
+    }
+    return 'en';
+  }
+  var lang=pickLang(), s=t[lang];
+  document.documentElement.lang=lang;
+
+  function $(id){return document.getElementById(id);}
+  $('txt-loading').textContent=s.loading;
+  $('txt-store').textContent=s.store;
+  $('txt-gplay').textContent=s.gplay;
+  $('txt-appstore').textContent=s.appstore;
+
+  /* linkul App Store pe magazinul tarii, dupa limba browserului (implicit ro) - la fel ca pe landing */
+  var ok={ro:1,de:1,at:1,ch:1,fr:1,nl:1,dk:1,se:1}, byLang={ro:'ro',de:'de',fr:'fr',nl:'nl',da:'dk',sv:'se'}, cc='';
+  for(var i=0;i<browserLangs.length&&!cc;i++){
+    var p=String(browserLangs[i]).toLowerCase().split('-'), r=p[p.length-1];
+    cc=(p.length>1&&ok[r])?r:(byLang[p[0]]||'');
+  }
+  $('appstore').href='https://apps.apple.com/'+(cc||'ro')+'/app/id6748481042';
+
+  var ua=navigator.userAgent;
+  var isIOS=/iPhone|iPad|iPod/i.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isAndroid=/Android/i.test(ua);
+
+  /* tokenul e ultimul segment din /invitation/<token> */
+  var segs=location.pathname.split('/').filter(Boolean);
+  var token=(segs.length>1&&segs[0]==='invitation')?segs[segs.length-1]:'';
+
+  /* numele vin de la utilizatori: intra in pagina doar ca text */
+  function fill(el,tpl,inviter,fridge){
+    el.textContent='';
+    tpl.split(/(\{inviter\}|\{fridge\})/).forEach(function(part){
+      if(part==='{inviter}') el.appendChild(document.createTextNode(inviter));
+      else if(part==='{fridge}'){
+        var b=document.createElement('span'); b.className='grad'; b.textContent=fridge; el.appendChild(b);
+      }
+      else if(part) el.appendChild(document.createTextNode(part));
+    });
+  }
+
+  /* daca pagina s-a deschis pe telefon, aplicatia nu a prins linkul: mergem in magazin */
+  function goToStore(){
+    if(!isIOS&&!isAndroid) return false;
+    var key='fridgy-inv-'+token;
+    try{ if(sessionStorage.getItem(key)) return false; }catch(e){}
+    var note=$('txt-note');
+    note.textContent=s.go.replace('{store}',isIOS?'App Store':'Google Play');
+    note.className='note go';
+    setTimeout(function(){
+      try{ sessionStorage.setItem(key,'1'); }catch(e){}
+      location.href=$(isIOS?'appstore':'gplay').href;
+    },2000);
+    return true;
+  }
+
+  function show(state,data){
+    var title=$('txt-title'), desc=$('txt-desc'), note=$('txt-note');
+    if(state==='ok'){
+      var inviter=data&&typeof data.inviter_name==='string'?data.inviter_name.trim():'';
+      var fridge=data&&typeof data.fridge_name==='string'?data.fridge_name.trim():'';
+      if(inviter&&fridge) fill(title,s.ok,inviter,fridge); else title.textContent=s.okPlain;
+      desc.textContent=s.okDesc;
+      if(!goToStore()&&!isIOS&&!isAndroid){ note.textContent=s.hint; note.className='note'; }
+    }else if(state==='bad'){
+      title.textContent=s.bad;
+      desc.textContent=s.badDesc;
+    }else{
+      title.textContent=s.err;
+      desc.textContent=s.errDesc;
+      goToStore();
+    }
+    $('loading').className='hidden';
+    $('result').className='';
+  }
+
+  if(!token){ show('bad'); return; }
+
+  var ctrl=window.AbortController?new AbortController():null;
+  var timer=setTimeout(function(){ if(ctrl) ctrl.abort(); },6000);
+  fetch(API+encodeURIComponent(token),{headers:{Accept:'application/json'},signal:ctrl?ctrl.signal:undefined})
+    .then(function(res){
+      if(res.status===404) return {state:'bad'};
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      return res.json().then(function(d){ return {state:'ok',data:d}; });
+    })
+    .catch(function(){ return {state:'err'}; })
+    .then(function(r){ clearTimeout(timer); show(r.state,r.data); });
+})();
+</script>
+</body>
+</html>

@@ -4,3 +4,4 @@
 /email-verification-error  /verify-email.html     200
 /reset-password            /reset-password.html   200
 /reset-password-failed     /reset-password.html   200
+/invitation/*              /invitation.html       200
