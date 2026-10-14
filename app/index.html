@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Descarcă Fridgy</title>
+<meta name="description" content="Scanează bonurile, organizează-ți frigiderul, gătește din ce ai, economisește bani." />
+<meta property="og:title" content="Fridgy — Scanează. Gătește. Zero risipă." />
+<meta property="og:description" content="Scanează bonurile, organizează-ți frigiderul, gătește din ce ai, economisește bani." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://fridgy.org/app" />
+<meta property="og:image" content="https://fridgy.org/img/og-ro.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="/fridgy-logo.png" />
+<script>
+  // Fallback pe client, dacă edge function-ul n-a redirecționat (ex. iPad cu UA de Mac).
+  (function () {
+    var ua = navigator.userAgent;
+    var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+    if (ios) location.replace('https://apps.apple.com/app/id6748481042');
+    else if (/Android/i.test(ua)) location.replace('https://play.google.com/store/apps/details?id=com.madreamircea.fridgy');
+  })();
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font-family: system-ui, sans-serif; background: #fff; color: #111; text-align: center; padding: 16px; }
+  img { width: 88px; height: 88px; border-radius: 20px; }
+  a { display: block; padding: 12px 24px; border-radius: 12px; background: #111; color: #fff; text-decoration: none; font-weight: 600; min-width: 200px; }
+</style>
+</head>
+<body>
+  <img src="/fridgy-logo.png" alt="Fridgy" />
+  <h1>Descarcă Fridgy</h1>
+  <a href="https://apps.apple.com/app/id6748481042">App Store</a>
+  <a href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy">Google Play</a>
+</body>
+</html>
