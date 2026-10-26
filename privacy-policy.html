@@ -178,7 +178,7 @@
         <div class="header-row">
             <h1>Politica de Confidențialitate - Fridgy</h1>
         </div>
-        <p class="last-updated">Ultima actualizare: 3 septembrie 2026</p>
+        <p class="last-updated">Ultima actualizare: 26 octombrie 2026</p>
 
         <p>Această Politică de Confidențialitate descrie modul în care aplicația Fridgy colectează, utilizează și protejează datele cu caracter personal ale utilizatorilor săi.</p>
         <p>Prin utilizarea aplicației Fridgy, sunteți de acord cu practicile descrise în această politică.</p>
@@ -200,6 +200,7 @@
             <li>adresa de email</li>
             <li>nume de utilizator sau nume afișat</li>
             <li>metoda de autentificare (email/parolă sau cont Google)</li>
+            <li>starea abonamentului Premium (activ, în perioada de probă gratuită sau expirat) și data la care expiră</li>
         </ul>
 
         <h3>2.2. Date introduse de utilizator în aplicație</h3>
@@ -207,9 +208,13 @@
             <li>produse adăugate în aplicație, cu cantități și, opțional, prețuri</li>
             <li>date de expirare ale produselor</li>
             <li>imagini ale bonurilor fiscale, fotografiate de utilizator pentru adăugarea automată a produselor</li>
+            <li>datele citite de pe bonurile scanate, din care se formează istoricul cumpărăturilor: magazinul (denumire, cod fiscal și adresă), data, totalul și produsele cumpărate, cu cantități, prețuri și reduceri</li>
             <li>istoricul produselor consumate sau aruncate, pe baza căruia se calculează statisticile de risipă și de economii</li>
+            <li>bugetul lunar pentru alimente, dacă îl setați, și pragul la care vreți să fiți avertizat</li>
+            <li>lista de cumpărături</li>
+            <li>rețetele salvate și cele pe care le-ați marcat ca gătite</li>
             <li>frigiderele create și membrii cu care sunt partajate</li>
-            <li>setări ale aplicației (limba, preferințe de notificare, restricții alimentare pentru rețete)</li>
+            <li>setări ale aplicației (limba, fusul orar, preferințe de notificare, restricții alimentare pentru rețete)</li>
         </ul>
 
         <h3>2.3. Date tehnice</h3>
@@ -230,7 +235,7 @@
                 <li>date biometrice</li>
                 <li>locație precisă</li>
             </ul>
-            <p>Prețurile produselor introduse de utilizator sunt stocate în contul său și nu sunt partajate cu terți.</p>
+            <p>Prețurile, bonurile și istoricul cumpărăturilor sunt păstrate în contul dumneavoastră și nu sunt vândute sau transmise către terți în scopuri comerciale.</p>
         </div>
 
         <h2>3. Scopul prelucrării datelor</h2>
@@ -240,7 +245,10 @@
             <li>furnizarea funcționalităților principale ale aplicației</li>
             <li>salvarea și gestionarea produselor utilizatorului</li>
             <li>recunoașterea automată a produselor din bonurile fiscale fotografiate</li>
-            <li>generarea de rețete pe baza produselor disponibile în frigider</li>
+            <li>păstrarea istoricului cumpărăturilor și urmărirea cheltuielilor lunare față de bugetul setat</li>
+            <li>generarea de rețete pe baza produselor disponibile în frigider și, pentru abonații Premium, propunerea zilnică de rețete noi</li>
+            <li>lista de cumpărături și sugestiile pentru ea, calculate din produsele terminate, aruncate sau cumpărate des și din ingredientele care lipsesc pentru rețete</li>
+            <li>administrarea abonamentului Premium și a perioadei de probă</li>
             <li>calcularea statisticilor de consum, de risipă și de economii ale utilizatorului</li>
             <li>partajarea frigiderelor între utilizatorii invitați de proprietar</li>
             <li>trimiterea notificărilor legate de expirarea produselor</li>
@@ -272,13 +280,15 @@
         <ul>
             <li>servicii de găzduire (hosting)</li>
             <li>servicii de livrare a notificărilor push (Expo, Apple, Google)</li>
-            <li>servicii AI pentru extragerea textului din bonuri și pentru generarea rețetelor (Google Cloud Vision, Google Gemini)</li>
+            <li>servicii AI pentru citirea bonurilor, încadrarea produselor pe categorii și generarea rețetelor (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>servicii AI pentru generarea fotografiilor care ilustrează rețetele (OpenAI)</li>
             <li>servicii de procesare plăți (RevenueCat, Apple, Google)</li>
             <li>servicii de analiză și statistici de utilizare (Firebase Analytics de la Google, PostHog)</li>
             <li>servicii de raportare a erorilor și performanței (Firebase Crashlytics)</li>
         </ul>
-        <p>Imaginile bonurilor fiscale sunt procesate prin servicii AI (Google Cloud Vision, Google Gemini) exclusiv pentru extragerea textului. Imaginile nu sunt stocate permanent pe serverele noastre.</p>
-        <p>Atunci când utilizatorul cere generarea unei rețete, lista produselor din frigiderul selectat și, dacă au fost setate, restricțiile alimentare sunt trimise către Google Gemini exclusiv pentru a obține sugestia de rețetă. Nu trimitem adresa de email, numele utilizatorului sau alte date de identificare.</p>
+        <p>Imaginile bonurilor fiscale sunt trimise doar către Google Cloud Vision, pentru citirea textului. Textul rezultat este trimis apoi către Google Gemini sau, dacă acesta nu răspunde, către Anthropic Claude, care recunosc produsele și prețurile. Imaginile nu sunt stocate permanent pe serverele noastre; păstrăm doar datele citite de pe bon, în istoricul cumpărăturilor.</p>
+        <p>Când se generează rețete, fie la cererea dumneavoastră, fie zilnic pentru abonații Premium, lista produselor din frigiderul respectiv și, dacă le-ați setat, restricțiile alimentare sunt trimise către Google Gemini și Anthropic Claude, doar pentru a obține rețetele. Fotografiile rețetelor sunt generate de OpenAI pornind numai de la denumirea preparatului. Pentru încadrarea pe categorii, acestor servicii le trimitem doar denumirea produsului.</p>
+        <p>Niciunui serviciu AI nu îi trimitem adresa de email, numele sau alte date care vă pot identifica.</p>
         <p>Plățile pentru abonamentul Premium sunt procesate prin RevenueCat și Apple/Google. Nu avem acces la datele cardului dumneavoastră.</p>
         <p>Acești furnizori au acces doar la datele strict necesare pentru furnizarea serviciilor respective și sunt obligați să respecte confidențialitatea datelor.</p>
 
@@ -318,17 +328,19 @@
         <ul>
             <li>produsele din frigiderul respectiv, cu cantitățile, datele de expirare și prețurile introduse</li>
             <li>numele afișat și adresa de email ale celorlalți membri și ale persoanelor invitate</li>
+            <li>lista de cumpărături a frigiderului</li>
             <li>modificările făcute în frigiderul partajat de oricare dintre membri</li>
         </ul>
-        <p>Statisticile personale, produsele din frigiderele nepartajate și setările contului rămân vizibile doar utilizatorului.</p>
+        <p>Statisticile personale, istoricul cumpărăturilor, bugetul, rețetele, produsele din frigiderele nepartajate și setările contului rămân vizibile doar utilizatorului.</p>
         <p>Proprietarul poate elimina oricând un membru, iar orice membru poate părăsi un frigider partajat. După aceea, accesul la produsele din frigiderul respectiv încetează.</p>
 
         <h2>7. Transferuri de date în afara Uniunii Europene</h2>
         <p>Datele cu caracter personal sunt stocate, în principal, în Uniunea Europeană. Furnizorii noștri de servicii (Firebase, PostHog, RevenueCat) folosesc infrastructura UE pentru stocarea principală a datelor.</p>
-        <p>În situații limitate, anumite date tehnice pot fi prelucrate de serviciile partenere în afara UE (de exemplu, pentru anumite operațiuni ale Google sau Apple). În astfel de cazuri, ne asigurăm că sunt aplicate garanții adecvate pentru protecția datelor, conform Clauzelor Contractuale Standard (SCC) sau altor mecanisme prevăzute de GDPR.</p>
+        <p>Unii furnizori prelucrează date și în afara UE. Serviciile AI Anthropic și OpenAI, de exemplu, procesează în Statele Unite datele pe care le primesc: textul bonurilor, lista produselor sau denumirea unui preparat, niciodată numele sau adresa de email. La fel se poate întâmpla, în situații limitate, cu anumite date tehnice prelucrate de Google sau Apple.</p>
+        <p>Pentru toate aceste transferuri ne asigurăm că se aplică garanții adecvate pentru protecția datelor, cum ar fi Clauzele Contractuale Standard (SCC) adoptate de Comisia Europeană sau alte mecanisme prevăzute de GDPR.</p>
 
         <h2>8. Notificări push</h2>
-        <p>Aplicația Fridgy poate trimite notificări push legate de produsele utilizatorului și datele de expirare.</p>
+        <p>Aplicația Fridgy poate trimite notificări push despre produsele care urmează să expire și, pentru abonații Premium, o notificare de dimineață cu rețetele propuse pentru ziua respectivă.</p>
         <p>Notificările:</p>
         <ul>
             <li>sunt opționale</li>
@@ -379,6 +391,9 @@
             <li>datele de cont (nume, adresă de email, identificator de utilizator)</li>
             <li>toate produsele adăugate, cantitățile, prețurile și datele de expirare</li>
             <li>imaginile bonurilor fiscale și istoricul scanărilor</li>
+            <li>istoricul cumpărăturilor (magazine, date, totaluri, produse și prețuri)</li>
+            <li>bugetul lunar</li>
+            <li>rețetele generate, salvate și cele marcate ca gătite</li>
             <li>istoricul produselor consumate sau aruncate</li>
             <li>statisticile de risipă și de economii</li>
             <li>frigiderele create și apartenența la frigiderele partajate</li>
@@ -386,6 +401,7 @@
             <li>datele de utilizare și diagnosticare asociate contului</li>
             <li>token-urile pentru notificări push</li>
         </ul>
+        <p>Frigiderele pe care le partajați cu alți utilizatori nu se șterg: produsele și lista lor de cumpărături rămân la ceilalți membri, iar dacă erați proprietarul, frigiderul trece la membrul care s-a alăturat primul.</p>
         <p>Ștergerea este imediată și ireversibilă. Anumite informații pot fi păstrate pe perioada impusă de legislația aplicabilă, conform secțiunii 9.</p>
 
         <h3>Abonamente active</h3>
@@ -411,7 +427,7 @@
         <div class="header-row">
             <h1>Privacy Policy - Fridgy</h1>
         </div>
-        <p class="last-updated">Last updated: September 3, 2026</p>
+        <p class="last-updated">Last updated: October 26, 2026</p>
 
         <p>This Privacy Policy describes how the Fridgy application collects, uses, and protects the personal data of its users.</p>
         <p>By using the Fridgy application, you agree to the practices described in this policy.</p>
@@ -433,6 +449,7 @@
             <li>email address</li>
             <li>username or display name</li>
             <li>authentication method (email/password or Google account)</li>
+            <li>Premium subscription status (active, in a free trial or expired) and its expiry date</li>
         </ul>
 
         <h3>2.2. Data entered by the user in the application</h3>
@@ -440,9 +457,13 @@
             <li>products added to the application, with quantities and, optionally, prices</li>
             <li>product expiration dates</li>
             <li>receipt images photographed by the user for automatic product entry</li>
+            <li>the details read from scanned receipts, which make up your purchase history: the store (name, tax ID and address), the date, the total and the items bought, with quantities, prices and discounts</li>
             <li>history of products consumed or thrown away, from which the waste and savings statistics are calculated</li>
+            <li>your monthly grocery budget, if you set one, and the point at which you want to be alerted</li>
+            <li>your shopping list</li>
+            <li>recipes you have saved or marked as cooked</li>
             <li>fridges created and the members they are shared with</li>
-            <li>application settings (language, notification preferences, dietary restrictions for recipes)</li>
+            <li>application settings (language, time zone, notification preferences, dietary restrictions for recipes)</li>
         </ul>
 
         <h3>2.3. Technical data</h3>
@@ -463,7 +484,7 @@
                 <li>biometric data</li>
                 <li>precise location</li>
             </ul>
-            <p>Product prices entered by the user are stored within their account and are not shared with third parties.</p>
+            <p>Prices, receipts and your purchase history are kept in your account and are never sold or passed on to third parties for commercial purposes.</p>
         </div>
 
         <h2>3. Purpose of data processing</h2>
@@ -473,7 +494,10 @@
             <li>providing the core functionalities of the application</li>
             <li>storing and managing the user's products</li>
             <li>automatic recognition of products from photographed receipts</li>
-            <li>generating recipes based on the products available in the fridge</li>
+            <li>keeping your purchase history and tracking monthly spending against the budget you set</li>
+            <li>generating recipes based on the products available in the fridge and, for Premium subscribers, suggesting new recipes every day</li>
+            <li>the shopping list and its suggestions, based on products you have run out of, thrown away or buy often, and on ingredients missing for recipes</li>
+            <li>managing the Premium subscription and the free trial</li>
             <li>calculating the user's consumption, waste and savings statistics</li>
             <li>sharing fridges between the users invited by the owner</li>
             <li>sending notifications regarding product expiration</li>
@@ -505,13 +529,15 @@
         <ul>
             <li>hosting services</li>
             <li>push notification delivery services (Expo, Apple, Google)</li>
-            <li>AI services for extracting text from receipts and for generating recipes (Google Cloud Vision, Google Gemini)</li>
+            <li>AI services for reading receipts, sorting products into categories and generating recipes (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>AI services for generating the photos that illustrate recipes (OpenAI)</li>
             <li>payment processing services (RevenueCat, Apple, Google)</li>
             <li>usage analytics and statistics services (Firebase Analytics by Google, PostHog)</li>
             <li>error and performance reporting services (Firebase Crashlytics)</li>
         </ul>
-        <p>Receipt images are processed through AI services (Google Cloud Vision, Google Gemini) exclusively for text extraction. Images are not permanently stored on our servers.</p>
-        <p>When the user requests a recipe, the list of products in the selected fridge and, if set, the dietary restrictions are sent to Google Gemini solely to obtain the recipe suggestion. We do not send the email address, the user's name or any other identifying data.</p>
+        <p>Receipt images are sent only to Google Cloud Vision, which reads the text on them. That text is then passed to Google Gemini or, if Gemini does not respond, to Anthropic Claude, which pick out the products and prices. Images are not permanently stored on our servers; we keep only the details read from the receipt, as part of your purchase history.</p>
+        <p>Whenever recipes are generated, whether at your request or daily for Premium subscribers, the list of products in that fridge and any dietary restrictions you have set are sent to Google Gemini and Anthropic Claude, solely to obtain the recipes. Recipe photos are generated by OpenAI from the name of the dish alone. To sort products into categories, we send these services only the product name.</p>
+        <p>We never send any AI service your email address, your name or any other information that could identify you.</p>
         <p>Premium subscription payments are processed through RevenueCat and Apple/Google. We do not have access to your card details.</p>
         <p>These providers have access only to the data strictly necessary to provide their services and are required to maintain data confidentiality.</p>
 
@@ -551,16 +577,18 @@
         <ul>
             <li>the products in that fridge, with the quantities, expiration dates and prices entered</li>
             <li>the display name and email address of the other members and of the invited people</li>
+            <li>the fridge's shopping list</li>
             <li>the changes any member makes in the shared fridge</li>
         </ul>
-        <p>Personal statistics, products in fridges that are not shared, and account settings remain visible only to the user.</p>
+        <p>Personal statistics, purchase history, budget, recipes, products in fridges that are not shared, and account settings remain visible only to the user.</p>
         <p>The owner can remove a member at any time, and any member can leave a shared fridge. Access to the products in that fridge ends at that point.</p>
         <h2>7. Data transfers outside the European Union</h2>
         <p>Personal data is primarily stored in the European Union. Our service providers (Firebase, PostHog, RevenueCat) use EU infrastructure for primary data storage.</p>
-        <p>In limited situations, certain technical data may be processed by partner services outside the EU (for example, for certain Google or Apple operations). In such cases, we ensure that adequate safeguards for data protection are applied, in accordance with Standard Contractual Clauses (SCC) or other mechanisms provided by GDPR.</p>
+        <p>Some providers also process data outside the EU. The AI services Anthropic and OpenAI, for example, process the data they receive in the United States: receipt text, product lists or the name of a dish, never your name or email address. In limited situations, the same may apply to certain technical data processed by Google or Apple.</p>
+        <p>For all such transfers, we ensure that adequate data protection safeguards are in place, such as the Standard Contractual Clauses (SCC) adopted by the European Commission or other mechanisms provided for by the GDPR.</p>
 
         <h2>8. Push notifications</h2>
-        <p>The Fridgy application may send push notifications related to the user's products and expiration dates.</p>
+        <p>The Fridgy application may send push notifications about products that are about to expire and, for Premium subscribers, a morning notification with the day's suggested recipes.</p>
         <p>Notifications are:</p>
         <ul>
             <li>optional</li>
@@ -611,6 +639,9 @@
             <li>account data (name, email address, user identifier)</li>
             <li>all added products, quantities, prices and expiry dates</li>
             <li>receipt images and scan history</li>
+            <li>purchase history (stores, dates, totals, products and prices)</li>
+            <li>the monthly budget</li>
+            <li>recipes generated, saved or marked as cooked</li>
             <li>the history of products consumed or thrown away</li>
             <li>waste and savings statistics</li>
             <li>the fridges you created and your membership of shared fridges</li>
@@ -618,6 +649,7 @@
             <li>usage and diagnostic data associated with the account</li>
             <li>push notification tokens</li>
         </ul>
+        <p>Fridges you share with other users are not deleted: their products and shopping list stay with the other members, and if you were the owner, ownership passes to the member who joined first.</p>
         <p>Deletion is immediate and irreversible. Certain information may be retained for the period required by applicable law, as described in section 9.</p>
 
         <h3>Active subscriptions</h3>
@@ -643,7 +675,7 @@
         <div class="header-row">
             <h1>Datenschutzerklärung - Fridgy</h1>
         </div>
-        <p class="last-updated">Letzte Aktualisierung: 3. September 2026</p>
+        <p class="last-updated">Letzte Aktualisierung: 26. Oktober 2026</p>
 
         <p>Diese Datenschutzerklärung beschreibt, wie die Fridgy-Anwendung personenbezogene Daten ihrer Nutzer erfasst, verwendet und schützt.</p>
         <p>Durch die Nutzung der Fridgy-Anwendung stimmen Sie den in dieser Richtlinie beschriebenen Praktiken zu.</p>
@@ -665,6 +697,7 @@
             <li>E-Mail-Adresse</li>
             <li>Benutzername oder Anzeigename</li>
             <li>Authentifizierungsmethode (E-Mail/Passwort oder Google-Konto)</li>
+            <li>Status des Premium-Abonnements (aktiv, im kostenlosen Testzeitraum oder abgelaufen) und dessen Ablaufdatum</li>
         </ul>
 
         <h3>2.2. Vom Nutzer in der Anwendung eingegebene Daten</h3>
@@ -672,9 +705,13 @@
             <li>in der Anwendung hinzugefügte Produkte, mit Mengen und optional Preisen</li>
             <li>Ablaufdaten der Produkte</li>
             <li>Bilder von Kassenbons, die der Nutzer für die automatische Produkterfassung aufnimmt</li>
+            <li>die von gescannten Kassenbons ausgelesenen Daten, aus denen sich der Einkaufsverlauf zusammensetzt: Geschäft (Name, Steuernummer und Adresse), Einkaufsdatum, Gesamtbetrag sowie die gekauften Produkte mit Mengen, Preisen und Rabatten</li>
             <li>Verlauf der verbrauchten oder weggeworfenen Produkte, auf dessen Grundlage die Statistiken zu Verschwendung und Ersparnis berechnet werden</li>
+            <li>Ihr monatliches Lebensmittelbudget, sofern Sie eines festlegen, und die Grenze, ab der Sie gewarnt werden möchten</li>
+            <li>die Einkaufsliste</li>
+            <li>gespeicherte Rezepte und Rezepte, die Sie als gekocht markiert haben</li>
             <li>angelegte Kühlschränke und die Mitglieder, mit denen sie geteilt werden</li>
-            <li>Anwendungseinstellungen (Sprache, Benachrichtigungseinstellungen, Ernährungseinschränkungen für Rezepte)</li>
+            <li>Anwendungseinstellungen (Sprache, Zeitzone, Benachrichtigungseinstellungen, Ernährungseinschränkungen für Rezepte)</li>
         </ul>
 
         <h3>2.3. Technische Daten</h3>
@@ -695,7 +732,7 @@
                 <li>biometrische Daten</li>
                 <li>genaue Standortdaten</li>
             </ul>
-            <p>Vom Nutzer eingegebene Produktpreise werden in seinem Konto gespeichert und nicht an Dritte weitergegeben.</p>
+            <p>Preise, Kassenbons und Einkaufsverlauf bleiben in Ihrem Konto gespeichert und werden weder verkauft noch zu kommerziellen Zwecken an Dritte weitergegeben.</p>
         </div>
 
         <h2>3. Zweck der Datenverarbeitung</h2>
@@ -705,7 +742,10 @@
             <li>Bereitstellung der Kernfunktionen der Anwendung</li>
             <li>Speicherung und Verwaltung der Produkte des Nutzers</li>
             <li>automatische Erkennung der Produkte auf fotografierten Kassenbons</li>
-            <li>Erstellung von Rezepten auf Basis der im Kühlschrank vorhandenen Produkte</li>
+            <li>Speicherung des Einkaufsverlaufs und Abgleich der monatlichen Ausgaben mit dem festgelegten Budget</li>
+            <li>Erstellung von Rezepten auf Basis der im Kühlschrank vorhandenen Produkte und, für Premium-Abonnenten, tägliche neue Rezeptvorschläge</li>
+            <li>Einkaufsliste und passende Vorschläge, die sich aus aufgebrauchten, weggeworfenen oder häufig gekauften Produkten sowie aus fehlenden Zutaten für Rezepte ergeben</li>
+            <li>Verwaltung des Premium-Abonnements und des Testzeitraums</li>
             <li>Berechnung der Verbrauchs-, Verschwendungs- und Ersparnisstatistiken des Nutzers</li>
             <li>Teilen von Kühlschränken zwischen den vom Eigentümer eingeladenen Nutzern</li>
             <li>Versenden von Benachrichtigungen über das Ablaufdatum von Produkten</li>
@@ -737,13 +777,15 @@
         <ul>
             <li>Hosting-Dienste</li>
             <li>Zustelldienste für Push-Benachrichtigungen (Expo, Apple, Google)</li>
-            <li>KI-Dienste zur Textextraktion aus Kassenbons und zur Erstellung von Rezepten (Google Cloud Vision, Google Gemini)</li>
+            <li>KI-Dienste zum Auslesen von Kassenbons, zur Zuordnung von Produkten zu Kategorien und zur Erstellung von Rezepten (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>KI-Dienste zur Erzeugung von Rezeptfotos (OpenAI)</li>
             <li>Zahlungsabwicklungsdienste (RevenueCat, Apple, Google)</li>
             <li>Nutzungsanalyse- und Statistikdienste (Firebase Analytics von Google, PostHog)</li>
             <li>Fehler- und Leistungsberichtsdienste (Firebase Crashlytics)</li>
         </ul>
-        <p>Quittungsbilder werden über KI-Dienste (Google Cloud Vision, Google Gemini) ausschließlich zur Textextraktion verarbeitet. Bilder werden nicht dauerhaft auf unseren Servern gespeichert.</p>
-        <p>Wenn der Nutzer ein Rezept anfordert, werden die Liste der Produkte im ausgewählten Kühlschrank und, sofern hinterlegt, die Ernährungseinschränkungen ausschließlich zum Abruf des Rezeptvorschlags an Google Gemini übermittelt. E-Mail-Adresse, Name des Nutzers und andere identifizierende Daten werden nicht übermittelt.</p>
+        <p>Bilder von Kassenbons werden ausschließlich an Google Cloud Vision übermittelt, um den Text auszulesen. Der erkannte Text geht anschließend an Google Gemini oder, falls dieser Dienst nicht antwortet, an Anthropic Claude, die daraus Produkte und Preise ermitteln. Die Bilder werden nicht dauerhaft auf unseren Servern gespeichert; wir bewahren nur die vom Kassenbon ausgelesenen Daten im Einkaufsverlauf auf.</p>
+        <p>Für die Erstellung von Rezepten, ob auf Ihre Anfrage oder für Premium-Abonnenten täglich, werden die Liste der Produkte im jeweiligen Kühlschrank und, sofern hinterlegt, Ihre Ernährungseinschränkungen an Google Gemini und Anthropic Claude übermittelt – ausschließlich zu diesem Zweck. Die Rezeptfotos erzeugt OpenAI allein anhand des Namens des Gerichts. Für die Zuordnung zu Kategorien erhalten diese Dienste nur die Produktbezeichnung.</p>
+        <p>An keinen KI-Dienst übermitteln wir Ihre E-Mail-Adresse, Ihren Namen oder andere Daten, anhand derer Sie identifiziert werden können.</p>
         <p>Premium-Abonnementzahlungen werden über RevenueCat und Apple/Google abgewickelt. Wir haben keinen Zugang zu Ihren Kartendaten.</p>
         <p>Diese Anbieter haben nur Zugang zu den Daten, die für die Erbringung ihrer Dienste unbedingt erforderlich sind, und sind zur Wahrung der Datensicherheit verpflichtet.</p>
 
@@ -783,16 +825,18 @@
         <ul>
             <li>die Produkte in diesem Kühlschrank, mit den eingetragenen Mengen, Ablaufdaten und Preisen</li>
             <li>den Anzeigenamen und die E-Mail-Adresse der anderen Mitglieder und der eingeladenen Personen</li>
+            <li>die Einkaufsliste des Kühlschranks</li>
             <li>die Änderungen, die ein Mitglied im geteilten Kühlschrank vornimmt</li>
         </ul>
-        <p>Persönliche Statistiken, Produkte in nicht geteilten Kühlschränken und Kontoeinstellungen bleiben nur für den Nutzer sichtbar.</p>
+        <p>Persönliche Statistiken, Einkaufsverlauf, Budget, Rezepte, Produkte in nicht geteilten Kühlschränken und Kontoeinstellungen bleiben nur für den Nutzer sichtbar.</p>
         <p>Der Eigentümer kann ein Mitglied jederzeit entfernen, und jedes Mitglied kann einen geteilten Kühlschrank verlassen. Danach endet der Zugriff auf die Produkte dieses Kühlschranks.</p>
         <h2>7. Datenübermittlungen außerhalb der Europäischen Union</h2>
         <p>Personenbezogene Daten werden in erster Linie in der Europäischen Union gespeichert. Unsere Dienstleister (Firebase, PostHog, RevenueCat) nutzen EU-Infrastruktur für die primäre Datenspeicherung.</p>
-        <p>In begrenzten Situationen können bestimmte technische Daten von Partnerdiensten außerhalb der EU verarbeitet werden (z. B. für bestimmte Google- oder Apple-Operationen). In solchen Fällen stellen wir sicher, dass angemessene Schutzmaßnahmen für den Datenschutz angewendet werden, gemäß den Standardvertragsklauseln (SCC) oder anderen von der DSGVO vorgesehenen Mechanismen.</p>
+        <p>Einige Anbieter verarbeiten Daten auch außerhalb der EU. So werden etwa die Daten, die die KI-Dienste von Anthropic und OpenAI erhalten, in den Vereinigten Staaten verarbeitet: der Text von Kassenbons, die Produktliste oder der Name eines Gerichts, niemals jedoch Ihr Name oder Ihre E-Mail-Adresse. Gleiches kann in begrenztem Umfang für bestimmte technische Daten gelten, die Google oder Apple verarbeiten.</p>
+        <p>Bei all diesen Übermittlungen stellen wir sicher, dass angemessene Garantien für den Datenschutz bestehen, etwa die von der Europäischen Kommission erlassenen Standardvertragsklauseln (SCC) oder andere in der DSGVO vorgesehene Mechanismen.</p>
 
         <h2>8. Push-Benachrichtigungen</h2>
-        <p>Die Fridgy-Anwendung kann Push-Benachrichtigungen zu den Produkten des Nutzers und deren Ablaufdaten senden.</p>
+        <p>Die Fridgy-Anwendung kann Push-Benachrichtigungen zu bald ablaufenden Produkten senden und Premium-Abonnenten morgens die Rezeptvorschläge des Tages mitteilen.</p>
         <p>Benachrichtigungen sind:</p>
         <ul>
             <li>optional</li>
@@ -843,6 +887,9 @@
             <li>Kontodaten (Name, E-Mail-Adresse, Benutzerkennung)</li>
             <li>alle hinzugefügten Produkte, Mengen, Preise und Ablaufdaten</li>
             <li>Kassenbon-Bilder und den Scan-Verlauf</li>
+            <li>den Einkaufsverlauf (Geschäfte, Einkaufsdaten, Gesamtbeträge, Produkte und Preise)</li>
+            <li>das monatliche Budget</li>
+            <li>erstellte, gespeicherte und als gekocht markierte Rezepte</li>
             <li>den Verlauf verbrauchter oder weggeworfener Produkte</li>
             <li>Statistiken zu Lebensmittelverschwendung und Ersparnissen</li>
             <li>erstellte Kühlschränke und Mitgliedschaften in geteilten Kühlschränken</li>
@@ -850,6 +897,7 @@
             <li>dem Konto zugeordnete Nutzungs- und Diagnosedaten</li>
             <li>Token für Push-Benachrichtigungen</li>
         </ul>
+        <p>Kühlschränke, die Sie mit anderen Nutzern teilen, werden nicht gelöscht: Die darin enthaltenen Produkte und die Einkaufsliste bleiben den übrigen Mitgliedern erhalten. Waren Sie der Eigentümer, geht der Kühlschrank an das Mitglied über, das ihm als Erstes beigetreten ist.</p>
         <p>Die Löschung erfolgt sofort und ist unwiderruflich. Bestimmte Informationen können für den gesetzlich vorgeschriebenen Zeitraum aufbewahrt werden, siehe Abschnitt 9.</p>
 
         <h3>Aktive Abonnements</h3>
@@ -875,7 +923,7 @@
         <div class="header-row">
             <h1>Adatvédelmi szabályzat - Fridgy</h1>
         </div>
-        <p class="last-updated">Utolsó frissítés: 2026. szeptember 3.</p>
+        <p class="last-updated">Utolsó frissítés: 2026. október 26.</p>
 
         <p>Ez az Adatvédelmi szabályzat leírja, hogyan gyűjti, használja és védi a Fridgy alkalmazás a felhasználók személyes adatait.</p>
         <p>A Fridgy alkalmazás használatával Ön elfogadja az ebben a szabályzatban leírt gyakorlatokat.</p>
@@ -897,6 +945,7 @@
             <li>e-mail cím</li>
             <li>felhasználónév vagy megjelenítési név</li>
             <li>hitelesítési módszer (e-mail/jelszó vagy Google-fiók)</li>
+            <li>a Premium előfizetés állapota (aktív, ingyenes próbaidőszakban van vagy lejárt) és a lejárat dátuma</li>
         </ul>
 
         <h3>2.2. A felhasználó által az alkalmazásban megadott adatok</h3>
@@ -904,9 +953,13 @@
             <li>az alkalmazáshoz hozzáadott termékek, mennyiséggel és opcionálisan árral</li>
             <li>termékek lejárati dátuma</li>
             <li>a felhasználó által készített blokk-fényképek a termékek automatikus felviteléhez</li>
+            <li>a beolvasott blokkokról kiolvasott adatok, amelyekből a vásárlási előzmények összeállnak: az üzlet (neve, adószáma és címe), a vásárlás dátuma és végösszege, valamint a megvett termékek mennyiséggel, árral és kedvezménnyel</li>
             <li>az elfogyasztott vagy kidobott termékek előzményei, amelyekből a pazarlási és megtakarítási statisztikák számítódnak</li>
+            <li>a havi élelmiszer-költségkeret, ha beállítja, és az a határ, amelynek elérésekor figyelmeztetést szeretne kapni</li>
+            <li>a bevásárlólista</li>
+            <li>a mentett receptek, valamint azok, amelyeket elkészítettnek jelölt</li>
             <li>a létrehozott hűtők és a tagok, akikkel meg vannak osztva</li>
-            <li>alkalmazásbeállítások (nyelv, értesítési preferenciák, receptekre vonatkozó étkezési korlátozások)</li>
+            <li>alkalmazásbeállítások (nyelv, időzóna, értesítési preferenciák, receptekre vonatkozó étkezési korlátozások)</li>
         </ul>
 
         <h3>2.3. Technikai adatok</h3>
@@ -927,7 +980,7 @@
                 <li>biometrikus adatok</li>
                 <li>pontos tartózkodási hely</li>
             </ul>
-            <p>A felhasználó által megadott termékárak a fiókjában tárolódnak, és nem kerülnek megosztásra harmadik felekkel.</p>
+            <p>Az árakat, a blokkokat és a vásárlási előzményeket a fiókjában tároljuk, és nem adjuk el, illetve kereskedelmi célból nem adjuk át harmadik feleknek.</p>
         </div>
 
         <h2>3. Az adatkezelés célja</h2>
@@ -937,7 +990,10 @@
             <li>az alkalmazás alapfunkcióinak biztosítása</li>
             <li>a felhasználó termékeinek tárolása és kezelése</li>
             <li>a termékek automatikus felismerése a lefényképezett blokkokról</li>
-            <li>receptek generálása a hűtőben lévő termékek alapján</li>
+            <li>a vásárlási előzmények megőrzése és a havi kiadások követése a beállított költségkerethez képest</li>
+            <li>receptek generálása a hűtőben lévő termékek alapján, a Premium előfizetőknek pedig naponta új receptek ajánlása</li>
+            <li>a bevásárlólista és a hozzá tartozó javaslatok, amelyek az elfogyott, kidobott vagy gyakran vásárolt termékekből, illetve a receptekhez hiányzó hozzávalókból állnak össze</li>
+            <li>a Premium előfizetés és a próbaidőszak kezelése</li>
             <li>a felhasználó fogyasztási, pazarlási és megtakarítási statisztikáinak kiszámítása</li>
             <li>hűtők megosztása a tulajdonos által meghívott felhasználók között</li>
             <li>értesítések küldése a termékek lejáratával kapcsolatban</li>
@@ -969,13 +1025,15 @@
         <ul>
             <li>tárhelyszolgáltatások</li>
             <li>push értesítési kézbesítési szolgáltatások (Expo, Apple, Google)</li>
-            <li>MI-szolgáltatások a blokkok szövegének kinyeréséhez és receptek generálásához (Google Cloud Vision, Google Gemini)</li>
+            <li>MI-szolgáltatások a blokkok beolvasásához, a termékek kategóriákba sorolásához és receptek generálásához (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>MI-szolgáltatások a recepteket illusztráló képek elkészítéséhez (OpenAI)</li>
             <li>fizetésfeldolgozási szolgáltatások (RevenueCat, Apple, Google)</li>
             <li>használati elemzési és statisztikai szolgáltatások (Firebase Analytics a Google-tól, PostHog)</li>
             <li>hiba- és teljesítményjelentési szolgáltatások (Firebase Crashlytics)</li>
         </ul>
-        <p>A nyugtaképeket MI-szolgáltatások (Google Cloud Vision, Google Gemini) dolgozzák fel kizárólag szövegkinyerés céljából. A képek nem kerülnek tartósan tárolásra szervereinkre.</p>
-        <p>Amikor a felhasználó receptet kér, a kiválasztott hűtő terméklistája és – ha be van állítva – az étkezési korlátozások kizárólag a receptjavaslat lekérése céljából kerülnek a Google Gemini szolgáltatáshoz. E-mail-címet, felhasználónevet vagy más azonosító adatot nem küldünk.</p>
+        <p>A blokkokról készült fényképeket kizárólag a Google Cloud Vision kapja meg, a szöveg kiolvasásához. A kiolvasott szöveget ezután a Google Gemini – vagy ha az nem válaszol, az Anthropic Claude – dolgozza fel, és ismeri fel belőle a termékeket és az árakat. A képeket nem tároljuk tartósan a szervereinken; csak a blokkról kiolvasott adatokat őrizzük meg, a vásárlási előzmények részeként.</p>
+        <p>Receptek generálásakor – akár az Ön kérésére, akár a Premium előfizetőknek járó napi receptek esetén – az adott hűtő terméklistáját és – ha beállította – az étkezési korlátozásokat elküldjük a Google Gemini és az Anthropic Claude szolgáltatásnak, kizárólag a receptek elkészítéséhez. A receptekhez tartozó fotókat az OpenAI készíti, kizárólag az étel neve alapján. A kategóriákba soroláshoz ezek a szolgáltatások csak a termék nevét kapják meg.</p>
+        <p>Egyik MI-szolgáltatásnak sem küldjük el az Ön e-mail-címét, nevét vagy más olyan adatát, amely alapján azonosítható lenne.</p>
         <p>A prémium előfizetési fizetések a RevenueCat és az Apple/Google által kerülnek feldolgozásra. Nincs hozzáférésünk a kártyaadataihoz.</p>
         <p>Ezek a szolgáltatók csak az adott szolgáltatások nyújtásához feltétlenül szükséges adatokhoz férnek hozzá, és kötelesek megőrizni az adatok titkosságát.</p>
 
@@ -1010,21 +1068,23 @@
         <p>A felhasználók kérhetik az elemzési adatgyűjtés és munkamenet-rögzítés leállítását, ha kapcsolatba lépnek velünk a <a href="mailto:contact@fridgy.org">contact@fridgy.org</a> címen. A kérelmet 30 napon belül feldolgozzuk a GDPR-nak megfelelően.</p>
 
         <h2>6.2. Megosztott hűtők</h2>
-        <p>A Fridgy lehetővé teszi, hogy egy hűtőt megossz más felhasználókkal. A megosztás kizárólag a hűtő tulajdonosának kezdeményezésére történik, e-mailben küldött meghívóval.</p>
+        <p>A Fridgyben hűtőjét más felhasználókkal is megoszthatja. A megosztás kizárólag a hűtő tulajdonosának kezdeményezésére történik, e-mailben küldött meghívóval.</p>
         <p>Egy megosztott hűtőben a többi tag látja:</p>
         <ul>
             <li>az adott hűtő termékeit a megadott mennyiségekkel, lejárati dátumokkal és árakkal</li>
             <li>a többi tag és a meghívott személyek megjelenített nevét és e-mail-címét</li>
+            <li>a hűtő bevásárlólistáját</li>
             <li>a megosztott hűtőben bármely tag által végzett módosításokat</li>
         </ul>
-        <p>A személyes statisztikák, a nem megosztott hűtők termékei és a fiókbeállítások csak a felhasználó számára maradnak láthatók.</p>
+        <p>A személyes statisztikák, a vásárlási előzmények, a költségkeret, a receptek, a nem megosztott hűtők termékei és a fiókbeállítások csak a felhasználó számára maradnak láthatók.</p>
         <p>A tulajdonos bármikor eltávolíthat egy tagot, és bármely tag elhagyhat egy megosztott hűtőt. Ezt követően megszűnik a hozzáférés az adott hűtő termékeihez.</p>
         <h2>7. Adattovábbítás az Európai Unión kívülre</h2>
         <p>A személyes adatok elsősorban az Európai Unióban kerülnek tárolásra. Szolgáltatóink (Firebase, PostHog, RevenueCat) uniós infrastruktúrát használnak az elsődleges adattároláshoz.</p>
-        <p>Korlátozott esetekben bizonyos technikai adatokat partnercégek az EU-n kívül is feldolgozhatnak (például egyes Google vagy Apple műveletek esetén). Ilyen esetekben gondoskodunk arról, hogy megfelelő adatvédelmi garanciák kerüljenek alkalmazásra, a Szabványos Szerződési Záradékoknak (SCC) vagy a GDPR által biztosított egyéb mechanizmusoknak megfelelően.</p>
+        <p>Egyes szolgáltatóink az EU-n kívül is kezelnek adatokat. Az Anthropic és az OpenAI MI-szolgáltatásai például az Egyesült Államokban dolgozzák fel a hozzájuk eljutó adatokat: a blokkok szövegét, a terméklistát vagy egy étel nevét – az Ön nevét vagy e-mail-címét azonban soha. Korlátozott esetekben ugyanez előfordulhat a Google vagy az Apple által kezelt egyes technikai adatokkal is.</p>
+        <p>Minden ilyen adattovábbításnál gondoskodunk a megfelelő adatvédelmi garanciákról, például az Európai Bizottság által elfogadott szabványos szerződési záradékok (SCC) vagy a GDPR által biztosított egyéb mechanizmusok alkalmazásával.</p>
 
         <h2>8. Push értesítések</h2>
-        <p>A Fridgy alkalmazás push értesítéseket küldhet a felhasználó termékeihez és lejárati dátumaihoz kapcsolódóan.</p>
+        <p>A Fridgy alkalmazás push értesítést küldhet a hamarosan lejáró termékekről, a Premium előfizetőknek pedig reggelente egy értesítést az aznapra ajánlott receptekkel.</p>
         <p>Az értesítések:</p>
         <ul>
             <li>opcionálisak</li>
@@ -1075,6 +1135,9 @@
             <li>a fiókadatokat (név, e-mail-cím, felhasználói azonosító)</li>
             <li>az összes hozzáadott terméket, mennyiséget, árat és lejárati dátumot</li>
             <li>a nyugtaképeket és a beolvasási előzményeket</li>
+            <li>a vásárlási előzményeket (üzletek, dátumok, végösszegek, termékek és árak)</li>
+            <li>a havi költségkeretet</li>
+            <li>a generált és a mentett recepteket, valamint az elkészítettnek jelölteket</li>
             <li>az elfogyasztott vagy kidobott termékek előzményeit</li>
             <li>a pazarlási és megtakarítási statisztikákat</li>
             <li>a létrehozott hűtőket és a megosztott hűtőkben való tagságot</li>
@@ -1082,6 +1145,7 @@
             <li>a fiókhoz kapcsolódó használati és diagnosztikai adatokat</li>
             <li>a push értesítési tokeneket</li>
         </ul>
+        <p>A más felhasználókkal megosztott hűtők nem törlődnek: termékeik és bevásárlólistájuk a többi tagnál megmarad, és ha Ön volt a tulajdonos, a hűtő ahhoz a taghoz kerül, aki elsőként csatlakozott.</p>
         <p>A törlés azonnali és visszafordíthatatlan. Bizonyos adatokat a vonatkozó jogszabályok által előírt ideig megőrizhetünk, a 9. pontnak megfelelően.</p>
 
         <h3>Aktív előfizetések</h3>
@@ -1107,7 +1171,7 @@
         <div class="header-row">
             <h1>Politique de confidentialité - Fridgy</h1>
         </div>
-        <p class="last-updated">Dernière mise à jour : 3 septembre 2026</p>
+        <p class="last-updated">Dernière mise à jour : 26 octobre 2026</p>
 
         <p>Cette Politique de confidentialité décrit comment l'application Fridgy collecte, utilise et protège les données personnelles de ses utilisateurs.</p>
         <p>En utilisant l'application Fridgy, vous acceptez les pratiques décrites dans cette politique.</p>
@@ -1129,6 +1193,7 @@
             <li>adresse e-mail</li>
             <li>nom d'utilisateur ou nom d'affichage</li>
             <li>méthode d'authentification (e-mail/mot de passe ou compte Google)</li>
+            <li>statut de l'abonnement Premium (actif, en période d'essai gratuit ou expiré) et sa date d'expiration</li>
         </ul>
 
         <h3>2.2. Données saisies par l'utilisateur dans l'application</h3>
@@ -1136,9 +1201,13 @@
             <li>produits ajoutés à l'application, avec les quantités et, éventuellement, les prix</li>
             <li>dates d'expiration des produits</li>
             <li>images de tickets de caisse photographiées par l'utilisateur pour l'ajout automatique des produits</li>
+            <li>informations lues sur les tickets scannés, qui alimentent l'historique d'achats : le magasin (nom, numéro d'identification fiscale et adresse), la date, le montant total et les produits achetés, avec leurs quantités, prix et remises</li>
             <li>historique des produits consommés ou jetés, à partir duquel sont calculées les statistiques de gaspillage et d'économies</li>
+            <li>budget alimentaire mensuel, si vous en définissez un, et seuil à partir duquel vous souhaitez être alerté</li>
+            <li>liste de courses</li>
+            <li>recettes enregistrées et recettes marquées comme cuisinées</li>
             <li>frigos créés et membres avec lesquels ils sont partagés</li>
-            <li>paramètres de l'application (langue, préférences de notification, restrictions alimentaires pour les recettes)</li>
+            <li>paramètres de l'application (langue, fuseau horaire, préférences de notification, restrictions alimentaires pour les recettes)</li>
         </ul>
 
         <h3>2.3. Données techniques</h3>
@@ -1159,7 +1228,7 @@
                 <li>données biométriques</li>
                 <li>localisation précise</li>
             </ul>
-            <p>Les prix des produits saisis par l'utilisateur sont stockés dans son compte et ne sont pas partagés avec des tiers.</p>
+            <p>Les prix, les tickets et l'historique d'achats restent dans votre compte : ils ne sont ni vendus ni communiqués à des tiers à des fins commerciales.</p>
         </div>
 
         <h2>3. Finalité du traitement des données</h2>
@@ -1169,7 +1238,10 @@
             <li>la fourniture des fonctionnalités principales de l'application</li>
             <li>le stockage et la gestion des produits de l'utilisateur</li>
             <li>la reconnaissance automatique des produits sur les tickets photographiés</li>
-            <li>la génération de recettes à partir des produits disponibles dans le frigo</li>
+            <li>la conservation de l'historique d'achats et le suivi des dépenses du mois par rapport au budget défini</li>
+            <li>la génération de recettes à partir des produits disponibles dans le frigo et, pour les abonnés Premium, la proposition chaque jour de nouvelles recettes</li>
+            <li>la liste de courses et ses suggestions, établies à partir des produits terminés, jetés ou souvent achetés, ainsi que des ingrédients qui manquent pour les recettes</li>
+            <li>la gestion de l'abonnement Premium et de la période d'essai</li>
             <li>le calcul des statistiques de consommation, de gaspillage et d'économies de l'utilisateur</li>
             <li>le partage de frigos entre les utilisateurs invités par le propriétaire</li>
             <li>l'envoi de notifications concernant l'expiration des produits</li>
@@ -1201,13 +1273,15 @@
         <ul>
             <li>services d'hébergement</li>
             <li>services de livraison de notifications push (Expo, Apple, Google)</li>
-            <li>services d'IA pour l'extraction du texte des tickets et pour la génération de recettes (Google Cloud Vision, Google Gemini)</li>
+            <li>services d'IA pour la lecture des tickets, le classement des produits par catégorie et la génération de recettes (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>services d'IA pour la création des photos illustrant les recettes (OpenAI)</li>
             <li>services de traitement des paiements (RevenueCat, Apple, Google)</li>
             <li>services d'analyse d'utilisation et de statistiques (Firebase Analytics de Google, PostHog)</li>
             <li>services de rapport d'erreurs et de performance (Firebase Crashlytics)</li>
         </ul>
-        <p>Les images de reçus sont traitées via des services d'IA (Google Cloud Vision, Google Gemini) exclusivement pour l'extraction de texte. Les images ne sont pas stockées définitivement sur nos serveurs.</p>
-        <p>Lorsque l'utilisateur demande une recette, la liste des produits du frigo sélectionné et, le cas échéant, les restrictions alimentaires sont envoyées à Google Gemini uniquement pour obtenir la suggestion de recette. Nous n'envoyons ni l'adresse e-mail, ni le nom de l'utilisateur, ni aucune autre donnée d'identification.</p>
+        <p>Les images de tickets sont envoyées uniquement à Google Cloud Vision, qui en lit le texte. Ce texte est ensuite transmis à Google Gemini ou, si celui-ci ne répond pas, à Anthropic Claude, qui reconnaissent les produits et les prix. Les images ne sont pas stockées définitivement sur nos serveurs : nous ne conservons que les informations lues sur le ticket, dans l'historique d'achats.</p>
+        <p>Lors de la génération de recettes, que ce soit à votre demande ou chaque jour pour les abonnés Premium, la liste des produits du frigo concerné et, si vous en avez défini, vos restrictions alimentaires sont envoyées à Google Gemini et à Anthropic Claude, dans le seul but d'obtenir les recettes. Les photos des recettes sont créées par OpenAI à partir du seul nom du plat. Pour classer un produit par catégorie, nous ne transmettons à ces services que son nom.</p>
+        <p>Aucun service d'IA ne reçoit votre adresse e-mail, votre nom ni aucune autre donnée permettant de vous identifier.</p>
         <p>Les paiements d'abonnement Premium sont traités via RevenueCat et Apple/Google. Nous n'avons pas accès à vos données de carte.</p>
         <p>Ces prestataires n'ont accès qu'aux données strictement nécessaires à la fourniture de leurs services et sont tenus de maintenir la confidentialité des données.</p>
 
@@ -1247,16 +1321,18 @@
         <ul>
             <li>les produits de ce frigo, avec les quantités, les dates d'expiration et les prix saisis</li>
             <li>le nom affiché et l'adresse e-mail des autres membres et des personnes invitées</li>
+            <li>la liste de courses du frigo</li>
             <li>les modifications apportées au frigo partagé par n'importe quel membre</li>
         </ul>
-        <p>Les statistiques personnelles, les produits des frigos non partagés et les paramètres du compte restent visibles uniquement par l'utilisateur.</p>
+        <p>Les statistiques personnelles, l'historique d'achats, le budget, les recettes, les produits des frigos non partagés et les paramètres du compte restent visibles uniquement par l'utilisateur.</p>
         <p>Le propriétaire peut retirer un membre à tout moment, et tout membre peut quitter un frigo partagé. L'accès aux produits de ce frigo prend alors fin.</p>
         <h2>7. Transferts de données hors de l'Union européenne</h2>
         <p>Les données personnelles sont principalement stockées dans l'Union européenne. Nos prestataires de services (Firebase, PostHog, RevenueCat) utilisent l'infrastructure de l'UE pour le stockage principal des données.</p>
-        <p>Dans des situations limitées, certaines données techniques peuvent être traitées par des services partenaires en dehors de l'UE (par exemple, pour certaines opérations Google ou Apple). Dans ces cas, nous nous assurons que des garanties adéquates pour la protection des données sont appliquées, conformément aux Clauses Contractuelles Types (CCT) ou à d'autres mécanismes prévus par le RGPD.</p>
+        <p>Certains prestataires traitent toutefois des données hors de l'UE. C'est le cas des services d'IA Anthropic et OpenAI, qui traitent aux États-Unis les données qu'ils reçoivent : le texte des tickets, la liste des produits ou le nom d'un plat, jamais votre nom ni votre adresse e-mail. Il peut en aller de même, dans des situations limitées, pour certaines données techniques traitées par Google ou Apple.</p>
+        <p>Pour l'ensemble de ces transferts, nous veillons à ce que des garanties adéquates de protection des données s'appliquent, telles que les Clauses Contractuelles Types (CCT) adoptées par la Commission européenne ou d'autres mécanismes prévus par le RGPD.</p>
 
         <h2>8. Notifications push</h2>
-        <p>L'application Fridgy peut envoyer des notifications push relatives aux produits de l'utilisateur et aux dates d'expiration.</p>
+        <p>L'application Fridgy peut envoyer des notifications push sur les produits qui arrivent bientôt à expiration et, pour les abonnés Premium, une notification le matin avec les recettes proposées pour la journée.</p>
         <p>Les notifications sont :</p>
         <ul>
             <li>optionnelles</li>
@@ -1307,6 +1383,9 @@
             <li>des données de compte (nom, adresse e-mail, identifiant utilisateur)</li>
             <li>de tous les produits ajoutés, des quantités, des prix et des dates de péremption</li>
             <li>des images de tickets de caisse et de l’historique des scans</li>
+            <li>de l’historique d’achats (magasins, dates, montants totaux, produits et prix)</li>
+            <li>du budget mensuel</li>
+            <li>des recettes générées, enregistrées et marquées comme cuisinées</li>
             <li>de l’historique des produits consommés ou jetés</li>
             <li>des statistiques de gaspillage et d’économies</li>
             <li>des réfrigérateurs créés et de l’appartenance aux réfrigérateurs partagés</li>
@@ -1314,6 +1393,7 @@
             <li>des données d’utilisation et de diagnostic associées au compte</li>
             <li>des jetons de notifications push</li>
         </ul>
+        <p>Les réfrigérateurs que vous partagez avec d’autres utilisateurs ne sont pas supprimés : leurs produits et leur liste de courses restent accessibles aux autres membres et, si vous en étiez le propriétaire, le réfrigérateur passe au membre qui l’a rejoint en premier.</p>
         <p>La suppression est immédiate et irréversible. Certaines informations peuvent être conservées pendant la durée imposée par la législation applicable, conformément à la section 9.</p>
 
         <h3>Abonnements actifs</h3>
@@ -1339,7 +1419,7 @@
         <div class="header-row">
             <h1>Privacybeleid - Fridgy</h1>
         </div>
-        <p class="last-updated">Laatst bijgewerkt: 3 september 2026</p>
+        <p class="last-updated">Laatst bijgewerkt: 26 oktober 2026</p>
 
         <p>Dit Privacybeleid beschrijft hoe de Fridgy-applicatie de persoonlijke gegevens van zijn gebruikers verzamelt, gebruikt en beschermt.</p>
         <p>Door de Fridgy-applicatie te gebruiken, stemt u in met de in dit beleid beschreven praktijken.</p>
@@ -1361,6 +1441,7 @@
             <li>e-mailadres</li>
             <li>gebruikersnaam of weergavenaam</li>
             <li>authenticatiemethode (e-mail/wachtwoord of Google-account)</li>
+            <li>status van het Premium-abonnement (actief, in de gratis proefperiode of verlopen) en de datum waarop het afloopt</li>
         </ul>
 
         <h3>2.2. Door de gebruiker ingevoerde gegevens in de applicatie</h3>
@@ -1368,9 +1449,13 @@
             <li>aan de applicatie toegevoegde producten, met hoeveelheden en eventueel prijzen</li>
             <li>vervaldatums van producten</li>
             <li>foto's van kassabonnen die de gebruiker maakt om producten automatisch toe te voegen</li>
+            <li>de gegevens die van gescande kassabonnen worden gelezen en waarmee uw aankoopgeschiedenis wordt opgebouwd: de winkel (naam, fiscaal nummer en adres), de datum, het totaalbedrag en de gekochte producten, met hoeveelheden, prijzen en kortingen</li>
             <li>geschiedenis van geconsumeerde of weggegooide producten, waarop de statistieken over verspilling en besparing worden gebaseerd</li>
+            <li>uw maandbudget voor boodschappen, als u dat instelt, en de grens waarbij u een waarschuwing wilt krijgen</li>
+            <li>de boodschappenlijst</li>
+            <li>opgeslagen recepten en recepten die u als gekookt hebt gemarkeerd</li>
             <li>aangemaakte koelkasten en de leden met wie ze worden gedeeld</li>
-            <li>applicatie-instellingen (taal, meldingsvoorkeuren, dieetbeperkingen voor recepten)</li>
+            <li>applicatie-instellingen (taal, tijdzone, meldingsvoorkeuren, dieetbeperkingen voor recepten)</li>
         </ul>
 
         <h3>2.3. Technische gegevens</h3>
@@ -1391,7 +1476,7 @@
                 <li>biometrische gegevens</li>
                 <li>precieze locatie</li>
             </ul>
-            <p>Productprijzen ingevoerd door de gebruiker worden opgeslagen in hun account en worden niet gedeeld met derden.</p>
+            <p>Prijzen, kassabonnen en uw aankoopgeschiedenis blijven in uw account en worden niet verkocht of voor commerciële doeleinden aan derden doorgegeven.</p>
         </div>
 
         <h2>3. Doel van gegevensverwerking</h2>
@@ -1401,7 +1486,10 @@
             <li>het leveren van de kernfunctionaliteiten van de applicatie</li>
             <li>het opslaan en beheren van de producten van de gebruiker</li>
             <li>het automatisch herkennen van producten op gefotografeerde kassabonnen</li>
-            <li>het genereren van recepten op basis van de producten in de koelkast</li>
+            <li>het bijhouden van uw aankoopgeschiedenis en van uw maandelijkse uitgaven ten opzichte van het ingestelde budget</li>
+            <li>het genereren van recepten op basis van de producten in de koelkast en, voor Premium-abonnees, het dagelijks voorstellen van nieuwe recepten</li>
+            <li>de boodschappenlijst en de suggesties daarvoor, gebaseerd op producten die op zijn, zijn weggegooid of vaak worden gekocht, en op ingrediënten die voor recepten ontbreken</li>
+            <li>het beheren van het Premium-abonnement en de proefperiode</li>
             <li>het berekenen van de statistieken over consumptie, verspilling en besparing van de gebruiker</li>
             <li>het delen van koelkasten tussen gebruikers die door de eigenaar zijn uitgenodigd</li>
             <li>het verzenden van meldingen over het verlopen van producten</li>
@@ -1433,13 +1521,15 @@
         <ul>
             <li>hostingdiensten</li>
             <li>bezorgdiensten voor pushmeldingen (Expo, Apple, Google)</li>
-            <li>AI-diensten voor het extraheren van tekst uit kassabonnen en voor het genereren van recepten (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-diensten voor het lezen van kassabonnen, het indelen van producten in categorieën en het genereren van recepten (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>AI-diensten voor het maken van de foto's bij recepten (OpenAI)</li>
             <li>betalingsverwerkingsdiensten (RevenueCat, Apple, Google)</li>
             <li>gebruiksanalyse- en statistiekdiensten (Firebase Analytics van Google, PostHog)</li>
             <li>fout- en prestatierapportagediensten (Firebase Crashlytics)</li>
         </ul>
-        <p>Bonafbeeldingen worden verwerkt via AI-diensten (Google Cloud Vision, Google Gemini) uitsluitend voor tekstextractie. Afbeeldingen worden niet permanent opgeslagen op onze servers.</p>
-        <p>Wanneer de gebruiker om een recept vraagt, worden de productenlijst van de geselecteerde koelkast en, indien ingesteld, de dieetbeperkingen uitsluitend naar Google Gemini gestuurd om het receptvoorstel op te halen. We sturen geen e-mailadres, gebruikersnaam of andere identificerende gegevens mee.</p>
+        <p>Foto's van kassabonnen worden alleen naar Google Cloud Vision gestuurd, om de tekst uit te lezen. Die tekst gaat vervolgens naar Google Gemini of, als die niet reageert, naar Anthropic Claude, die de producten en prijzen herkent. De afbeeldingen worden niet permanent op onze servers opgeslagen; we bewaren alleen de gegevens die van de bon zijn gelezen, in uw aankoopgeschiedenis.</p>
+        <p>Bij het genereren van recepten, op uw verzoek of dagelijks voor Premium-abonnees, sturen we de productenlijst van de betreffende koelkast en, als u die hebt ingesteld, uw dieetbeperkingen naar Google Gemini en Anthropic Claude, uitsluitend om de recepten op te stellen. De foto's bij recepten worden door OpenAI gemaakt op basis van alleen de naam van het gerecht. Voor het indelen in categorieën krijgen deze diensten van ons alleen de productnaam.</p>
+        <p>We sturen geen enkele AI-dienst uw e-mailadres, naam of andere gegevens waarmee u kunt worden geïdentificeerd.</p>
         <p>Premium abonnementsbetalingen worden verwerkt via RevenueCat en Apple/Google. Wij hebben geen toegang tot uw kaartgegevens.</p>
         <p>Deze aanbieders hebben alleen toegang tot de gegevens die strikt noodzakelijk zijn voor het leveren van hun diensten en zijn verplicht de vertrouwelijkheid van gegevens te handhaven.</p>
 
@@ -1474,21 +1564,23 @@
         <p>Gebruikers kunnen verzoeken om stopzetting van de verzameling van analysegegevens en sessieopname door contact met ons op te nemen via <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>. Wij verwerken het verzoek binnen 30 dagen, in overeenstemming met de AVG.</p>
 
         <h2>6.2. Gedeelde koelkasten</h2>
-        <p>Met Fridgy kun je een koelkast delen met andere gebruikers. Delen gebeurt alleen op initiatief van de eigenaar van de koelkast, via een uitnodiging per e-mail.</p>
+        <p>Met Fridgy kunt u een koelkast delen met andere gebruikers. Delen gebeurt alleen op initiatief van de eigenaar van de koelkast, via een uitnodiging per e-mail.</p>
         <p>In een gedeelde koelkast zien de andere leden:</p>
         <ul>
             <li>de producten in die koelkast, met de ingevoerde hoeveelheden, vervaldatums en prijzen</li>
             <li>de weergegeven naam en het e-mailadres van de andere leden en van de uitgenodigde personen</li>
+            <li>de boodschappenlijst van de koelkast</li>
             <li>de wijzigingen die een lid in de gedeelde koelkast aanbrengt</li>
         </ul>
-        <p>Persoonlijke statistieken, producten in niet-gedeelde koelkasten en accountinstellingen blijven alleen zichtbaar voor de gebruiker.</p>
+        <p>Persoonlijke statistieken, aankoopgeschiedenis, budget, recepten, producten in niet-gedeelde koelkasten en accountinstellingen blijven alleen zichtbaar voor de gebruiker.</p>
         <p>De eigenaar kan een lid op elk moment verwijderen en elk lid kan een gedeelde koelkast verlaten. Daarna eindigt de toegang tot de producten in die koelkast.</p>
         <h2>7. Gegevensoverdrachten buiten de Europese Unie</h2>
         <p>Persoonsgegevens worden primair opgeslagen in de Europese Unie. Onze dienstverleners (Firebase, PostHog, RevenueCat) gebruiken EU-infrastructuur voor primaire gegevensopslag.</p>
-        <p>In beperkte situaties kunnen bepaalde technische gegevens worden verwerkt door partnerdiensten buiten de EU (bijvoorbeeld voor bepaalde Google- of Apple-operaties). In dergelijke gevallen zorgen wij ervoor dat adequate waarborgen voor gegevensbescherming worden toegepast, in overeenstemming met Standaard Contractuele Clausules (SCC) of andere mechanismen voorzien door de AVG.</p>
+        <p>Sommige aanbieders verwerken gegevens ook buiten de EU. Zo verwerken de AI-diensten van Anthropic en OpenAI de gegevens die ze ontvangen in de Verenigde Staten: de tekst van kassabonnen, de productenlijst of de naam van een gerecht, maar nooit uw naam of e-mailadres. In beperkte situaties kan hetzelfde gelden voor bepaalde technische gegevens die door Google of Apple worden verwerkt.</p>
+        <p>Voor al deze doorgiften zorgen wij voor passende waarborgen voor gegevensbescherming, zoals de door de Europese Commissie vastgestelde Standaard Contractuele Clausules (SCC) of andere mechanismen uit de AVG.</p>
 
         <h2>8. Pushmeldingen</h2>
-        <p>De Fridgy-applicatie kan pushmeldingen sturen met betrekking tot de producten van de gebruiker en vervaldatums.</p>
+        <p>De Fridgy-applicatie kan pushmeldingen sturen over producten die bijna verlopen en, voor Premium-abonnees, 's ochtends een melding met de voorgestelde recepten van die dag.</p>
         <p>Meldingen zijn:</p>
         <ul>
             <li>optioneel</li>
@@ -1539,6 +1631,9 @@
             <li>accountgegevens (naam, e-mailadres, gebruikersidentificatie)</li>
             <li>alle toegevoegde producten, hoeveelheden, prijzen en houdbaarheidsdata</li>
             <li>kassabonafbeeldingen en de scangeschiedenis</li>
+            <li>de aankoopgeschiedenis (winkels, datums, totaalbedragen, producten en prijzen)</li>
+            <li>het maandbudget</li>
+            <li>gegenereerde en opgeslagen recepten en recepten die als gekookt zijn gemarkeerd</li>
             <li>de geschiedenis van geconsumeerde of weggegooide producten</li>
             <li>statistieken over voedselverspilling en besparingen</li>
             <li>aangemaakte koelkasten en het lidmaatschap van gedeelde koelkasten</li>
@@ -1546,6 +1641,7 @@
             <li>gebruiks- en diagnosegegevens die aan het account zijn gekoppeld</li>
             <li>tokens voor pushmeldingen</li>
         </ul>
+        <p>Koelkasten die u met andere gebruikers deelt, worden niet verwijderd: de producten en de boodschappenlijst blijven beschikbaar voor de andere leden, en als u de eigenaar was, gaat de koelkast over naar het lid dat er als eerste bij is gekomen.</p>
         <p>De verwijdering is onmiddellijk en onomkeerbaar. Bepaalde gegevens kunnen worden bewaard gedurende de wettelijk vereiste termijn, zoals beschreven in artikel 9.</p>
 
         <h3>Actieve abonnementen</h3>
@@ -1571,7 +1667,7 @@
         <div class="header-row">
             <h1>Privatlivspolitik - Fridgy</h1>
         </div>
-        <p class="last-updated">Sidst opdateret: 3. september 2026</p>
+        <p class="last-updated">Sidst opdateret: 26. oktober 2026</p>
 
         <p>Denne Privatlivspolitik beskriver, hvordan Fridgy-applikationen indsamler, bruger og beskytter sine brugeres personoplysninger.</p>
         <p>Ved at bruge Fridgy-applikationen accepterer du de praksisser, der er beskrevet i denne politik.</p>
@@ -1593,6 +1689,7 @@
             <li>e-mailadresse</li>
             <li>brugernavn eller visningsnavn</li>
             <li>godkendelsesmetode (e-mail/adgangskode eller Google-konto)</li>
+            <li>status for dit Premium-abonnement (aktivt, i gratis prøveperiode eller udløbet) og datoen, hvor det udløber</li>
         </ul>
 
         <h3>2.2. Data indtastet af brugeren i applikationen</h3>
@@ -1600,9 +1697,13 @@
             <li>produkter tilføjet til applikationen, med mængder og eventuelt priser</li>
             <li>produkters udløbsdatoer</li>
             <li>billeder af kvitteringer, som brugeren tager for automatisk at tilføje produkter</li>
+            <li>oplysningerne, der aflæses fra de scannede kvitteringer, og som udgør din købshistorik: butikken (navn, momsnummer og adresse), datoen, totalbeløbet og de købte produkter med mængder, priser og rabatter</li>
             <li>historik over forbrugte eller kasserede produkter, som statistikkerne over madspild og besparelser beregnes ud fra</li>
+            <li>dit månedlige madbudget, hvis du har sat et, og den grænse, hvor du gerne vil have en advarsel</li>
+            <li>indkøbslisten</li>
+            <li>dine gemte opskrifter og dem, du har markeret som lavet</li>
             <li>oprettede køleskabe og de medlemmer, de deles med</li>
-            <li>applikationsindstillinger (sprog, notifikationspræferencer, kostbegrænsninger til opskrifter)</li>
+            <li>applikationsindstillinger (sprog, tidszone, notifikationspræferencer, kostbegrænsninger til opskrifter)</li>
         </ul>
 
         <h3>2.3. Tekniske data</h3>
@@ -1623,7 +1724,7 @@
                 <li>biometriske data</li>
                 <li>præcis lokation</li>
             </ul>
-            <p>Produktpriser indtastet af brugeren gemmes i deres konto og deles ikke med tredjepart.</p>
+            <p>Priser, kvitteringer og købshistorik gemmes på din konto og bliver hverken solgt eller videregivet til tredjepart til kommercielle formål.</p>
         </div>
 
         <h2>3. Formål med databehandling</h2>
@@ -1633,7 +1734,10 @@
             <li>levering af applikationens kernefunktioner</li>
             <li>lagring og administration af brugerens produkter</li>
             <li>automatisk genkendelse af produkter på fotograferede kvitteringer</li>
-            <li>generering af opskrifter ud fra produkterne i køleskabet</li>
+            <li>registrering af købshistorikken og opfølgning på de månedlige udgifter i forhold til det budget, du har sat</li>
+            <li>generering af opskrifter ud fra produkterne i køleskabet og, for Premium-abonnenter, nye opskriftsforslag hver dag</li>
+            <li>indkøbslisten og forslagene til den, som beregnes ud fra produkter, der er brugt op, smidt ud eller ofte købt, og ud fra ingredienser, der mangler til opskrifterne</li>
+            <li>administration af Premium-abonnementet og prøveperioden</li>
             <li>beregning af brugerens statistikker over forbrug, madspild og besparelser</li>
             <li>deling af køleskabe mellem de brugere, ejeren har inviteret</li>
             <li>afsendelse af notifikationer om produkters udløb</li>
@@ -1665,13 +1769,15 @@
         <ul>
             <li>hostingtjenester</li>
             <li>leveringstjenester for push-notifikationer (Expo, Apple, Google)</li>
-            <li>AI-tjenester til udtrækning af tekst fra kvitteringer og til generering af opskrifter (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-tjenester til aflæsning af kvitteringer, inddeling af produkter i kategorier og generering af opskrifter (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>AI-tjenester til generering af de billeder, der illustrerer opskrifterne (OpenAI)</li>
             <li>betalingsbehandlingstjenester (RevenueCat, Apple, Google)</li>
             <li>brugsanalyse- og statistiktjenester (Firebase Analytics fra Google, PostHog)</li>
             <li>fejl- og ydeevnerapporteringstjenester (Firebase Crashlytics)</li>
         </ul>
-        <p>Kvitteringsbilleder behandles via AI-tjenester (Google Cloud Vision, Google Gemini) udelukkende til tekstudtrækning. Billeder gemmes ikke permanent på vores servere.</p>
-        <p>Når brugeren beder om en opskrift, sendes listen over produkter i det valgte køleskab og, hvis de er angivet, kostbegrænsningerne til Google Gemini udelukkende for at hente opskriftsforslaget. Vi sender ikke e-mailadresse, brugernavn eller andre identificerende oplysninger.</p>
+        <p>Kvitteringsbilleder sendes kun til Google Cloud Vision, som aflæser teksten. Teksten sendes derefter videre til Google Gemini eller, hvis Gemini ikke svarer, til Anthropic Claude, som genkender produkterne og priserne. Billederne gemmes ikke permanent på vores servere; vi gemmer kun de oplysninger, der er aflæst fra kvitteringen, i din købshistorik.</p>
+        <p>Når der genereres opskrifter, enten fordi du beder om det eller dagligt for Premium-abonnenter, sendes listen over produkter i det pågældende køleskab og eventuelle kostbegrænsninger, du har angivet, til Google Gemini og Anthropic Claude, udelukkende for at få opskrifterne. Billederne til opskrifterne laves af OpenAI alene ud fra rettens navn. Til inddeling i kategorier sender vi kun produktets navn til disse tjenester.</p>
+        <p>Vi sender aldrig din e-mailadresse, dit navn eller andre oplysninger, der kan identificere dig, til nogen AI-tjeneste.</p>
         <p>Premium-abonnementsbetalinger behandles via RevenueCat og Apple/Google. Vi har ikke adgang til dine kortoplysninger.</p>
         <p>Disse udbydere har kun adgang til de data, der er strengt nødvendige for at levere deres tjenester, og er forpligtet til at opretholde fortrolighed om data.</p>
 
@@ -1711,16 +1817,18 @@
         <ul>
             <li>produkterne i det pågældende køleskab med de indtastede mængder, udløbsdatoer og priser</li>
             <li>det viste navn og e-mailadressen på de øvrige medlemmer og på de inviterede personer</li>
+            <li>køleskabets indkøbsliste</li>
             <li>de ændringer, et medlem foretager i det delte køleskab</li>
         </ul>
-        <p>Personlige statistikker, produkter i køleskabe, der ikke er delt, og kontoindstillinger forbliver kun synlige for brugeren.</p>
+        <p>Personlige statistikker, købshistorik, budget, opskrifter, produkter i køleskabe, der ikke er delt, og kontoindstillinger forbliver kun synlige for brugeren.</p>
         <p>Ejeren kan til enhver tid fjerne et medlem, og ethvert medlem kan forlade et delt køleskab. Derefter ophører adgangen til produkterne i det pågældende køleskab.</p>
         <h2>7. Dataoverførsler uden for Den Europæiske Union</h2>
         <p>Personoplysninger lagres primært i Den Europæiske Union. Vores tjenesteudbydere (Firebase, PostHog, RevenueCat) bruger EU-infrastruktur til primær datalagring.</p>
-        <p>I begrænsede situationer kan visse tekniske data behandles af partnertjenester uden for EU (f.eks. for visse Google- eller Apple-operationer). I sådanne tilfælde sikrer vi, at passende beskyttelsesforanstaltninger for databeskyttelse anvendes i overensstemmelse med standardkontraktbestemmelser (SCC) eller andre mekanismer i henhold til GDPR.</p>
+        <p>Nogle udbydere behandler også data uden for EU. AI-tjenesterne Anthropic og OpenAI behandler for eksempel de data, de modtager, i USA: kvitteringernes tekst, produktlisten eller navnet på en ret, men aldrig dit navn eller din e-mailadresse. Det samme kan i begrænsede tilfælde gælde visse tekniske data, som Google eller Apple behandler.</p>
+        <p>Ved alle disse overførsler sikrer vi, at der anvendes passende garantier for beskyttelse af data, f.eks. Europa-Kommissionens standardkontraktbestemmelser (SCC) eller andre mekanismer i henhold til GDPR.</p>
 
         <h2>8. Push-notifikationer</h2>
-        <p>Fridgy-applikationen kan sende push-notifikationer relateret til brugerens produkter og udløbsdatoer.</p>
+        <p>Fridgy-applikationen kan sende push-notifikationer om produkter, der snart udløber, og til Premium-abonnenter en morgennotifikation med dagens opskriftsforslag.</p>
         <p>Notifikationer er:</p>
         <ul>
             <li>valgfrie</li>
@@ -1771,6 +1879,9 @@
             <li>kontooplysninger (navn, e-mailadresse, bruger-id)</li>
             <li>alle tilføjede produkter, mængder, priser og udløbsdatoer</li>
             <li>kvitteringsbilleder og scanningshistorik</li>
+            <li>købshistorik (butikker, datoer, totalbeløb, produkter og priser)</li>
+            <li>månedsbudget</li>
+            <li>genererede og gemte opskrifter samt dem, der er markeret som lavet</li>
             <li>historikken over forbrugte eller smidte produkter</li>
             <li>statistik over madspild og besparelser</li>
             <li>oprettede køleskabe og medlemskab af delte køleskabe</li>
@@ -1778,6 +1889,7 @@
             <li>brugs- og diagnosticeringsdata knyttet til kontoen</li>
             <li>tokens til push-notifikationer</li>
         </ul>
+        <p>Køleskabe, du deler med andre brugere, bliver ikke slettet: produkterne og indkøbslisten bliver hos de øvrige medlemmer, og hvis du var ejer, overgår køleskabet til det medlem, der blev tilknyttet først.</p>
         <p>Sletningen sker øjeblikkeligt og kan ikke fortrydes. Visse oplysninger kan opbevares i den periode, som gældende lovgivning kræver, jf. afsnit 9.</p>
 
         <h3>Aktive abonnementer</h3>
@@ -1803,7 +1915,7 @@
         <div class="header-row">
             <h1>Integritetspolicy - Fridgy</h1>
         </div>
-        <p class="last-updated">Senast uppdaterad: 3 september 2026</p>
+        <p class="last-updated">Senast uppdaterad: 26 oktober 2026</p>
 
         <p>Denna Integritetspolicy beskriver hur Fridgy-applikationen samlar in, använder och skyddar sina användares personuppgifter.</p>
         <p>Genom att använda Fridgy-applikationen godkänner du de metoder som beskrivs i denna policy.</p>
@@ -1825,6 +1937,7 @@
             <li>e-postadress</li>
             <li>användarnamn eller visningsnamn</li>
             <li>autentiseringsmetod (e-post/lösenord eller Google-konto)</li>
+            <li>status för din Premium-prenumeration (aktiv, i gratis provperiod eller utgången) och när den löper ut</li>
         </ul>
 
         <h3>2.2. Uppgifter som användaren har angett i applikationen</h3>
@@ -1832,9 +1945,13 @@
             <li>produkter som lagts till i applikationen, med mängder och eventuellt priser</li>
             <li>produkters utgångsdatum</li>
             <li>bilder på kvitton som användaren fotograferar för att lägga till produkter automatiskt</li>
+            <li>uppgifter som läses av från skannade kvitton och som bildar din köphistorik: butiken (namn, organisationsnummer och adress), datum, totalbelopp och köpta produkter med mängder, priser och rabatter</li>
             <li>historik över konsumerade eller slängda produkter, som statistiken över matsvinn och besparingar beräknas utifrån</li>
+            <li>din månadsbudget för mat, om du har angett en, och vid vilken nivå du vill få en varning</li>
+            <li>inköpslistan</li>
+            <li>sparade recept och recept som du har markerat som lagade</li>
             <li>skapade kylskåp och de medlemmar de delas med</li>
-            <li>applikationsinställningar (språk, aviseringspreferenser, kostrestriktioner för recept)</li>
+            <li>applikationsinställningar (språk, tidszon, aviseringspreferenser, kostrestriktioner för recept)</li>
         </ul>
 
         <h3>2.3. Tekniska uppgifter</h3>
@@ -1855,7 +1972,7 @@
                 <li>biometriska uppgifter</li>
                 <li>exakt plats</li>
             </ul>
-            <p>Produktpriser som användaren angett lagras i deras konto och delas inte med tredje part.</p>
+            <p>Priser, kvitton och köphistorik sparas i ditt konto och varken säljs eller lämnas ut till tredje part i kommersiellt syfte.</p>
         </div>
 
         <h2>3. Syfte med databehandling</h2>
@@ -1865,7 +1982,10 @@
             <li>tillhandahållande av applikationens kärnfunktioner</li>
             <li>lagring och hantering av användarens produkter</li>
             <li>automatisk igenkänning av produkter på fotograferade kvitton</li>
-            <li>generering av recept utifrån produkterna i kylskåpet</li>
+            <li>lagring av köphistoriken och uppföljning av månadens utgifter mot den budget du har satt</li>
+            <li>generering av recept utifrån produkterna i kylskåpet och, för Premium-prenumeranter, nya receptförslag varje dag</li>
+            <li>inköpslistan och förslagen till den, som tas fram utifrån produkter som har tagit slut, slängts eller ofta köps samt ingredienser som saknas till recepten</li>
+            <li>hantering av Premium-prenumerationen och provperioden</li>
             <li>beräkning av användarens statistik över konsumtion, matsvinn och besparingar</li>
             <li>delning av kylskåp mellan de användare som ägaren har bjudit in</li>
             <li>sändning av aviseringar om produkters utgång</li>
@@ -1897,13 +2017,15 @@
         <ul>
             <li>värdtjänster</li>
             <li>leveranstjänster för push-aviseringar (Expo, Apple, Google)</li>
-            <li>AI-tjänster för att utvinna text ur kvitton och för att generera recept (Google Cloud Vision, Google Gemini)</li>
+            <li>AI-tjänster för att läsa kvitton, sortera produkter i kategorier och generera recept (Google Cloud Vision, Google Gemini, Anthropic Claude)</li>
+            <li>AI-tjänster för att generera bilderna som illustrerar recepten (OpenAI)</li>
             <li>betalningstjänster (RevenueCat, Apple, Google)</li>
             <li>användningsanalys- och statistiktjänster (Firebase Analytics från Google, PostHog)</li>
             <li>fel- och prestandarapporteringstjänster (Firebase Crashlytics)</li>
         </ul>
-        <p>Kvittobilder behandlas via AI-tjänster (Google Cloud Vision, Google Gemini) uteslutande för textutvinning. Bilder lagras inte permanent på våra servrar.</p>
-        <p>När användaren begär ett recept skickas listan över produkter i det valda kylskåpet och, om de är angivna, kostrestriktionerna till Google Gemini enbart för att hämta receptförslaget. Vi skickar inte e-postadress, användarnamn eller andra identifierande uppgifter.</p>
+        <p>Kvittobilder skickas bara till Google Cloud Vision, som läser av texten. Texten skickas sedan vidare till Google Gemini – eller till Anthropic Claude om Gemini inte svarar – som känner igen produkterna och priserna. Bilderna lagras inte permanent på våra servrar; vi sparar bara de uppgifter som har lästs av från kvittot, i din köphistorik.</p>
+        <p>När recept tas fram, antingen när du ber om det eller varje dag för Premium-prenumeranter, skickas listan över produkterna i det aktuella kylskåpet och eventuella kostrestriktioner som du har angett till Google Gemini och Anthropic Claude, enbart för att ta fram recepten. Receptbilderna genereras av OpenAI och utgår bara från rättens namn. För kategoriseringen skickar vi bara produktnamnet till dessa tjänster.</p>
+        <p>Vi skickar aldrig din e-postadress, ditt namn eller andra uppgifter som kan identifiera dig till någon AI-tjänst.</p>
         <p>Premium-prenumerationsbetalningar behandlas via RevenueCat och Apple/Google. Vi har inte tillgång till dina kortuppgifter.</p>
         <p>Dessa leverantörer har endast tillgång till de uppgifter som är strikt nödvändiga för att tillhandahålla sina tjänster och är skyldiga att upprätthålla konfidentialitet om uppgifter.</p>
 
@@ -1943,16 +2065,18 @@
         <ul>
             <li>produkterna i kylskåpet, med de angivna mängderna, utgångsdatumen och priserna</li>
             <li>visningsnamn och e-postadress för övriga medlemmar och för inbjudna personer</li>
+            <li>kylskåpets inköpslista</li>
             <li>de ändringar som någon medlem gör i det delade kylskåpet</li>
         </ul>
-        <p>Personlig statistik, produkter i kylskåp som inte delas och kontoinställningar förblir synliga endast för användaren.</p>
+        <p>Personlig statistik, köphistorik, budget, recept, produkter i kylskåp som inte delas och kontoinställningar förblir synliga endast för användaren.</p>
         <p>Ägaren kan när som helst ta bort en medlem, och varje medlem kan lämna ett delat kylskåp. Därefter upphör åtkomsten till produkterna i det kylskåpet.</p>
         <h2>7. Dataöverföringar utanför Europeiska unionen</h2>
         <p>Personuppgifter lagras primärt inom Europeiska unionen. Våra tjänsteleverantörer (Firebase, PostHog, RevenueCat) använder EU-infrastruktur för primär datalagring.</p>
-        <p>I begränsade situationer kan vissa tekniska uppgifter behandlas av partnertjänster utanför EU (till exempel för vissa Google- eller Apple-operationer). I sådana fall säkerställer vi att lämpliga skyddsåtgärder för dataskydd tillämpas, i enlighet med standardavtalsklausuler (SCC) eller andra mekanismer som föreskrivs av GDPR.</p>
+        <p>Vissa leverantörer behandlar uppgifter även utanför EU. AI-tjänsterna Anthropic och OpenAI behandlar till exempel de uppgifter de tar emot i USA: kvittotext, produktlistor eller namnet på en rätt – aldrig ditt namn eller din e-postadress. Detsamma kan i begränsade fall gälla vissa tekniska uppgifter som behandlas av Google eller Apple.</p>
+        <p>För alla dessa överföringar säkerställer vi att lämpliga skyddsåtgärder för dataskydd tillämpas, till exempel Europeiska kommissionens standardavtalsklausuler (SCC) eller andra mekanismer som föreskrivs i GDPR.</p>
 
         <h2>8. Push-aviseringar</h2>
-        <p>Fridgy-applikationen kan skicka push-aviseringar relaterade till användarens produkter och utgångsdatum.</p>
+        <p>Fridgy-applikationen kan skicka push-aviseringar om produkter som snart går ut och, för Premium-prenumeranter, en avisering på morgonen med dagens receptförslag.</p>
         <p>Aviseringar är:</p>
         <ul>
             <li>valfria</li>
@@ -2003,6 +2127,9 @@
             <li>kontouppgifter (namn, e-postadress, användar-ID)</li>
             <li>alla tillagda produkter, mängder, priser och utgångsdatum</li>
             <li>kvittobilder och skanningshistorik</li>
+            <li>köphistoriken (butiker, datum, totalbelopp, produkter och priser)</li>
+            <li>månadsbudgeten</li>
+            <li>genererade och sparade recept samt recept som markerats som lagade</li>
             <li>historiken över förbrukade eller kasserade produkter</li>
             <li>statistik över matsvinn och besparingar</li>
             <li>skapade kylskåp och medlemskap i delade kylskåp</li>
@@ -2010,6 +2137,7 @@
             <li>användnings- och diagnostikdata kopplade till kontot</li>
             <li>tokens för pushnotiser</li>
         </ul>
+        <p>Kylskåp som du delar med andra användare raderas inte: produkterna och inköpslistan finns kvar hos de övriga medlemmarna, och om du var ägare går kylskåpet över till den medlem som gick med först.</p>
         <p>Raderingen sker omedelbart och går inte att ångra. Viss information kan sparas under den tid som gällande lagstiftning kräver, enligt avsnitt 9.</p>
 
         <h3>Aktiva prenumerationer</h3>
