@@ -276,6 +276,37 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .fam-list em{font-size:14.5px}
 }
 
+/* ---------- telefon gol (loc pentru capturi care nu exista inca) ----------
+   Cand vine captura, inlocuiesti <div class="ph" data-img="..."> cu <img src="..."> */
+.ph{position:relative;flex:none;aspect-ratio:784/1559;height:100%;max-width:100%;border-radius:15%/7.5%;
+  background:#161a24;padding:3.4%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16),0 40px 62px -10px rgba(0,0,0,.6)}
+.ph::after{content:"";position:absolute;top:4.6%;left:50%;transform:translateX(-50%);width:30%;height:3.6%;
+  border-radius:999px;background:#05070c}
+.ph i{display:block;width:100%;height:100%;border-radius:12%/6%;
+  background:linear-gradient(120deg,#6db4ff,#2453d6) top/100% 12.5% no-repeat,
+    linear-gradient(#fff,#fff) 50% 22%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 40%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 58%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 76%/86% 10% no-repeat,#e8f0fb}
+.fam-shot .ph{height:clamp(420px,40vw,560px)}
+.cell-media .ph{height:380px}
+/* cardul de buget decupat din aplicatie, cate unul pe limba */
+.m-bud{padding:14px 28px 40px!important}
+.m-bud img{width:100%;max-width:440px;height:auto;max-height:none;transform:rotate(-1.5deg);
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.pill{display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 10px;border-radius:999px;
+  font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;color:#fff;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff)}
+.fam-rev{grid-template-columns:.98fr 1.02fr}
+.fam-rev .fam-shot{order:-1}
+.fam-rev::before{left:auto;right:-140px}
+@media(max-width:980px){
+  .fam-shot .ph{height:clamp(360px,72vw,520px)}
+  .cell-media .ph{height:340px}
+  .fam-rev{grid-template-columns:1fr}
+  .fam-rev .fam-shot{order:0}
+}
+
 /* ---------- pricing ---------- */
 .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
 .plan{position:relative;padding:38px 34px;border-radius:var(--r-lg);background:var(--surface);
@@ -424,13 +455,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="step-n">2</div>
         <h3>Tartsd szemmel a hűtőt</h3>
         <p>A teljes hűtő egy képernyőn. Keress, szűrj, és egy pillantás alatt látod, mi járt le és mit kell hamar megenni.</p>
-        <div class="stepc-media"><img src="/img/hu/fridge.webp" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stepc-media"><img src="/img/hu/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Főzz abból, amid van</h3>
-        <p>Nemcsak a hűtő szemmel tartásában segítünk — a megoldást is adjuk: egyszerű, finom recepteket a lejáró termékekből.</p>
-        <div class="stepc-media"><img src="/img/hu/recipes.webp" alt="" loading="lazy" decoding="async" /></div>
+        <p>Nemcsak a hűtő szemmel tartásában segítünk — a megoldást is adjuk: egyszerű, finom recepteket a lejáró termékekből. Premiummal minden reggel új recepteket kapsz.</p>
+        <div class="stepc-media"><img src="/img/hu/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -438,10 +469,57 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <span class="nband-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
         <div>
           <h3>Időben szólunk</h3>
-          <p>Értesítés a megfelelő pillanatban, hogy tudd, mi jár le hamarosan.</p>
+          <p>Értesítés a megfelelő pillanatban, hogy tudd, mi jár le hamarosan. Premiummal reggelente a nap receptjeit is megkapod.</p>
         </div>
       </div>
       <div class="nband-shot"><img src="/img/hu/notify.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="lista">
+  <div class="wrap">
+    <div class="fam fam-rev">
+      <div class="fam-copy rv">
+        <div class="tag">Új · Bevásárlólista</div>
+        <h2>A lista, amely magától kipipálódik</h2>
+        <p class="fam-sub">Minden hűtőnek saját listája van, közös az összes taggal. Beszkenneled a blokkot, a Fridgy pedig kipipálja, amit megvettél.</p>
+        <ul class="fam-list">
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Kipipálódik, amikor beszkenneled a blokkot</b><em>„Tej” a listán és „FÉLZSÍROS TEJ 1,5% 1L” a blokkon? A Fridgy tudja, hogy ugyanaz a termék.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Javaslatok a hűtődből</b><em>Ami elfogyott, amit gyakran veszel, ami hamarosan lejár, és ami hiányzik a mai receptekhez.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Magától bővül<span class="pill">Premium</span></b><em>A gyakran vásárolt alapvető termékek felkerülnek a listára, amikor elfogynak. Bármikor kikapcsolható.</em></div></li>
+        </ul>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>A lista az ingyenes csomagban is benne van.</span></p>
+      </div>
+      <div class="fam-shot rv"><img src="/img/hu/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="cheltuieli">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="tag">Kiadások</div>
+      <h2>Annyit költs, amennyit terveztél, nem többet</h2>
+      <p>Havi költségkeret értesítéssel és a teljes vásárlási előzményeid.</p>
+    </div>
+    <div class="bento">
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Havi költségkeret<span class="pill">Premium</span></h3>
+        <p>Megadod, mennyit szeretnél havonta ételre költeni, mi pedig szólunk, ha közeledsz a határhoz.</p>
+      </div>
+      <div class="cell-media m-bud">
+        <img src="/img/hu/budget.webp" alt="" width="842" height="444" loading="lazy" decoding="async" />
+      </div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Vásárlási előzmények</h3>
+        <p>Minden, amit veszel, ide kerül, akár beszkenneled a blokkot, akár kézzel adod hozzá. Lásd pontosan, mire ment el a pénzed, napról napra.</p>
+      </div>
+      <div class="cell-media m-phone"><img src="/img/hu/history.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
     </div>
   </div>
 </section>
@@ -450,7 +528,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="sec-head rv">
       <div class="tag">Nem csak nyilvántartás</div>
-      <h2>A Fridgy megmutatja, hol folyik el a pénz</h2>
+      <h2>A Fridgy megmutatja, mit dobsz ki</h2>
       <p>Megmentési arány, visszanyert pénz és a kategóriák, ahol a legtöbbet pazarolod.</p>
     </div>
     <div class="bento">
@@ -459,7 +537,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>Nézd meg, mennyit spóroltál</h3>
         <p>Megmentési arány és visszanyert pénz, hónapról hónapra.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/hu/profile.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/hu/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -490,6 +568,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Annyi hűtő, amennyit szeretnél</b><em>Otthon, a nyaraló, az iroda — mind a saját termékeivel.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Meghívás pár másodperc alatt</b><em>Elküldöd a meghívót e-mailben — amint elfogadják, ugyanazt a hűtőt látjátok.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Mindenkinél szinkronban</b><em>Valaki hozzáad vagy elfogyaszt valamit? A változást azonnal mindenki látja, és a hűtő minden tagja értesítést kap.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Közös bevásárlólista</b><em>A hűtő minden tagja ugyanazt a listát látja és bővíti.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Az ingyenes csomagban is benne van.</span></p>
       </div>

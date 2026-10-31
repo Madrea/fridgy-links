@@ -275,6 +275,37 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .fam-list em{font-size:14.5px}
 }
 
+/* ---------- telefon gol (loc pentru capturi care nu exista inca) ----------
+   Cand vine captura, inlocuiesti <div class="ph" data-img="..."> cu <img src="..."> */
+.ph{position:relative;flex:none;aspect-ratio:784/1559;height:100%;max-width:100%;border-radius:15%/7.5%;
+  background:#161a24;padding:3.4%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16),0 40px 62px -10px rgba(0,0,0,.6)}
+.ph::after{content:"";position:absolute;top:4.6%;left:50%;transform:translateX(-50%);width:30%;height:3.6%;
+  border-radius:999px;background:#05070c}
+.ph i{display:block;width:100%;height:100%;border-radius:12%/6%;
+  background:linear-gradient(120deg,#6db4ff,#2453d6) top/100% 12.5% no-repeat,
+    linear-gradient(#fff,#fff) 50% 22%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 40%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 58%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 76%/86% 10% no-repeat,#e8f0fb}
+.fam-shot .ph{height:clamp(420px,40vw,560px)}
+.cell-media .ph{height:380px}
+/* cardul de buget decupat din aplicatie, cate unul pe limba */
+.m-bud{padding:14px 28px 40px!important}
+.m-bud img{width:100%;max-width:440px;height:auto;max-height:none;transform:rotate(-1.5deg);
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.pill{display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 10px;border-radius:999px;
+  font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;color:#fff;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff)}
+.fam-rev{grid-template-columns:.98fr 1.02fr}
+.fam-rev .fam-shot{order:-1}
+.fam-rev::before{left:auto;right:-140px}
+@media(max-width:980px){
+  .fam-shot .ph{height:clamp(360px,72vw,520px)}
+  .cell-media .ph{height:340px}
+  .fam-rev{grid-template-columns:1fr}
+  .fam-rev .fam-shot{order:0}
+}
+
 /* ---------- pricing ---------- */
 .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
 .plan{position:relative;padding:38px 34px;border-radius:var(--r-lg);background:var(--surface);
@@ -423,13 +454,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="step-n">2</div>
         <h3>Urmărești frigiderul</h3>
         <p>Tot frigiderul într-un singur ecran. Cauți, filtrezi și vezi dintr-o privire ce a expirat și ce trebuie consumat repede.</p>
-        <div class="stepc-media"><img src="/img/ro/fridge.webp" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stepc-media"><img src="/img/ro/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Gătești cu ce ai</h3>
-        <p>Nu te ajutăm doar să-ți urmărești frigiderul, ci îți dăm și soluția: rețete simple și gustoase din produsele care expiră.</p>
-        <div class="stepc-media"><img src="/img/ro/recipes.webp" alt="" loading="lazy" decoding="async" /></div>
+        <p>Nu te ajutăm doar să-ți urmărești frigiderul, ci îți dăm și soluția: rețete simple și gustoase din produsele care expiră. Cu Premium, primești rețete noi în fiecare dimineață.</p>
+        <div class="stepc-media"><img src="/img/ro/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -437,10 +468,57 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <span class="nband-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
         <div>
           <h3>Te notificăm din timp</h3>
-          <p>Notificări la momentul potrivit, ca să știi ce alimente urmează să expire.</p>
+          <p>Notificări la momentul potrivit, ca să știi ce alimente urmează să expire. Cu Premium, dimineața primești și rețetele zilei.</p>
         </div>
       </div>
       <div class="nband-shot"><img src="/img/ro/notify.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="lista">
+  <div class="wrap">
+    <div class="fam fam-rev">
+      <div class="fam-copy rv">
+        <div class="tag">Nou · Listă de cumpărături</div>
+        <h2>Lista care se bifează singură</h2>
+        <p class="fam-sub">O listă pentru fiecare frigider, comună pentru toți membrii. Scanezi bonul, iar Fridgy bifează ce ai cumpărat.</p>
+        <ul class="fam-list">
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Se bifează când scanezi bonul</b><em>„Lapte” pe listă și „LAPTE ZUZU 1,5%” pe bon? Fridgy știe că e același produs.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Sugestii din frigiderul tău</b><em>Ce s-a terminat, ce cumperi des, ce urmează să expire și ce îți lipsește pentru rețetele de azi.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Se completează singură<span class="pill">Premium</span></b><em>Produsele de bază pe care le cumperi des apar pe listă când se termină. O poți opri oricând.</em></div></li>
+        </ul>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Lista e inclusă și în planul gratuit.</span></p>
+      </div>
+      <div class="fam-shot rv"><img src="/img/ro/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="cheltuieli">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="tag">Cheltuieli</div>
+      <h2>Cheltui cât îți propui, nu mai mult</h2>
+      <p>Un buget lunar cu alertă și istoricul complet al cumpărăturilor.</p>
+    </div>
+    <div class="bento">
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Buget lunar<span class="pill">Premium</span></h3>
+        <p>Setezi cât vrei să cheltui lunar pe mâncare și te anunțăm când te apropii de limită.</p>
+      </div>
+      <div class="cell-media m-bud">
+        <img src="/img/ro/budget.webp" alt="" width="842" height="444" loading="lazy" decoding="async" />
+      </div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Istoric cumpărături</h3>
+        <p>Tot ce cumperi ajunge aici, fie că scanezi bonul, fie că adaugi de mână. Vezi exact pe ce ai dat banii, zi cu zi.</p>
+      </div>
+      <div class="cell-media m-phone"><img src="/img/ro/history.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
     </div>
   </div>
 </section>
@@ -458,7 +536,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>Vezi cât ai salvat</h3>
         <p>Rată de salvare, bani recuperați, lună de lună.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/ro/profile.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/ro/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -489,6 +567,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Câte frigidere vrei</b><em>Personal, casa de la munte, biroul — fiecare cu produsele lui.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Invitații în câteva secunde</b><em>Trimiți invitația pe email și, de îndată ce e acceptată, vedeți același frigider.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Sincronizat pentru toți</b><em>Cineva adaugă sau consumă un produs? Schimbarea se vede instant la toată lumea, iar toți membrii frigiderului primesc o notificare.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Listă de cumpărături comună</b><em>Toți membrii frigiderului văd și completează aceeași listă.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Inclus și în planul gratuit.</span></p>
       </div>

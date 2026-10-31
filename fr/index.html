@@ -276,6 +276,37 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .fam-list em{font-size:14.5px}
 }
 
+/* ---------- telefon gol (loc pentru capturi care nu exista inca) ----------
+   Cand vine captura, inlocuiesti <div class="ph" data-img="..."> cu <img src="..."> */
+.ph{position:relative;flex:none;aspect-ratio:784/1559;height:100%;max-width:100%;border-radius:15%/7.5%;
+  background:#161a24;padding:3.4%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16),0 40px 62px -10px rgba(0,0,0,.6)}
+.ph::after{content:"";position:absolute;top:4.6%;left:50%;transform:translateX(-50%);width:30%;height:3.6%;
+  border-radius:999px;background:#05070c}
+.ph i{display:block;width:100%;height:100%;border-radius:12%/6%;
+  background:linear-gradient(120deg,#6db4ff,#2453d6) top/100% 12.5% no-repeat,
+    linear-gradient(#fff,#fff) 50% 22%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 40%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 58%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 76%/86% 10% no-repeat,#e8f0fb}
+.fam-shot .ph{height:clamp(420px,40vw,560px)}
+.cell-media .ph{height:380px}
+/* cardul de buget decupat din aplicatie, cate unul pe limba */
+.m-bud{padding:14px 28px 40px!important}
+.m-bud img{width:100%;max-width:440px;height:auto;max-height:none;transform:rotate(-1.5deg);
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.pill{display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 10px;border-radius:999px;
+  font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;color:#fff;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff)}
+.fam-rev{grid-template-columns:.98fr 1.02fr}
+.fam-rev .fam-shot{order:-1}
+.fam-rev::before{left:auto;right:-140px}
+@media(max-width:980px){
+  .fam-shot .ph{height:clamp(360px,72vw,520px)}
+  .cell-media .ph{height:340px}
+  .fam-rev{grid-template-columns:1fr}
+  .fam-rev .fam-shot{order:0}
+}
+
 /* ---------- pricing ---------- */
 .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
 .plan{position:relative;padding:38px 34px;border-radius:var(--r-lg);background:var(--surface);
@@ -424,13 +455,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="step-n">2</div>
         <h3>Surveille le frigo</h3>
         <p>Tout le frigo sur un seul écran. Cherche, filtre et vois d'un coup d'œil ce qui est périmé et ce qu'il faut manger vite.</p>
-        <div class="stepc-media"><img src="/img/fr/fridge.webp" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stepc-media"><img src="/img/fr/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Cuisine ce que tu as</h3>
-        <p>On ne fait pas que surveiller ton frigo : on te donne la solution, des recettes simples et savoureuses avec ce qui périme.</p>
-        <div class="stepc-media"><img src="/img/fr/recipes.webp" alt="" loading="lazy" decoding="async" /></div>
+        <p>On ne fait pas que surveiller ton frigo : on te donne la solution, des recettes simples et savoureuses avec ce qui périme. Avec Premium, tu reçois de nouvelles recettes chaque matin.</p>
+        <div class="stepc-media"><img src="/img/fr/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -438,10 +469,57 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <span class="nband-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
         <div>
           <h3>On te prévient à temps</h3>
-          <p>Des notifications au bon moment, pour savoir ce qui va bientôt périmer.</p>
+          <p>Des notifications au bon moment, pour savoir ce qui va bientôt périmer. Avec Premium, tu reçois aussi les recettes du jour chaque matin.</p>
         </div>
       </div>
       <div class="nband-shot"><img src="/img/fr/notify.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="lista">
+  <div class="wrap">
+    <div class="fam fam-rev">
+      <div class="fam-copy rv">
+        <div class="tag">Nouveau · Liste de courses</div>
+        <h2>La liste qui se coche toute seule</h2>
+        <p class="fam-sub">Une liste par frigo, partagée par tous les membres. Tu scannes ton ticket et Fridgy coche ce que tu as acheté.</p>
+        <ul class="fam-list">
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Cochée quand tu scannes le ticket</b><em>« Lait » sur la liste et « LAIT DEMI-ÉCRÉMÉ 1L » sur le ticket ? Fridgy sait que c’est le même produit.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Des suggestions tirées de ton frigo</b><em>Ce qui est fini, ce que tu achètes souvent, ce qui va périmer et ce qu’il te manque pour les recettes du jour.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Elle se remplit toute seule<span class="pill">Premium</span></b><em>Les produits de base que tu achètes souvent s’ajoutent à la liste quand ils sont finis. Désactivable à tout moment.</em></div></li>
+        </ul>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>La liste est incluse aussi dans le plan gratuit.</span></p>
+      </div>
+      <div class="fam-shot rv"><img src="/img/fr/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="cheltuieli">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="tag">Dépenses</div>
+      <h2>Dépense ce que tu as prévu, pas plus</h2>
+      <p>Un budget mensuel avec alerte et tout l’historique de tes achats.</p>
+    </div>
+    <div class="bento">
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Budget mensuel<span class="pill">Premium</span></h3>
+        <p>Fixe combien tu veux dépenser pour manger chaque mois et on te prévient quand tu approches de la limite.</p>
+      </div>
+      <div class="cell-media m-bud">
+        <img src="/img/fr/budget.webp" alt="" width="842" height="444" loading="lazy" decoding="async" />
+      </div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Historique d’achats</h3>
+        <p>Tout ce que tu achètes arrive ici, que tu scannes le ticket ou que tu l’ajoutes à la main. Vois exactement où est passé ton argent, jour après jour.</p>
+      </div>
+      <div class="cell-media m-phone"><img src="/img/fr/history.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
     </div>
   </div>
 </section>
@@ -450,7 +528,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="sec-head rv">
       <div class="tag">Pas seulement un suivi</div>
-      <h2>Fridgy te montre où part l'argent</h2>
+      <h2>Fridgy te montre ce que tu jettes</h2>
       <p>Taux de sauvetage, argent récupéré et les catégories où tu gaspilles le plus.</p>
     </div>
     <div class="bento">
@@ -459,7 +537,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>Vois ce que tu as économisé</h3>
         <p>Taux de sauvetage et argent récupéré, mois après mois.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/fr/profile.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/fr/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -490,6 +568,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Autant de frigos que tu veux</b><em>La maison, le chalet, le bureau — chacun ses produits.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Des invitations en quelques secondes</b><em>Tu envoies l'invitation par e-mail : dès qu'elle est acceptée, vous partagez le même frigo.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Synchronisé pour tout le monde</b><em>Quelqu'un ajoute ou consomme un produit ? Le changement apparaît aussitôt chez tout le monde, et chaque membre du frigo reçoit une notification.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Liste de courses partagée</b><em>Tous les membres du frigo voient et complètent la même liste.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Inclus aussi dans le plan gratuit.</span></p>
       </div>

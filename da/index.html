@@ -276,6 +276,37 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .fam-list em{font-size:14.5px}
 }
 
+/* ---------- telefon gol (loc pentru capturi care nu exista inca) ----------
+   Cand vine captura, inlocuiesti <div class="ph" data-img="..."> cu <img src="..."> */
+.ph{position:relative;flex:none;aspect-ratio:784/1559;height:100%;max-width:100%;border-radius:15%/7.5%;
+  background:#161a24;padding:3.4%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.16),0 40px 62px -10px rgba(0,0,0,.6)}
+.ph::after{content:"";position:absolute;top:4.6%;left:50%;transform:translateX(-50%);width:30%;height:3.6%;
+  border-radius:999px;background:#05070c}
+.ph i{display:block;width:100%;height:100%;border-radius:12%/6%;
+  background:linear-gradient(120deg,#6db4ff,#2453d6) top/100% 12.5% no-repeat,
+    linear-gradient(#fff,#fff) 50% 22%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 40%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 58%/86% 10% no-repeat,
+    linear-gradient(#fff,#fff) 50% 76%/86% 10% no-repeat,#e8f0fb}
+.fam-shot .ph{height:clamp(420px,40vw,560px)}
+.cell-media .ph{height:380px}
+/* cardul de buget decupat din aplicatie, cate unul pe limba */
+.m-bud{padding:14px 28px 40px!important}
+.m-bud img{width:100%;max-width:440px;height:auto;max-height:none;transform:rotate(-1.5deg);
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.pill{display:inline-block;vertical-align:middle;margin-left:8px;padding:4px 10px;border-radius:999px;
+  font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;color:#fff;
+  background:linear-gradient(135deg,#4b9bff,#7c5cff)}
+.fam-rev{grid-template-columns:.98fr 1.02fr}
+.fam-rev .fam-shot{order:-1}
+.fam-rev::before{left:auto;right:-140px}
+@media(max-width:980px){
+  .fam-shot .ph{height:clamp(360px,72vw,520px)}
+  .cell-media .ph{height:340px}
+  .fam-rev{grid-template-columns:1fr}
+  .fam-rev .fam-shot{order:0}
+}
+
 /* ---------- pricing ---------- */
 .plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
 .plan{position:relative;padding:38px 34px;border-radius:var(--r-lg);background:var(--surface);
@@ -424,13 +455,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="step-n">2</div>
         <h3>Hold øje med køleskabet</h3>
         <p>Hele køleskabet på én skærm. Søg, filtrer og se med det samme, hvad der er udløbet, og hvad der skal spises snart.</p>
-        <div class="stepc-media"><img src="/img/da/fridge.webp" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stepc-media"><img src="/img/da/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Lav mad af det du har</h3>
-        <p>Vi hjælper dig ikke kun med overblikket — vi giver også løsningen: enkle, lækre opskrifter med det, der snart udløber.</p>
-        <div class="stepc-media"><img src="/img/da/recipes.webp" alt="" loading="lazy" decoding="async" /></div>
+        <p>Vi hjælper dig ikke kun med overblikket — vi giver også løsningen: enkle, lækre opskrifter med det, der snart udløber. Med Premium får du nye opskrifter hver morgen.</p>
+        <div class="stepc-media"><img src="/img/da/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -438,10 +469,57 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <span class="nband-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
         <div>
           <h3>Vi siger til i god tid</h3>
-          <p>Beskeder på det rigtige tidspunkt, så du ved, hvad der snart udløber.</p>
+          <p>Beskeder på det rigtige tidspunkt, så du ved, hvad der snart udløber. Med Premium får du også dagens opskrifter hver morgen.</p>
         </div>
       </div>
       <div class="nband-shot"><img src="/img/da/notify.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="lista">
+  <div class="wrap">
+    <div class="fam fam-rev">
+      <div class="fam-copy rv">
+        <div class="tag">Nyt · Indkøbsliste</div>
+        <h2>Listen, der krydser sig selv af</h2>
+        <p class="fam-sub">Én liste pr. køleskab, fælles for alle medlemmer. Du scanner kvitteringen, og Fridgy krydser af, hvad du har købt.</p>
+        <ul class="fam-list">
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Krydses af, når du scanner kvitteringen</b><em>»Mælk« på listen og »LETMÆLK 1,5% 1L« på kvitteringen? Fridgy ved, at det er den samme vare.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Forslag fra dit køleskab</b><em>Hvad der er sluppet op, hvad du ofte køber, hvad der snart udløber, og hvad du mangler til dagens opskrifter.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Udfylder sig selv<span class="pill">Premium</span></b><em>Basisvarer, du ofte køber, kommer på listen, når de slipper op. Kan slås fra når som helst.</em></div></li>
+        </ul>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Listen er også med i den gratis plan.</span></p>
+      </div>
+      <div class="fam-shot rv"><img src="/img/da/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="block pt0" id="cheltuieli">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="tag">Forbrug</div>
+      <h2>Brug det, du har planlagt – ikke mere</h2>
+      <p>Et månedligt budget med advarsler og hele din købshistorik.</p>
+    </div>
+    <div class="bento">
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Månedligt budget<span class="pill">Premium</span></h3>
+        <p>Vælg, hvor meget du vil bruge på mad om måneden, og vi siger til, når du nærmer dig grænsen.</p>
+      </div>
+      <div class="cell-media m-bud">
+        <img src="/img/da/budget.webp" alt="" width="842" height="444" loading="lazy" decoding="async" />
+      </div>
+    </article></div>
+      <div class="rv span-6"><article class="cell">
+      <div class="cell-body">
+        <h3>Købshistorik</h3>
+        <p>Alt, hvad du køber, havner her, uanset om du scanner kvitteringen eller tilføjer det i hånden. Se præcis, hvad pengene gik til, dag for dag.</p>
+      </div>
+      <div class="cell-media m-phone"><img src="/img/da/history.webp" alt="" loading="lazy" decoding="async" /></div>
+    </article></div>
     </div>
   </div>
 </section>
@@ -450,7 +528,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="sec-head rv">
       <div class="tag">Ikke bare et overblik</div>
-      <h2>Fridgy viser dig hvor pengene forsvinder</h2>
+      <h2>Fridgy viser dig, hvad du smider ud</h2>
       <p>Redningsrate, penge tilbage og de kategorier, hvor du spilder mest.</p>
     </div>
     <div class="bento">
@@ -459,7 +537,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>Se hvor meget du har sparet</h3>
         <p>Redningsrate og penge tilbage, måned efter måned.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/da/profile.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/da/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -490,6 +568,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Så mange køleskabe du vil</b><em>Hjemme, sommerhuset, kontoret — hvert med sine egne varer.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Invitationer på få sekunder</b><em>Send invitationen på mail — så snart den er accepteret, deler I det samme køleskab.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Synkroniseret for alle</b><em>Nogen tilføjer eller bruger en vare? Ændringen ses med det samme hos alle, og alle medlemmer af køleskabet får en besked.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Fælles indkøbsliste</b><em>Alle medlemmer af køleskabet ser og tilføjer til den samme liste.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Også med i den gratis plan.</span></p>
       </div>
