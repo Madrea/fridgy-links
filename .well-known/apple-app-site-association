@@ -7,12 +7,14 @@
         "paths": [
           "/email-verified",
           "/email-verified/*",
+          "/email-verification-error",
+          "/email-verification-error/*",
+          "/claim/*",
+          "/invitation/*",
           "/reset-password",
           "/reset-password/*",
           "/reset-password-failed",
-          "/reset-password-failed/*",
-          "/claim/*",
-          "/invitation/*"
+          "/reset-password-failed/*"
         ]
       }
     ]
