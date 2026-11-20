@@ -6,28 +6,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#070b18" />
 <meta name="color-scheme" content="dark" />
-<title>Fridgy - Scan. Kook. Geen verspilling.</title>
-<meta name="description" content="Scan je kassabonnen, organiseer je koelkast, kook met wat je hebt, bespaar geld." />
-<link rel="canonical" href="https://fridgy.org/nl" />
-<link rel="alternate" hreflang="ro" href="https://fridgy.org/" />
-<link rel="alternate" hreflang="en" href="https://fridgy.org/en" />
-<link rel="alternate" hreflang="de" href="https://fridgy.org/de" />
-<link rel="alternate" hreflang="hu" href="https://fridgy.org/hu" />
-<link rel="alternate" hreflang="fr" href="https://fridgy.org/fr" />
-<link rel="alternate" hreflang="nl" href="https://fridgy.org/nl" />
-<link rel="alternate" hreflang="da" href="https://fridgy.org/da" />
-<link rel="alternate" hreflang="sv" href="https://fridgy.org/sv" />
-<link rel="alternate" hreflang="x-default" href="https://fridgy.org/" />
-<meta property="og:title" content="Fridgy — Scan. Kook. Geen verspilling." />
-<meta property="og:description" content="Scan je kassabonnen, organiseer je koelkast, kook met wat je hebt, bespaar geld." />
+<title>Rispy - Scan. Kook. Geen verspilling.</title>
+<meta name="description" content="Scan je kassabonnen, organiseer je keuken, kook met wat je hebt, bespaar geld." />
+<link rel="canonical" href="https://rispy.app/nl" />
+<link rel="alternate" hreflang="ro" href="https://rispy.app/" />
+<link rel="alternate" hreflang="en" href="https://rispy.app/en" />
+<link rel="alternate" hreflang="es" href="https://rispy.app/es" />
+<link rel="alternate" hreflang="fr" href="https://rispy.app/fr" />
+<link rel="alternate" hreflang="de" href="https://rispy.app/de" />
+<link rel="alternate" hreflang="it" href="https://rispy.app/it" />
+<link rel="alternate" hreflang="pt" href="https://rispy.app/pt" />
+<link rel="alternate" hreflang="nl" href="https://rispy.app/nl" />
+<link rel="alternate" hreflang="pl" href="https://rispy.app/pl" />
+<link rel="alternate" hreflang="cs" href="https://rispy.app/cs" />
+<link rel="alternate" hreflang="sk" href="https://rispy.app/sk" />
+<link rel="alternate" hreflang="hu" href="https://rispy.app/hu" />
+<link rel="alternate" hreflang="sv" href="https://rispy.app/sv" />
+<link rel="alternate" hreflang="da" href="https://rispy.app/da" />
+<link rel="alternate" hreflang="fi" href="https://rispy.app/fi" />
+<link rel="alternate" hreflang="et" href="https://rispy.app/et" />
+<link rel="alternate" hreflang="lv" href="https://rispy.app/lv" />
+<link rel="alternate" hreflang="lt" href="https://rispy.app/lt" />
+<link rel="alternate" hreflang="el" href="https://rispy.app/el" />
+<link rel="alternate" hreflang="bg" href="https://rispy.app/bg" />
+<link rel="alternate" hreflang="hr" href="https://rispy.app/hr" />
+<link rel="alternate" hreflang="sl" href="https://rispy.app/sl" />
+<link rel="alternate" hreflang="ga" href="https://rispy.app/ga" />
+<link rel="alternate" hreflang="mt" href="https://rispy.app/mt" />
+<link rel="alternate" hreflang="x-default" href="https://rispy.app/" />
+<meta property="og:title" content="Rispy — Scan. Kook. Geen verspilling." />
+<meta property="og:description" content="Scan je kassabonnen, organiseer je keuken, kook met wat je hebt, bespaar geld." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fridgy.org/nl" />
-<meta property="og:image" content="https://fridgy.org/img/og-nl.jpg" />
+<meta property="og:url" content="https://rispy.app/nl" />
+<meta property="og:image" content="https://rispy.app/img/og-nl.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/png" href="/fridgy-logo.png" />
+<link rel="icon" type="image/png" href="/rispy-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{
   --bg:#070b18;
@@ -38,7 +54,7 @@
   --line-2:rgba(255,255,255,.20);
   --accent:#60a5fa; --accent-2:#a78bfa;
   --r-lg:30px; --r-md:20px;
-  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font:'Plus Jakarta Sans','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --maxw:1180px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -89,6 +105,8 @@ body.scrolled nav{background:rgba(8,13,27,.82);border-color:var(--line-2);box-sh
 .lang-menu a{display:block;padding:9px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted)}
 .lang-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink)}
 .lang-menu a.active{color:#9ec5ff;font-weight:800}
+/* meniu limbi: scroll */
+.lang-menu{max-height:min(68vh,520px);overflow-y:auto;overscroll-behavior:contain}
 @media(max-width:900px){.nav-links>a:not(.nav-cta){display:none}}
 
 /* ---------- hero ---------- */
@@ -231,7 +249,7 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .m-big{height:360px}
 }
 
-/* ---------- familie (frigider partajat) ---------- */
+/* ---------- familie (bucătărie partajată) ---------- */
 .fam{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,64px);align-items:center;
   padding:clamp(30px,3.4vw,54px);border-radius:var(--r-lg);background:var(--surface);
   border:1px solid var(--line);position:relative;overflow:hidden}
@@ -395,14 +413,14 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 
 <header>
   <nav>
-    <a href="/nl" class="brand" aria-label="Fridgy"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></a>
+    <a href="/nl" class="brand" aria-label="Rispy"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></a>
     <div class="nav-links">
       <a href="#pasi">Hoe het werkt</a>
-      <a href="#functii">Waarom Fridgy</a>
+      <a href="#functii">Waarom Rispy</a>
       <a href="#planuri">Abonnementen</a>
       <div class="lang">
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">NL<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="lang-menu"><a href="/" hreflang="ro" onclick="document.cookie='fridgy-lang=ro;path=/;max-age=31536000;samesite=lax;secure'">Roemeens</a><a href="/en" hreflang="en" onclick="document.cookie='fridgy-lang=en;path=/;max-age=31536000;samesite=lax;secure'">Engels</a><a href="/de" hreflang="de" onclick="document.cookie='fridgy-lang=de;path=/;max-age=31536000;samesite=lax;secure'">Duits</a><a href="/hu" hreflang="hu" onclick="document.cookie='fridgy-lang=hu;path=/;max-age=31536000;samesite=lax;secure'">Hongaars</a><a href="/fr" hreflang="fr" onclick="document.cookie='fridgy-lang=fr;path=/;max-age=31536000;samesite=lax;secure'">Frans</a><a href="/nl" hreflang="nl" class="active" onclick="document.cookie='fridgy-lang=nl;path=/;max-age=31536000;samesite=lax;secure'">Nederlands</a><a href="/da" hreflang="da" onclick="document.cookie='fridgy-lang=da;path=/;max-age=31536000;samesite=lax;secure'">Deens</a><a href="/sv" hreflang="sv" onclick="document.cookie='fridgy-lang=sv;path=/;max-age=31536000;samesite=lax;secure'">Zweeds</a></div>
+        <div class="lang-menu"><a href="/" hreflang="ro" onclick="document.cookie='fridgy-lang=ro;path=/;max-age=31536000;samesite=lax;secure'">Roemeens</a><a href="/en" hreflang="en" onclick="document.cookie='fridgy-lang=en;path=/;max-age=31536000;samesite=lax;secure'">Engels</a><a href="/es" hreflang="es" onclick="document.cookie='fridgy-lang=es;path=/;max-age=31536000;samesite=lax;secure'">Spaans</a><a href="/fr" hreflang="fr" onclick="document.cookie='fridgy-lang=fr;path=/;max-age=31536000;samesite=lax;secure'">Frans</a><a href="/de" hreflang="de" onclick="document.cookie='fridgy-lang=de;path=/;max-age=31536000;samesite=lax;secure'">Duits</a><a href="/it" hreflang="it" onclick="document.cookie='fridgy-lang=it;path=/;max-age=31536000;samesite=lax;secure'">Italiaans</a><a href="/pt" hreflang="pt" onclick="document.cookie='fridgy-lang=pt;path=/;max-age=31536000;samesite=lax;secure'">Portugees</a><a href="/nl" hreflang="nl" class="active" onclick="document.cookie='fridgy-lang=nl;path=/;max-age=31536000;samesite=lax;secure'">Nederlands</a><a href="/pl" hreflang="pl" onclick="document.cookie='fridgy-lang=pl;path=/;max-age=31536000;samesite=lax;secure'">Pools</a><a href="/cs" hreflang="cs" onclick="document.cookie='fridgy-lang=cs;path=/;max-age=31536000;samesite=lax;secure'">Tsjechisch</a><a href="/sk" hreflang="sk" onclick="document.cookie='fridgy-lang=sk;path=/;max-age=31536000;samesite=lax;secure'">Slowaaks</a><a href="/hu" hreflang="hu" onclick="document.cookie='fridgy-lang=hu;path=/;max-age=31536000;samesite=lax;secure'">Hongaars</a><a href="/sv" hreflang="sv" onclick="document.cookie='fridgy-lang=sv;path=/;max-age=31536000;samesite=lax;secure'">Zweeds</a><a href="/da" hreflang="da" onclick="document.cookie='fridgy-lang=da;path=/;max-age=31536000;samesite=lax;secure'">Deens</a><a href="/fi" hreflang="fi" onclick="document.cookie='fridgy-lang=fi;path=/;max-age=31536000;samesite=lax;secure'">Fins</a><a href="/et" hreflang="et" onclick="document.cookie='fridgy-lang=et;path=/;max-age=31536000;samesite=lax;secure'">Estisch</a><a href="/lv" hreflang="lv" onclick="document.cookie='fridgy-lang=lv;path=/;max-age=31536000;samesite=lax;secure'">Lets</a><a href="/lt" hreflang="lt" onclick="document.cookie='fridgy-lang=lt;path=/;max-age=31536000;samesite=lax;secure'">Litouws</a><a href="/el" hreflang="el" onclick="document.cookie='fridgy-lang=el;path=/;max-age=31536000;samesite=lax;secure'">Grieks</a><a href="/bg" hreflang="bg" onclick="document.cookie='fridgy-lang=bg;path=/;max-age=31536000;samesite=lax;secure'">Bulgaars</a><a href="/hr" hreflang="hr" onclick="document.cookie='fridgy-lang=hr;path=/;max-age=31536000;samesite=lax;secure'">Kroatisch</a><a href="/sl" hreflang="sl" onclick="document.cookie='fridgy-lang=sl;path=/;max-age=31536000;samesite=lax;secure'">Sloveens</a><a href="/ga" hreflang="ga" onclick="document.cookie='fridgy-lang=ga;path=/;max-age=31536000;samesite=lax;secure'">Iers</a><a href="/mt" hreflang="mt" onclick="document.cookie='fridgy-lang=mt;path=/;max-age=31536000;samesite=lax;secure'">Maltees</a></div>
       </div>
       <a href="#download" class="nav-cta">Gratis downloaden</a>
     </div>
@@ -415,13 +433,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
     <div class="hero-grid">
       <div class="rv">
         <h1>&euro;&nbsp;290 weggegooid in de prullenbak<br><span class="grad">elk jaar. Wij lossen dat op.</span></h1>
-        <p class="sub">Elke Europeaan verspilt ongeveer <strong>130 kg</strong> voedsel per jaar — bijna <strong>&euro;&nbsp;290</strong> in de vuilnisbak. Fridgy helpt je georganiseerd te blijven, houdbaarheidsdata bij te houden en verspilling te voorkomen. En als eten bijna verloopt, maakt Fridgy er heerlijke receptideeën van.</p>
+        <p class="sub">Elke Europeaan verspilt ongeveer <strong>130 kg</strong> voedsel per jaar — bijna <strong>&euro;&nbsp;290</strong> in de vuilnisbak. Rispy helpt je georganiseerd te blijven, houdbaarheidsdata bij te houden en verspilling te voorkomen. En als eten bijna verloopt, maakt Rispy er heerlijke receptideeën van.</p>
         <div class="store-row">
         <a class="store-btn" href="https://apps.apple.com/ro/app/id6748481042" target="_blank" rel="noopener" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download in</small><b>App Store</b></span></a>
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" target="_blank" rel="noopener" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Beschikbaar op</small><b>Google Play</b></span></a>
       </div>
       </div>
-      <div class="hero-visual rv"><img src="/img/nl/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" /></div>
+      <div class="hero-visual rv"><img src="/img/nl/scan.webp" alt="Rispy" fetchpriority="high" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -453,15 +471,15 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       </article>
       <article class="stepc rv">
         <div class="step-n">2</div>
-        <h3>Houd je koelkast in de gaten</h3>
-        <p>Je hele koelkast op één scherm. Zoek, filter en zie in één oogopslag wat verlopen is en wat snel op moet.</p>
-        <div class="stepc-media"><img src="/img/nl/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+        <h3>Houd je keuken in de gaten</h3>
+        <p>Je hele keuken op één scherm. Zoek, filter en zie in één oogopslag wat verlopen is en wat snel op moet.</p>
+        <div class="stepc-media"><img src="/img/nl/fridge.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Kook met wat je hebt</h3>
         <p>We helpen je niet alleen bij het overzicht — we geven ook de oplossing: simpele, lekkere recepten met wat bijna verloopt. Met Premium krijg je elke ochtend nieuwe recepten.</p>
-        <div class="stepc-media"><img src="/img/nl/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stepc-media"><img src="/img/nl/recipes.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -483,15 +501,15 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       <div class="fam-copy rv">
         <div class="tag">Nieuw · Boodschappenlijst</div>
         <h2>De lijst die zichzelf afvinkt</h2>
-        <p class="fam-sub">Eén lijst per koelkast, gedeeld met alle leden. Je scant je kassabon en Fridgy vinkt af wat je hebt gekocht.</p>
+        <p class="fam-sub">Eén lijst per keuken, gedeeld met alle leden. Je scant je kassabon en Rispy vinkt af wat je hebt gekocht.</p>
         <ul class="fam-list">
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Afgevinkt zodra je de bon scant</b><em>“Melk” op de lijst en “HALFVOLLE MELK 1L” op de bon? Fridgy weet dat het hetzelfde product is.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Suggesties uit je koelkast<span class="pill">Premium</span></b><em>Wat op is, wat je vaak koopt, wat bijna verloopt en wat je mist voor de recepten van vandaag.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Afgevinkt zodra je de bon scant</b><em>“Melk” op de lijst en “HALFVOLLE MELK 1L” op de bon? Rispy weet dat het hetzelfde product is.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Suggesties uit je keuken<span class="pill">Premium</span></b><em>Wat op is, wat je vaak koopt, wat bijna verloopt en wat je mist voor de recepten van vandaag.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Vult zichzelf aan<span class="pill">Premium</span></b><em>Basisproducten die je vaak koopt komen op de lijst zodra ze op zijn. Altijd uit te zetten.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>De lijst zit ook in het gratis plan.</span></p>
       </div>
-      <div class="fam-shot rv"><img src="/img/nl/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="fam-shot rv"><img src="/img/nl/shopping.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -528,7 +546,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="sec-head rv">
       <div class="tag">Meer dan bijhouden</div>
-      <h2>Fridgy laat zien wat je weggooit</h2>
+      <h2>Rispy laat zien wat je weggooit</h2>
       <p>Reddingspercentage, teruggewonnen geld en de categorieën waar je het meest weggooit.</p>
     </div>
     <div class="bento">
@@ -537,7 +555,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>Zie hoeveel je bespaarde</h3>
         <p>Reddingspercentage en teruggewonnen geld, maand na maand.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/nl/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/nl/profile.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -562,17 +580,17 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
     <div class="fam">
       <div class="fam-copy rv">
         <div class="tag">Samen</div>
-        <h2>Eén koelkast voor het hele gezin</h2>
-        <p class="fam-sub">Elke koelkast kun je delen met wie je wilt. Dezelfde producten, dezelfde hoeveelheden, voor iedereen in real time bijgewerkt.</p>
+        <h2>Eén keuken voor het hele gezin</h2>
+        <p class="fam-sub">Elke keuken kun je delen met wie je wilt. Dezelfde producten, dezelfde hoeveelheden, voor iedereen in real time bijgewerkt.</p>
         <ul class="fam-list">
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Zoveel koelkasten als je wilt</b><em>Thuis, het vakantiehuis, kantoor — elk met eigen producten.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Uitnodigingen in seconden</b><em>Stuur een uitnodiging per e-mail — zodra die is geaccepteerd, delen jullie dezelfde koelkast.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Voor iedereen gesynchroniseerd</b><em>Iemand voegt iets toe of gebruikt iets? De wijziging is meteen bij iedereen zichtbaar en elk lid van de koelkast krijgt een melding.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Gedeelde boodschappenlijst</b><em>Alle leden van de koelkast zien en vullen dezelfde lijst aan.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Zoveel keukens als je wilt<span class="pill">Premium</span></b><em>Thuis, het vakantiehuis, kantoor — elk met eigen producten.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Uitnodigingen in seconden</b><em>Stuur een uitnodiging per e-mail — zodra die is geaccepteerd, delen jullie dezelfde keuken.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Voor iedereen gesynchroniseerd</b><em>Iemand voegt iets toe of gebruikt iets? De wijziging is meteen bij iedereen zichtbaar en elk lid van de keuken krijgt een melding.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Gedeelde boodschappenlijst</b><em>Alle leden van de keuken zien en vullen dezelfde lijst aan.</em></div></li>
         </ul>
-        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Ook inbegrepen in het gratis plan.</span></p>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Het gratis plan bevat één keuken, die je deelt met wie je maar wilt.</span></p>
       </div>
-      <div class="fam-shot rv"><img src="/img/nl/family.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="fam-shot rv"><img src="/img/nl/family.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -588,7 +606,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-name">Gratis</div>
         <div class="plan-price">Gratis</div>
         <span class="plan-year"></span>
-        <ul><li><span class="ck y">&#10003;</span>Kassabonscans: 10 / maand</li><li><span class="ck y">&#10003;</span>Recepten: één keer per koelkast</li><li><span class="ck y">&#10003;</span>Gedeelde boodschappenlijst</li><li><span class="ck y">&#10003;</span>Aankoopgeschiedenis: deze maand</li><li><span class="ck y">&#10003;</span>Basisstatistieken</li><li><span class="ck y">&#10003;</span>Meerdere koelkasten</li><li><span class="ck y">&#10003;</span>Gedeelde koelkast</li></ul>
+        <ul><li><span class="ck y">&#10003;</span>Kassabonscans: 10 / maand</li><li><span class="ck y">&#10003;</span>Recepten: één keer per keuken</li><li><span class="ck y">&#10003;</span>Gedeelde boodschappenlijst</li><li><span class="ck y">&#10003;</span>Aankoopgeschiedenis: deze maand</li><li><span class="ck y">&#10003;</span>Basisstatistieken</li><li><span class="ck y">&#10003;</span>Eén keuken</li><li><span class="ck y">&#10003;</span>Te delen met wie je wilt</li></ul>
         <a href="#download" class="plan-btn btn-free">Gratis downloaden</a>
       </div>
       <div class="plan pro rv">
@@ -596,7 +614,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-name">Premium</div>
         <div class="plan-price">&euro; 3,99 <span>/ maand</span></div>
         <span class="plan-year">of &euro; 39,99 / jaar &middot; bespaar 16%</span>
-        <ul><li><span class="ck y">&#10003;</span>Alles uit Gratis, plus:</li><li><span class="ck y">&#10003;</span>Onbeperkt kassabonnen scannen</li><li><span class="ck y">&#10003;</span>Elke ochtend nieuwe recepten + 2× per dag vernieuwen</li><li><span class="ck y">&#10003;</span>Bewaarde recepten</li><li><span class="ck y">&#10003;</span>Maandbudget met meldingen</li><li><span class="ck y">&#10003;</span>Volledige aankoopgeschiedenis</li><li><span class="ck y">&#10003;</span>Slimme boodschappenlijst</li><li><span class="ck y">&#10003;</span>Geavanceerde statistieken</li></ul>
+        <ul><li><span class="ck y">&#10003;</span>Alles uit Gratis, plus:</li><li><span class="ck y">&#10003;</span>Onbeperkt keukens</li><li><span class="ck y">&#10003;</span>Onbeperkt kassabonnen scannen</li><li><span class="ck y">&#10003;</span>Elke ochtend nieuwe recepten + 2× per dag vernieuwen</li><li><span class="ck y">&#10003;</span>Bewaarde recepten</li><li><span class="ck y">&#10003;</span>Maandbudget met meldingen</li><li><span class="ck y">&#10003;</span>Volledige aankoopgeschiedenis</li><li><span class="ck y">&#10003;</span>Slimme boodschappenlijst</li><li><span class="ck y">&#10003;</span>Geavanceerde statistieken</li></ul>
         <a href="#download" class="plan-btn btn-pro">Probeer 7 dagen gratis</a>
       </div>
     </div>
@@ -607,7 +625,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="cta-inner rv">
       <h2>Begin vandaag nog met besparen</h2>
-      <p>Download Fridgy gratis en verander de manier waarop je je eten beheert.</p>
+      <p>Download Rispy gratis en verander de manier waarop je je eten beheert.</p>
       <div class="store-row">
         <a class="store-btn" href="https://apps.apple.com/ro/app/id6748481042" target="_blank" rel="noopener" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download in</small><b>App Store</b></span></a>
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" target="_blank" rel="noopener" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Beschikbaar op</small><b>Google Play</b></span></a>
@@ -621,7 +639,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="foot">
       <div>
-        <div class="brand"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></div>
+        <div class="brand"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></div>
         <p>Voedselverspilling verminderen. Kassabonnen scannen. Recepten genereren van wat je al thuis hebt.</p>
       </div>
       <div class="foot-cols">
@@ -638,12 +656,12 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         </div>
         <div>
           <h5>Contact</h5>
-          <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>
+          <a href="mailto:contact@rispy.app">contact@rispy.app</a>
         </div>
       </div>
     </div>
     <div class="copy">
-      <span>&copy; <span id="yr"></span> Fridgy. Alle rechten voorbehouden.</span>
+      <span>&copy; <span id="yr"></span> Rispy. Alle rechten voorbehouden.</span>
       <span>Gemaakt met &#x1F499; in Roemenië</span>
     </div>
   </div>
@@ -702,7 +720,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 
   /* linkul App Store pe magazinul tarii, dupa limba browserului (implicit ro) */
   (function(){
-    var ok={ro:1,de:1,at:1,ch:1,fr:1,nl:1,dk:1,se:1}, byLang={ro:'ro',de:'de',fr:'fr',nl:'nl',da:'dk',sv:'se'};
+    var ok={at:1,be:1,bg:1,ch:1,cy:1,cz:1,de:1,dk:1,ee:1,es:1,fi:1,fr:1,gr:1,hr:1,hu:1,ie:1,it:1,lt:1,lu:1,lv:1,mt:1,nl:1,pl:1,pt:1,ro:1,se:1,si:1,sk:1}, byLang={ro:'ro',de:'de',fr:'fr',nl:'nl',da:'dk',sv:'se',es:'es',it:'it',pt:'pt',pl:'pl',cs:'cz',sk:'sk',fi:'fi',et:'ee',lv:'lv',lt:'lt',el:'gr',bg:'bg',hr:'hr',sl:'si',ga:'ie',mt:'mt',hu:'hu'};
     var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''], cc='';
     for(var i=0;i<ls.length&&!cc;i++){
       var p=String(ls[i]).toLowerCase().split('-'), r=p[p.length-1];

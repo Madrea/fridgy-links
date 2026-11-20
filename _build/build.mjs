@@ -106,7 +106,7 @@ function page(code){
   const freeFeat = t.plan_features.slice(0,half);
   const premFeat = t.plan_features.slice(half);
   const alt = LANG_ORDER.map(c=>`<link rel="alternate" hreflang="${c}" href="https://fridgy.org${urlFor(c)}" />`).join('\n');
-  const heroImg = has(code,'scan') ? `<img src="/img/${code}/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" />` : '';
+  const heroImg = has(code,'scan') ? `<img src="/img/${code}/scan.webp" alt="Rispy" fetchpriority="high" decoding="async" />` : '';
 
 return `<!DOCTYPE html>
 <html lang="${code}">
@@ -126,7 +126,7 @@ ${alt}
 <meta property="og:url" content="https://fridgy.org${urlFor(code)}" />
 <meta property="og:image" content="https://fridgy.org/img/og-${code}.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/png" href="/fridgy-logo.png" />
+<link rel="icon" type="image/png" href="/rispy-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -465,7 +465,7 @@ ${GRAD_DEF}
 
 <header>
   <nav>
-    <a href="${urlFor(code)}" class="brand" aria-label="Fridgy"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></a>
+    <a href="${urlFor(code)}" class="brand" aria-label="Rispy"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></a>
     <div class="nav-links">
       <a href="#pasi">${t.nav_how}</a>
       <a href="#functii">${t.tags[1]}</a>
@@ -576,7 +576,7 @@ ${familySection(code,t)}
   <div class="wrap">
     <div class="foot">
       <div>
-        <div class="brand"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></div>
+        <div class="brand"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></div>
         <p>${t.foot_tagline}</p>
       </div>
       <div class="foot-cols">
@@ -593,7 +593,7 @@ ${familySection(code,t)}
         </div>
         <div>
           <h5>${t.foot_h5[2]}</h5>
-          <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>
+          <a href="mailto:contact@rispy.app">contact@rispy.app</a>
         </div>
       </div>
     </div>

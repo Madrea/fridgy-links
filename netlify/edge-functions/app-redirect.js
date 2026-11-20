@@ -1,4 +1,4 @@
-// Link unic de share: fridgy.org/app → App Store pe iPhone/iPad, Google Play pe Android, landing page pe desktop.
+// Link unic de share: rispy.app/app → App Store pe iPhone/iPad, Google Play pe Android, landing page pe desktop.
 // Boții de preview (Facebook, WhatsApp etc.) primesc app/index.html, ca să vadă tag-urile og: și să arate cardul.
 // Parametrii utm_* ajung în Play Store ca "referrer", ca să vezi în Play Console din ce rețea au venit instalările.
 

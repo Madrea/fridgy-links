@@ -26,6 +26,11 @@ from scipy import ndimage
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FOLDERS = {'da': 'Danish', 'de': 'German', 'en': 'English', 'fr': 'French',
            'hu': 'Hungarian', 'nl': 'Holland', 'ro': 'Romanian', 'sv': 'Swedish'}
+
+# limbile noi (pozele de store facute cu store-shots-lang.py, pe aceeasi compozitie ca romana)
+FOLDERS.update({'bg': 'Bulgarian', 'es': 'Spanish', 'it': 'Italian', 'pl': 'Polish', 'pt': 'Portuguese',
+                'cs': 'Czech', 'el': 'Greek', 'fi': 'Finnish', 'sk': 'Slovak', 'hr': 'Croatian', 'sl': 'Slovenian',
+                'lt': 'Lithuanian', 'lv': 'Latvian', 'et': 'Estonian', 'ga': 'Irish', 'mt': 'Maltese'})
 SHOT = 'iPhone 6.9/iPhone 6.9_ - 1.0.jpg'
 BOX = (91.55, 718.61, 1105.56, 1916.30)   # decupajul exportului in JPG - vezi en-mockups.py
 

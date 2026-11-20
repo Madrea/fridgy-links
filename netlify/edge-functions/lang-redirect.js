@@ -2,7 +2,7 @@
 // Ordine: cookie "fridgy-lang" (alegerea manuală din meniu) > Accept-Language > română.
 // Boții (Googlebot etc.) primesc mereu pagina română, ca să fie indexată corect.
 
-const SUPPORTED = ['ro', 'en', 'de', 'hu', 'fr', 'nl', 'da', 'sv'];
+const SUPPORTED = ['ro', 'en', 'es', 'fr', 'de', 'it', 'pt', 'nl', 'pl', 'cs', 'sk', 'hu', 'sv', 'da', 'fi', 'et', 'lv', 'lt', 'el', 'bg', 'hr', 'sl', 'ga', 'mt'];
 const BOT = /bot|crawl|spider|slurp|facebookexternalhit|embedly|whatsapp|telegram|preview|lighthouse|headless/i;
 
 function pickLang(header) {

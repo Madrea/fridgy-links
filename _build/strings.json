@@ -1,11 +1,11 @@
 {
  "ro": {
-  "title": "Fridgy - Frigiderul tău inteligent",
+  "title": "Rispy - Frigiderul tău inteligent",
   "meta_description": "Scanează bonurile, organizează-ți frigiderul, redu risipa, economisește bani.",
-  "og_title": "Fridgy — Frigiderul tău inteligent",
+  "og_title": "Rispy — Frigiderul tău inteligent",
   "og_description": "Scanează bonurile, organizează-ți frigiderul, redu risipa, economisește bani.",
   "nav": [
-   "De ce Fridgy",
+   "De ce Rispy",
    "Planuri",
    "Descarcă",
    "Descarcă gratuit",
@@ -18,7 +18,7 @@
   "nav_cta": "Descarcă gratuit",
   "pill": "Frigiderul tău inteligent",
   "h1": "130 kg de mâncare aruncate anual.<br><span class=\"grad\">Noi te ajutăm să oprești asta.</span>",
-  "hero_sub": "Fiecare european risipește aproximativ <strong>130 kg</strong> de alimente pe an — aproape <strong>1.450 lei</strong> aruncați la gunoi. Fridgy te ajută să rămâi organizat, să urmărești datele de expirare și să eviți risipa. Iar când alimentele sunt pe cale să expire, le transformă în idei de rețete delicioase.",
+  "hero_sub": "Fiecare european risipește aproximativ <strong>130 kg</strong> de alimente pe an — aproape <strong>1.450 lei</strong> aruncați la gunoi. Rispy te ajută să rămâi organizat, să urmărești datele de expirare și să eviți risipa. Iar când alimentele sunt pe cale să expire, le transformă în idei de rețete delicioase.",
   "store_labels": [
    "Disponibil pe",
    "Descarcă din",
@@ -27,7 +27,7 @@
   ],
   "tags": [
    "Cifrele vorbesc",
-   "De ce Fridgy",
+   "De ce Rispy",
    "Privește aplicația",
    "Planuri"
   ],
@@ -41,7 +41,7 @@
   "sec_p": [
    "Trei funcții simple care îți schimbă felul în care faci cumpărături și gătești.",
    "O experiență gândită până la cel mai mic detaliu.",
-   "Descarcă Fridgy gratuit și transformă felul în care îți gestionezi mâncarea."
+   "Descarcă Rispy gratuit și transformă felul în care îți gestionezi mâncarea."
   ],
   "stat_number": [
    "130 kg",
@@ -64,9 +64,9 @@
    "Generezi rețete"
   ],
   "feat_p": [
-   "După cumpărături, fotografiezi bonul și Fridgy adaugă automat produsele în frigiderul tău digital.",
+   "După cumpărături, fotografiezi bonul și Rispy adaugă automat produsele în frigiderul tău digital.",
    "Vezi ce ai în frigider, ce expiră curând și primești notificări la momentul potrivit — ca să folosești totul la timp și să nu mai arunci bani.",
-   "Fridgy îți propune rețete din ingredientele pe care le ai deja acasă. Alegi o rețetă și gătești fără risipă."
+   "Rispy îți propune rețete din ingredientele pe care le ai deja acasă. Alegi o rețetă și gătești fără risipă."
   ],
   "feat_badge": "Sub 10 secunde",
   "shot_h4": [
@@ -105,7 +105,7 @@
   ],
   "plan_badge": "Cel mai popular",
   "cta_h2": "Începe să economisești azi",
-  "cta_p": "Descarcă Fridgy gratuit și transformă felul în care îți gestionezi mâncarea.",
+  "cta_p": "Descarcă Rispy gratuit și transformă felul în care îți gestionezi mâncarea.",
   "foot_tagline": "Reduce risipa alimentară. Scanează bonuri. Generează rețete din ce ai deja acasă.",
   "foot_h5": [
    "Produs",
@@ -123,19 +123,19 @@
     "Termeni și condiții"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Toate drepturile rezervate.",
+  "copy": "Rispy. Toate drepturile rezervate.",
   "made": "Făcut cu &#x1F499; în România"
  },
  "en": {
-  "title": "Fridgy - Your smart fridge",
-  "meta_description": "Fridgy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home.",
-  "og_title": "Fridgy — Less waste, more recipes",
+  "title": "Rispy - Your smart fridge",
+  "meta_description": "Rispy helps you reduce food waste: scan your grocery receipt, organize your fridge and get recipes generated from what you already have at home.",
+  "og_title": "Rispy — Less waste, more recipes",
   "og_description": "Scan receipts, organize your fridge and cook with what you already have at home.",
   "nav": [
-   "Why Fridgy",
+   "Why Rispy",
    "Plans",
    "Download",
    "Download free",
@@ -148,7 +148,7 @@
   "nav_cta": "Download free",
   "pill": "Your smart fridge",
   "h1": "&euro;290 thrown in the trash<br><span class=\"grad\">every year. We fix that.</span>",
-  "hero_sub": "Every European wastes around <strong>130 kg</strong> of food per year — nearly <strong>&euro;290</strong> thrown in the bin. Fridgy helps you stay organised, keep track of expiry dates and avoid waste. And when food is about to expire, it turns it into delicious recipe ideas.",
+  "hero_sub": "Every European wastes around <strong>130 kg</strong> of food per year — nearly <strong>&euro;290</strong> thrown in the bin. Rispy helps you stay organised, keep track of expiry dates and avoid waste. And when food is about to expire, it turns it into delicious recipe ideas.",
   "store_labels": [
    "Available on",
    "Download from",
@@ -157,7 +157,7 @@
   ],
   "tags": [
    "The numbers speak",
-   "Why Fridgy",
+   "Why Rispy",
    "See the app",
    "Plans"
   ],
@@ -171,7 +171,7 @@
   "sec_p": [
    "Three simple features that change the way you shop and cook.",
    "An experience designed down to the smallest detail.",
-   "Download Fridgy for free and transform the way you manage your food."
+   "Download Rispy for free and transform the way you manage your food."
   ],
   "stat_number": [
    "130 kg",
@@ -194,9 +194,9 @@
    "Generate recipes"
   ],
   "feat_p": [
-   "After shopping, take a photo of your receipt and Fridgy automatically adds the products to your digital fridge.",
+   "After shopping, take a photo of your receipt and Rispy automatically adds the products to your digital fridge.",
    "See what you have, what expires soon and get notified at the right time — so you use everything before it goes bad and stop wasting money.",
-   "Fridgy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste."
+   "Rispy suggests recipes from the ingredients you already have at home. Pick one and cook with no waste."
   ],
   "feat_badge": "Under 10 seconds",
   "shot_h4": [
@@ -235,7 +235,7 @@
   ],
   "plan_badge": "Most popular",
   "cta_h2": "Start saving today",
-  "cta_p": "Download Fridgy for free and transform the way you manage your food.",
+  "cta_p": "Download Rispy for free and transform the way you manage your food.",
   "foot_tagline": "Reduce food waste. Scan receipts. Generate recipes from what you already have at home.",
   "foot_h5": [
    "Product",
@@ -253,16 +253,16 @@
     "Terms &amp; Conditions"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. All rights reserved.",
+  "copy": "Rispy. All rights reserved.",
   "made": "Made with &#x1F499; in Romania"
  },
  "de": {
-  "title": "Fridgy - Dein smarter Kühlschrank",
+  "title": "Rispy - Dein smarter Kühlschrank",
   "meta_description": "Scanne Kassenbons, organisiere deinen Kühlschrank, reduziere Verschwendung, spare Geld.",
-  "og_title": "Fridgy — Weniger Verschwendung, mehr Rezepte",
+  "og_title": "Rispy — Weniger Verschwendung, mehr Rezepte",
   "og_description": "Scanne Kassenbons, organisiere deinen Kühlschrank und koche mit dem, was du bereits zu Hause hast.",
   "nav": [
    "Herunterladen",
@@ -274,7 +274,7 @@
   "nav_cta": "Kostenlos herunterladen",
   "pill": "Dein smarter Kühlschrank",
   "h1": "290 &euro; landen jährlich im Müll.<br><span class=\"grad\">Wir ändern das.</span>",
-  "hero_sub": "Jeder Europäer verschwendet rund <strong>130 kg</strong> Lebensmittel pro Jahr — fast <strong>290&nbsp;&euro;</strong> im Müll. Fridgy hilft dir, den Überblick zu behalten, Ablaufdaten im Auge zu behalten und Verschwendung zu vermeiden. Und wenn Lebensmittel bald ablaufen, macht Fridgy daraus köstliche Rezeptideen.",
+  "hero_sub": "Jeder Europäer verschwendet rund <strong>130 kg</strong> Lebensmittel pro Jahr — fast <strong>290&nbsp;&euro;</strong> im Müll. Rispy hilft dir, den Überblick zu behalten, Ablaufdaten im Auge zu behalten und Verschwendung zu vermeiden. Und wenn Lebensmittel bald ablaufen, macht Rispy daraus köstliche Rezeptideen.",
   "store_labels": [
    "Verfügbar auf",
    "Laden im",
@@ -283,7 +283,7 @@
   ],
   "tags": [
    "Die Zahlen sprechen",
-   "Warum Fridgy",
+   "Warum Rispy",
    "Sieh die App",
    "Tarife"
   ],
@@ -297,7 +297,7 @@
   "sec_p": [
    "Drei einfache Funktionen, die die Art verändern, wie du einkaufst und kochst.",
    "Ein Erlebnis, das bis ins kleinste Detail durchdacht ist.",
-   "Lade Fridgy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest."
+   "Lade Rispy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest."
   ],
   "stat_number": [
    "130 kg",
@@ -320,9 +320,9 @@
    "Rezepte generieren"
   ],
   "feat_p": [
-   "Nach dem Einkauf fotografierst du den Kassenbon und Fridgy fügt die Produkte automatisch in deinen digitalen Kühlschrank ein.",
+   "Nach dem Einkauf fotografierst du den Kassenbon und Rispy fügt die Produkte automatisch in deinen digitalen Kühlschrank ein.",
    "Sieh was du hast, was bald abläuft und erhalte Benachrichtigungen zur richtigen Zeit — damit du alles rechtzeitig verbrauchst und kein Geld mehr verschwendest.",
-   "Fridgy schlägt Rezepte aus den Zutaten vor, die du bereits zu Hause hast. Wähle eines und koche ohne Verschwendung."
+   "Rispy schlägt Rezepte aus den Zutaten vor, die du bereits zu Hause hast. Wähle eines und koche ohne Verschwendung."
   ],
   "feat_badge": "Unter 10 Sekunden",
   "shot_h4": [
@@ -361,7 +361,7 @@
   ],
   "plan_badge": "Beliebteste",
   "cta_h2": "Fang heute an zu sparen",
-  "cta_p": "Lade Fridgy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest.",
+  "cta_p": "Lade Rispy kostenlos herunter und verändere die Art, wie du deine Lebensmittel verwaltest.",
   "foot_tagline": "Reduziere Lebensmittelverschwendung. Scanne Kassenbons. Generiere Rezepte aus dem, was du bereits zu Hause hast.",
   "foot_h5": [
    "Produkt",
@@ -378,16 +378,16 @@
     "AGB"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Alle Rechte vorbehalten.",
+  "copy": "Rispy. Alle Rechte vorbehalten.",
   "made": "Mit &#x1F499; in Rumänien gemacht"
  },
  "fr": {
-  "title": "Fridgy - Ton frigo intelligent",
-  "meta_description": "Fridgy t'aide à réduire le gaspillage alimentaire : scanne ton ticket de caisse, organise ton frigo et obtiens des recettes générées à partir de ce que tu as déjà chez toi.",
-  "og_title": "Fridgy — Moins de gaspillage, plus de recettes",
+  "title": "Rispy - Ton frigo intelligent",
+  "meta_description": "Rispy t'aide à réduire le gaspillage alimentaire : scanne ton ticket de caisse, organise ton frigo et obtiens des recettes générées à partir de ce que tu as déjà chez toi.",
+  "og_title": "Rispy — Moins de gaspillage, plus de recettes",
   "og_description": "Scanne tes tickets de caisse, organise ton frigo et cuisine avec ce que tu as déjà chez toi.",
   "nav": [
    "Télécharger",
@@ -399,7 +399,7 @@
   "nav_cta": "Télécharger gratuitement",
   "pill": "Ton frigo intelligent",
   "h1": "290&nbsp;&euro; jetés à la poubelle<br><span class=\"grad\">chaque année. On règle ça.</span>",
-  "hero_sub": "Chaque Européen gaspille environ <strong>130 kg</strong> de nourriture par an — près de <strong>290&nbsp;&euro;</strong> jetés à la poubelle. Fridgy t'aide à rester organisé, à suivre les dates de péremption et à éviter le gaspillage. Et quand des aliments sont sur le point de périmer, il les transforme en délicieuses idées de recettes.",
+  "hero_sub": "Chaque Européen gaspille environ <strong>130 kg</strong> de nourriture par an — près de <strong>290&nbsp;&euro;</strong> jetés à la poubelle. Rispy t'aide à rester organisé, à suivre les dates de péremption et à éviter le gaspillage. Et quand des aliments sont sur le point de périmer, il les transforme en délicieuses idées de recettes.",
   "store_labels": [
    "Disponible sur",
    "Télécharger dans",
@@ -408,7 +408,7 @@
   ],
   "tags": [
    "Les chiffres parlent",
-   "Pourquoi Fridgy",
+   "Pourquoi Rispy",
    "Voir l'application",
    "Tarifs"
   ],
@@ -422,7 +422,7 @@
   "sec_p": [
    "Trois fonctionnalités simples qui changent ta façon de faire les courses et de cuisiner.",
    "Une expérience conçue dans les moindres détails.",
-   "Télécharge Fridgy gratuitement et transforme la façon dont tu gères tes aliments."
+   "Télécharge Rispy gratuitement et transforme la façon dont tu gères tes aliments."
   ],
   "stat_number": [
    "130 kg",
@@ -445,9 +445,9 @@
    "Générer des recettes"
   ],
   "feat_p": [
-   "Après tes courses, prends en photo ton ticket de caisse et Fridgy ajoute automatiquement les produits à ton frigo numérique.",
+   "Après tes courses, prends en photo ton ticket de caisse et Rispy ajoute automatiquement les produits à ton frigo numérique.",
    "Vois ce que tu as, ce qui expire bientôt et reçois des notifications au bon moment — pour tout utiliser avant que ça ne se périme et arrêter de perdre de l'argent.",
-   "Fridgy suggère des recettes à partir des ingrédients que tu as déjà chez toi. Choisis-en une et cuisine sans gaspillage."
+   "Rispy suggère des recettes à partir des ingrédients que tu as déjà chez toi. Choisis-en une et cuisine sans gaspillage."
   ],
   "feat_badge": "En moins de 10 secondes",
   "shot_h4": [
@@ -486,7 +486,7 @@
   ],
   "plan_badge": "Le plus populaire",
   "cta_h2": "Commence à économiser aujourd'hui",
-  "cta_p": "Télécharge Fridgy gratuitement et transforme la façon dont tu gères tes aliments.",
+  "cta_p": "Télécharge Rispy gratuitement et transforme la façon dont tu gères tes aliments.",
   "foot_tagline": "Réduis le gaspillage alimentaire. Scanne tes tickets. Génère des recettes à partir de ce que tu as déjà chez toi.",
   "foot_h5": [
    "Produit",
@@ -503,16 +503,16 @@
     "Conditions générales"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Tous droits réservés.",
+  "copy": "Rispy. Tous droits réservés.",
   "made": "Fait avec &#x1F499; en Roumanie"
  },
  "nl": {
-  "title": "Fridgy - Je slimme koelkast",
-  "meta_description": "Fridgy helpt je voedselverspilling te verminderen: scan je kassabon, organiseer je koelkast en ontvang recepten op basis van wat je al thuis hebt.",
-  "og_title": "Fridgy — Minder verspilling, meer recepten",
+  "title": "Rispy - Je slimme koelkast",
+  "meta_description": "Rispy helpt je voedselverspilling te verminderen: scan je kassabon, organiseer je koelkast en ontvang recepten op basis van wat je al thuis hebt.",
+  "og_title": "Rispy — Minder verspilling, meer recepten",
   "og_description": "Scan kassabonnen, organiseer je koelkast en kook met wat je al thuis hebt.",
   "nav": [
    "Downloaden",
@@ -525,7 +525,7 @@
   "nav_cta": "Gratis downloaden",
   "pill": "Je slimme koelkast",
   "h1": "&euro;&nbsp;290 weggegooid in de prullenbak<br><span class=\"grad\">elk jaar. Wij lossen dat op.</span>",
-  "hero_sub": "Elke Europeaan verspilt ongeveer <strong>130 kg</strong> voedsel per jaar — bijna <strong>&euro;&nbsp;290</strong> in de vuilnisbak. Fridgy helpt je georganiseerd te blijven, houdbaarheidsdata bij te houden en verspilling te voorkomen. En als eten bijna verloopt, maakt Fridgy er heerlijke receptideeën van.",
+  "hero_sub": "Elke Europeaan verspilt ongeveer <strong>130 kg</strong> voedsel per jaar — bijna <strong>&euro;&nbsp;290</strong> in de vuilnisbak. Rispy helpt je georganiseerd te blijven, houdbaarheidsdata bij te houden en verspilling te voorkomen. En als eten bijna verloopt, maakt Rispy er heerlijke receptideeën van.",
   "store_labels": [
    "Beschikbaar op",
    "Download in",
@@ -534,7 +534,7 @@
   ],
   "tags": [
    "De cijfers spreken",
-   "Waarom Fridgy",
+   "Waarom Rispy",
    "Bekijk de app",
    "Abonnementen"
   ],
@@ -548,7 +548,7 @@
   "sec_p": [
    "Drie eenvoudige functies die de manier waarop je winkelt en kookt veranderen.",
    "Een ervaring ontworpen tot in het kleinste detail.",
-   "Download Fridgy gratis en verander de manier waarop je je eten beheert."
+   "Download Rispy gratis en verander de manier waarop je je eten beheert."
   ],
   "stat_number": [
    "130 kg",
@@ -571,9 +571,9 @@
    "Recepten genereren"
   ],
   "feat_p": [
-   "Maak na het winkelen een foto van je kassabon en Fridgy voegt de producten automatisch toe aan je digitale koelkast.",
+   "Maak na het winkelen een foto van je kassabon en Rispy voegt de producten automatisch toe aan je digitale koelkast.",
    "Bekijk wat je hebt, wat binnenkort verloopt en ontvang een melding op het juiste moment — zodat je alles gebruikt voordat het slecht wordt en je geen geld meer verspilt.",
-   "Fridgy stelt recepten voor op basis van de ingrediënten die je al thuis hebt. Kies er een en kook zonder verspilling."
+   "Rispy stelt recepten voor op basis van de ingrediënten die je al thuis hebt. Kies er een en kook zonder verspilling."
   ],
   "feat_badge": "Minder dan 10 seconden",
   "shot_h4": [
@@ -612,7 +612,7 @@
   ],
   "plan_badge": "Meest populair",
   "cta_h2": "Begin vandaag nog met besparen",
-  "cta_p": "Download Fridgy gratis en verander de manier waarop je je eten beheert.",
+  "cta_p": "Download Rispy gratis en verander de manier waarop je je eten beheert.",
   "foot_tagline": "Voedselverspilling verminderen. Kassabonnen scannen. Recepten genereren van wat je al thuis hebt.",
   "foot_h5": [
    "Product",
@@ -630,16 +630,16 @@
     "Algemene voorwaarden"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Alle rechten voorbehouden.",
+  "copy": "Rispy. Alle rechten voorbehouden.",
   "made": "Gemaakt met &#x1F499; in Roemenië"
  },
  "da": {
-  "title": "Fridgy - Dit smarte køleskab",
-  "meta_description": "Fridgy hjælper dig med at reducere madspild: scan din kassebonnet, organiser dit køleskab og få opskrifter genereret fra det, du allerede har derhjemme.",
-  "og_title": "Fridgy — Mindre spild, flere opskrifter",
+  "title": "Rispy - Dit smarte køleskab",
+  "meta_description": "Rispy hjælper dig med at reducere madspild: scan din kassebonnet, organiser dit køleskab og få opskrifter genereret fra det, du allerede har derhjemme.",
+  "og_title": "Rispy — Mindre spild, flere opskrifter",
   "og_description": "Scan kvitteringer, organiser dit køleskab og lav mad med det, du allerede har derhjemme.",
   "nav": [
    "Hent",
@@ -651,7 +651,7 @@
   "nav_cta": "Download gratis",
   "pill": "Dit smarte køleskab",
   "h1": "2.150 kr smidt i skraldespanden<br><span class=\"grad\">hvert år. Vi løser det.</span>",
-  "hero_sub": "Hver europæer spilder omkring <strong>130 kg</strong> mad om året — næsten <strong>2.150 kr</strong> i skraldespanden. Fridgy hjælper dig med at holde styr på det hele, følge udløbsdatoerne og undgå madspild. Og når maden er ved at udløbe, forvandler den den til lækre opskriftsidéer.",
+  "hero_sub": "Hver europæer spilder omkring <strong>130 kg</strong> mad om året — næsten <strong>2.150 kr</strong> i skraldespanden. Rispy hjælper dig med at holde styr på det hele, følge udløbsdatoerne og undgå madspild. Og når maden er ved at udløbe, forvandler den den til lækre opskriftsidéer.",
   "store_labels": [
    "Tilgængelig på",
    "Download fra",
@@ -660,7 +660,7 @@
   ],
   "tags": [
    "Tallene taler for sig selv",
-   "Hvorfor Fridgy",
+   "Hvorfor Rispy",
    "Se appen",
    "Priser"
   ],
@@ -674,7 +674,7 @@
   "sec_p": [
    "Tre enkle funktioner, der ændrer den måde du handler og laver mad på.",
    "En oplevelse designet ned til mindste detalje.",
-   "Download Fridgy gratis og forandre den måde du håndterer din mad på."
+   "Download Rispy gratis og forandre den måde du håndterer din mad på."
   ],
   "stat_number": [
    "130 kg",
@@ -697,9 +697,9 @@
    "Generer opskrifter"
   ],
   "feat_p": [
-   "Efter indkøb tager du et foto af din kvittering, og Fridgy tilføjer automatisk produkterne til dit digitale køleskab.",
+   "Efter indkøb tager du et foto af din kvittering, og Rispy tilføjer automatisk produkterne til dit digitale køleskab.",
    "Se hvad du har, hvad der udløber snart, og få besked på det rigtige tidspunkt — så du bruger alt inden det bliver dårligt og holder op med at spilde penge.",
-   "Fridgy foreslår opskrifter ud fra de ingredienser, du allerede har derhjemme. Vælg en og lav mad uden spild."
+   "Rispy foreslår opskrifter ud fra de ingredienser, du allerede har derhjemme. Vælg en og lav mad uden spild."
   ],
   "feat_badge": "Under 10 sekunder",
   "shot_h4": [
@@ -738,7 +738,7 @@
   ],
   "plan_badge": "Mest populær",
   "cta_h2": "Begynd at spare i dag",
-  "cta_p": "Download Fridgy gratis og forandre den måde du håndterer din mad på.",
+  "cta_p": "Download Rispy gratis og forandre den måde du håndterer din mad på.",
   "foot_tagline": "Reducer madspild. Scan kvitteringer. Generer opskrifter fra det du allerede har derhjemme.",
   "foot_h5": [
    "Produkt",
@@ -755,16 +755,16 @@
     "Vilkår &amp; Betingelser"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Alle rettigheder forbeholdes.",
+  "copy": "Rispy. Alle rettigheder forbeholdes.",
   "made": "Lavet med &#x1F499; i Rumænien"
  },
  "sv": {
-  "title": "Fridgy - Ditt smarta kylskåp",
-  "meta_description": "Fridgy hjälper dig minska matsvinn: skanna ditt kassakvitto, organisera ditt kylskåp och få recept genererade från det du redan har hemma.",
-  "og_title": "Fridgy — Mindre svinn, fler recept",
+  "title": "Rispy - Ditt smarta kylskåp",
+  "meta_description": "Rispy hjälper dig minska matsvinn: skanna ditt kassakvitto, organisera ditt kylskåp och få recept genererade från det du redan har hemma.",
+  "og_title": "Rispy — Mindre svinn, fler recept",
   "og_description": "Skanna kvitton, organisera ditt kylskåp och laga mat med det du redan har hemma.",
   "nav": [
    "Ladda ner",
@@ -776,7 +776,7 @@
   "nav_cta": "Ladda ner gratis",
   "pill": "Ditt smarta kylskåp",
   "h1": "3&nbsp;000 kr slängs i soporna<br><span class=\"grad\">varje år. Vi löser det.</span>",
-  "hero_sub": "Varje europé slänger ungefär <strong>130 kg</strong> mat per år — nästan <strong>3&nbsp;000 kr</strong> rakt ner i soporna. Fridgy hjälper dig att hålla ordning, hålla koll på utgångsdatum och undvika matsvinn. Och när maten snart går ut förvandlar den den till läckra receptidéer.",
+  "hero_sub": "Varje europé slänger ungefär <strong>130 kg</strong> mat per år — nästan <strong>3&nbsp;000 kr</strong> rakt ner i soporna. Rispy hjälper dig att hålla ordning, hålla koll på utgångsdatum och undvika matsvinn. Och när maten snart går ut förvandlar den den till läckra receptidéer.",
   "store_labels": [
    "Tillgänglig på",
    "Ladda ner från",
@@ -785,7 +785,7 @@
   ],
   "tags": [
    "Siffrorna talar",
-   "Varför Fridgy",
+   "Varför Rispy",
    "Se appen",
    "Planer"
   ],
@@ -799,7 +799,7 @@
   "sec_p": [
    "Tre enkla funktioner som förändrar hur du handlar och lagar mat.",
    "En upplevelse designad ned till minsta detalj.",
-   "Ladda ner Fridgy gratis och förändra hur du hanterar din mat."
+   "Ladda ner Rispy gratis och förändra hur du hanterar din mat."
   ],
   "stat_number": [
    "130 kg",
@@ -822,9 +822,9 @@
    "Generera recept"
   ],
   "feat_p": [
-   "Ta en bild på kvittot efter din handel och Fridgy lägger automatiskt till produkterna i ditt digitala kylskåp.",
+   "Ta en bild på kvittot efter din handel och Rispy lägger automatiskt till produkterna i ditt digitala kylskåp.",
    "Se vad du har, vad som snart går ut och få en notis i rätt tid — så att du använder allt innan det blir dåligt och slutar slösa pengar.",
-   "Fridgy föreslår recept baserade på de ingredienser du redan har hemma. Välj ett och laga mat utan svinn."
+   "Rispy föreslår recept baserade på de ingredienser du redan har hemma. Välj ett och laga mat utan svinn."
   ],
   "feat_badge": "Under 10 sekunder",
   "shot_h4": [
@@ -863,7 +863,7 @@
   ],
   "plan_badge": "Mest populär",
   "cta_h2": "Börja spara redan idag",
-  "cta_p": "Ladda ner Fridgy gratis och förändra hur du hanterar din mat.",
+  "cta_p": "Ladda ner Rispy gratis och förändra hur du hanterar din mat.",
   "foot_tagline": "Minska matsvinn. Skanna kvitton. Generera recept från det du redan har hemma.",
   "foot_h5": [
    "Produkt",
@@ -880,16 +880,16 @@
     "Användarvillkor"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Alla rättigheter förbehållna.",
+  "copy": "Rispy. Alla rättigheter förbehållna.",
   "made": "Made with &#x1F499; in Romania"
  },
  "hu": {
-  "title": "Fridgy - Az okos hűtőd",
+  "title": "Rispy - Az okos hűtőd",
   "meta_description": "Szkenneld a blokkot, rendezd a hűtőd, csökkentsd a pazarlást, spórolj pénzt.",
-  "og_title": "Fridgy — Kevesebb pazarlás, több recept",
+  "og_title": "Rispy — Kevesebb pazarlás, több recept",
   "og_description": "Szkennelj blokkokat, rendezd a hűtőd és főzz abból, amid már otthon van.",
   "nav": [
    "Letöltés",
@@ -901,7 +901,7 @@
   "nav_cta": "Ingyenes letöltés",
   "pill": "Az okos hűtőd",
   "h1": "Évente 130 kg étel a kukában.<br><span class=\"grad\">Mi segítünk megállítani.</span>",
-  "hero_sub": "Minden európai nagyjából <strong>130 kg</strong> élelmiszert pazarol el évente — közel <strong>115 000 Ft</strong> a kukában. A Fridgy segít rendet tartani, követni a lejárati dátumokat és elkerülni a pazarlást. Ha pedig egy élelmiszer hamarosan lejár, finom receptötletekké alakítja.",
+  "hero_sub": "Minden európai nagyjából <strong>130 kg</strong> élelmiszert pazarol el évente — közel <strong>115 000 Ft</strong> a kukában. A Rispy segít rendet tartani, követni a lejárati dátumokat és elkerülni a pazarlást. Ha pedig egy élelmiszer hamarosan lejár, finom receptötletekké alakítja.",
   "store_labels": [
    "Elérhető a",
    "Letöltés az",
@@ -910,7 +910,7 @@
   ],
   "tags": [
    "A számok beszélnek",
-   "Miért Fridgy",
+   "Miért Rispy",
    "Nézd meg az appot",
    "Csomagok"
   ],
@@ -924,7 +924,7 @@
   "sec_p": [
    "Három egyszerű funkció, amely megváltoztatja a vásárlási és főzési szokásaidat.",
    "A legapróbb részletekig átgondolt élmény.",
-   "Töltsd le a Fridgy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat."
+   "Töltsd le a Rispy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat."
   ],
   "stat_number": [
    "130 kg",
@@ -947,9 +947,9 @@
    "Receptek generálása"
   ],
   "feat_p": [
-   "Vásárlás után fotózd le a blokkot és a Fridgy automatikusan hozzáadja a termékeket a digitális hűtődhöz.",
+   "Vásárlás után fotózd le a blokkot és a Rispy automatikusan hozzáadja a termékeket a digitális hűtődhöz.",
    "Lásd mit tartasz, mi jár le hamarosan és kapj értesítéseket a megfelelő időben — hogy mindent időben felhasználj és ne dobd ki a pénzed.",
-   "A Fridgy recepteket javasol a már otthon lévő hozzávalókból. Válassz egyet és főzz pazarlás nélkül."
+   "A Rispy recepteket javasol a már otthon lévő hozzávalókból. Válassz egyet és főzz pazarlás nélkül."
   ],
   "feat_badge": "10 másodperc alatt",
   "shot_h4": [
@@ -988,7 +988,7 @@
   ],
   "plan_badge": "Legnépszerűbb",
   "cta_h2": "Kezdj el spórolni ma",
-  "cta_p": "Töltsd le a Fridgy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat.",
+  "cta_p": "Töltsd le a Rispy-t ingyen és változtasd meg az élelmiszer-kezelési szokásaidat.",
   "foot_tagline": "Csökkentsd az élelmiszerpazarlást. Szkennelj blokkokat. Generálj recepteket abból, amid már otthon van.",
   "foot_h5": [
    "Termék",
@@ -1005,10 +1005,10 @@
     "Felhasználási feltételek"
    ],
    [
-    "contact@fridgy.org"
+    "contact@rispy.app"
    ]
   ],
-  "copy": "Fridgy. Minden jog fenntartva.",
+  "copy": "Rispy. Minden jog fenntartva.",
   "made": "Szeretettel készült &#x1F499; Romániában"
  }
 }

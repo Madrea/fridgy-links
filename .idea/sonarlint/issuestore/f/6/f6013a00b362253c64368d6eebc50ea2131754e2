@@ -1,6 +1,9 @@
 
-xjavascript:S3776½"TRefactor this function to reduce its Cognitive Complexity from 57 to the 15 allowed.(ˆè²Ô8Ö‹¯ Š4
-Ÿjavascript:S2681Ø"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(äş–Ö8Ø‹¯ Š4
-Ÿjavascript:S2681Û"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(³³8Ø‹¯ Š4
-„javascript:S6582ò"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÑŞ’ÿÿÿÿÿ8°”ô•4
-d	css:S4666‡"BUnexpected duplicate selector ".block.pt0", first used at line 131(¡Öååüÿÿÿÿ8‘‘¯ Š4
+NWeb:ImgWithoutAltCheck©"%Add an "alt" attribute to this image.(ÿš‡8ı¤øš™4
+xjavascript:S3776"TRefactor this function to reduce its Cognitive Complexity from 57 to the 15 allowed.(ˆè²Ô8“ÜÍÏœ4
+Ÿjavascript:S2681¹"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(äş–Ö8“ÜÍÏœ4
+Ÿjavascript:S2681¼"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(³³8“ÜÍÏœ4
+„javascript:S6582Ó"[Prefer using an optional chain expression instead, as it's more concise and easier to read.(ÜÑŞ’ÿÿÿÿÿ8”ÜÍÏœ4
+c	css:S4666l"BUnexpected duplicate selector ".lang-menu", first used at line 100(›´Úêúÿÿÿÿ8áë‘Ÿ4
+d	css:S4666™"BUnexpected duplicate selector ".block.pt0", first used at line 149(¡Öååüÿÿÿÿ8¢ßÍÏœ4
+Z	css:S4666º"=Unexpected duplicate selector ".pill", first used at line 114(éºİÁ8¢ßÍÏœ4

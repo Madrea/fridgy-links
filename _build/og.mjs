@@ -32,7 +32,7 @@ p{margin-top:22px;font-size:21px;color:#93a3c4;max-width:33ch;line-height:1.45;f
 ${shot?`<img class="ph" src="${shot}">`:''}
 <div class="scrim"></div>
 <div class="in">
-  <div class="lg"><img src="/fridgy-logo.png"><span>Fridgy</span></div>
+  <div class="lg"><img src="/rispy-logo.png"><span>Rispy</span></div>
   <h1>${t.h1}</h1>
   <p>${t.meta_description}</p>
 </div></body></html>`;

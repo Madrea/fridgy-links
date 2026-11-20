@@ -15,11 +15,17 @@ Pentru fiecare limba:
 import math
 import os
 import subprocess
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, '_build', 'img-original')
 DST = os.path.join(ROOT, 'img')
 LANGS = ['ro', 'de', 'fr', 'nl', 'sv', 'da', 'hu', 'en']
+# limbile noi: exportul e decupat cu refresh-shot.py din pozele de store
+LANGS += ['es', 'it', 'pt', 'pl', 'cs', 'sk', 'fi', 'et', 'lv', 'lt', 'el', 'bg', 'hr', 'sl', 'ga', 'mt']
+# randuri in plus ale cardului (mesaj pe 4 randuri, vezi NOTIFY_GROW in refresh-shot.py): cardul creste
+# in sus, iar iconita coboara cu jumatate fata de marginea de sus
+GROW = {'el': 36}
 GEOM_LANG = 'de'        # exportul dupa care se masoara geometria (vezi geometry())
 
 PAD = 140               # spatiu de lucru adaugat pe fiecare parte
@@ -50,7 +56,7 @@ def rrect_sdf(x, y, x0, y0, x1, y1, r):
     return math.hypot(max(qx, 0.0), max(qy, 0.0)) + min(max(qx, qy), 0.0) - r
 
 
-def geometry(lang, band=None):
+def geometry(lang, band=None, grow=0):
     """Cardul alb si patratul iconitei, masurate pe un export.
 
     band forteaza randurile cardului in loc sa le masoare: exportul englezesc e
@@ -68,17 +74,19 @@ def geometry(lang, band=None):
         white = [y for y in range(H) if px(CLEAN_X, y)[0] > 250]
         band = white[0], white[-1]
     top, bot = band
+    bot += grow
 
     # patratul iconitei: minimele de luminanta pe conturul lui
     mid_y = (top + bot) // 2
     t_right = min(range(40, 90), key=lambda x: px(x, mid_y)[0])
     inner_x = max(10, t_right - 26)
-    t_top = min(range(top + 45, top + 70), key=lambda y: px(inner_x, y)[0])
-    t_bot = min(range(bot - 65, bot - 40), key=lambda y: px(inner_x, y)[0])
+    g = grow // 2
+    t_top = min(range(top + 45 + g, top + 70 + g), key=lambda y: px(inner_x, y)[0])
+    t_bot = min(range(bot - 65 - g, bot - 40 - g), key=lambda y: px(inner_x, y)[0])
     return top, bot, t_right, t_top, t_bot
 
 
-def fix(lang, geom, anchor, width=None):
+def fix(lang, geom, anchor, width=None, write=True):
     raw, W, H = load(os.path.join(SRC, lang, 'notify.webp'))
     top, bot, t_right, t_top, t_bot = geom
 
@@ -142,6 +150,8 @@ def fix(lang, geom, anchor, width=None):
                                                  FW - 1, NH - 1, CARD_R)))
             fin[(y * FW + x) * 4 + 3] = round(255 * a)
 
+    if not write:
+        return FW
     save(fin, FW, NH, os.path.join(DST, lang, 'notify.webp'))
     print(f'{lang}: {W}x{H} -> {FW}x{NH} (margini {MARGIN}px)')
     return FW
@@ -152,7 +162,9 @@ def fix(lang, geom, anchor, width=None):
 # fiindca in exportul englezesc continutul cardului e mutat cu cativa pixeli.
 ref = geometry(GEOM_LANG)
 band, anchor = (ref[0], ref[1]), ref[2] - (ref[4] - ref[3]) + PAD
-width = fix(GEOM_LANG, ref, anchor)
-for lang in LANGS:
+# cu argumente (ex. fix-notify.py es el) se refac doar limbile date
+only = sys.argv[1:]
+width = fix(GEOM_LANG, ref, anchor, write=not only or GEOM_LANG in only)
+for lang in only or LANGS:
     if lang != GEOM_LANG and os.path.exists(os.path.join(SRC, lang, 'notify.webp')):
-        fix(lang, geometry(lang, band), anchor, width)
+        fix(lang, geometry(lang, band, GROW.get(lang, 0)), anchor, width)

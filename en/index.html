@@ -6,28 +6,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#070b18" />
 <meta name="color-scheme" content="dark" />
-<title>Fridgy - Scan. Cook. Zero Waste.</title>
-<meta name="description" content="Scan your receipts, organize your fridge, cook with what you have, save money." />
-<link rel="canonical" href="https://fridgy.org/en" />
-<link rel="alternate" hreflang="ro" href="https://fridgy.org/" />
-<link rel="alternate" hreflang="en" href="https://fridgy.org/en" />
-<link rel="alternate" hreflang="de" href="https://fridgy.org/de" />
-<link rel="alternate" hreflang="hu" href="https://fridgy.org/hu" />
-<link rel="alternate" hreflang="fr" href="https://fridgy.org/fr" />
-<link rel="alternate" hreflang="nl" href="https://fridgy.org/nl" />
-<link rel="alternate" hreflang="da" href="https://fridgy.org/da" />
-<link rel="alternate" hreflang="sv" href="https://fridgy.org/sv" />
-<link rel="alternate" hreflang="x-default" href="https://fridgy.org/" />
-<meta property="og:title" content="Fridgy — Scan. Cook. Zero Waste." />
-<meta property="og:description" content="Scan your receipts, organize your fridge, cook with what you have, save money." />
+<title>Rispy - Scan. Cook. Zero Waste.</title>
+<meta name="description" content="Scan your receipts, organize your kitchen, cook with what you have, save money." />
+<link rel="canonical" href="https://rispy.app/en" />
+<link rel="alternate" hreflang="ro" href="https://rispy.app/" />
+<link rel="alternate" hreflang="en" href="https://rispy.app/en" />
+<link rel="alternate" hreflang="es" href="https://rispy.app/es" />
+<link rel="alternate" hreflang="fr" href="https://rispy.app/fr" />
+<link rel="alternate" hreflang="de" href="https://rispy.app/de" />
+<link rel="alternate" hreflang="it" href="https://rispy.app/it" />
+<link rel="alternate" hreflang="pt" href="https://rispy.app/pt" />
+<link rel="alternate" hreflang="nl" href="https://rispy.app/nl" />
+<link rel="alternate" hreflang="pl" href="https://rispy.app/pl" />
+<link rel="alternate" hreflang="cs" href="https://rispy.app/cs" />
+<link rel="alternate" hreflang="sk" href="https://rispy.app/sk" />
+<link rel="alternate" hreflang="hu" href="https://rispy.app/hu" />
+<link rel="alternate" hreflang="sv" href="https://rispy.app/sv" />
+<link rel="alternate" hreflang="da" href="https://rispy.app/da" />
+<link rel="alternate" hreflang="fi" href="https://rispy.app/fi" />
+<link rel="alternate" hreflang="et" href="https://rispy.app/et" />
+<link rel="alternate" hreflang="lv" href="https://rispy.app/lv" />
+<link rel="alternate" hreflang="lt" href="https://rispy.app/lt" />
+<link rel="alternate" hreflang="el" href="https://rispy.app/el" />
+<link rel="alternate" hreflang="bg" href="https://rispy.app/bg" />
+<link rel="alternate" hreflang="hr" href="https://rispy.app/hr" />
+<link rel="alternate" hreflang="sl" href="https://rispy.app/sl" />
+<link rel="alternate" hreflang="ga" href="https://rispy.app/ga" />
+<link rel="alternate" hreflang="mt" href="https://rispy.app/mt" />
+<link rel="alternate" hreflang="x-default" href="https://rispy.app/" />
+<meta property="og:title" content="Rispy — Scan. Cook. Zero Waste." />
+<meta property="og:description" content="Scan your receipts, organize your kitchen, cook with what you have, save money." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://fridgy.org/en" />
-<meta property="og:image" content="https://fridgy.org/img/og-en.jpg" />
+<meta property="og:url" content="https://rispy.app/en" />
+<meta property="og:image" content="https://rispy.app/img/og-en.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="image/png" href="/fridgy-logo.png" />
+<link rel="icon" type="image/png" href="/rispy-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{
   --bg:#070b18;
@@ -38,7 +54,7 @@
   --line-2:rgba(255,255,255,.20);
   --accent:#60a5fa; --accent-2:#a78bfa;
   --r-lg:30px; --r-md:20px;
-  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font:'Plus Jakarta Sans','Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   --maxw:1180px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -89,6 +105,8 @@ body.scrolled nav{background:rgba(8,13,27,.82);border-color:var(--line-2);box-sh
 .lang-menu a{display:block;padding:9px 14px;border-radius:10px;font-size:14px;font-weight:600;color:var(--muted)}
 .lang-menu a:hover{background:rgba(255,255,255,.07);color:var(--ink)}
 .lang-menu a.active{color:#9ec5ff;font-weight:800}
+/* meniu limbi: scroll */
+.lang-menu{max-height:min(68vh,520px);overflow-y:auto;overscroll-behavior:contain}
 @media(max-width:900px){.nav-links>a:not(.nav-cta){display:none}}
 
 /* ---------- hero ---------- */
@@ -231,7 +249,7 @@ h2{font-size:clamp(30px,3.9vw,50px);line-height:1.08;letter-spacing:-.033em;font
   .m-big{height:360px}
 }
 
-/* ---------- familie (frigider partajat) ---------- */
+/* ---------- familie (bucătărie partajată) ---------- */
 .fam{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,64px);align-items:center;
   padding:clamp(30px,3.4vw,54px);border-radius:var(--r-lg);background:var(--surface);
   border:1px solid var(--line);position:relative;overflow:hidden}
@@ -395,14 +413,14 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 
 <header>
   <nav>
-    <a href="/en" class="brand" aria-label="Fridgy"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></a>
+    <a href="/en" class="brand" aria-label="Rispy"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></a>
     <div class="nav-links">
       <a href="#pasi">How it works</a>
-      <a href="#functii">Why Fridgy</a>
+      <a href="#functii">Why Rispy</a>
       <a href="#planuri">Plans</a>
       <div class="lang">
         <button class="lang-btn" aria-haspopup="true" aria-expanded="false">EN<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
-        <div class="lang-menu"><a href="/" hreflang="ro" onclick="document.cookie='fridgy-lang=ro;path=/;max-age=31536000;samesite=lax;secure'">Romanian</a><a href="/en" hreflang="en" class="active" onclick="document.cookie='fridgy-lang=en;path=/;max-age=31536000;samesite=lax;secure'">English</a><a href="/de" hreflang="de" onclick="document.cookie='fridgy-lang=de;path=/;max-age=31536000;samesite=lax;secure'">German</a><a href="/hu" hreflang="hu" onclick="document.cookie='fridgy-lang=hu;path=/;max-age=31536000;samesite=lax;secure'">Hungarian</a><a href="/fr" hreflang="fr" onclick="document.cookie='fridgy-lang=fr;path=/;max-age=31536000;samesite=lax;secure'">French</a><a href="/nl" hreflang="nl" onclick="document.cookie='fridgy-lang=nl;path=/;max-age=31536000;samesite=lax;secure'">Dutch</a><a href="/da" hreflang="da" onclick="document.cookie='fridgy-lang=da;path=/;max-age=31536000;samesite=lax;secure'">Danish</a><a href="/sv" hreflang="sv" onclick="document.cookie='fridgy-lang=sv;path=/;max-age=31536000;samesite=lax;secure'">Swedish</a></div>
+        <div class="lang-menu"><a href="/" hreflang="ro" onclick="document.cookie='fridgy-lang=ro;path=/;max-age=31536000;samesite=lax;secure'">Romanian</a><a href="/en" hreflang="en" class="active" onclick="document.cookie='fridgy-lang=en;path=/;max-age=31536000;samesite=lax;secure'">English</a><a href="/es" hreflang="es" onclick="document.cookie='fridgy-lang=es;path=/;max-age=31536000;samesite=lax;secure'">Spanish</a><a href="/fr" hreflang="fr" onclick="document.cookie='fridgy-lang=fr;path=/;max-age=31536000;samesite=lax;secure'">French</a><a href="/de" hreflang="de" onclick="document.cookie='fridgy-lang=de;path=/;max-age=31536000;samesite=lax;secure'">German</a><a href="/it" hreflang="it" onclick="document.cookie='fridgy-lang=it;path=/;max-age=31536000;samesite=lax;secure'">Italian</a><a href="/pt" hreflang="pt" onclick="document.cookie='fridgy-lang=pt;path=/;max-age=31536000;samesite=lax;secure'">Portuguese</a><a href="/nl" hreflang="nl" onclick="document.cookie='fridgy-lang=nl;path=/;max-age=31536000;samesite=lax;secure'">Dutch</a><a href="/pl" hreflang="pl" onclick="document.cookie='fridgy-lang=pl;path=/;max-age=31536000;samesite=lax;secure'">Polish</a><a href="/cs" hreflang="cs" onclick="document.cookie='fridgy-lang=cs;path=/;max-age=31536000;samesite=lax;secure'">Czech</a><a href="/sk" hreflang="sk" onclick="document.cookie='fridgy-lang=sk;path=/;max-age=31536000;samesite=lax;secure'">Slovak</a><a href="/hu" hreflang="hu" onclick="document.cookie='fridgy-lang=hu;path=/;max-age=31536000;samesite=lax;secure'">Hungarian</a><a href="/sv" hreflang="sv" onclick="document.cookie='fridgy-lang=sv;path=/;max-age=31536000;samesite=lax;secure'">Swedish</a><a href="/da" hreflang="da" onclick="document.cookie='fridgy-lang=da;path=/;max-age=31536000;samesite=lax;secure'">Danish</a><a href="/fi" hreflang="fi" onclick="document.cookie='fridgy-lang=fi;path=/;max-age=31536000;samesite=lax;secure'">Finnish</a><a href="/et" hreflang="et" onclick="document.cookie='fridgy-lang=et;path=/;max-age=31536000;samesite=lax;secure'">Estonian</a><a href="/lv" hreflang="lv" onclick="document.cookie='fridgy-lang=lv;path=/;max-age=31536000;samesite=lax;secure'">Latvian</a><a href="/lt" hreflang="lt" onclick="document.cookie='fridgy-lang=lt;path=/;max-age=31536000;samesite=lax;secure'">Lithuanian</a><a href="/el" hreflang="el" onclick="document.cookie='fridgy-lang=el;path=/;max-age=31536000;samesite=lax;secure'">Greek</a><a href="/bg" hreflang="bg" onclick="document.cookie='fridgy-lang=bg;path=/;max-age=31536000;samesite=lax;secure'">Bulgarian</a><a href="/hr" hreflang="hr" onclick="document.cookie='fridgy-lang=hr;path=/;max-age=31536000;samesite=lax;secure'">Croatian</a><a href="/sl" hreflang="sl" onclick="document.cookie='fridgy-lang=sl;path=/;max-age=31536000;samesite=lax;secure'">Slovenian</a><a href="/ga" hreflang="ga" onclick="document.cookie='fridgy-lang=ga;path=/;max-age=31536000;samesite=lax;secure'">Irish</a><a href="/mt" hreflang="mt" onclick="document.cookie='fridgy-lang=mt;path=/;max-age=31536000;samesite=lax;secure'">Maltese</a></div>
       </div>
       <a href="#download" class="nav-cta">Download free</a>
     </div>
@@ -415,13 +433,13 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
     <div class="hero-grid">
       <div class="rv">
         <h1>&euro;290 thrown in the trash<br><span class="grad">every year. We fix that.</span></h1>
-        <p class="sub">Every European wastes around <strong>130 kg</strong> of food per year — nearly <strong>&euro;290</strong> thrown in the bin. Fridgy helps you stay organised, keep track of expiry dates and avoid waste. And when food is about to expire, it turns it into delicious recipe ideas.</p>
+        <p class="sub">Every European wastes around <strong>130 kg</strong> of food per year — nearly <strong>&euro;290</strong> thrown in the bin. Rispy helps you stay organised, keep track of expiry dates and avoid waste. And when food is about to expire, it turns it into delicious recipe ideas.</p>
         <div class="store-row">
         <a class="store-btn" href="https://apps.apple.com/ro/app/id6748481042" target="_blank" rel="noopener" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download from</small><b>App Store</b></span></a>
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" target="_blank" rel="noopener" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Available on</small><b>Google Play</b></span></a>
       </div>
       </div>
-      <div class="hero-visual rv"><img src="/img/en/scan.webp" alt="Fridgy" fetchpriority="high" decoding="async" /></div>
+      <div class="hero-visual rv"><img src="/img/en/scan.webp" alt="Rispy" fetchpriority="high" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -453,15 +471,15 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       </article>
       <article class="stepc rv">
         <div class="step-n">2</div>
-        <h3>Watch your fridge</h3>
-        <p>Your whole fridge on one screen. Search, filter and see at a glance what has expired and what needs eating soon.</p>
-        <div class="stepc-media"><img src="/img/en/fridge.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+        <h3>Watch your kitchen</h3>
+        <p>Your whole kitchen on one screen. Search, filter and see at a glance what has expired and what needs eating soon.</p>
+        <div class="stepc-media"><img src="/img/en/fridge.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
       </article>
       <article class="stepc rv">
         <div class="step-n">3</div>
         <h3>Cook what you have</h3>
-        <p>We don't just help you watch your fridge — we hand you the solution: simple, tasty recipes from what's about to expire. With Premium, you get fresh recipes every morning.</p>
-        <div class="stepc-media"><img src="/img/en/recipes.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+        <p>We don't just help you watch your kitchen — we hand you the solution: simple, tasty recipes from what's about to expire. With Premium, you get fresh recipes every morning.</p>
+        <div class="stepc-media"><img src="/img/en/recipes.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
       </article>
     </div>
     <div class="nband rv">
@@ -483,15 +501,15 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
       <div class="fam-copy rv">
         <div class="tag">New · Shopping list</div>
         <h2>The list that ticks itself off</h2>
-        <p class="fam-sub">One list per fridge, shared by every member. Scan your receipt and Fridgy ticks off what you bought.</p>
+        <p class="fam-sub">One list per kitchen, shared by every member. Scan your receipt and Rispy ticks off what you bought.</p>
         <ul class="fam-list">
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Ticked off when you scan the receipt</b><em>“Milk” on the list and “WHOLE MILK 3.5% 1L” on the receipt? Fridgy knows it’s the same product.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Suggestions from your fridge<span class="pill">Premium</span></b><em>What ran out, what you buy often, what’s about to expire and what you’re missing for today’s recipes.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Ticked off when you scan the receipt</b><em>“Milk” on the list and “WHOLE MILK 3.5% 1L” on the receipt? Rispy knows it’s the same product.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Suggestions from your kitchen<span class="pill">Premium</span></b><em>What ran out, what you buy often, what’s about to expire and what you’re missing for today’s recipes.</em></div></li>
           <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Fills itself in<span class="pill">Premium</span></b><em>The staples you buy often go on the list when they run out. You can turn it off anytime.</em></div></li>
         </ul>
         <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>The list is included in the free plan too.</span></p>
       </div>
-      <div class="fam-shot rv"><img src="/img/en/shopping.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="fam-shot rv"><img src="/img/en/shopping.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -528,7 +546,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="sec-head rv">
       <div class="tag">Not just keeping track</div>
-      <h2>Fridgy shows you what you throw away</h2>
+      <h2>Rispy shows you what you throw away</h2>
       <p>Save rate, money recovered, and the categories you waste the most on.</p>
     </div>
     <div class="bento">
@@ -537,7 +555,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <h3>See how much you saved</h3>
         <p>Save rate and money recovered, month after month.</p>
       </div>
-      <div class="cell-media m-big"><img src="/img/en/profile.webp?v=2" alt="" loading="lazy" decoding="async" /></div>
+      <div class="cell-media m-big"><img src="/img/en/profile.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </article></div>
       <div class="rv span-6"><article class="cell">
       <div class="cell-body">
@@ -562,17 +580,17 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
     <div class="fam">
       <div class="fam-copy rv">
         <div class="tag">Together</div>
-        <h2>One fridge for the whole family</h2>
-        <p class="fam-sub">Any fridge can be shared with whoever you want. Same products, same quantities, updated for everyone in real time.</p>
+        <h2>One kitchen for the whole family</h2>
+        <p class="fam-sub">Any kitchen can be shared with whoever you want. Same products, same quantities, updated for everyone in real time.</p>
         <ul class="fam-list">
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>As many fridges as you need</b><em>Home, the cabin, the office — each with its own products.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Invites in seconds</b><em>Send an email invite — as soon as it is accepted, you share the same fridge.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>In sync for everyone</b><em>Someone adds or uses a product? The change shows up instantly for everyone, and every member of the fridge gets a notification.</em></div></li>
-          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Shared shopping list</b><em>Every member of the fridge sees and adds to the same list.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>As many kitchens as you need<span class="pill">Premium</span></b><em>Home, the cabin, the office — each with its own products.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Invites in seconds</b><em>Send an email invite — as soon as it is accepted, you share the same kitchen.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>In sync for everyone</b><em>Someone adds or uses a product? The change shows up instantly for everyone, and every member of the kitchen gets a notification.</em></div></li>
+          <li><span class="fam-ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span><div><b>Shared shopping list</b><em>Every member of the kitchen sees and adds to the same list.</em></div></li>
         </ul>
-        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Included in the free plan too.</span></p>
+        <p class="fam-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>The free plan includes one kitchen, shared with anyone you want.</span></p>
       </div>
-      <div class="fam-shot rv"><img src="/img/en/family.webp" alt="" loading="lazy" decoding="async" /></div>
+      <div class="fam-shot rv"><img src="/img/en/family.webp?v=3" alt="" loading="lazy" decoding="async" /></div>
     </div>
   </div>
 </section>
@@ -588,7 +606,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-name">Free</div>
         <div class="plan-price">Free</div>
         <span class="plan-year"></span>
-        <ul><li><span class="ck y">&#10003;</span>Receipt scans: 10 / month</li><li><span class="ck y">&#10003;</span>Recipes: one batch per fridge</li><li><span class="ck y">&#10003;</span>Shared shopping list</li><li><span class="ck y">&#10003;</span>Purchase history: this month</li><li><span class="ck y">&#10003;</span>Basic statistics</li><li><span class="ck y">&#10003;</span>Multiple fridges</li><li><span class="ck y">&#10003;</span>Shared fridge</li></ul>
+        <ul><li><span class="ck y">&#10003;</span>Receipt scans: 10 / month</li><li><span class="ck y">&#10003;</span>Recipes: one batch per kitchen</li><li><span class="ck y">&#10003;</span>Shared shopping list</li><li><span class="ck y">&#10003;</span>Purchase history: this month</li><li><span class="ck y">&#10003;</span>Basic statistics</li><li><span class="ck y">&#10003;</span>One kitchen</li><li><span class="ck y">&#10003;</span>Shared with anyone you want</li></ul>
         <a href="#download" class="plan-btn btn-free">Download free</a>
       </div>
       <div class="plan pro rv">
@@ -596,7 +614,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         <div class="plan-name">Premium</div>
         <div class="plan-price">&euro;3.99 <span>/ month</span></div>
         <span class="plan-year">or &euro;39.99 / year · save 16%</span>
-        <ul><li><span class="ck y">&#10003;</span>Everything in Free, plus:</li><li><span class="ck y">&#10003;</span>Unlimited receipt scans</li><li><span class="ck y">&#10003;</span>Fresh recipes every morning + 2 refreshes a day</li><li><span class="ck y">&#10003;</span>Saved recipes</li><li><span class="ck y">&#10003;</span>Monthly budget with alerts</li><li><span class="ck y">&#10003;</span>Full purchase history</li><li><span class="ck y">&#10003;</span>Smart shopping list</li><li><span class="ck y">&#10003;</span>Advanced statistics</li></ul>
+        <ul><li><span class="ck y">&#10003;</span>Everything in Free, plus:</li><li><span class="ck y">&#10003;</span>Unlimited kitchens</li><li><span class="ck y">&#10003;</span>Unlimited receipt scans</li><li><span class="ck y">&#10003;</span>Fresh recipes every morning + 2 refreshes a day</li><li><span class="ck y">&#10003;</span>Saved recipes</li><li><span class="ck y">&#10003;</span>Monthly budget with alerts</li><li><span class="ck y">&#10003;</span>Full purchase history</li><li><span class="ck y">&#10003;</span>Smart shopping list</li><li><span class="ck y">&#10003;</span>Advanced statistics</li></ul>
         <a href="#download" class="plan-btn btn-pro">Try 7 days free</a>
       </div>
     </div>
@@ -607,7 +625,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="cta-inner rv">
       <h2>Start saving today</h2>
-      <p>Download Fridgy for free and transform the way you manage your food.</p>
+      <p>Download Rispy for free and transform the way you manage your food.</p>
       <div class="store-row">
         <a class="store-btn" href="https://apps.apple.com/ro/app/id6748481042" target="_blank" rel="noopener" aria-label="App Store"><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318 271c-1-58 47-86 49-87-27-39-68-44-83-45-35-4-69 21-86 21-18 0-45-20-74-20-38 1-73 22-93 56-40 69-10 171 28 227 19 27 41 58 70 57 28-1 39-18 73-18s44 18 74 17c30-1 49-28 67-55 21-31 30-61 30-63-1 0-58-22-58-87zM262 84c15-19 26-45 23-71-22 1-49 15-65 33-14 16-27 43-23 68 25 2 50-13 65-30z"/></svg><span><small>Download from</small><b>App Store</b></span></a>
         <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.madreamircea.fridgy" target="_blank" rel="noopener" aria-label="Google Play"><svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M99 26 309 236 99 446a30 30 0 0 1-14-25V51c0-10 5-19 14-25z"/><path d="M340 205 387 232c25 14 25 50 0 64l-47 27-58-59 58-59z" opacity=".85"/><path d="M99 26c8-5 18-5 27 0l209 119-53 54L99 26z" opacity=".7"/><path d="M99 446 282 263l53 54-209 119c-9 5-19 5-27 0z" opacity=".55"/></svg><span><small>Available on</small><b>Google Play</b></span></a>
@@ -621,7 +639,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
   <div class="wrap">
     <div class="foot">
       <div>
-        <div class="brand"><img src="/fridgy-logo.png" alt="" /><span>Fridgy</span></div>
+        <div class="brand"><img src="/rispy-logo.png" alt="" /><span>Rispy</span></div>
         <p>Reduce food waste. Scan receipts. Generate recipes from what you already have at home.</p>
       </div>
       <div class="foot-cols">
@@ -638,12 +656,12 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
         </div>
         <div>
           <h5>Contact</h5>
-          <a href="mailto:contact@fridgy.org">contact@fridgy.org</a>
+          <a href="mailto:contact@rispy.app">contact@rispy.app</a>
         </div>
       </div>
     </div>
     <div class="copy">
-      <span>&copy; <span id="yr"></span> Fridgy. All rights reserved.</span>
+      <span>&copy; <span id="yr"></span> Rispy. All rights reserved.</span>
       <span>Made with &#x1F499; in Romania</span>
     </div>
   </div>
@@ -702,7 +720,7 @@ footer{padding:80px 0 34px;margin-top:90px;border-top:1px solid var(--line);colo
 
   /* linkul App Store pe magazinul tarii, dupa limba browserului (implicit ro) */
   (function(){
-    var ok={ro:1,de:1,at:1,ch:1,fr:1,nl:1,dk:1,se:1}, byLang={ro:'ro',de:'de',fr:'fr',nl:'nl',da:'dk',sv:'se'};
+    var ok={at:1,be:1,bg:1,ch:1,cy:1,cz:1,de:1,dk:1,ee:1,es:1,fi:1,fr:1,gr:1,hr:1,hu:1,ie:1,it:1,lt:1,lu:1,lv:1,mt:1,nl:1,pl:1,pt:1,ro:1,se:1,si:1,sk:1}, byLang={ro:'ro',de:'de',fr:'fr',nl:'nl',da:'dk',sv:'se',es:'es',it:'it',pt:'pt',pl:'pl',cs:'cz',sk:'sk',fi:'fi',et:'ee',lv:'lv',lt:'lt',el:'gr',bg:'bg',hr:'hr',sl:'si',ga:'ie',mt:'mt',hu:'hu'};
     var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||''], cc='';
     for(var i=0;i<ls.length&&!cc;i++){
       var p=String(ls[i]).toLowerCase().split('-'), r=p[p.length-1];
